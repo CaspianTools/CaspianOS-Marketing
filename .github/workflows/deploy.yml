@@ -1,0 +1,72 @@
+name: Deploy
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  # Manual trigger, so a deploy can be re-run without a code push — e.g. after
+  # adding a missing secret.
+  workflow_dispatch:
+
+jobs:
+  check:
+    # Cheap guards against the ways a hand-written static site actually breaks:
+    # a malformed config, an unbalanced tag, or a link to a page that does not
+    # exist. There is no bundler here, so this is the whole build gate.
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Validate JSON configs
+        run: |
+          for f in firebase.json .firebaserc; do
+            node -e "JSON.parse(require('fs').readFileSync('$f','utf8'))" && echo "ok: $f"
+          done
+
+      - name: Check HTML tags are balanced
+        run: node scripts/check-html.mjs
+
+      - name: Check internal links resolve
+        run: node scripts/check-links.mjs
+
+  deploy:
+    needs: check
+    if: (github.event_name == 'push' || github.event_name == 'workflow_dispatch') && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check FIREBASE_SERVICE_ACCOUNT_MARKETING secret is configured
+        id: secret
+        env:
+          FIREBASE_SERVICE_ACCOUNT_MARKETING: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_MARKETING }}
+        run: |
+          if [ -z "$FIREBASE_SERVICE_ACCOUNT_MARKETING" ]; then
+            echo "configured=false" >> "$GITHUB_OUTPUT"
+            echo "::warning::FIREBASE_SERVICE_ACCOUNT_MARKETING is not set — skipping the deploy, so caspianos.io stays on its last deployed version. Add the secret under Settings → Secrets and variables → Actions (a service-account JSON from the caspianos Firebase project with the Firebase Hosting Admin role), or deploy by hand with: npx firebase-tools deploy --only hosting --project caspianos"
+          else
+            echo "configured=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - uses: actions/checkout@v4
+        if: steps.secret.outputs.configured == 'true'
+
+      - uses: actions/setup-node@v4
+        if: steps.secret.outputs.configured == 'true'
+        with:
+          node-version: 20
+
+      - name: Authenticate with Google Cloud
+        if: steps.secret.outputs.configured == 'true'
+        uses: google-github-actions/auth@v2
+        with:
+          credentials_json: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_MARKETING }}
+
+      - name: Deploy to Firebase Hosting
+        # A 403 here means the service account is missing the Firebase Hosting
+        # Admin role in the caspianos project — grant it in Google Cloud IAM.
+        if: steps.secret.outputs.configured == 'true'
+        run: npx firebase-tools@15 deploy --only hosting --project caspianos --non-interactive
