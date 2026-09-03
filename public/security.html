@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Security &amp; access control — CaspianOS</title>
+<meta name="description" content="Multi-tenant isolation, permission-based RBAC enforced server-side, verified invitations and an audit log. How CaspianOS protects your organization's data.">
+<link rel="canonical" href="https://caspianos.io/security">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CaspianOS">
+<meta property="og:title" content="Security &amp; access control — CaspianOS">
+<meta property="og:description" content="Multi-tenant isolation, permission-based RBAC enforced server-side, verified invitations and an audit log. How CaspianOS protects your organization's data.">
+<meta property="og:url" content="https://caspianos.io/security">
+<meta property="og:image" content="https://caspianos.io/assets/img/og-image.svg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#4f46e5">
+<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="/assets/css/site.css">
+<noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="announce">
+  <span>Fleet &amp; Manufacturing modules are now live in CaspianOS &nbsp;·&nbsp; <a href="/modules">See what's included</a></span>
+</div>
+<header class="site-header">
+  <div class="container">
+    <nav class="nav" aria-label="Main">
+      <a class="brand" href="/">
+        <img class="brand-mark" src="/assets/img/logo-mark.svg" alt="" width="30" height="30">
+        <span class="brand-name">Caspian<b>OS</b></span>
+      </a>
+      <ul class="nav-links">
+        <li><a class="nav-link" href="/modules">Modules</a></li>
+        <li><a class="nav-link" href="/industries">Industries</a></li>
+        <li><a class="nav-link" href="/security" aria-current="page">Security</a></li>
+        <li><a class="nav-link" href="/pricing">Pricing</a></li>
+        <li><a class="nav-link" href="/about">Company</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a class="btn btn-ghost btn-sm" href="https://app.caspianos.io">Sign in</a>
+        <a class="btn btn-primary btn-sm" href="https://app.caspianos.io">Start free trial</a>
+        <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </nav>
+  </div>
+  <div class="mobile-menu" id="mobile-menu">
+    <a class="nav-link" href="/modules">Modules</a>
+    <a class="nav-link" href="/industries">Industries</a>
+    <a class="nav-link" href="/security">Security</a>
+    <a class="nav-link" href="/pricing">Pricing</a>
+    <a class="nav-link" href="/about">Company</a>
+    <a class="nav-link" href="/contact">Contact</a>
+    <div class="mobile-cta">
+      <a class="btn btn-secondary" href="https://app.caspianos.io">Sign in</a>
+      <a class="btn btn-primary" href="https://app.caspianos.io">Start free trial</a>
+    </div>
+  </div>
+</header>
+<main id="main">
+
+  <section class="hero" style="padding-bottom:8px">
+    <div class="container">
+      <span class="eyebrow">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
+        Security &amp; access control
+      </span>
+      <h1>Permissions enforced <span class="grad">in the database</span></h1>
+      <p class="hero-sub">
+        An ERP holds your incidents, your medical records, your salaries and your contracts.
+        Hiding a menu item is not access control — so in CaspianOS every read and write is
+        checked server-side against the permissions you granted.
+      </p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <div class="grid grid-3">
+        <div class="card card-pad card-interactive reveal">
+          <span class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></span>
+          <h3 class="mt-16">Tenant isolation</h3>
+          <p class="muted mt-6">Every record lives under its organization and carries its organization's ID. A query that reaches outside your organization is rejected by the rules, not filtered by the client.</p>
+        </div>
+        <div class="card card-pad card-interactive reveal">
+          <span class="icon-tile t-emerald"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></span>
+          <h3 class="mt-16">Permission-based RBAC</h3>
+          <p class="muted mt-6">Each tool has its own read, create, update and delete permissions. A role is a set of permissions; a member holds one role per organization. Nothing is implied by job title.</p>
+        </div>
+        <div class="card card-pad card-interactive reveal">
+          <span class="icon-tile t-violet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
+          <h3 class="mt-16">Audit log</h3>
+          <p class="muted mt-6">Membership, role and permission changes are written to an append-only log attributed to the member who made them — entries cannot be forged in another member's name.</p>
+        </div>
+        <div class="card card-pad card-interactive reveal">
+          <span class="icon-tile t-amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z"/><path d="m8 12 3 3 5-6"/></svg></span>
+          <h3 class="mt-16">Verified invitations</h3>
+          <p class="muted mt-6">An invitation can only be discovered and accepted by a verified email address, so nobody joins your organization by registering someone else's address.</p>
+        </div>
+        <div class="card card-pad card-interactive reveal">
+          <span class="icon-tile t-cyan"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5v7c0 6 8 10 8 10s8-4 8-10V5z"/></svg></span>
+          <h3 class="mt-16">Least privilege by default</h3>
+          <p class="muted mt-6">Ownership, billing plan and member quota are platform-owned fields — an administrator cannot promote themselves to owner or change your plan from inside the app.</p>
+        </div>
+        <div class="card card-pad card-interactive reveal">
+          <span class="icon-tile t-rose"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l3 8 4-16 3 8h4"/></svg></span>
+          <h3 class="mt-16">Hardened transport</h3>
+          <p class="muted mt-6">HTTPS everywhere, security headers, a content security policy, and per-user rate limits on every server route.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-soft">
+    <div class="container split">
+      <div>
+        <h2>How access is decided</h2>
+        <p class="lead mt-16">
+          Four questions are answered on the server for every single operation. If any answer
+          is no, the operation fails — whatever the browser thinks.
+        </p>
+        <div class="feature-list">
+          <div class="feature-item"><span class="icon-tile sm">1</span><div><h4>Are you signed in?</h4><p>Authentication via Google or email and password, with email verification required for password accounts.</p></div></div>
+          <div class="feature-item"><span class="icon-tile sm">2</span><div><h4>Are you an active member of this organization?</h4><p>Suspended and offboarded members lose access immediately; suspended organizations become read-only.</p></div></div>
+          <div class="feature-item"><span class="icon-tile sm">3</span><div><h4>Does your role hold this permission?</h4><p>Checked per tool and per action — read, create, update or delete — against the permission registry.</p></div></div>
+          <div class="feature-item"><span class="icon-tile sm">4</span><div><h4>Does the record belong to your organization?</h4><p>Enforced on the document path and its organization ID, on reads and on writes alike.</p></div></div>
+        </div>
+      </div>
+      <div class="split-media reveal">
+        <div class="panel">
+          <div class="panel-head">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
+            Roles · Site Supervisor
+            <span class="badge badge-indigo">Custom role</span>
+          </div>
+          <div class="panel-body">
+            <table class="table-mock">
+              <caption class="sr-only">Example permission set for a custom role</caption>
+              <thead><tr><th scope="col">Tool</th><th scope="col">Read</th><th scope="col">Create</th><th scope="col">Update</th><th scope="col">Delete</th></tr></thead>
+              <tbody>
+                <tr><td>Permits to Work</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="no">—</td></tr>
+                <tr><td>Observations</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="no">—</td></tr>
+                <tr><td>Incidents</td><td class="yes">✓</td><td class="yes">✓</td><td class="no">—</td><td class="no">—</td></tr>
+                <tr><td>Personnel</td><td class="yes">✓</td><td class="no">—</td><td class="no">—</td><td class="no">—</td></tr>
+                <tr><td>Medical</td><td class="no">—</td><td class="no">—</td><td class="no">—</td><td class="no">—</td></tr>
+                <tr><td>Invoices</td><td class="no">—</td><td class="no">—</td><td class="no">—</td><td class="no">—</td></tr>
+              </tbody>
+            </table>
+            <p class="small muted mt-16">Roles are built tool by tool. A supervisor who should never see payroll or medical data simply never holds that permission.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section dark-section">
+    <div class="container">
+      <div class="section-head">
+        <h2>Infrastructure and data</h2>
+        <p>CaspianOS runs on Google Cloud. We build on managed infrastructure rather than operating our own servers.</p>
+      </div>
+      <div class="grid grid-3">
+        <div class="dark-card reveal">
+          <h3>Encryption</h3>
+          <p>Traffic is served over HTTPS. Data at rest is encrypted by the underlying Google Cloud services.</p>
+        </div>
+        <div class="dark-card reveal">
+          <h3>Backups &amp; availability</h3>
+          <p>Records are stored in a managed, replicated database. The application scales automatically and has no maintenance window you need to plan around.</p>
+        </div>
+        <div class="dark-card reveal">
+          <h3>Your data is yours</h3>
+          <p>Export any list to CSV whenever you like, and request a full export of your organization's records before closing an account.</p>
+        </div>
+        <div class="dark-card reveal">
+          <h3>Access on our side</h3>
+          <p>Support access to a customer organization is limited, purposeful, and only with your agreement — not a standing privilege.</p>
+        </div>
+        <div class="dark-card reveal">
+          <h3>Responsible disclosure</h3>
+          <p>Found something? Email <a href="mailto:security@caspianos.io" style="color:#c7d2fe">security@caspianos.io</a>. We will acknowledge, investigate and keep you updated.</p>
+        </div>
+        <div class="dark-card reveal">
+          <h3>Certifications</h3>
+          <p>Our cloud provider holds the major industry certifications. CaspianOS itself does not yet carry an independent audit — we would rather say so than imply otherwise.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head"><h2>Common security questions</h2></div>
+      <div class="faq">
+        <details>
+          <summary>Where is our data stored?</summary>
+          <div class="faq-body">In Google Cloud, in a managed database dedicated to the platform, with your records namespaced under your organization. If your business has a specific data-residency requirement, raise it with us before you sign — we will tell you plainly whether we can meet it.</div>
+        </details>
+        <details>
+          <summary>Can one customer see another customer's data?</summary>
+          <div class="faq-body">No. Every document sits beneath its organization and carries its organization ID, and the security rules check both membership and permission on every read and write. There is no client-side filter you could bypass.</div>
+        </details>
+        <details>
+          <summary>How do we remove someone who has left?</summary>
+          <div class="faq-body">Suspend or offboard their membership in Settings → Team. Access ends immediately, their historical records stay intact and attributed, and the change is recorded in the audit log.</div>
+        </details>
+        <details>
+          <summary>Do you support single sign-on?</summary>
+          <div class="faq-body">Google sign-in is supported today alongside email and password with verification. If you need SAML or another identity provider, tell us — it is on the roadmap and customer demand is what orders it.</div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="section dark-section cta-band">
+    <div class="container">
+      <h2>Bring your security questionnaire</h2>
+      <p>We would rather answer the hard questions early than surprise you later.</p>
+      <div class="cta-actions">
+        <a class="btn btn-onDark btn-lg" href="/contact">Contact us</a>
+        <a class="btn btn-outline-onDark btn-lg" href="https://app.caspianos.io">Start free trial</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="/">
+          <img class="brand-mark" src="/assets/img/logo-mark.svg" alt="" width="30" height="30">
+          <span class="brand-name" style="color:#fff">Caspian<b>OS</b></span>
+        </a>
+        <p>The multi-tenant ERP that runs your whole organization — people, safety, supply chain, assets, customers and finance — in one connected platform.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Platform</h4>
+        <ul>
+          <li><a href="/modules">Modules</a></li>
+          <li><a href="/industries">Industries</a></li>
+          <li><a href="/security">Security &amp; RBAC</a></li>
+          <li><a href="/pricing">Pricing</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Modules</h4>
+        <ul>
+          <li><a href="/modules#hr">Human Resources</a></li>
+          <li><a href="/modules#hseq">HSEQ</a></li>
+          <li><a href="/modules#procurement">Procurement</a></li>
+          <li><a href="/modules#inventory">Inventory</a></li>
+          <li><a href="/modules#finance">Finance</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="/about">About</a></li>
+          <li><a href="/contact">Contact</a></li>
+          <li><a href="/contact#demo">Book a demo</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Get started</h4>
+        <ul>
+          <li><a href="https://app.caspianos.io">Sign in</a></li>
+          <li><a href="https://app.caspianos.io">Start free trial</a></li>
+          <li><a href="/pricing#faq">Pricing FAQ</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <span data-year>2026</span> CaspianOS. All rights reserved.</p>
+      <nav aria-label="Legal">
+        <a href="/privacy">Privacy Policy</a>
+        <a href="/terms">Terms of Service</a>
+        <a href="/security">Security</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+<script src="/assets/js/site.js" defer></script>
+</body>
+</html>
