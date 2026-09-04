@@ -5,20 +5,25 @@ Features that were identified, scoped, and deferred. Each entry describes *what*
 
 ---
 
-### Real legal entity and jurisdiction in the legal pages
-**What:** `public/privacy.html` and `public/terms.html` ship with `[Legal entity name]`,
-`[registered address]` and `[jurisdiction]` placeholders, and have not been reviewed by a lawyer.
+### Full registered address and counsel review of the legal pages
+**What:** `public/privacy.html` and `public/terms.html` now name **CaspianTools, Bursa, Türkiye**
+as the entity, with Turkish governing law and the courts of Bursa. What is still missing is a full
+registered street address, a company registration number, and any review by a lawyer.
 
-**Why it matters:** The pages are linked from the footer of every page. Publishing them with
-placeholders is visibly unfinished, and unreviewed terms give no real protection.
+**Why it matters:** The pages are linked from the footer of every page. "Bursa, Türkiye" is enough
+to identify the entity but is not a registered address, and unreviewed terms give no real
+protection.
 
-**Why deferred:** The company's registered entity, address and governing law were not available
-when the site was written, and inventing them would have been worse than leaving a marked gap.
+**Why deferred:** The full registered address and registration number were not supplied when the
+rebrand was made, and inventing them would be worse than naming the entity and stopping there.
 
 **How to approach:**
-1. Replace the three placeholders in both pages (search for `[Legal entity name]`).
+1. Replace `Bursa, T&uuml;rkiye` in both pages with the full registered address, and add the
+   company registration number.
 2. Have both pages reviewed by counsel — particularly the liability cap, the controller/processor
-   split in the privacy policy, and the international-transfer paragraph.
+   split in the privacy policy, and the international-transfer paragraph. Confirm that Turkish
+   governing law and the courts of Bursa are what you actually want, and check KVKK obligations
+   alongside the GDPR language already in the privacy policy.
 3. Update the "Last updated" date in both pages when the reviewed text lands.
 4. If a DPA or sub-processor list is required by customers, add it as a fourth legal page and link
    it from the footer's Legal nav.
@@ -60,6 +65,27 @@ nothing is captured if they abandon it. There is also no spam protection and no 
    notification is enough to start.
 
 **Estimated effort:** 1 day
+
+### Real product screenshots on the module pages
+**What:** Each page under `/modules/` carries a hand-built CSS mock of the application rather than
+a screenshot, with plausible but invented row data (task names, PO numbers, KPI values).
+
+**Why it matters:** A real screenshot is more persuasive than a stylised mock, and the mock has to
+be updated by hand whenever the app's navigation changes.
+
+**Why deferred:** Image files need a rasteriser and an asset pipeline this repository deliberately
+does not have, and a stale screenshot ages worse than an abstract mock. The mock is marked up as
+`role="img"` with a descriptive label, so it is honest about being a representation.
+
+**How to approach:**
+1. Capture each module at a consistent viewport with demo data — never a real customer's data.
+2. Export as WebP with a PNG fallback, and add width/height so the page does not shift on load.
+3. Replace the `.mock` block per page, keeping the surrounding `.mock-wrap` for the frame, and keep
+   the descriptive `alt` text the mock's `aria-label` already provides.
+4. Add a note to `DESIGN.md` about which app version the screenshots came from, so they can be
+   refreshed as a set.
+
+**Estimated effort:** 0.5 day plus capture time
 
 ### Resources section (blog, case studies, docs)
 **What:** There is no `/blog`, `/customers` or public documentation.

@@ -7,8 +7,68 @@
   </url>
   <url>
     <loc>https://caspianos.io/modules</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://caspianos.io/modules/hr</loc>
+    <lastmod>2026-09-04</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://caspianos.io/modules/hseq</loc>
+    <lastmod>2026-09-04</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://caspianos.io/modules/business</loc>
+    <lastmod>2026-09-04</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://caspianos.io/modules/efficiency</loc>
+    <lastmod>2026-09-04</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://caspianos.io/modules/procurement</loc>
+    <lastmod>2026-09-04</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://caspianos.io/modules/manufacturing</loc>
+    <lastmod>2026-09-04</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://caspianos.io/modules/crm</loc>
+    <lastmod>2026-09-04</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://caspianos.io/modules/inventory</loc>
+    <lastmod>2026-09-04</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://caspianos.io/modules/logistics</loc>
+    <lastmod>2026-09-04</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://caspianos.io/modules/maintenance</loc>
+    <lastmod>2026-09-04</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://caspianos.io/modules/finance</loc>
+    <lastmod>2026-09-04</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://caspianos.io/modules/administration</loc>
+    <lastmod>2026-09-04</lastmod>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://caspianos.io/industries</loc>
@@ -27,7 +87,7 @@
   </url>
   <url>
     <loc>https://caspianos.io/about</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <priority>0.6</priority>
   </url>
   <url>

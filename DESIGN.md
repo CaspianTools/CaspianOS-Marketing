@@ -52,10 +52,35 @@ public site, and the site ships with no build step at all.
   the app's controls.
 - **Dark sections** (`.dark-section`) sit on `--ink` with a radial indigo glow and a masked grid
   overlay; cards inside them are `.dark-card`, never `.card`.
+- **Breadcrumbs** (`.breadcrumb`) sit above the `<h1>` on the per-module pages only, centred to
+  match the hero. Links are indigo; the chevron is `--slate-300`.
+- **Cross-module links inside a dark section** use `.link-arrow`, which is re-coloured to `#c7d2fe`
+  under `.dark-section` so it stays legible on `--ink`.
+- **The footer credit** (`.footer-by`) is the "Built by CaspianTools" line in the footer brand
+  column. It sits inside `.footer-brand`, so it inherits that column's muted colour and only
+  overrides the link.
 - **Icons** are inline `<svg>` with `stroke-width="2"` in the Lucide idiom (the app uses the real
   `lucide-react` package; this site has no dependencies, so the paths are inlined). Icons in a
   tinted square use `.icon-tile` with a tint modifier (`.t-emerald`, `.t-cyan`, `.t-violet`,
   `.t-amber`, `.t-rose`, `.t-slate`, `.t-teal`), `.sm` for the 34px variant.
+
+### Per-module pages
+
+Each of the twelve pages under `/modules/` uses the same section order, and the order is the
+argument: hero → app mock → the problem → what it does → process flow → every tool → how it
+connects (dark) → who uses it → what you can configure → FAQ → CTA band (dark). Backgrounds
+alternate white / soft / dark so no two adjacent sections share one.
+
+- The **app mock** reuses the `.mock-*` component from the home page, with the module's own
+  sidebar and six `.mock-card`s. It is `role="img"` with a descriptive `aria-label`, and its
+  interior is `aria-hidden`.
+- The **configure** section pairs a `.check-list` with a `.panel` + `.table-mock` settings table.
+  Every page ends that section with a link to `/modules/administration`.
+- The **connects** section is the page's single dark section before the CTA band, and always links
+  to three other module pages.
+- These pages were generated once from a script and are now **hand-edited like every other page**.
+  There is no generator in this repository, and there should not be one — that is the same reason
+  the header and footer are duplicated rather than templated.
 
 ### Rules
 
@@ -69,6 +94,8 @@ public site, and the site ships with no build step at all.
 - **Wide content scrolls inside its own container** (`.table-scroll`); the page body never scrolls
   horizontally.
 - **One `<h1>` per page**, and a `.skip-link` before the header on every page.
+- **Escape bare ampersands** in copy (`&amp;`). Several module names contain one
+  ("Departments &amp; Tools", "Logistics &amp; Fleet") and a raw `&` is invalid HTML.
 - **No third-party scripts, trackers or cookies.** The only external request is the Inter webfont.
 - **Claims must be true.** No invented customer logos, testimonials, certifications or metrics —
   the numbers in the stat band come from the actual module and tool count.

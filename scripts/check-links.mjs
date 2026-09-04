@@ -5,7 +5,20 @@ import fs from 'node:fs';
 import path from 'node:path';
 
 const ROOT = 'public';
-const pages = fs.readdirSync(ROOT).filter((f) => f.endsWith('.html'));
+
+// Pages live at the top level and one directory down (public/modules/*.html),
+// so the walk has to recurse. Clean URLs mean `/modules/hr` maps to
+// `public/modules/hr.html`, which the resolver below already handles.
+const pagesIn = (dir) =>
+  fs.readdirSync(dir, { withFileTypes: true }).flatMap((e) =>
+    e.isDirectory()
+      ? pagesIn(path.join(dir, e.name))
+      : e.name.endsWith('.html')
+        ? [path.relative(ROOT, path.join(dir, e.name))]
+        : []
+  );
+
+const pages = pagesIn(ROOT);
 
 const idsOf = (html) => new Set([...html.matchAll(/\bid="([^"]+)"/g)].map((m) => m[1]));
 const cache = new Map();

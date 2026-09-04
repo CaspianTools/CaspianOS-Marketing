@@ -15,7 +15,20 @@ Every call to action here links to `https://app.caspianos.io`.
 ├── .firebaserc             Pins deploys to the `caspianos` Firebase project
 ├── public/                 Everything served
 │   ├── index.html          Home
-│   ├── modules.html        Module directory (anchors: #hr, #hseq, … #admin)
+│   ├── modules.html        Module directory — a card per module, linking to its page
+│   ├── modules/            One landing page per module (12 pages)
+│   │   ├── hr.html         /modules/hr  · Human Resources
+│   │   ├── hseq.html       /modules/hseq
+│   │   ├── business.html   /modules/business
+│   │   ├── efficiency.html /modules/efficiency
+│   │   ├── procurement.html
+│   │   ├── manufacturing.html
+│   │   ├── crm.html
+│   │   ├── inventory.html
+│   │   ├── logistics.html  Vehicles, journeys and inter-site transfers
+│   │   ├── maintenance.html
+│   │   ├── finance.html
+│   │   └── administration.html   The configuration story; included with every plan
 │   ├── industries.html     Industry positioning
 │   ├── security.html       Security & access control
 │   ├── pricing.html        Plans, comparison table, pricing FAQ
@@ -46,7 +59,12 @@ There is no bundler, framework, or npm dependency. Edit the HTML and CSS directl
 - **`DESIGN.md` is the single source of truth** for tokens, components and layout rules. Keep it in
   sync with `public/assets/css/site.css`; do not scatter design conventions elsewhere.
 - **Clean URLs.** Hosting serves `/modules`, not `/modules.html` — link without the extension.
-  `check-links.mjs` enforces that every such link resolves.
+  The same applies one level down: `/modules/hr` is served from `public/modules/hr.html`.
+  `check-links.mjs` enforces that every such link resolves, and both check scripts walk
+  subdirectories, so the module pages are validated like any other page.
+- **One page per module.** `/modules` is a directory of cards; each card links to a full landing
+  page under `/modules/<slug>`. The old in-page anchors (`/modules#hr`, `/modules#fleet`) still
+  resolve, because the hub cards keep those ids. Fleet is presented as part of **Logistics**.
 - **The header and footer are duplicated in every page.** There is no template engine on purpose.
   Change the nav or footer in *all* pages, and keep `aria-current="page"` on the current page's link.
 - **JavaScript is optional.** Every page must render, read and navigate with JS disabled.
@@ -55,6 +73,9 @@ There is no bundler, framework, or npm dependency. Edit the HTML and CSS directl
   runs (`.reveal`) must have a `<noscript>` override in the page head.
 - **No third-party scripts, trackers or cookies.** The only external request is the Inter webfont.
 - **Claims must be true.** No invented customer logos, testimonials, certifications or metrics.
+- **CaspianOS is a CaspianTools product.** The footer of every page carries the credit and links to
+  `caspiantools.com`; `/about` explains the studio; `/privacy` and `/terms` name CaspianTools,
+  Bursa, Türkiye as the entity. Keep those consistent if any of it changes.
 
 ## Local preview
 
@@ -92,7 +113,7 @@ custom domain), not from this repo.
 
 ## Before launch
 
-`public/privacy.html` and `public/terms.html` carry `[Legal entity name]`, `[registered address]`
-and `[jurisdiction]` placeholders and have not been reviewed by counsel. The pricing on
-`public/pricing.html` is a placeholder, not a commercial decision. Both are tracked in
-[future.md](future.md).
+`public/privacy.html` and `public/terms.html` now name **CaspianTools, Bursa, Türkiye** and Turkish
+governing law, but they still lack a full registered address and a company registration number, and
+they have not been reviewed by counsel. The pricing on `public/pricing.html` is a placeholder, not a
+commercial decision. Both are tracked in [future.md](future.md).
