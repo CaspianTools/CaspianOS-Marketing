@@ -52,13 +52,14 @@ public site, and the site ships with no build step at all.
   the app's controls.
 - **Dark sections** (`.dark-section`) sit on `--ink` with a radial indigo glow and a masked grid
   overlay; cards inside them are `.dark-card`, never `.card`.
+- **The header** (`.nav`) is a three-track grid (`1fr auto 1fr`): brand left, `.nav-links`
+  centred, `.nav-actions` right. Below 980px the middle track is empty and collapses, leaving the
+  brand and the menu button at the edges. The footer brand column holds the logo alone — no
+  tagline, no credit paragraph — so `.footer-grid` is five equal columns.
 - **Breadcrumbs** (`.breadcrumb`) sit above the `<h1>` on the per-module pages only, centred to
   match the hero. Links are indigo; the chevron is `--slate-300`.
 - **Cross-module links inside a dark section** use `.link-arrow`, which is re-coloured to `#c7d2fe`
   under `.dark-section` so it stays legible on `--ink`.
-- **The footer credit** (`.footer-by`) is the "Built by CaspianTools" line in the footer brand
-  column. It sits inside `.footer-brand`, so it inherits that column's muted colour and only
-  overrides the link.
 - **Icons** are inline `<svg>` with `stroke-width="2"` in the Lucide idiom (the app uses the real
   `lucide-react` package; this site has no dependencies, so the paths are inlined). Icons in a
   tinted square use `.icon-tile` with a tint modifier (`.t-emerald`, `.t-cyan`, `.t-violet`,
