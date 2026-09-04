@@ -4,6 +4,35 @@ All notable changes to the CaspianOS marketing site are documented in this file.
 
 ## [Unreleased]
 
+### Fixed
+- **Returning visitors were being served a year-old stylesheet.** `firebase.json` caches
+  `/assets/**` as `max-age=31536000, immutable`, and `site.css` never changes filename — so any
+  browser that had visited before kept the pre-`/modules` CSS and rendered the new pages against
+  it. The most visible symptom was the breadcrumb separator blowing up to a full-width chevron,
+  because `.breadcrumb svg` did not exist in the cached copy. Every page now links
+  `site.css` and `site.js` with a `?v=` version, and `scripts/check-assets.mjs` fails the build
+  when pages disagree on it. Documented in `README.md`, `DESIGN.md` and `CLAUDE.md`.
+- **`check-links.mjs` now strips query strings** before resolving a path, so a versioned asset
+  URL is checked against the file on disk.
+
+### Added
+- **Motion and elevation across every page** (§20 of `site.css`):
+  - Resting shadow plus a hover lift on `.card`, `.panel`, `.industry-card`, `.price-card`,
+    `.stat` and `.flow-step` — `translateY(-3px)` to `--shadow-md`, with `.card-interactive` and
+    the featured price card going to `-5px` and `--shadow-lg`.
+  - Icon tiles nudge and scale when their card is hovered; buttons press on `:active`; the
+    primary button deepens its brand glow; the app mock deepens its shadow.
+  - A pure-CSS hero entrance (`caspian-rise`, staggered 0.02s–0.31s) that runs with JavaScript
+    disabled, and a slide-in for the FAQ answer.
+  - Staggered `.reveal` for grid siblings, 0.06s apart, capped from the seventh card.
+  - `prefers-reduced-motion` now zeroes animation and transition *delays* as well as durations —
+    zeroing only the duration left a staggered card blank for a third of a second.
+- **`.reveal` on the cards that were missing it** across 18 pages, so the entrance animation is
+  consistent rather than applying to whichever cards happened to be marked up first.
+- **`scripts/check-assets.mjs`**, wired into the CI workflow alongside the HTML and link checks.
+
+## Module pages and the CaspianTools rebrand
+
 ### Added
 - **A landing page for every module** — twelve pages under `/modules/`: `hr`, `hseq`, `business`,
   `efficiency`, `procurement`, `manufacturing`, `crm`, `inventory`, `logistics`, `maintenance`,

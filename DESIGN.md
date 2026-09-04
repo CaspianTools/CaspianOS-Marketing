@@ -82,6 +82,28 @@ alternate white / soft / dark so no two adjacent sections share one.
   There is no generator in this repository, and there should not be one — that is the same reason
   the header and footer are duplicated rather than templated.
 
+### Motion & elevation
+
+Restraint is the rule: nothing moves more than a few pixels, and nothing animates for longer than
+about 0.6s. All of it lives in §20 of `site.css`.
+
+- **Every surface has a resting shadow and a hover lift.** `.card`, `.panel`, `.industry-card`,
+  `.price-card`, `.stat` and `.flow-step` transition `transform`, `box-shadow` and `border-color`.
+  The default lift is `translateY(-3px)` to `--shadow-md`; `.card-interactive` and the featured
+  price card go further, to `-5px` and `--shadow-lg`.
+- **Icon tiles answer their card** — a card hover nudges its `.icon-tile` up 2px and scales it to
+  1.06. The tile itself is never the hover target.
+- **Buttons press.** `-1px` on hover, back to `0` on `:active`, and `.btn-primary` deepens its
+  brand glow.
+- **Entrance is two mechanisms, not one.** The hero animates with pure CSS keyframes
+  (`caspian-rise`) on `.hero .container > *`, staggered 0.02s–0.31s, so it runs with JavaScript
+  disabled. Everything below the fold uses `.reveal`, which needs JS and therefore needs the
+  `<noscript>` override in the page head.
+- **Grid siblings stagger.** `.grid > .reveal:nth-child(n)` adds 0.06s per card, capped at 0.36s
+  from the seventh onward so a twelve-card grid does not crawl.
+- **`prefers-reduced-motion` zeroes durations *and* delays.** Zeroing only the duration leaves a
+  staggered card waiting a third of a second before appearing instantly, which reads as a bug.
+
 ### Rules
 
 - **JavaScript is an enhancement, never a requirement.** Every page must render, read and navigate
@@ -94,6 +116,9 @@ alternate white / soft / dark so no two adjacent sections share one.
 - **Wide content scrolls inside its own container** (`.table-scroll`); the page body never scrolls
   horizontally.
 - **One `<h1>` per page**, and a `.skip-link` before the header on every page.
+- **Bump the asset version when you edit this stylesheet.** `site.css` is served immutable for a
+  year, so every page links it as `?v=<date>` and all pages must agree. `check-assets.mjs`
+  enforces it; forgetting means returning visitors render new HTML against old CSS.
 - **Escape bare ampersands** in copy (`&amp;`). Several module names contain one
   ("Departments &amp; Tools", "Logistics &amp; Fleet") and a raw `&` is invalid HTML.
 - **No third-party scripts, trackers or cookies.** The only external request is the Inter webfont.
