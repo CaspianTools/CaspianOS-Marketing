@@ -45,7 +45,8 @@ Every call to action here links to `https://app.caspianos.io`.
 │       └── img/            logo-mark.svg · favicon.svg · og-image.svg
 ├── scripts/
 │   ├── check-html.mjs      Fails on unbalanced tags
-│   └── check-links.mjs     Fails on broken internal links and anchors
+│   ├── check-links.mjs     Fails on broken internal links and anchors
+│   └── check-assets.mjs    Fails when pages disagree on the ?v= asset version
 └── DESIGN.md               Single source of truth for the design system
 ```
 
@@ -65,6 +66,11 @@ There is no bundler, framework, or npm dependency. Edit the HTML and CSS directl
 - **One page per module.** `/modules` is a directory of cards; each card links to a full landing
   page under `/modules/<slug>`. The old in-page anchors (`/modules#hr`, `/modules#fleet`) still
   resolve, because the hub cards keep those ids. Fleet is presented as part of **Logistics**.
+- **Assets are versioned, because they are cached for a year.** Hosting serves `/assets/**` with
+  `max-age=31536000, immutable`, so every page links the stylesheet and script as
+  `?v=<date>`. Edit `site.css` or `site.js` and you must bump that version in *every* page —
+  otherwise returning visitors keep the old stylesheet and the new HTML renders unstyled.
+  `check-assets.mjs` fails the build when pages disagree.
 - **The header and footer are duplicated in every page.** There is no template engine on purpose.
   Change the nav or footer in *all* pages, and keep `aria-current="page"` on the current page's link.
 - **JavaScript is optional.** Every page must render, read and navigate with JS disabled.
@@ -91,6 +97,7 @@ Run the checks the same way CI does:
 ```bash
 node scripts/check-html.mjs
 node scripts/check-links.mjs
+node scripts/check-assets.mjs
 ```
 
 ## Deploy

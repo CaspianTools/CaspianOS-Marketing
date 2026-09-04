@@ -1255,7 +1255,90 @@ button { font: inherit; cursor: pointer; }
 .dark-section .link-arrow:hover { color: #fff; }
 
 /* --------------------------------------------------------------------------
-   20. Utilities
+   20. Motion & elevation
+   Resting shadows, hover lift and entrance animation. Everything here is CSS:
+   the only JavaScript involved anywhere is the `.reveal` visibility class, so
+   a page with JS disabled still gets the hero entrance and every hover state.
+   The `prefers-reduced-motion` bypass at the end of this file collapses all of it.
+   -------------------------------------------------------------------------- */
+
+/* Surfaces lift on hover. .card already carries --shadow-sm at rest; these add
+   the movement and the deeper shadow, and .card-interactive lifts further. */
+.card,
+.panel,
+.industry-card,
+.price-card,
+.stat,
+.flow-step,
+.mock {
+  transition: transform .22s cubic-bezier(.22, 1, .36, 1),
+              box-shadow .22s ease,
+              border-color .22s ease;
+}
+.card:hover,
+.panel:hover,
+.industry-card:hover,
+.price-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--indigo-200);
+}
+.card-interactive:hover,
+.price-card.featured:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+.stat:hover { transform: translateY(-2px); box-shadow: var(--shadow-sm); }
+.flow-step:hover { transform: translateY(-2px); box-shadow: var(--shadow-sm); }
+.mock:hover { box-shadow: 0 32px 64px -20px rgba(15, 23, 42, .30), 0 12px 24px -14px rgba(15, 23, 42, .14); }
+
+/* Panels keep their own border colour on hover — they frame data, not links. */
+.panel:hover { border-color: var(--border-strong); }
+
+/* Icon tiles answer their card. */
+.icon-tile { transition: transform .25s cubic-bezier(.22, 1, .36, 1); }
+.card:hover .icon-tile,
+.dark-card:hover .icon-tile,
+.feature-item:hover .icon-tile,
+.industry-card:hover .icon-tile { transform: translateY(-2px) scale(1.06); }
+
+/* Buttons: press-and-release, and a deeper glow under the primary. */
+.btn { transition: background .16s ease, border-color .16s ease, color .16s ease,
+                   transform .16s cubic-bezier(.22, 1, .36, 1), box-shadow .16s ease; }
+.btn:hover  { transform: translateY(-1px); }
+.btn:active { transform: translateY(0); }
+.btn-primary:hover { box-shadow: 0 14px 30px -10px rgba(79, 70, 229, .62); }
+
+/* Accordion: the answer slides rather than snapping. */
+.faq details { transition: border-color .18s ease, box-shadow .18s ease; }
+.faq details:hover { border-color: var(--indigo-200); }
+.faq details[open] .faq-body { animation: caspian-slide .28s cubic-bezier(.22, 1, .36, 1) both; }
+
+/* Staggered reveal: siblings in a grid arrive one after another rather than
+   as a single block. Capped at six so a twelve-card grid never crawls. */
+.grid > .reveal:nth-child(2),
+.price-grid > .reveal:nth-child(2) { transition-delay: .06s; }
+.grid > .reveal:nth-child(3),
+.price-grid > .reveal:nth-child(3) { transition-delay: .12s; }
+.grid > .reveal:nth-child(4) { transition-delay: .18s; }
+.grid > .reveal:nth-child(5) { transition-delay: .24s; }
+.grid > .reveal:nth-child(6) { transition-delay: .30s; }
+.grid > .reveal:nth-child(n + 7) { transition-delay: .36s; }
+
+/* Hero entrance — pure CSS, so it runs with JavaScript disabled. */
+.hero .container > * { animation: caspian-rise .62s cubic-bezier(.22, 1, .36, 1) both; }
+.hero .breadcrumb { animation-delay: .02s; }
+.hero .eyebrow    { animation-delay: .07s; }
+.hero h1          { animation-delay: .13s; }
+.hero .hero-sub   { animation-delay: .19s; }
+.hero .hero-cta   { animation-delay: .25s; }
+.hero .hero-note  { animation-delay: .31s; }
+
+@keyframes caspian-rise  { from { opacity: 0; transform: translateY(14px); } }
+@keyframes caspian-slide { from { opacity: 0; transform: translateY(-6px); } }
+
+/* --------------------------------------------------------------------------
+   21. Utilities
    -------------------------------------------------------------------------- */
 .text-center { text-align: center; }
 .mt-0  { margin-top: 0; }
@@ -1310,6 +1393,10 @@ button { font: inherit; cursor: pointer; }
   *, *::before, *::after {
     animation-duration: .001ms !important;
     transition-duration: .001ms !important;
+    /* Delays too, or the staggered reveal still waits its turn before
+       appearing instantly — a third of a second of blank card. */
+    animation-delay: 0ms !important;
+    transition-delay: 0ms !important;
   }
   .reveal { opacity: 1; transform: none; }
 }

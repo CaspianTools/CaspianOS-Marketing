@@ -46,15 +46,31 @@ the highest-priority thing in the session.
 
 ## Before you push
 
-There is no bundler, so these two scripts are the entire build gate. Run both — CI runs exactly
+There is no bundler, so these three scripts are the entire build gate. Run all of them — CI runs exactly
 the same commands:
 
 ```bash
 node scripts/check-html.mjs     # unbalanced or mismatched tags
 node scripts/check-links.mjs    # internal links and #anchors that do not resolve
+node scripts/check-assets.mjs   # every page links the same ?v= asset version
 ```
 
-Both walk `public/` recursively, so pages under `public/modules/` are checked like any other.
+All three walk `public/` recursively, so pages under `public/modules/` are checked like any other.
+
+**If you edit `site.css` or `site.js`, bump the version.** Hosting serves `/assets/**` with
+`max-age=31536000, immutable`, so a returning visitor keeps the old stylesheet for a year unless
+the URL changes. Every page links them as `?v=<date>`; change the file, change the version in
+*every* page:
+
+```bash
+sed -i 's|site\.css?v=[0-9]*|site.css?v=YYYYMMDD|g; s|site\.js?v=[0-9]*|site.js?v=YYYYMMDD|g' \
+  public/*.html public/modules/*.html
+node scripts/check-assets.mjs
+```
+
+Shipping new HTML against a cached old stylesheet is what breaks the site for everyone who has
+visited before — and it looks fine to anyone testing in a fresh browser, so nothing catches it
+except this rule.
 
 To see what production actually serves — clean URLs are a hosting feature, so a plain static
 server will 404 on `/modules`:

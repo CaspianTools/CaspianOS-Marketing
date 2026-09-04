@@ -40,7 +40,10 @@ for (const page of pages) {
     const raw = m[1];
     if (/^(https?:|mailto:|tel:|data:)/.test(raw)) continue;
 
-    const [target, hash] = raw.split('#');
+    // Strip the fragment, then the `?v=` cache-busting query: the version is
+    // part of the URL a browser requests, but the file on disk has no query.
+    const [beforeHash, hash] = raw.split('#');
+    const target = beforeHash.split('?')[0];
 
     // Same-page anchor
     if (target === '' && hash) {
