@@ -10,9 +10,10 @@ The public marketing site for **caspianos.io** — hand-written static HTML and 
 no dependencies, deployed to Firebase Hosting in the `caspianos` project. The CaspianOS
 application lives in a separate repository and deploys separately to `app.caspianos.io`.
 
-CaspianOS is a **CaspianTools** product (a software studio in Bursa, Türkiye). Keep the footer
-credit, the `/about` studio section and the entity named in `/privacy` and `/terms` consistent if
-any of that changes.
+CaspianOS is a **CaspianTools** product (a software studio in Bursa, Türkiye). The attribution
+lives in the footer's copyright line, the `/about` studio section and the entity named in
+`/privacy` and `/terms` — keep those consistent if any of it changes. There is deliberately no
+credit paragraph under the footer logo.
 
 ## Ship rule — run this on autopilot
 
@@ -57,13 +58,14 @@ node scripts/check-assets.mjs   # every page links the same ?v= asset version
 
 All three walk `public/` recursively, so pages under `public/modules/` are checked like any other.
 
-**If you edit `site.css` or `site.js`, bump the version.** Hosting serves `/assets/**` with
+**If you edit `site.css` or `site.js`, bump the version.** Versions are `YYYYMMDD`, with a
+`.N` suffix for a second change on the same day (`20260904.2`). Hosting serves `/assets/**` with
 `max-age=31536000, immutable`, so a returning visitor keeps the old stylesheet for a year unless
 the URL changes. Every page links them as `?v=<date>`; change the file, change the version in
 *every* page:
 
 ```bash
-sed -i 's|site\.css?v=[0-9]*|site.css?v=YYYYMMDD|g; s|site\.js?v=[0-9]*|site.js?v=YYYYMMDD|g' \
+sed -i 's|site\.css?v=[0-9.]*|site.css?v=NEW|g; s|site\.js?v=[0-9.]*|site.js?v=NEW|g' \
   public/*.html public/modules/*.html
 node scripts/check-assets.mjs
 ```

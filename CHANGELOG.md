@@ -4,6 +4,23 @@ All notable changes to the CaspianOS marketing site are documented in this file.
 
 ## [Unreleased]
 
+### Changed
+- **Removed the Company link from the header nav**, on all 22 pages and in the mobile drawer, so
+  the two stay consistent. `/about` is still reachable from the footer's Company column.
+- **Header links are centred.** `.nav` is now a three-track grid (`1fr auto 1fr`) with each item
+  naming its column: brand left, links centre, actions right. The explicit `grid-column` matters —
+  below 980px `.nav-links` is `display: none` and stops being a grid item, so without it the
+  actions slid into the middle track instead of staying at the right edge.
+- **Removed the tagline and the CaspianTools credit paragraph from under the footer logo.** The
+  brand column now holds the logo alone, so `.footer-grid` is five equal columns rather than
+  `1.6fr repeat(4, 1fr)`, and the dead `.footer-brand p` and `.footer-by` rules are gone.
+  Attribution remains in the footer copyright line, on `/about` and in the legal pages.
+- **Asset version bumped to `20260904.2`** for the stylesheet change. Versions now take an optional
+  `.N` suffix for a second change on the same day; the documented `sed` in `CLAUDE.md`,
+  `README.md` and `DESIGN.md` was widened from `[0-9]*` to `[0-9.]*` so it cannot corrupt one.
+
+## Stale-CSS fix, motion and elevation
+
 ### Fixed
 - **Returning visitors were being served a year-old stylesheet.** `firebase.json` caches
   `/assets/**` as `max-age=31536000, immutable`, and `site.css` never changes filename — so any
