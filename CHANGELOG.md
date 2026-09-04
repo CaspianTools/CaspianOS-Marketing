@@ -5,6 +5,39 @@ All notable changes to the CaspianOS marketing site are documented in this file.
 ## [Unreleased]
 
 ### Added
+- **A landing page for every module** — twelve pages under `/modules/`: `hr`, `hseq`, `business`,
+  `efficiency`, `procurement`, `manufacturing`, `crm`, `inventory`, `logistics`, `maintenance`,
+  `finance` and `administration`. Each one runs the same section order — hero, an app mock built
+  from the existing `.mock-*` components, the problem, what it does, a process flow, every tool
+  with a one-line description, how it connects to three other modules, who uses it, what an
+  administrator can configure, an FAQ and a CTA band. Copy is written for energy and oil & gas
+  contractors first.
+- **`.breadcrumb`, `.footer-by` and a dark-section `.link-arrow` colour** in `site.css`, documented
+  in `DESIGN.md`.
+
+### Changed
+- **`/modules` is now a hub**, not a long-form directory: a card per module linking to its own
+  page. The previous in-page anchors (`#hr` … `#admin`, including `#fleet`) are kept on the cards,
+  so existing links still resolve.
+- **Fleet is presented as Logistics.** `/modules/logistics` covers vehicles, journey management and
+  the inter-site transfer orders it shares with Inventory; vehicle servicing stays in Maintenance,
+  because a vehicle is an asset. `index.html` and `pricing.html` updated to match.
+- **Administration is framed as the customization story** rather than a list of settings — module
+  and tool switches, roles built from individual permissions, and the limits stated honestly.
+- **Every module card on the home page now links to its page**, and the remaining "New" badges were
+  dropped: every tool in the app's navigation is presented as available.
+- **The site is branded as a CaspianTools product.** Footer credit and a `caspiantools.com` link on
+  every page, a "CaspianOS is built by CaspianTools" section on `/about` (a software studio in
+  Bursa, Türkiye), and `privacy.html` / `terms.html` now name CaspianTools, Bursa, Türkiye as the
+  entity with Turkish governing law — replacing the `[Legal entity name]`, `[registered address]`
+  and `[jurisdiction]` placeholders.
+- **`scripts/check-html.mjs` and `scripts/check-links.mjs` walk subdirectories**, so the twelve new
+  pages are validated in CI like every other page.
+- **`sitemap.xml`** lists the twelve module pages.
+
+## Initial release
+
+### Added
 - **The site itself** — ten static pages served from `public/`: home, module directory
   (`/modules`, anchored per department), industries, security & access control, pricing
   (plans + comparison table + FAQ), company, contact / book-a-demo, privacy policy, terms of

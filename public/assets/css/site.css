@@ -1230,6 +1230,30 @@ button { font: inherit; cursor: pointer; }
 .footer-bottom a { color: #74839c; }
 .footer-bottom a:hover { color: #fff; }
 
+/* Breadcrumb — used by the per-module pages under /modules/ */
+.breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 18px;
+  font-size: .8125rem;
+  color: var(--text-muted);
+}
+.breadcrumb a { color: var(--indigo-600); font-weight: 600; }
+.breadcrumb a:hover { text-decoration: underline; }
+.breadcrumb svg { width: 13px; height: 13px; color: var(--slate-300); flex: none; }
+
+/* Developer credit in the footer brand column */
+.footer-by { margin-top: 12px; }
+.footer-by a { color: #c7d2fe; font-weight: 600; }
+.footer-by a:hover { color: #fff; }
+
+/* Cross-module links inside a dark section */
+.dark-section .link-arrow { color: #c7d2fe; }
+.dark-section .link-arrow:hover { color: #fff; }
+
 /* --------------------------------------------------------------------------
    20. Utilities
    -------------------------------------------------------------------------- */

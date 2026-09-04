@@ -5,6 +5,17 @@ import fs from 'node:fs';
 import path from 'node:path';
 
 const ROOT = 'public';
+
+// Pages live at the top level and one directory down (public/modules/*.html),
+// so the walk has to recurse.
+const pagesIn = (dir) =>
+  fs.readdirSync(dir, { withFileTypes: true }).flatMap((e) =>
+    e.isDirectory()
+      ? pagesIn(path.join(dir, e.name))
+      : e.name.endsWith('.html')
+        ? [path.relative(ROOT, path.join(dir, e.name))]
+        : []
+  );
 const VOID = new Set([
   'area', 'base', 'br', 'col', 'embed', 'hr', 'img', 'input', 'link', 'meta',
   'param', 'source', 'track', 'wbr',
@@ -14,7 +25,7 @@ const VOID = new Set([
 
 let problems = 0;
 
-for (const file of fs.readdirSync(ROOT).filter((f) => f.endsWith('.html'))) {
+for (const file of pagesIn(ROOT)) {
   const html = fs.readFileSync(path.join(ROOT, file), 'utf8');
   const stack = [];
   const re = /<(\/?)([a-zA-Z][a-zA-Z0-9-]*)([^>]*?)(\/?)>/g;
