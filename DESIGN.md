@@ -3,10 +3,10 @@
 Source of truth: `public/assets/css/site.css`. See also `README.md` for the file layout and
 deploy notes.
 
-This site is a **separate visual system from the CaspianOS application**. It shares the brand —
+This site is a **separate visual system from the Caspian ERP application**. It shares the brand —
 the same indigo primary, the same slate neutrals, the same lightning mark — but nothing else: no
 Tailwind, no React, no shared classes, no shared components. Do not import application patterns
-here, and do not copy marketing patterns (the framed hero, inset dark sections, scroll reveal,
+here, and do not copy marketing patterns (the paper hero, inset dark sections, scroll reveal,
 48px pill buttons) into the app. The app keeps its own `DESIGN.md` in
 [CaspianOS-App](https://github.com/CaspianTools/CaspianOS-App).
 
@@ -25,7 +25,7 @@ public site, and the site ships with no build step at all.
 Editorial and flat. Big, tight, left-aligned headlines; every control is a pill; every surface is
 a large-radius card that rests without a shadow and lifts on hover; dark blocks are **inset from the
 viewport edge and rounded** rather than full-bleed bands; soft sections are warm cream rather than
-cool grey; the home hero sits inside a thick ink **frame** like a device. Colour is used sparingly —
+cool grey; the home hero is a flat block on a paper-white ground that the header shares. Colour is used sparingly —
 solid indigo for the primary action and the highlighted words, near-black for the dark blocks, and
 the status tints only where they mean something. There are no gradients on text or buttons.
 
@@ -36,12 +36,12 @@ the status tints only where they mean something. There are no gradients on text 
   nav pill, the eyebrow tile, the highlighted words in a hero `<h1>` (`.grad`, kept as a class name
   but now a flat colour) and the "Most popular" pricing pill. The logo mark keeps its gradient.
 - **Neutrals:** the same slate ramp as the app (`--slate-50` … `--slate-900`), plus `--ink #0e0f13`
-  for dark sections, the footer and the device frames, `--ink-2 #17181e` for cards on ink,
-  `--cream #f7f2ec` for soft sections and `--paper #f9f8fb` for the ground inside the hero frame.
+  for dark sections, the footer and the app-mock frame, `--ink-2 #17181e` for cards on ink,
+  `--cream #f7f2ec` for soft sections and `--paper #f9f8fb` for the home hero's ground.
 - **Accents (status/category tints only):** `--emerald-500`, `--amber-500`, `--rose-500`, `--teal-500`.
   The collage badge in a split section is the one place emerald is used as a fill.
 - **Radii:** `--r-sm 10` / `--r-md 14` / `--r-lg 20` / `--r-xl 28` / `--r-2xl 36` / `--r-pill`. Cards,
-  tiles and panels are `--r-xl`; dark sections and the footer `--r-2xl`; the hero frame 44px; buttons,
+  tiles and panels are `--r-xl`; dark sections and the footer `--r-2xl`; buttons,
   chips, nav links and the filter tabs are pills.
 - **Shadows:** `--shadow-xs/sm/md/lg` plus `--shadow-brand` (the indigo glow under primary buttons).
   Surfaces rest flat and take `--shadow-md` on hover; only the mock and the collage overlays rest with
@@ -75,12 +75,14 @@ the status tints only where they mean something. There are no gradients on text 
   and flat `--ink` — no glow, no grid. Cards inside them are `.dark-card`, `.tile` (module tile
   with a corner arrow that turns diagonal on hover) or `.role-card`, never `.card`. `.dark-feature`
   is the wide two-column banner card at the end of a dark section.
-- **The header** is a **floating pill**: `.site-header` is sticky with a 12px top offset and no
-  background of its own; `.nav` inside it is the white, bordered, fully rounded bar. It is a
-  three-track grid (`1fr auto 1fr`): brand left, `.nav-links` centred, `.nav-actions` right. The
-  current page's link is a filled indigo pill (`aria-current="page"`). Below 900px the middle track
-  is empty and collapses, leaving the brand and the round menu button at the edges; the mobile
-  drawer is a rounded card that drops out of the pill. There is no announcement bar.
+- **The header** is **flat**: `.site-header` is sticky at the top with a transparent background,
+  no border and no shadow, so it sits on whatever ground the page starts with — the `--paper` hero
+  on the home page, white elsewhere. Once scrolled (`.is-stuck`) it takes a translucent white
+  ground and a hairline so it stays legible over dark sections. `.nav` is a three-track grid
+  (`1fr auto 1fr`): brand left, `.nav-links` centred, `.nav-actions` right. The current page's link
+  is a filled indigo pill (`aria-current="page"`). Below 900px the middle track is empty and
+  collapses, leaving the brand and the round menu button at the edges; the mobile drawer is a
+  rounded card below the bar. There is no announcement bar.
 - **The footer** (`.site-footer`) is a dark rounded card, inset like a dark section, and it carries
   the site's closing call to action: `.footer-hero` (kicker, oversized `<h2>`, paragraph and two
   buttons) above the five-column `.footer-grid` and the `.footer-bottom` bar. Because the footer
@@ -99,9 +101,10 @@ the status tints only where they mean something. There are no gradients on text 
 
 The home page follows a fixed rhythm, and every section is numbered in its eyebrow:
 
-1. **Framed hero** — `.hero-frame` (10px ink border, 44px radius, `--paper` ground) holding a
-   two-column `.hero-grid`: copy on the left, the `.bento` on the right, and the `.ticker` of module
-   names along the bottom edge. The bento is three true things: `.bento-stat` (module count and a
+1. **Paper hero** — `.hero-home` paints the `--paper` ground full-bleed and pulls it up behind the
+   transparent header (negative top margin equal to `--nav-h`), so header and hero read as one
+   surface. Inside, `.hero-frame` holds a two-column `.hero-grid`: copy on the left, the `.bento`
+   on the right, and the `.ticker` of module names along the bottom edge, under a hairline. The bento is three true things: `.bento-stat` (module count and a
    bar per module's tool count), `.bento-panel` (a permits list, `role="img"`), and `.bento-side`
    (a `.bento-note` and the `.bento-pill` link). The ticker is pure CSS (`caspian-ticker`), its
    second list is `aria-hidden`, and it stops and wraps under reduced motion.
@@ -122,8 +125,8 @@ argument: hero → app mock → the problem → what it does → process flow �
 connects (dark) → who uses it → what you can configure → FAQ → CTA band (dark). Backgrounds
 alternate white / soft / dark so no two adjacent sections share one.
 
-- The **app mock** (`.mock-*`) sits in an 8px ink frame with a 36px radius, echoing the home
-  hero's frame, with the module's own sidebar and six `.mock-card`s. It is `role="img"` with a
+- The **app mock** (`.mock-*`) sits in an 8px ink frame with a 36px radius — the one device
+  frame on the site — with the module's own sidebar and six `.mock-card`s. It is `role="img"` with a
   descriptive `aria-label`, and its interior is `aria-hidden`.
 - The **configure** section pairs a `.check-list` with a `.panel` + `.table-mock` settings table.
   Every page ends that section with a link to `/modules/administration`.
@@ -147,8 +150,8 @@ about 0.6s. All of it lives in §20 of `site.css`.
 - **Buttons press.** `-1px` on hover, back to `0` on `:active`, and `.btn-primary` deepens its
   brand glow.
 - **Entrance is two mechanisms, not one.** The hero animates with pure CSS keyframes
-  (`caspian-rise`) on `.hero .container > *` (the copy column's children on the home page, where
-  the frame itself stays put), staggered 0.02s–0.31s, so it runs with JavaScript disabled. Everything below the fold uses `.reveal`, which needs JS and therefore needs the
+  (`caspian-rise`) on `.hero .container > *` (the copy column's children on the home page),
+  staggered 0.02s–0.31s, so it runs with JavaScript disabled. Everything below the fold uses `.reveal`, which needs JS and therefore needs the
   `<noscript>` override in the page head.
 - **Grid siblings stagger.** `.grid > .reveal:nth-child(n)` adds 0.06s per card, capped at 0.36s
   from the seventh onward so a twelve-card grid does not crawl.

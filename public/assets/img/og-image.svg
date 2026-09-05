@@ -17,10 +17,10 @@
   <rect width="1200" height="630" fill="url(#glow)"/>
   <rect x="80" y="80" width="96" height="96" rx="27" fill="url(#mark)"/>
   <path d="M133.7 99.8 108.8 132.2a2.1 2.1 0 0 0 1.65 3.39h13.08l-4.2 21.18a1.05 1.05 0 0 0 1.86.84l25.2-32.58a2.1 2.1 0 0 0-1.65-3.39h-13.2l4.02-20.94a1.05 1.05 0 0 0-1.86-.84Z" fill="#fff"/>
-  <text x="196" y="147" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="46" font-weight="700" fill="#fff">CaspianOS</text>
+  <text x="196" y="147" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="46" font-weight="700" fill="#fff">Caspian ERP</text>
   <text x="80" y="300" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="76" font-weight="800" fill="#fff" letter-spacing="-2">Run your entire organization</text>
   <text x="80" y="386" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="76" font-weight="800" fill="#A5B4FC" letter-spacing="-2">on one platform.</text>
   <text x="80" y="462" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="30" fill="#94A3B8">HR · HSEQ · Procurement · Inventory · Maintenance · Finance · CRM</text>
   <rect x="80" y="518" width="240" height="60" rx="14" fill="#4F46E5"/>
-  <text x="200" y="556" text-anchor="middle" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="24" font-weight="700" fill="#fff">caspianos.io</text>
+  <text x="200" y="556" text-anchor="middle" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="24" font-weight="700" fill="#fff">caspianerp.com</text>
 </svg>
