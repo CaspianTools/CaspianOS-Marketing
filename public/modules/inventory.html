@@ -18,14 +18,11 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
-<link rel="stylesheet" href="/assets/css/site.css?v=20260904.2">
+<link rel="stylesheet" href="/assets/css/site.css?v=20260905">
 <noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
-<div class="announce">
-  <span>Every module now has its own page &nbsp;·&nbsp; <a href="/modules">Browse the directory</a></span>
-</div>
 <header class="site-header">
   <div class="container">
     <nav class="nav" aria-label="Main">
@@ -34,14 +31,15 @@
         <span class="brand-name">Caspian<b>OS</b></span>
       </a>
       <ul class="nav-links">
-        <li><a class="nav-link" href="/modules" aria-current="page">Modules</a></li>
+        <li><a class="nav-link" aria-current="page" href="/modules">Modules</a></li>
         <li><a class="nav-link" href="/industries">Industries</a></li>
         <li><a class="nav-link" href="/security">Security</a></li>
         <li><a class="nav-link" href="/pricing">Pricing</a></li>
+        <li><a class="nav-link" href="/about">About</a></li>
       </ul>
       <div class="nav-actions">
         <a class="btn btn-ghost btn-sm" href="https://app.caspianos.io">Sign in</a>
-        <a class="btn btn-primary btn-sm" href="https://app.caspianos.io">Start free trial</a>
+        <a class="btn btn-primary btn-sm" href="https://app.caspianos.io">Start free trial <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
         <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
         </button>
@@ -49,10 +47,11 @@
     </nav>
   </div>
   <div class="mobile-menu" id="mobile-menu">
-    <a class="nav-link" href="/modules">Modules</a>
+    <a class="nav-link" aria-current="page" href="/modules">Modules</a>
     <a class="nav-link" href="/industries">Industries</a>
     <a class="nav-link" href="/security">Security</a>
     <a class="nav-link" href="/pricing">Pricing</a>
+    <a class="nav-link" href="/about">About</a>
     <a class="nav-link" href="/contact">Contact</a>
     <div class="mobile-cta">
       <a class="btn btn-secondary" href="https://app.caspianos.io">Sign in</a>
@@ -62,7 +61,7 @@
 </header>
 <main id="main">
 
-  <section class="hero" style="padding-bottom:8px">
+  <section class="hero">
     <div class="container">
       <nav class="breadcrumb" aria-label="Breadcrumb">
         <a href="/modules">Modules</a>
@@ -516,21 +515,23 @@
     </div>
   </section>
 
-  <section class="section dark-section cta-band">
-    <div class="container">
-      <h2>Load one warehouse and count it once</h2>
-      <p>Import your item list, set minimum levels, and run a cycle count session on a phone. That is the whole evaluation.</p>
-      <div class="cta-actions">
-        <a class="btn btn-onDark btn-lg" href="https://app.caspianos.io">Start free trial</a>
-        <a class="btn btn-outline-onDark btn-lg" href="/contact#demo">Book a demo</a>
-      </div>
-      <p class="cta-note">No card required · Every module included · Cancel whenever you like</p>
-    </div>
-  </section>
 
 </main>
 <footer class="site-footer">
   <div class="container">
+    <div class="footer-hero">
+      <div>
+        <p class="footer-kicker">Got a question? Want a walkthrough?</p>
+        <h2>One system for the whole operation.</h2>
+      </div>
+      <div>
+        <p>Start free, invite your team and switch on the modules you need. No installation, no servers, no procurement cycle.</p>
+        <div class="footer-actions">
+          <a class="btn btn-onDark btn-lg" href="https://app.caspianos.io">Start free trial <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+          <a class="btn btn-outline-onDark btn-lg" href="/contact#demo">Book a demo</a>
+        </div>
+      </div>
+    </div>
     <div class="footer-grid">
       <div class="footer-brand">
         <a class="brand" href="/">
@@ -586,6 +587,6 @@
     </div>
   </div>
 </footer>
-<script src="/assets/js/site.js?v=20260904.2" defer></script>
+<script src="/assets/js/site.js?v=20260905" defer></script>
 </body>
 </html>

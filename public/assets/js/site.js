@@ -3,6 +3,10 @@
 (function () {
   'use strict';
 
+  /* Marks the document so CSS can show controls that only work with JS
+     (the scroller arrows) without hiding anything from a no-JS visitor. */
+  document.documentElement.classList.add('js');
+
   /* ---------------------------------------------------------------- header */
   var header = document.querySelector('.site-header');
   if (header) {
@@ -72,6 +76,20 @@
       revealables.forEach(function (el) { io.observe(el); });
     }
   }
+
+  /* ---------------------------------------------- horizontal scrollers */
+  /* The track scrolls and snaps in pure CSS; the arrow buttons are hidden
+     until this runs, because without it they would do nothing. */
+  document.querySelectorAll('[data-scroller]').forEach(function (wrap) {
+    var track = wrap.querySelector('.scroller-track');
+    if (!track) return;
+    wrap.querySelectorAll('[data-scroll]').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var dir = btn.getAttribute('data-scroll') === 'prev' ? -1 : 1;
+        track.scrollBy({ left: dir * Math.round(track.clientWidth * 0.8), behavior: 'smooth' });
+      });
+    });
+  });
 
   /* ------------------------------------------- contact form → mail client */
   /* The site is static (Firebase Hosting, no backend), so the form composes a

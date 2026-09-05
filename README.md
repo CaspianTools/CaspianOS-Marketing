@@ -74,8 +74,8 @@ There is no bundler, framework, or npm dependency. Edit the HTML and CSS directl
 - **The header and footer are duplicated in every page.** There is no template engine on purpose.
   Change the nav or footer in *all* pages, and keep `aria-current="page"` on the current page's link.
 - **JavaScript is optional.** Every page must render, read and navigate with JS disabled.
-  `site.js` only adds the sticky-header shadow, the mobile drawer, the module filter tabs, scroll
-  reveal, the mail-composing contact form and the footer year. Anything that hides content until JS
+  `site.js` only adds the `html.js` marker, the sticky-header shadow, the mobile drawer, the module
+  filter tabs, scroll reveal, the scroller arrows, the mail-composing contact form and the footer year. Anything that hides content until JS
   runs (`.reveal`) must have a `<noscript>` override in the page head.
 - **No third-party scripts, trackers or cookies.** The only external request is the Inter webfont.
 - **Claims must be true.** No invented customer logos, testimonials, certifications or metrics.
