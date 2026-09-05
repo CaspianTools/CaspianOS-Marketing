@@ -1,4 +1,4 @@
-/* CaspianOS marketing site — progressive enhancement only.
+/* Caspian ERP marketing site — progressive enhancement only.
    Every page renders and navigates fine with JS disabled. */
 (function () {
   'use strict';
@@ -111,8 +111,8 @@
       ];
       var to = form.getAttribute('data-mail-to') || 'hello@caspianos.io';
       var subject = get('interest')
-        ? 'CaspianOS enquiry — ' + get('interest')
-        : 'CaspianOS enquiry';
+        ? 'Caspian ERP enquiry — ' + get('interest')
+        : 'Caspian ERP enquiry';
       window.location.href = 'mailto:' + to +
         '?subject=' + encodeURIComponent(subject) +
         '&body=' + encodeURIComponent(lines.join('\n'));

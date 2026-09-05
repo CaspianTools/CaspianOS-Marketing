@@ -1,8 +1,26 @@
 # Changelog
 
-All notable changes to the CaspianOS marketing site are documented in this file.
+All notable changes to the Caspian ERP marketing site are documented in this file.
 
 ## [Unreleased]
+
+### Changed
+- **Rebranded from CaspianOS to Caspian ERP.** The wordmark, every page title, the copy, the
+  Open Graph image, the sitemap and the canonical URLs now say Caspian ERP and `caspianerp.com`.
+  The application domain (`app.caspianos.io`), the mailboxes (`hello@`, `support@`, `security@`,
+  `privacy@caspianos.io`), the repository names and the `caspianos` Firebase project are
+  unchanged.
+- **Flat header.** The navigation is a transparent bar on the same ground as the hero, with no
+  pill, border or shadow at rest; once the page scrolls it takes a translucent white ground and a
+  hairline so it stays legible over dark sections.
+- **The home hero lost its ink frame.** It is a flat `--paper` block that extends up behind the
+  header, with the module ticker along its bottom edge.
+- **Redesigned every page around a framed, editorial layout** (merged as #5): pill buttons, flat
+  large-radius cards, inset rounded dark sections, warm cream soft sections, an editorial accordion,
+  a dark rounded footer carrying the closing call to action, and a rebuilt home page.
+- **Asset version bumped to `20260905.2`.**
+
+## Header and footer chrome
 
 ### Changed
 - **Removed the Company link from the header nav**, on all 22 pages and in the mobile drawer, so

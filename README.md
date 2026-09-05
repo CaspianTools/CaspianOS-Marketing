@@ -1,9 +1,9 @@
-# CaspianOS Marketing Site
+# Caspian ERP Marketing Site
 
-The public marketing site for **[caspianos.io](https://caspianos.io)** — static HTML and CSS,
+The public marketing site for **[caspianerp.com](https://caspianerp.com)** — static HTML and CSS,
 deployed to **Firebase Hosting** in the **`caspianos`** Firebase project.
 
-This repository is *only* the marketing site. The CaspianOS application lives in
+This repository is *only* the marketing site. The Caspian ERP application lives in
 [CaspianTools/CaspianOS-App](https://github.com/CaspianTools/CaspianOS-App) and is deployed
 separately to `app.caspianos.io` — different repo, different Firebase project, no shared code.
 Every call to action here links to `https://app.caspianos.io`.
@@ -79,7 +79,7 @@ There is no bundler, framework, or npm dependency. Edit the HTML and CSS directl
   runs (`.reveal`) must have a `<noscript>` override in the page head.
 - **No third-party scripts, trackers or cookies.** The only external request is the Inter webfont.
 - **Claims must be true.** No invented customer logos, testimonials, certifications or metrics.
-- **CaspianOS is a CaspianTools product.** The footer of every page carries the credit and links to
+- **Caspian ERP is a CaspianTools product.** The footer of every page carries the credit and links to
   `caspiantools.com`; `/about` explains the studio; `/privacy` and `/terms` name CaspianTools,
   Bursa, Türkiye as the entity. Keep those consistent if any of it changes.
 

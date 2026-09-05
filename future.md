@@ -58,7 +58,7 @@ nothing is captured if they abandon it. There is also no spam protection and no 
 
 **How to approach:**
 1. Add a Cloud Function (or Cloud Run service) in the `caspianos` project, rate-limited, with a
-   honeypot field and a strict CORS allowlist for `https://caspianos.io`.
+   honeypot field and a strict CORS allowlist for `https://caspianerp.com`.
 2. Point the form's `action` at it and progressively enhance with `fetch`, keeping the current
    `mailto:` path as the no-JS fallback.
 3. Store submissions somewhere the sales side actually reads — a Firestore collection plus an email
