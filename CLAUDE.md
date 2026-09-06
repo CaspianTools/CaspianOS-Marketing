@@ -8,10 +8,10 @@ editing anything visual.
 
 The public marketing site for **caspianerp.com** — hand-written static HTML and CSS, no build step,
 no dependencies, deployed to Firebase Hosting in the `caspianos` project. The Caspian ERP
-application lives in a separate repository and deploys separately to `app.caspianos.io`.
+application lives in a separate repository and deploys separately to `app.caspianerp.com`.
 
-Caspian ERP (formerly CaspianOS — the app domain `app.caspianos.io`, the `@caspianos.io` mailboxes,
-the repository names and the `caspianos` Firebase project keep the old name) is a **CaspianTools**
+Caspian ERP (formerly CaspianOS — only the repository names and the `caspianos` Firebase project
+keep the old name; `caspianos.io` is no longer ours, so never link or mail to it) is a **CaspianTools**
 product (a software studio in Bursa, Türkiye). The attribution
 lives in the footer's copyright line, the `/about` studio section and the entity named in
 `/privacy` and `/terms` — keep those consistent if any of it changes. There is deliberately no

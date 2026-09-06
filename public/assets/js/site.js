@@ -109,7 +109,7 @@
         '',
         get('message')
       ];
-      var to = form.getAttribute('data-mail-to') || 'hello@caspianos.io';
+      var to = form.getAttribute('data-mail-to') || 'hello@caspianerp.com';
       var subject = get('interest')
         ? 'Caspian ERP enquiry — ' + get('interest')
         : 'Caspian ERP enquiry';

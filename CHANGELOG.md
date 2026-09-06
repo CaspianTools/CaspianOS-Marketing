@@ -7,9 +7,12 @@ All notable changes to the Caspian ERP marketing site are documented in this fil
 ### Changed
 - **Rebranded from CaspianOS to Caspian ERP.** The wordmark, every page title, the copy, the
   Open Graph image, the sitemap and the canonical URLs now say Caspian ERP and `caspianerp.com`.
-  The application domain (`app.caspianos.io`), the mailboxes (`hello@`, `support@`, `security@`,
-  `privacy@caspianos.io`), the repository names and the `caspianos` Firebase project are
-  unchanged.
+  The repository names and the `caspianos` Firebase project are unchanged.
+- **Dropped `caspianos.io` everywhere.** The domain is no longer ours: the application now lives at
+  `app.caspianerp.com` (every sign-in, sign-up and free-trial link, and the deep links on the
+  module pages), the mailboxes are `hello@`, `support@`, `security@` and `privacy@caspianerp.com`
+  (contact page, privacy policy, terms and the contact form's `mailto:` fallback), and the deploy
+  workflow's warning names the right site.
 - **Flat header.** The navigation is a transparent bar on the same ground as the hero, with no
   pill, border or shadow at rest; once the page scrolls it takes a translucent white ground and a
   hairline so it stays legible over dark sections.

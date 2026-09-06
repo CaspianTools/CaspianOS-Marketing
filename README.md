@@ -5,8 +5,8 @@ deployed to **Firebase Hosting** in the **`caspianos`** Firebase project.
 
 This repository is *only* the marketing site. The Caspian ERP application lives in
 [CaspianTools/CaspianOS-App](https://github.com/CaspianTools/CaspianOS-App) and is deployed
-separately to `app.caspianos.io` — different repo, different Firebase project, no shared code.
-Every call to action here links to `https://app.caspianos.io`.
+separately to `app.caspianerp.com` — different repo, different Firebase project, no shared code.
+Every call to action here links to `https://app.caspianerp.com`.
 
 ## Layout
 
