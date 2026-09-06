@@ -5,6 +5,31 @@ Features that were identified, scoped, and deferred. Each entry describes *what*
 
 ---
 
+### Connect marketing, application, administration and documentation
+**Owner requirement (2026-09-06):** Connect `caspianerp.com`, `app.caspianerp.com`,
+`admin.caspianerp.com` and `docs.caspianerp.com` into a coherent user journey. The confirmed
+domain map and contact/pricing constraints are recorded in `README.md`.
+
+**How to approach:**
+1. Verify each site's navigation, app signup/login paths, documentation entry points, and
+   intended audience for the administration site.
+2. Add documentation links to marketing navigation/footer and relevant module pages, using
+   verified destinations. Retain clear application entry links.
+3. In the other repositories, add contextual documentation/help links from app and admin,
+   and marketing/application return links from docs. Decide admin link placement after
+   verifying who should use it.
+4. Verify the complete journey on desktop, mobile, and with keyboard navigation. Treat any
+   shared authentication requirement as separate work; links alone do not implement SSO.
+
+**Status:** Marketing footer links to app, docs and admin are implemented; documentation is also linked from mobile navigation and page actions. Reciprocal links in the other repositories and live destination verification remain pending.
+
+### Contact and company-location accuracy
+**Owner clarification (2026-09-06):** There is no physical office yet. Publish no real or
+invented phone numbers, telephone links, office address, map, or invitation to visit an office.
+Use email and the contact/demo flow. Geographic references are not proof of an office or a
+registered address. Review existing About and legal copy with that distinction; do not invent
+or infer company registration details.
+
 ### Full registered address and counsel review of the legal pages
 **What:** `public/privacy.html` and `public/terms.html` now name **CaspianTools, Bursa, Türkiye**
 as the entity, with Turkish governing law and the courts of Bursa. What is still missing is a full
@@ -30,25 +55,33 @@ rebrand was made, and inventing them would be worse than naming the entity and s
 
 **Estimated effort:** 0.5 day plus legal review turnaround
 
-### Confirm or replace the placeholder pricing
-**What:** `public/pricing.html` publishes Starter $12 / Growth $29 per member per month and a
+### Develop the pricing model (placeholder offers removed)
+**What:** `public/pricing.html` formerly published Starter $12 / Growth $29 per member per month and a
 module split between the tiers. These numbers and the tier contents are a plausible starting point,
 not a commercial decision.
 
 **Why it matters:** Published prices set expectations and are quoted back at you in negotiations.
 
-**Why deferred:** No pricing decision had been made when the site was built.
+**Why deferred:** No pricing decision had been made when the site was built. On 2026-09-06,
+the owner confirmed that they need help developing pricing and cannot supply prices yet.
+The current prices, tier contents and limits must not be treated as approved terms.
 
 **How to approach:**
-1. Decide the real tiers, prices, member caps and which modules each tier includes.
-2. Update the three `.price-card` blocks, the `.compare-table` rows, and the "Who counts as a
+1. Develop the offer with the owner: identify the initial buyer and use case, active users
+   versus personnel records, expected hosting/support costs, onboarding effort, and whether
+   charging per organization, active user, or package best fits the value delivered. Research
+   comparable offers and validate willingness to pay before proposing actual prices.
+2. Until that work is complete, replace provisional public prices and unconfirmed commercial
+   promises with consistent pricing-on-request messaging and a contact/demo action. This replacement is implemented in the marketing source as of 2026-09-06; deployment is separate.
+3. Once approved, update the three `.price-card` blocks, the `.compare-table` rows, and the "Who counts as a
    member?" FAQ answer — the three must agree.
-3. Check the home page FAQ and `/modules` copy for anything that contradicts the new tiers.
+4. Check metadata, home page FAQ, module pages, footer and `/modules` copy for anything that
+   contradicts the offer. Confirm trial scope and duration separately; do not guess them.
 
 **Estimated effort:** 0.5 day once the pricing is decided
 
-### Server-side contact form
-**What:** The contact form composes a pre-filled `mailto:` link instead of posting anywhere,
+### Server-side contact form (email composer improved)
+**What:** The contact form now validates and previews an email draft, with explicit mail-app and copy-to-webmail actions plus a no-JS direct email fallback. It does not post or store leads,
 because Firebase Hosting serves static files only.
 
 **Why it matters:** A mail-client hand-off loses visitors who use webmail in another tab, and

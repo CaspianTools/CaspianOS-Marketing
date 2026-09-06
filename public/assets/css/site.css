@@ -1779,3 +1779,18 @@ button { font: inherit; cursor: pointer; }
   .ticker ul { flex-wrap: wrap; justify-content: center; row-gap: 8px; }
   .ticker { mask-image: none; -webkit-mask-image: none; }
 }
+
+/* Audit fixes: no-JS navigation, explicit email handoff and static module list. */
+.email-composer { display: none; }
+.email-composer.is-ready { display: block; }
+[hidden] { display: none !important; }
+#email-draft { width: 100%; min-height: 240px; margin-top: 12px; }
+#demo, #faq { scroll-margin-top: calc(var(--nav-h) + 24px); }
+.ticker-track { animation: none; width: auto; }
+.ticker-track ul { flex-wrap: wrap; row-gap: 8px; }
+.ticker-track ul[aria-hidden] { display: none; }
+.ticker { mask-image: none; -webkit-mask-image: none; }
+@media (max-width: 900px) {
+  html:not(.js) .mobile-menu { display: block; }
+  html:not(.js) .nav-toggle { display: none; }
+}

@@ -145,3 +145,13 @@ All notable changes to the Caspian ERP marketing site are documented in this fil
   [CaspianOS-App](https://github.com/CaspianTools/CaspianOS-App); it was moved here so the public
   site and the application deploy independently, from separate repositories and separate Firebase
   projects.
+
+## 2026-09-06 - Marketing audit fixes
+
+- Replace provisional pricing and trial promises with demo and pricing enquiries.
+- Focus the homepage on industrial operations and reconcile module counts.
+- Link to app, documentation and admin; describe remote working without an office.
+- Validate and preview email drafts, support copying to webmail, and provide a no-JS fallback.
+- Keep mobile navigation usable without JavaScript and respect reduced-motion preferences.
+- Label sample product views and refresh sitemap dates and asset versions.
+- Add behavioral checks for navigation and the contact composer to CI.

@@ -104,10 +104,9 @@ The home page follows a fixed rhythm, and every section is numbered in its eyebr
 1. **Paper hero** — `.hero-home` paints the `--paper` ground full-bleed and pulls it up behind the
    transparent header (negative top margin equal to `--nav-h`), so header and hero read as one
    surface. Inside, `.hero-frame` holds a two-column `.hero-grid`: copy on the left, the `.bento`
-   on the right, and the `.ticker` of module names along the bottom edge, under a hairline. The bento is three true things: `.bento-stat` (module count and a
-   bar per module's tool count), `.bento-panel` (a permits list, `role="img"`), and `.bento-side`
-   (a `.bento-note` and the `.bento-pill` link). The ticker is pure CSS (`caspian-ticker`), its
-   second list is `aria-hidden`, and it stops and wraps under reduced motion.
+   on the right, and the `.ticker` of module names along the bottom edge, under a hairline. The bento is three true things: `.bento-stat` (module count and short shared-records copy), `.bento-panel` (a permits list, `role="img"`), and `.bento-side`
+   (a `.bento-note` and the `.bento-pill` link). The ticker is a static wrapping list, its
+   second list is `aria-hidden`, and its duplicate is hidden.
 2. **Connected** (cream) — a `.split` with a `.collage` (panel + floating `.collage-badge` +
    `.collage-note`) beside the copy.
 3. **Modules** (dark) — twelve `.tile`s in a `.grid-3`.
@@ -163,7 +162,7 @@ about 0.6s. All of it lives in §20 of `site.css`.
 - **JavaScript is an enhancement, never a requirement.** Every page must render, read and navigate
   with JS off. `public/assets/js/site.js` only adds the `html.js` marker, the sticky-header
   shadow, the mobile drawer, the module filter tabs, scroll reveal, the scroller arrows, the
-  mail-composing contact form and the footer year. Anything that hides content until JS runs
+  email draft composer and the footer year. Anything that hides content until JS runs
   (`.reveal`) **must** have a `<noscript>` override in the page head; anything that only works
   with JS (the scroller arrows) is hidden until `html.js` is present, never the other way round.
 - **No inline icon lists inside a flex `<li>`.** `.check-list` and `.price-features` position their
@@ -183,3 +182,16 @@ about 0.6s. All of it lives in §20 of `site.css`.
   real modules, and the "who it is for" cards describe roles, not customers. The reference layout
   this design follows has a logo marquee and a testimonial grid; those were deliberately replaced
   with the module ticker and the role cards rather than filled with placeholders.
+
+
+### Marketing audit update (2026-09-06)
+
+- Primary acquisition actions request a demo; sign-in links open the application. Documentation
+  and the admin portal are linked from the footer, with docs also in the mobile menu.
+- Pricing uses an enquiry page until commercial terms are approved. No placeholder tiers,
+  trial commitments or implementation-time promises should appear in marketing copy.
+- The home hero introduces industrial and field operations. Tool-count bars are removed;
+  the module ticker is a static wrapping list. Product representations carry sample-data labels.
+- The email composer validates and previews a draft, then offers explicit email and copy actions.
+  It does not send or store leads. No-JS visitors get a direct email link and visible mobile nav.
+- Manual scroller controls respect reduced-motion preferences; form anchors clear the header.

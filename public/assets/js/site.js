@@ -24,17 +24,20 @@
     toggle.addEventListener('click', function () {
       var open = menu.classList.toggle('is-open');
       toggle.setAttribute('aria-expanded', String(open));
+      toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
     });
     menu.addEventListener('click', function (e) {
       if (e.target.closest('a')) {
         menu.classList.remove('is-open');
         toggle.setAttribute('aria-expanded', 'false');
+        toggle.setAttribute('aria-label', 'Open menu');
       }
     });
     window.addEventListener('keydown', function (e) {
       if (e.key === 'Escape' && menu.classList.contains('is-open')) {
         menu.classList.remove('is-open');
         toggle.setAttribute('aria-expanded', 'false');
+        toggle.setAttribute('aria-label', 'Open menu');
         toggle.focus();
       }
     });
@@ -86,43 +89,62 @@
     wrap.querySelectorAll('[data-scroll]').forEach(function (btn) {
       btn.addEventListener('click', function () {
         var dir = btn.getAttribute('data-scroll') === 'prev' ? -1 : 1;
-        track.scrollBy({ left: dir * Math.round(track.clientWidth * 0.8), behavior: 'smooth' });
+        track.scrollBy({ left: dir * Math.round(track.clientWidth * 0.8), behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
       });
     });
   });
 
-  /* ------------------------------------------- contact form → mail client */
-  /* The site is static (Firebase Hosting, no backend), so the form composes a
-     pre-filled message and hands it to the visitor's mail client. */
+  /* Contact composer: preview first, then explicit email or copy action. */
   var form = document.querySelector('[data-mail-form]');
   if (form) {
+    var preview = form.querySelector('[data-email-preview]');
+    var draft = form.querySelector('#email-draft');
+    var status = form.querySelector('[data-form-status]');
+    var interest = form.querySelector('[name="interest"]');
+    if (new URLSearchParams(window.location.search).get('interest') === 'pricing') {
+      interest.value = 'Pricing & plans';
+    } else if (window.location.hash === '#demo') {
+      interest.value = 'A product demo';
+    }
+    form.addEventListener('input', function (event) {
+      if (event.target === draft) return;
+      preview.hidden = true;
+      status.textContent = '';
+      event.target.setCustomValidity('');
+    });
     form.addEventListener('submit', function (e) {
       e.preventDefault();
+      form.querySelectorAll('[required]').forEach(function (field) {
+        field.setCustomValidity(field.value.trim() ? '' : 'Please complete this field.');
+      });
+      if (!form.reportValidity()) return;
       var data = new FormData(form);
-      var get = function (k) { return (data.get(k) || '').toString().trim(); };
-      var lines = [
-        'Name: ' + get('name'),
-        'Work email: ' + get('email'),
-        'Company: ' + get('company'),
-        'Team size: ' + get('size'),
-        'Interested in: ' + get('interest'),
-        '',
-        get('message')
-      ];
-      var to = form.getAttribute('data-mail-to') || 'hello@caspianerp.com';
-      var subject = get('interest')
-        ? 'Caspian ERP enquiry — ' + get('interest')
-        : 'Caspian ERP enquiry';
-      window.location.href = 'mailto:' + to +
-        '?subject=' + encodeURIComponent(subject) +
-        '&body=' + encodeURIComponent(lines.join('\n'));
-      var status = form.querySelector('[data-form-status]');
-      if (status) {
-        status.textContent =
-          'Your email app should now be open with the message ready to send. ' +
-          'If nothing happened, email ' + to + ' directly.';
+      var get = function (key) { return (data.get(key) || '').toString().trim(); };
+      var to = form.getAttribute('data-mail-to');
+      var subject = 'Caspian ERP enquiry' + (get('interest') ? ' - ' + get('interest') : '');
+      var body = [
+        'Name: ' + get('name'), 'Work email: ' + get('email'),
+        'Company: ' + get('company'), 'Team size: ' + get('size'),
+        'Interested in: ' + get('interest'), '', get('message')
+      ].join('\n');
+      draft.value = 'To: ' + to + '\nSubject: ' + subject + '\n\n' + body;
+      form.querySelector('[data-open-email]').href = 'mailto:' + to +
+        '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+      preview.hidden = false;
+      status.textContent = 'Your draft is ready. Open your email app or copy it into webmail, then send it. Nothing has been sent yet.';
+      draft.focus();
+    });
+    form.querySelector('[data-copy-email]').addEventListener('click', async function () {
+      try {
+        await navigator.clipboard.writeText(draft.value);
+        status.textContent = 'Copied. Paste the draft into your email service and send it to hello@caspianerp.com.';
+      } catch (error) {
+        draft.focus();
+        draft.select();
+        status.textContent = 'Copy the selected draft using your device’s copy command, then paste it into your email service.';
       }
     });
+    form.classList.add('is-ready');
   }
 
   /* --------------------------------------------------------- footer year */

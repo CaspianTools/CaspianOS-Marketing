@@ -37,6 +37,9 @@ jobs:
       - name: Check asset versions are consistent
         run: node scripts/check-assets.mjs
 
+      - name: Check navigation and email composer
+        run: node --test scripts/check-interactions.mjs
+
   deploy:
     needs: check
     if: (github.event_name == 'push' || github.event_name == 'workflow_dispatch') && github.ref == 'refs/heads/main'
