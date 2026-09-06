@@ -6,7 +6,41 @@ deployed to **Firebase Hosting** in the **`caspianos`** Firebase project.
 This repository is *only* the marketing site. The Caspian ERP application lives in
 [CaspianTools/CaspianOS-App](https://github.com/CaspianTools/CaspianOS-App) and is deployed
 separately to `app.caspianerp.com` — different repo, different Firebase project, no shared code.
-Every call to action here links to `https://app.caspianerp.com`.
+Product entry calls to action link to `https://app.caspianerp.com`; demo and sales
+enquiries link to `/contact#demo`.
+
+## Owner decisions and connected sites (2026-09-06)
+
+[CLAUDE.md](CLAUDE.md) is the central project memory and working guide for all assistants.
+Read it first, then the repository documentation it indexes.
+
+These owner-provided facts take precedence over older assumptions in this repository.
+
+| Site | Role |
+| --- | --- |
+| `https://caspianerp.com` | Public ERP marketing site (this repository) |
+| `https://app.caspianerp.com` | ERP application |
+| `https://admin.caspianerp.com` | Administration site; intended audience and access flow still need verification |
+| `https://docs.caspianerp.com` | Documentation site |
+
+**Connection requirement:** Make these sites a coherent journey. Marketing should link to
+the application and documentation. The application and administration site should provide
+relevant documentation/help links, and documentation should link back to marketing and the
+application. Verify the administration site's audience before choosing its public navigation
+placement. Cross-site links do not imply shared authentication or single sign-on. Changes to
+the other sites require their own repositories; their code is not present here. Track delivery
+in `future.md`.
+
+**Contact and location:** There is no physical office yet. Do not publish real phone numbers,
+invent placeholder phone numbers, add `tel:` links, or ask visitors to call or visit an office.
+Use email and the contact/demo journey. Existing Bursa references must not be presented as
+an office or a verified registered address; confirm entity details separately before updating
+legal identity information.
+
+**Pricing:** Pricing has not been decided. The owner needs help developing the model, not
+just entering numbers. Existing prices, plan limits, and module allocations are placeholders,
+not approved commercial terms. Do not invent replacement prices, discounts, trial durations,
+or billing commitments. The public pricing page now uses pricing-on-request messaging. Next comes a pricing discovery exercise before rates or trial terms are published.
 
 ## Layout
 
@@ -31,7 +65,7 @@ Every call to action here links to `https://app.caspianerp.com`.
 │   │   └── administration.html   The configuration story; included with every plan
 │   ├── industries.html     Industry positioning
 │   ├── security.html       Security & access control
-│   ├── pricing.html        Plans, comparison table, pricing FAQ
+│   ├── pricing.html        Pricing enquiry and FAQ
 │   ├── about.html          Company
 │   ├── contact.html        Contact + book a demo (#demo)
 │   ├── privacy.html        Privacy policy
@@ -52,8 +86,8 @@ Every call to action here links to `https://app.caspianerp.com`.
 
 ## No build step
 
-There is no bundler, framework, or npm dependency. Edit the HTML and CSS directly; what is in
-`public/` is exactly what is served. Node is used only for the two check scripts in CI.
+There is no bundler, frontend framework, or runtime npm dependency. Edit the HTML and CSS directly; what is in
+`public/` is exactly what is served. Node runs the validation scripts; Playwright is a development dependency for browser testing.
 
 ## Conventions
 
@@ -122,5 +156,13 @@ custom domain), not from this repo.
 
 `public/privacy.html` and `public/terms.html` now name **CaspianTools, Bursa, Türkiye** and Turkish
 governing law, but they still lack a full registered address and a company registration number, and
-they have not been reviewed by counsel. The pricing on `public/pricing.html` is a placeholder, not a
-commercial decision. Both are tracked in [future.md](future.md).
+they have not been reviewed by counsel. The pricing page now uses an enquiry flow until the commercial model is established. Both are tracked in [future.md](future.md).
+
+Behavioral checks for navigation and the email composer: `node --test scripts/check-interactions.mjs`.
+
+## Browser testing with Playwright
+
+Install development dependencies with `npm ci`, then download Chromium with
+`npx playwright install chromium`. Playwright Test is available through
+`npm run test:browser` (browser test files must be added before running a test suite).
+Generated browser reports and `node_modules/` are ignored by Git.

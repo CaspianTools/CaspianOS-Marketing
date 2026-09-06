@@ -4,12 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Contact &amp; book a demo — Caspian ERP</title>
-<meta name="description" content="Book a demo, ask about pricing or send a security questionnaire. We reply within one business day.">
+<meta name="description" content="Book a demo, ask about pricing or send a security questionnaire. Contact the team online.">
 <link rel="canonical" href="https://caspianerp.com/contact">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Caspian ERP">
 <meta property="og:title" content="Contact &amp; book a demo — Caspian ERP">
-<meta property="og:description" content="Book a demo, ask about pricing or send a security questionnaire. We reply within one business day.">
+<meta property="og:description" content="Book a demo, ask about pricing or send a security questionnaire. Contact the team online.">
 <meta property="og:url" content="https://caspianerp.com/contact">
 <meta property="og:image" content="https://caspianerp.com/assets/img/og-image.svg">
 <meta name="twitter:card" content="summary_large_image">
@@ -18,7 +18,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
-<link rel="stylesheet" href="/assets/css/site.css?v=20260906">
+<link rel="stylesheet" href="/assets/css/site.css?v=20260906.2">
 <noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
 </head>
 <body>
@@ -39,7 +39,7 @@
       </ul>
       <div class="nav-actions">
         <a class="btn btn-ghost btn-sm" href="https://app.caspianerp.com">Sign in</a>
-        <a class="btn btn-primary btn-sm" href="https://app.caspianerp.com">Start free trial <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+        <a class="btn btn-primary btn-sm" href="/contact#demo">Request a demo <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
         <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
         </button>
@@ -52,10 +52,11 @@
     <a class="nav-link" href="/security">Security</a>
     <a class="nav-link" href="/pricing">Pricing</a>
     <a class="nav-link" href="/about">About</a>
+    <a class="nav-link" href="https://docs.caspianerp.com">Documentation</a>
     <a class="nav-link" href="/contact">Contact</a>
     <div class="mobile-cta">
       <a class="btn btn-secondary" href="https://app.caspianerp.com">Sign in</a>
-      <a class="btn btn-primary" href="https://app.caspianerp.com">Start free trial</a>
+      <a class="btn btn-primary" href="/contact#demo">Request a demo</a>
     </div>
   </div>
 </header>
@@ -78,9 +79,11 @@
   <section class="section-tight" id="demo">
     <div class="container split" style="align-items:start">
       <div class="card card-pad reveal">
-        <h2 style="font-size:1.4rem">Book a demo or ask a question</h2>
+        <h2 style="font-size:1.4rem">Prepare a demo request or question</h2>
         <p class="muted small mt-6">All fields marked with <span style="color:var(--rose-500)">*</span> are required.</p>
-        <form class="mt-24" data-mail-form data-mail-to="hello@caspianerp.com" novalidate>
+        <p class="small muted mt-12">This form prepares an email; it does not submit a request to us. Send it from your mail app, or copy it into your webmail.</p>
+<noscript><p class="mt-16">Email <a href="mailto:hello@caspianerp.com">hello@caspianerp.com</a> with your name, company and the workflow you would like to discuss.</p></noscript>
+<form class="mt-24 email-composer" data-mail-form data-mail-to="hello@caspianerp.com">
           <div class="form-grid">
             <div class="field">
               <label for="c-name">Name <span class="req">*</span></label>
@@ -129,12 +132,16 @@
           </div>
           <div class="row mt-24">
             <button class="btn btn-primary" type="submit">
-              Send message
+              Prepare email
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4 4 16 8-16 8 3-8z"/></svg>
             </button>
-            <span class="form-note">Opens in your mail app, pre-filled.</span>
+            <span class="form-note">Review your message before sending.</span>
           </div>
-          <p class="form-note mt-16" data-form-status role="status" aria-live="polite"></p>
+          <div class="mt-24" data-email-preview hidden>
+<label for="email-draft">Your email draft</label><textarea id="email-draft" rows="12" readonly></textarea>
+<div class="row mt-16"><a class="btn btn-primary" data-open-email href="mailto:hello@caspianerp.com">Open email app</a><button class="btn btn-secondary" type="button" data-copy-email>Copy email</button></div>
+<p class="small muted mt-12">Send to <a href="mailto:hello@caspianerp.com">hello@caspianerp.com</a>. Preparing or copying a draft does not send it.</p></div>
+<p class="form-note mt-16" data-form-status role="status" aria-live="polite"></p>
         </form>
       </div>
 
@@ -151,14 +158,14 @@
 
         <div class="card card-pad reveal">
           <h3>Already a customer?</h3>
-          <p class="muted small mt-6">Sign in to your organization at app.caspianerp.com — support requests raised from inside the app reach us with the context already attached.</p>
+          <p class="muted small mt-6">Open your organization in the app, or email support with the page and workflow you need help with.</p>
           <a class="btn btn-secondary btn-block mt-16" href="https://app.caspianerp.com">Go to the app</a>
         </div>
 
         <div class="card card-pad reveal">
           <h3>Prefer to look first?</h3>
-          <p class="muted small mt-6">Start a free trial with your own data — no card, no call, no obligation.</p>
-          <a class="btn btn-primary btn-block mt-16" href="https://app.caspianerp.com">Start free trial</a>
+          <p class="muted small mt-6">Explore the documentation to learn about the product before arranging a walkthrough.</p>
+          <a class="btn btn-primary btn-block mt-16" href="https://docs.caspianerp.com">Read the documentation</a>
         </div>
       </div>
     </div>
@@ -171,17 +178,17 @@
         <div class="card card-pad reveal">
           <span class="icon-tile">1</span>
           <h3 class="mt-16">We reply</h3>
-          <p class="muted mt-6">Usually within one business day, from a person who knows the product — not a queue.</p>
+          <p class="muted mt-6">After you send your email, we review your requirements and reply to arrange the next step.</p>
         </div>
         <div class="card card-pad reveal">
           <span class="icon-tile">2</span>
-          <h3 class="mt-16">A short call</h3>
-          <p class="muted mt-6">Thirty minutes on how your organization runs today and which module is worth starting with.</p>
+          <h3 class="mt-16">An online walkthrough</h3>
+          <p class="muted mt-6">Explore the workflows relevant to your organization and discuss where to start.</p>
         </div>
         <div class="card card-pad reveal">
           <span class="icon-tile">3</span>
-          <h3 class="mt-16">A trial with your data</h3>
-          <p class="muted mt-6">We help you set up your organization, load a real list, and try the workflow that matters.</p>
+          <h3 class="mt-16">Agree an evaluation</h3>
+          <p class="muted mt-6">Discuss evaluation access, data preparation and onboarding needs before deciding how to proceed.</p>
         </div>
       </div>
     </div>
@@ -196,10 +203,10 @@
         <h2>One system for the whole operation.</h2>
       </div>
       <div>
-        <p>Start free, invite your team and switch on the modules you need. No installation, no servers, no procurement cycle.</p>
+        <p>Tell us how your operation runs. Explore the relevant workflows, review your data and agree the next steps with our team.</p>
         <div class="footer-actions">
-          <a class="btn btn-onDark btn-lg" href="https://app.caspianerp.com">Start free trial <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
-          <a class="btn btn-outline-onDark btn-lg" href="/contact#demo">Book a demo</a>
+          <a class="btn btn-onDark btn-lg" href="/contact#demo">Request a demo <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+          <a class="btn btn-outline-onDark btn-lg" href="https://docs.caspianerp.com">Read the docs</a>
         </div>
       </div>
     </div>
@@ -236,15 +243,17 @@
           <li><a href="/about">About</a></li>
           <li><a href="https://caspiantools.com" rel="noopener">CaspianTools</a></li>
           <li><a href="/contact">Contact</a></li>
-          <li><a href="/contact#demo">Book a demo</a></li>
+          <li><a href="/contact#demo">Request a demo</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h4>Get started</h4>
         <ul>
           <li><a href="https://app.caspianerp.com">Sign in</a></li>
-          <li><a href="https://app.caspianerp.com">Start free trial</a></li>
-          <li><a href="/pricing#faq">Pricing FAQ</a></li>
+          <li><a href="/contact#demo">Request a demo</a></li>
+          <li><a href="https://docs.caspianerp.com">Documentation</a></li>
+          <li><a href="https://admin.caspianerp.com">Admin portal</a></li>
+          <li><a href="/pricing#faq">Pricing questions</a></li>
         </ul>
       </div>
     </div>
@@ -258,6 +267,6 @@
     </div>
   </div>
 </footer>
-<script src="/assets/js/site.js?v=20260906" defer></script>
+<script src="/assets/js/site.js?v=20260906.2" defer></script>
 </body>
 </html>
