@@ -47,6 +47,11 @@ This file is the central index, while each supporting document keeps its purpose
   as-is. Never hand-edit a generated page. The translations were produced in-house, and the owner
   accepted them as shipped on 2026-09-08, declining a native-speaker review for now. The review
   stays in future.md as optional polish, not a pending ask — do not re-raise it unprompted.
+- A localized page hands its language to the application: *Sign in* links on `/<lang>/…` point at
+  `https://app.caspianerp.com/<lang>/welcome`, not the bare host, because the app reads a
+  `/{lang}/` prefix from its own URL and redirects an unprefixed URL to `/en/…`. `APP_ORIGIN` and
+  `APP_ENTRY` in `i18n/config.mjs` are the only place those values live; the generator rewrites
+  the links. If the app's language list or its entry route changes, this is what must follow.
 - Track remaining work in future.md. Verify Git, PR and deployment state before claiming a
   change is committed, merged or live; a local edit or changelog entry is not deployment proof.
 
