@@ -44,8 +44,9 @@ This file is the central index, while each supporting document keeps its purpose
 - The site ships in seven languages — en, az, tr, ru, nb, de, fr — matching the application's list.
   English under `public/` is hand-written and is the source; the other six are generated into
   `public/<lang>/` by `scripts/i18n-build.mjs` and committed, because hosting serves the repository
-  as-is. Never hand-edit a generated page. The translations were produced in-house; a native-speaker
-  copy review is recorded in future.md.
+  as-is. Never hand-edit a generated page. The translations were produced in-house, and the owner
+  accepted them as shipped on 2026-09-08, declining a native-speaker review for now. The review
+  stays in future.md as optional polish, not a pending ask — do not re-raise it unprompted.
 - Track remaining work in future.md. Verify Git, PR and deployment state before claiming a
   change is committed, merged or live; a local edit or changelog entry is not deployment proof.
 
