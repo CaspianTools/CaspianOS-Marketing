@@ -7,7 +7,9 @@ This repository is *only* the marketing site. The Caspian ERP application lives 
 [CaspianTools/CaspianOS-App](https://github.com/CaspianTools/CaspianOS-App) and is deployed
 separately to `app.caspianerp.com` — different repo, different Firebase project, no shared code.
 Product entry calls to action link to `https://app.caspianerp.com`; demo and sales
-enquiries link to `/contact#demo`.
+enquiries link to `/contact#demo`. On a localized page those app links carry the visitor's
+language across — `/de/…` links to `https://app.caspianerp.com/de/welcome` — because the
+application reads a `/{lang}/` prefix from its own URL and redirects a bare URL to `/en/…`.
 
 ## Owner decisions and connected sites (2026-09-06)
 

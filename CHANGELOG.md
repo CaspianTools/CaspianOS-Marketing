@@ -26,6 +26,12 @@ All notable changes to the Caspian ERP marketing site are documented in this fil
   because Firebase Hosting serves the repository as-is.
 
 ### Changed
+- **Links into the application carry the visitor's language.** A localized page's *Sign in* links
+  now point at `https://app.caspianerp.com/<lang>/welcome` instead of the bare host. The
+  application reads a `/{lang}/` prefix from its own URL and redirects every unprefixed URL to
+  `/en/…`, so a bare link silently dropped the language the visitor had just chosen. English pages
+  keep linking to the bare host. The application's list of languages matches the site's, so every
+  prefix the generator writes is one the app understands.
 - **`site.js` no longer hard-codes English.** The drawer's labels and every string the email
   composer writes now come from `data-text-*` attributes on the markup, and the contact form's
   preselected enquiry is matched by `data-interest` rather than by its visible text — so both work

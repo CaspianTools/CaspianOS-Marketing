@@ -19,7 +19,8 @@ import path from 'node:path';
 import { walk } from './lib/html-i18n.mjs';
 import { sourcePages } from './i18n-extract.mjs';
 import {
-  LANGUAGES, CODES, TARGETS, SOURCE, ORIGIN, UI, localizePath, urlForFile,
+  LANGUAGES, CODES, TARGETS, SOURCE, ORIGIN, APP_ORIGIN, APP_ENTRY, UI,
+  localizePath, urlForFile,
 } from '../i18n/config.mjs';
 
 const ROOT = 'public';
@@ -46,12 +47,20 @@ function readDictionary(lang) {
   return new Map(Object.entries(JSON.parse(fs.readFileSync(file, 'utf8'))));
 }
 
-/** `/pricing#faq` → `/de/pricing#faq`; assets and external URLs are untouched. */
+/** `/pricing#faq` → `/de/pricing#faq`; assets and unrelated external URLs are untouched. */
 function localizeUrl(value, lang) {
   if (lang === SOURCE) return value;
   let url = value;
   let prefix = '';
   if (url.startsWith(ORIGIN)) { prefix = ORIGIN; url = url.slice(ORIGIN.length) || '/'; }
+  // The application is the one external host that speaks the same prefixes we
+  // do, so a link into it carries the visitor's language across instead of
+  // landing them in English.
+  else if (url.startsWith(APP_ORIGIN)) {
+    prefix = APP_ORIGIN;
+    url = url.slice(APP_ORIGIN.length) || '/';
+    if (url === '/') url = APP_ENTRY;
+  }
   if (!url.startsWith('/') || url.startsWith('/assets/')) return value;
   const split = url.search(/[?#]/);
   const pathname = split === -1 ? url : url.slice(0, split);

@@ -23,6 +23,15 @@ export const TARGETS = CODES.filter((c) => c !== SOURCE);
 
 export const ORIGIN = 'https://caspianerp.com';
 
+// The application reads a /{lang}/ prefix from its own URL, so a localized page
+// hands its language over by linking to the prefixed app URL rather than the
+// bare one — the app's server redirects every bare URL to /en/…, which is what
+// used to drop a visitor's language at the door. `/welcome` is where a bare
+// visit lands today, named explicitly so the handoff does not depend on the
+// app's default-route fallback.
+export const APP_ORIGIN = 'https://app.caspianerp.com';
+export const APP_ENTRY = '/welcome';
+
 /** Chrome the generator writes itself, so it is never left half-translated. */
 export const UI = {
   en: { label: 'Language', current: 'Language: English',            switcher: 'Choose a language' },
