@@ -148,7 +148,9 @@ reads as translated costs credibility with exactly the buyer it was written for.
 
 **Why deferred:** The plumbing, the switcher and the browser-language adaptation are the part that
 needed engineering; a copy review is a per-language editorial pass that can happen at any time
-without touching the pipeline.
+without touching the pipeline. The owner considered it on 2026-09-08 and chose not to commission
+one — the shipped translations stand. Pick this up only if a reader reports awkward copy, or ahead
+of a deliberate push into one of these markets.
 
 **How to approach:**
 1. Send `i18n/<lang>.json` to a native speaker with `i18n/_catalog.json` for context — it names the
