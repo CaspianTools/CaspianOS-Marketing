@@ -1,0 +1,598 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="/assets/js/lang.js?v=20260908"></script>
+<title>Effizienz — Caspian ERP</title>
+<meta name="description" content="Aufgaben, Besprechungen, Kalender, Checklisten, Formulare, Notizen, Tagebuch und Lean-Management — die tägliche Arbeitsebene von Caspian ERP und der Ort, an dem Maßnahmen aus allen anderen Modulen landen.">
+<link rel="canonical" href="https://caspianerp.com/de/modules/efficiency">
+<!--i18n:alternates-->
+<link rel="alternate" hreflang="en" href="https://caspianerp.com/modules/efficiency">
+<link rel="alternate" hreflang="az" href="https://caspianerp.com/az/modules/efficiency">
+<link rel="alternate" hreflang="tr" href="https://caspianerp.com/tr/modules/efficiency">
+<link rel="alternate" hreflang="ru" href="https://caspianerp.com/ru/modules/efficiency">
+<link rel="alternate" hreflang="nb" href="https://caspianerp.com/nb/modules/efficiency">
+<link rel="alternate" hreflang="de" href="https://caspianerp.com/de/modules/efficiency">
+<link rel="alternate" hreflang="fr" href="https://caspianerp.com/fr/modules/efficiency">
+<link rel="alternate" hreflang="x-default" href="https://caspianerp.com/modules/efficiency">
+<!--/i18n:alternates-->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Caspian ERP">
+<meta property="og:title" content="Effizienz — Caspian ERP">
+<meta property="og:description" content="Aufgaben, Besprechungen, Kalender, Checklisten, Formulare, Notizen, Tagebuch und Lean-Management — die tägliche Arbeitsebene von Caspian ERP und der Ort, an dem Maßnahmen aus allen anderen Modulen landen.">
+<meta property="og:url" content="https://caspianerp.com/de/modules/efficiency">
+<meta property="og:image" content="https://caspianerp.com/assets/img/og-image.svg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#4f46e5">
+<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="/assets/css/site.css?v=20260908">
+<noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
+</head>
+<body>
+<a class="skip-link" href="#main">Zum Inhalt springen</a>
+<header class="site-header">
+  <div class="container">
+    <nav class="nav" aria-label="Haupt">
+      <a class="brand" href="/de">
+        <img class="brand-mark" src="/assets/img/logo-mark.svg" alt="" width="30" height="30">
+        <span class="brand-name">Caspian <b>ERP</b></span>
+      </a>
+      <ul class="nav-links">
+        <li><a class="nav-link" aria-current="page" href="/de/modules">Module</a></li>
+        <li><a class="nav-link" href="/de/industries">Branchen</a></li>
+        <li><a class="nav-link" href="/de/security">Sicherheit</a></li>
+        <li><a class="nav-link" href="/de/pricing">Preise</a></li>
+        <li><a class="nav-link" href="/de/about">Über uns</a></li>
+      </ul>
+      <div class="nav-actions">
+        <!--i18n:switcher-->
+        <details class="lang" data-lang-switcher>
+          <summary class="lang-button" title="Sprache wählen" aria-label="Sprache: Deutsch"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18"/></svg><span class="lang-code">DE</span><svg class="lang-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="lang-menu" role="group" aria-label="Sprache wählen">
+            <a class="lang-option" href="/modules/efficiency" hreflang="en" lang="en" data-lang="en">English</a>
+            <a class="lang-option" href="/az/modules/efficiency" hreflang="az" lang="az" data-lang="az">Azərbaycan dili</a>
+            <a class="lang-option" href="/tr/modules/efficiency" hreflang="tr" lang="tr" data-lang="tr">Türkçe</a>
+            <a class="lang-option" href="/ru/modules/efficiency" hreflang="ru" lang="ru" data-lang="ru">Русский</a>
+            <a class="lang-option" href="/nb/modules/efficiency" hreflang="nb" lang="nb" data-lang="nb">Norsk (bokmål)</a>
+            <a class="lang-option" href="/de/modules/efficiency" hreflang="de" lang="de" data-lang="de" aria-current="true">Deutsch</a>
+            <a class="lang-option" href="/fr/modules/efficiency" hreflang="fr" lang="fr" data-lang="fr">Français</a>
+          </div>
+        </details>
+        <!--/i18n:switcher-->
+        <a class="btn btn-ghost btn-sm" href="https://app.caspianerp.com">Anmelden</a>
+        <a class="btn btn-primary btn-sm" href="/de/contact#demo">Demo anfragen <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+        <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="mobile-menu" aria-label="Menü öffnen" data-text-open="Menü öffnen" data-text-close="Menü schließen">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </nav>
+  </div>
+  <div class="mobile-menu" id="mobile-menu">
+    <a class="nav-link" aria-current="page" href="/de/modules">Module</a>
+    <a class="nav-link" href="/de/industries">Branchen</a>
+    <a class="nav-link" href="/de/security">Sicherheit</a>
+    <a class="nav-link" href="/de/pricing">Preise</a>
+    <a class="nav-link" href="/de/about">Über uns</a>
+    <a class="nav-link" href="https://docs.caspianerp.com">Dokumentation</a>
+    <a class="nav-link" href="/de/contact">Kontakt</a>
+    <!--i18n:switcher-mobile-->
+    <div class="mobile-lang" role="group" aria-label="Sprache wählen">
+      <span class="mobile-lang-label">Sprache</span>
+      <div class="mobile-lang-options">
+        <a class="lang-option" href="/modules/efficiency" hreflang="en" lang="en" data-lang="en">English</a>
+        <a class="lang-option" href="/az/modules/efficiency" hreflang="az" lang="az" data-lang="az">Azərbaycan dili</a>
+        <a class="lang-option" href="/tr/modules/efficiency" hreflang="tr" lang="tr" data-lang="tr">Türkçe</a>
+        <a class="lang-option" href="/ru/modules/efficiency" hreflang="ru" lang="ru" data-lang="ru">Русский</a>
+        <a class="lang-option" href="/nb/modules/efficiency" hreflang="nb" lang="nb" data-lang="nb">Norsk (bokmål)</a>
+        <a class="lang-option" href="/de/modules/efficiency" hreflang="de" lang="de" data-lang="de" aria-current="true">Deutsch</a>
+        <a class="lang-option" href="/fr/modules/efficiency" hreflang="fr" lang="fr" data-lang="fr">Français</a>
+      </div>
+    </div>
+    <!--/i18n:switcher-mobile-->
+    <div class="mobile-cta">
+      <a class="btn btn-secondary" href="https://app.caspianerp.com">Anmelden</a>
+      <a class="btn btn-primary" href="/de/contact#demo">Demo anfragen</a>
+    </div>
+  </div>
+</header>
+<main id="main">
+
+  <section class="hero">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Brotkrümelnavigation">
+        <a href="/de/modules">Module</a>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg>
+        <span aria-current="page">Effizienz</span>
+      </nav>
+      <span class="eyebrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 4.5 13.5H11l-1 8.5 8.5-11.5H12z"/></svg>Effizienz</span>
+      <h1>Die Ebene, für die man <span class="grad">sich jeden Tag anmeldet</span></h1>
+      <p class="hero-sub">Aufgaben, Besprechungen, Checklisten und Formulare — plus der Ort, an dem jede anderswo ausgelöste Maßnahme vor der verantwortlichen Person landet.</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary btn-lg" href="/de/contact#demo">Demo anfragen</a>
+        <a class="btn btn-secondary btn-lg" href="https://docs.caspianerp.com">Dokumentation lesen</a>
+      </div>
+      <p class="hero-note">Acht Werkzeuge · Wo Maßnahmen aus HSEQ, Instandhaltung und Projekten landen</p>
+    </div>
+  </section>
+  <div class="container mock-wrap">
+    <p class="small muted text-center">Beispielhafte Produktansicht mit Musterdaten. <a href="/de/contact#demo">Live-Rundgang anfragen</a>.</p>
+    <div class="mock reveal" role="img" aria-label="Caspian ERP Effizienz mit brennenden Aufgaben, anstehenden Besprechungen, Checklisten-Fortschritt und Lean-Register">
+      <div class="mock-bar" aria-hidden="true">
+        <span class="mock-dot"></span><span class="mock-dot"></span><span class="mock-dot"></span>
+        <span class="mock-url">app.caspianerp.com/de/w/efficiency/tasks</span>
+      </div>
+      <div class="mock-body" aria-hidden="true">
+        <div class="mock-rail">
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg>Start</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/></svg>Personalwesen</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>HSEQ</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>Untern.</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1"/><circle cx="18" cy="20" r="1"/><path d="M2 3h2.5l2.6 12.6a1 1 0 0 0 1 .8h8.9a1 1 0 0 0 1-.77L21 8H6"/></svg>Beschaff.</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V10l6 4V10l6 4V6l6 4v11z"/><path d="M7 17h.01M13 17h.01M18 17h.01"/></svg>Fertig.</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>CRM</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V9l9-6 9 6v12"/><path d="M7 21v-8h10v8"/></svg>Lager</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 16V6h11v10"/><path d="M14 9h4l3 3.5V16h-7z"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg>Logistik</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0 5 5L21 21l-3 .5L8.5 12A4 4 0 0 1 3 6.5l3 3 2.5-2.5-3-3z"/></svg>Instandh.</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 6H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>Finanzen</div>
+          <div class="mock-rail-item active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4.5 13.5H11l-1 8.5 8.5-11.5H12z"/></svg>Effizienz</div>
+        </div>
+        <div class="mock-side">
+          <div class="mock-side-title">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4.5 13.5H11l-1 8.5 8.5-11.5H12z"/></svg>
+            Effizienz
+          </div>
+          <div class="mock-side-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M3 10h18M8 2v4M16 2v4"/></svg>Kalender</div>
+          <div class="mock-side-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="m8 12 3 3 5-6"/></svg>Checklisten</div>
+          <div class="mock-side-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5V5a2 2 0 0 1 2-2h13v18H6a2 2 0 0 1-2-2.5z"/></svg>Tagebuch</div>
+          <div class="mock-side-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/></svg>Formulare</div>
+          <div class="mock-side-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z"/></svg>Lean-Management</div>
+          <div class="mock-side-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M3 10h18M8 2v4M16 2v4"/></svg>Besprechungen</div>
+          <div class="mock-side-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5V5a2 2 0 0 1 2-2h13v18H6a2 2 0 0 1-2-2.5z"/></svg>Notizen</div>
+          <div class="mock-side-item active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6h11M9 12h11M9 18h11M4 6h.01M4 12h.01M4 18h.01"/></svg>Aufgaben</div>
+        </div>
+        <div class="mock-main">
+          <div class="mock-topbar">
+            <div class="mock-search">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.2-3.2"/></svg>
+              Personen, Aufträge, Anlagen suchen …
+            </div>
+            <div class="mock-plus"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></div>
+            <div class="mock-avatar"></div>
+          </div>
+          <div class="mock-h1">Guten Tag, Leyla</div>
+          <div class="mock-tag">Das braucht Ihre Aufmerksamkeit</div>
+          <div class="mock-cards">
+            <div class="mock-card">
+              <div class="mock-card-head" style="color:#e11d48">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/><path d="M12 9v4M12 17h.01"/></svg>
+                Brennende Aufgaben
+              </div>
+              <div class="mock-row"><span>Erlaubnis PTW-0241 abschließen</span><span class="mock-pill hot">3 T überfällig</span></div>
+              <div class="mock-row"><span>PR-1180 genehmigen</span><span class="mock-pill warn">Heute</span></div>
+              <div class="mock-row"><span>Kalibrierung freigeben</span><span class="mock-pill">Fr</span></div>
+            </div>
+            <div class="mock-card">
+              <div class="mock-card-head" style="color:#7c3aed">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M3 10h18M8 2v4M16 2v4"/></svg>
+                Anstehende Besprechungen
+              </div>
+              <div class="mock-row"><span>Wöchentliche HSE-Runde</span><span class="mock-pill">Di 09:00</span></div>
+              <div class="mock-row"><span>Lieferantenleistung</span><span class="mock-pill">Mi 14:00</span></div>
+            </div>
+            <div class="mock-card">
+              <div class="mock-card-head" style="color:#0d9488">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="m8 12 3 3 5-6"/></svg>
+                Checklisten
+              </div>
+              <div class="mock-kpi">12/14</div>
+              <div class="mock-kpi-sub">heute an 3 Standorten abgeschlossen</div>
+            </div>
+            <div class="mock-card">
+              <div class="mock-card-head" style="color:#4f46e5">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6h11M9 12h11M9 18h11M4 6h.01M4 12h.01M4 18h.01"/></svg>
+                Meine Aufgaben
+              </div>
+              <div class="mock-bars"><span style="height:40%"></span><span style="height:58%"></span><span style="height:62%"></span><span style="height:55%"></span><span style="height:74%"></span><span style="height:88%"></span></div>
+              <div class="mock-kpi-sub" style="margin-top:8px">31 offen · 6 diese Woche fällig</div>
+            </div>
+            <div class="mock-card">
+              <div class="mock-card-head" style="color:#d97706">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z"/></svg>
+                Lean-Register
+              </div>
+              <div class="mock-row"><span>Layout des Pumpenskids</span><span class="mock-pill warn">In Prüfung</span></div>
+              <div class="mock-row"><span>Lagerkennzeichnung</span><span class="mock-pill ok">Genehmigt</span></div>
+            </div>
+            <div class="mock-card">
+              <div class="mock-card-head" style="color:#0891b2">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/></svg>
+                Formularantworten
+              </div>
+              <div class="mock-kpi">46</div>
+              <div class="mock-kpi-sub">in diesem Monat über öffentliche Links</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="section section-soft">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Vor Caspian ERP</span>
+        <h2>Die Arbeit ist real; die Nachverfolgung ist verstreut</h2>
+        <p>Den meisten Organisationen fehlen keine Systeme. Ihnen fehlt ein Ort, an dem eine Person alles sieht, was ihr gehört.</p>
+      </div>
+      <div class="grid grid-3">
+        <article class="card card-pad reveal">
+          <h3>Maßnahmen leben an fünf Orten</h3>
+          <p class="mt-12">Eine im Ereignisbericht, eine im Protokoll, eine in einer Nachricht, zwei in jemandes Kopf. Keine davon auf einer Liste mit Fälligkeit.</p>
+        </article>
+        <article class="card card-pad reveal">
+          <h3>Besprechungen erzeugen Protokolle, keine Bewegung</h3>
+          <p class="mt-12">Maßnahmen werden vereinbart, in ein Dokument geschrieben — und hängen dann ganz davon ab, dass sich jemand erinnert, es wieder zu lesen.</p>
+        </article>
+        <article class="card card-pad reveal">
+          <h3>Verbesserungsideen verpuffen</h3>
+          <p class="mt-12">Die besten Vorschläge kommen von der Werksebene, werden einmal erwähnt und nirgends festgehalten, wo sie die Schicht überdauern.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Was es leistet</span>
+        <h2>Eine Arbeitsfläche für alles, was Ihres ist</h2>
+        <p>Dieses Modul bringt Menschen auch in einer ruhigen Woche ins System — und genau das lässt die anderen Module funktionieren.</p>
+      </div>
+      <div class="grid grid-2">
+        <article class="card card-pad reveal">
+          <span class="icon-tile t-cyan"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6h11M9 12h11M9 18h11M4 6h.01M4 12h.01M4 18h.01"/></svg></span>
+          <h3 class="mt-16">Aufgaben mit Verantwortlichen und Fristen</h3>
+          <p class="mt-12">Eine Liste je Person, gespeist von der gesamten Plattform.</p>
+          <ul class="check-list mt-16">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Prioritäten, Fristen, Zuständige und Board-Ansicht</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Maßnahmen aus Ereignissen, Untersuchungen und Besprechungen landen hier</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Überfälliges erscheint auf dem Startbildschirm statt vergraben zu sein</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Einer Person zugewiesen, nie einer Abteilung</li>
+          </ul>
+        </article>
+        <article class="card card-pad reveal">
+          <span class="icon-tile t-violet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M3 10h18M8 2v4M16 2v4"/></svg></span>
+          <h3 class="mt-16">Besprechungen, die in nachverfolgten Maßnahmen enden</h3>
+          <p class="mt-12">Agenda, Anwesenheit und Ergebnisse zusammen — Maßnahmen werden zu Aufgaben.</p>
+          <ul class="check-list mt-16">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Vorab erstellte Agenden, sichtbar für die Teilnehmenden</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Anwesenheit wird gegen die Personalakten erfasst</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Maßnahmen werden in der Sitzung zugewiesen und danach verantwortet</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Frühere Besprechungen sind durchsuchbar statt abgeheftet</li>
+          </ul>
+        </article>
+        <article class="card card-pad reveal">
+          <span class="icon-tile t-emerald"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/></svg></span>
+          <h3 class="mt-16">Formulare, auch für Menschen außerhalb des Systems</h3>
+          <p class="mt-12">Formular bauen, öffentlichen Link teilen und strukturierte Antworten sammeln.</p>
+          <ul class="check-list mt-16">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Eigene Formulare ohne Entwickler</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Teilbare öffentliche Links für Fremdfirmen, Besucher und Kunden</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Antworten werden als filter- und exportierbare Datensätze gespeichert</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Für die ausfüllende Person ist keine Lizenz nötig</li>
+          </ul>
+        </article>
+        <article class="card card-pad reveal">
+          <span class="icon-tile t-amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="m8 12 3 3 5-6"/></svg></span>
+          <h3 class="mt-16">Checklisten, Notizen und ein persönliches Tagebuch</h3>
+          <p class="mt-12">Das tägliche Gerüst — Routinekontrollen, Arbeitsnotizen und ein Protokoll des Geschehens.</p>
+          <ul class="check-list mt-16">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Wiederverwendbare Checklisten für Routine- und Vorabkontrollen</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Notizen liegen bei der Arbeit statt in einer separaten App</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Ein persönliches Tagebuch für die Aufzeichnung, die man immer vermisst</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Alles über dieselbe globale Suche auffindbar</li>
+          </ul>
+        </article>
+        <article class="card card-pad reveal">
+          <span class="icon-tile t-rose"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z"/></svg></span>
+          <h3 class="mt-16">Lean-Management-Register</h3>
+          <p class="mt-12">Verbesserungsideen werden erfasst, bewertet und bis zur Umsetzung verfolgt.</p>
+          <ul class="check-list mt-16">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Vorschläge von allen werden erfasst, nicht nur von der Leitung</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Bewertet, priorisiert und mit einer verantwortlichen Person versehen</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Der Fortschritt ist sichtbar — Einreichende sehen, was aus ihrer Idee wurde</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Eine Spur dessen, was sich geändert hat und was es wert war</li>
+          </ul>
+        </article>
+        <article class="card card-pad reveal">
+          <span class="icon-tile t-teal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M3 10h18M8 2v4M16 2v4"/></svg></span>
+          <h3 class="mt-16">Ein Kalender über die gesamte Plattform</h3>
+          <p class="mt-12">Besprechungen, Termine, Abwesenheiten und geplante Arbeiten in einer Ansicht.</p>
+          <ul class="check-list mt-16">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Schulungstermine aus dem Personalwesen erscheinen neben den Besprechungen</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Geplante Instandhaltung und Fahrten sind am selben Ort sichtbar</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Persönliche und Teamansichten</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Nichts zu synchronisieren, weil nichts getrennt ist</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-soft">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Jedes Werkzeug im Modul</span>
+        <h2>Acht Werkzeuge für den Tagesrhythmus</h2>
+        <p>Bewusst einfach, bewusst täglich in Gebrauch.</p>
+      </div>
+      <div class="grid grid-2">
+        <div class="feature-item reveal">
+          <span class="icon-tile sm t-cyan"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6h11M9 12h11M9 18h11M4 6h.01M4 12h.01M4 18h.01"/></svg></span>
+          <div>
+            <h4>Aufgaben</h4>
+            <p>Persönliche und Team-Aufgabenlisten mit Prioritäten, Fristen, Zuständigen und Board-Ansicht.</p>
+          </div>
+        </div>
+        <div class="feature-item reveal">
+          <span class="icon-tile sm t-violet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M3 10h18M8 2v4M16 2v4"/></svg></span>
+          <div>
+            <h4>Besprechungen</h4>
+            <p>Agenden, Anwesenheit und Ergebnisse — mit Maßnahmen, die zu nachverfolgten Aufgaben werden statt zu Protokollzeilen.</p>
+          </div>
+        </div>
+        <div class="feature-item reveal">
+          <span class="icon-tile sm t-teal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M3 10h18M8 2v4M16 2v4"/></svg></span>
+          <div>
+            <h4>Kalender</h4>
+            <p>Eine Ansicht von Besprechungen, Schulungen, Abwesenheiten und geplanten Arbeiten der gesamten Organisation.</p>
+          </div>
+        </div>
+        <div class="feature-item reveal">
+          <span class="icon-tile sm t-amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="m8 12 3 3 5-6"/></svg></span>
+          <div>
+            <h4>Checklisten</h4>
+            <p>Wiederverwendbare Checklisten für Routinekontrollen, Freigaben vor Arbeitsbeginn und Übergaben.</p>
+          </div>
+        </div>
+        <div class="feature-item reveal">
+          <span class="icon-tile sm t-emerald"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/></svg></span>
+          <div>
+            <h4>Formulare</h4>
+            <p>Eigene Formulare mit teilbaren öffentlichen Links, damit auch Externe strukturierte Daten einreichen können.</p>
+          </div>
+        </div>
+        <div class="feature-item reveal">
+          <span class="icon-tile sm t-slate"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5V5a2 2 0 0 1 2-2h13v18H6a2 2 0 0 1-2-2.5z"/></svg></span>
+          <div>
+            <h4>Notizen</h4>
+            <p>Arbeitsnotizen neben dem restlichen Betrieb, abgedeckt von derselben Suche.</p>
+          </div>
+        </div>
+        <div class="feature-item reveal">
+          <span class="icon-tile sm t-slate"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5V5a2 2 0 0 1 2-2h13v18H6a2 2 0 0 1-2-2.5z"/></svg></span>
+          <div>
+            <h4>Tagebuch</h4>
+            <p>Ein persönliches Tagesprotokoll — die Aufzeichnung dessen, was geschah, die niemand führt, bis er sie braucht.</p>
+          </div>
+        </div>
+        <div class="feature-item reveal">
+          <span class="icon-tile sm t-rose"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z"/></svg></span>
+          <div>
+            <h4>Lean-Management</h4>
+            <p>Das Register für kontinuierliche Verbesserung: Ideen werden erfasst, bewertet, verantwortet und bis zur Umsetzung verfolgt.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section dark-section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Verzahnt, nicht angeflanscht</span>
+        <h2>Jedes Modul endet hier</h2>
+        <p>Effizienz ist der Ort, an dem Arbeit aus dem Rest der Plattform heute zu jemandes Aufgabe wird.</p>
+      </div>
+      <div class="grid grid-3">
+        <div class="dark-card reveal">
+          <span class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span>
+          <h3 class="mt-16">HSEQ-Maßnahmen</h3>
+          <p>Untersuchungsergebnisse und Beobachtungs-Nachverfolgungen kommen als Aufgabe mit Verantwortlichem und Termin — auf der Liste, mit der die Person ohnehin arbeitet.</p>
+          <p class="mt-12"><a class="link-arrow" href="/de/modules/hseq">HSEQ ansehen<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></p>
+        </div>
+        <div class="dark-card reveal">
+          <span class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a4 4 0 0 0 5 5L21 21l-3 .5L8.5 12A4 4 0 0 1 3 6.5l3 3 2.5-2.5-3-3z"/></svg></span>
+          <h3 class="mt-16">Instandhaltungsarbeiten</h3>
+          <p>Vorbeugende Maßnahmen und Wartungschecklisten nutzen dieselbe Aufgaben- und Checklistenmechanik — keine parallele To-do-Liste nötig.</p>
+          <p class="mt-12"><a class="link-arrow" href="/de/modules/maintenance">Instandhaltung ansehen<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></p>
+        </div>
+        <div class="dark-card reveal">
+          <span class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg></span>
+          <h3 class="mt-16">Projektlieferung</h3>
+          <p>Projektaufgaben und -besprechungen liegen hier — deshalb lässt sich Projektfortschritt messen statt beschreiben.</p>
+          <p class="mt-12"><a class="link-arrow" href="/de/modules/business">Unternehmenssteuerung ansehen<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Wer darin arbeitet</span>
+        <h2>Das Modul, das alle nutzen — unabhängig von der Aufgabe</h2>
+        <p>Die Einführung der Plattform beginnt meist hier.</p>
+      </div>
+      <div class="grid grid-3">
+        <article class="card card-pad reveal">
+          <span class="icon-tile sm t-cyan"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span>
+          <h3 class="mt-16">Alle mit einer Aufgabenliste</h3>
+          <p class="mt-12">Öffnet morgens einen Bildschirm und sieht jeden überfälligen und fälligen eigenen Punkt — egal, aus welchem Teil der Plattform er stammt.</p>
+        </article>
+        <article class="card card-pad reveal">
+          <span class="icon-tile sm t-violet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/></svg></span>
+          <h3 class="mt-16">Teamleitung</h3>
+          <p class="mt-12">Führt die Wochenbesprechung anhand der Agenda, vergibt Maßnahmen darin und beginnt die nächste mit dem, was geschlossen wurde und was nicht.</p>
+        </article>
+        <article class="card card-pad reveal">
+          <span class="icon-tile sm t-rose"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z"/></svg></span>
+          <h3 class="mt-16">Verbesserungsverantwortliche</h3>
+          <p class="mt-12">Hält das Lean-Register in Bewegung, damit Vorschläge von der Werksebene in einer Änderung enden statt in einem Gespräch.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-soft">
+    <div class="container split">
+      <div>
+        <span class="eyebrow">Von Ihnen zu gestalten</span>
+        <h2 class="mt-16">Die tägliche Ebene an die Arbeitsweise Ihrer Teams anpassen</h2>
+        <p class="lead mt-12">Kleine Einstellungen hier entscheiden, ob die Plattform überhaupt angenommen wird.</p>
+        <ul class="check-list mt-24">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Eigene Checklisten- und Formularvorlagen bauen, standort- und schichtübergreifend wiederverwendbar</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Aufgabenprioritäten und Status wählen, die zu Ihrer bestehenden Sprache passen</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Entscheiden, ob Aufgabenlisten privat, teamweit sichtbar oder organisationsweit offen sind</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Formulare mit öffentlichen Links veröffentlichen — für Antwortende ist keine Lizenz nötig</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Nicht benötigte Werkzeuge abschalten — viele Organisationen nutzen nur Aufgaben und Besprechungen</li>
+        </ul>
+        <p class="mt-24"><a class="link-arrow" href="/de/modules/administration">Ansehen, was eine Administration steuert<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></p>
+      </div>
+      <div class="split-media">
+        <div class="panel reveal">
+          <div class="panel-head reveal">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21v-7M4 10V3M12 21v-9M12 8V3M20 21v-5M20 12V3M1 14h6M9 8h6M17 16h6"/></svg>
+            Effizienz · Einstellungen
+          </div>
+          <div class="panel-body reveal">
+            <table class="table-mock">
+              <thead><tr><th>Einstellung</th><th>Wert</th></tr></thead>
+              <tbody>
+                <tr><td>Sichtbarkeit der Aufgaben</td><td><span class="badge badge-cyan">Team</span></td></tr>
+                <tr><td>Besprechungsmaßnahmen</td><td><span class="badge badge-violet">Aufgaben anlegen</span></td></tr>
+                <tr><td>Öffentliche Formularlinks</td><td><span class="badge badge-emerald">Aktiv</span></td></tr>
+                <tr><td>Checklistenvorlagen</td><td><span class="badge badge-amber">18 geteilt</span></td></tr>
+                <tr><td>Tagebuch</td><td><span class="badge badge-indigo">Privat für den Eigentümer</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2>Fragen zu Effizienz, die uns gestellt werden</h2>
+      </div>
+      <div class="faq">
+        <details>
+          <summary>Warum das nutzen, wenn wir schon eine Aufgaben-App haben?</summary>
+          <div class="faq-body">Weil eine separate Aufgaben-App Ihre Ereignisse, Arbeitsaufträge und Projekte nicht sieht. Der Wert liegt nicht in der Liste selbst, sondern darin, dass eine in einer Untersuchung oder Besprechung entstandene Maßnahme ohne Neuerfassung auf derselben Liste landet.</div>
+        </details>
+        <details>
+          <summary>Können Personen außerhalb unserer Organisation ein Formular ausfüllen?</summary>
+          <div class="faq-body">Ja. Formulare lassen sich mit einem teilbaren öffentlichen Link veröffentlichen — Fremdfirmen, Besucher und Kunden können ohne Konto oder Lizenz einreichen. Die Antworten kommen als strukturierte Datensätze zurück.</div>
+        </details>
+        <details>
+          <summary>Ist das Tagebuch für Führungskräfte sichtbar?</summary>
+          <div class="faq-body">Das Tagebuch ist als persönliches Protokoll gedacht, und seine Sichtbarkeit folgt demselben Berechtigungsmodell wie alles andere. Die meisten Organisationen halten es privat.</div>
+        </details>
+        <details>
+          <summary>Zeigt der Kalender mehr als Besprechungen?</summary>
+          <div class="faq-body">Ja — Schulungen, Abwesenheiten, geplante Instandhaltung und Fahrten können in derselben Ansicht erscheinen, weil sie Datensätze desselben Systems sind und keine Einträge getrennter Kalender.</div>
+        </details>
+        <details>
+          <summary>Können wir nur mit diesem Modul starten?</summary>
+          <div class="faq-body">Viele Organisationen tun genau das. Effizienz ist der übliche Einstieg, weil sie ab Tag eins von allen genutzt werden kann — die operativen Module kommen dazu, sobald sich die Gewohnheit eingestellt hat.</div>
+        </details>
+      </div>
+      <p class="text-center mt-32">
+        <a class="link-arrow" href="/de/modules">Alle Module durchsehen<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+      </p>
+    </div>
+  </section>
+
+
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-hero">
+      <div>
+        <p class="footer-kicker">Eine Frage? Oder lieber ein Rundgang?</p>
+        <h2>Ein System für den gesamten Betrieb.</h2>
+      </div>
+      <div>
+        <p>Erzählen Sie uns, wie Ihr Betrieb läuft. Wir sehen uns die passenden Arbeitsabläufe an, prüfen Ihre Daten und stimmen mit unserem Team die nächsten Schritte ab.</p>
+        <div class="footer-actions">
+          <a class="btn btn-onDark btn-lg" href="/de/contact#demo">Demo anfragen <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+          <a class="btn btn-outline-onDark btn-lg" href="https://docs.caspianerp.com">Dokumentation lesen</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="/de">
+          <img class="brand-mark" src="/assets/img/logo-mark.svg" alt="" width="30" height="30">
+          <span class="brand-name" style="color:#fff">Caspian <b>ERP</b></span>
+        </a>
+      </div>
+      <div class="footer-col">
+        <h4>Plattform</h4>
+        <ul>
+          <li><a href="/de/modules">Alle Module</a></li>
+          <li><a href="/de/industries">Branchen</a></li>
+          <li><a href="/de/security">Sicherheit und RBAC</a></li>
+          <li><a href="/de/pricing">Preise</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Module</h4>
+        <ul>
+          <li><a href="/de/modules/hseq">HSEQ</a></li>
+          <li><a href="/de/modules/hr">Personalwesen</a></li>
+          <li><a href="/de/modules/procurement">Beschaffung</a></li>
+          <li><a href="/de/modules/inventory">Lager</a></li>
+          <li><a href="/de/modules/maintenance">Instandhaltung</a></li>
+          <li><a href="/de/modules/finance">Finanzen</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Unternehmen</h4>
+        <ul>
+          <li><a href="/de/about">Über uns</a></li>
+          <li><a href="https://caspiantools.com" rel="noopener">CaspianTools</a></li>
+          <li><a href="/de/contact">Kontakt</a></li>
+          <li><a href="/de/contact#demo">Demo anfragen</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Erste Schritte</h4>
+        <ul>
+          <li><a href="https://app.caspianerp.com">Anmelden</a></li>
+          <li><a href="/de/contact#demo">Demo anfragen</a></li>
+          <li><a href="https://docs.caspianerp.com">Dokumentation</a></li>
+          <li><a href="https://admin.caspianerp.com">Admin-Portal</a></li>
+          <li><a href="/de/pricing#faq">Fragen zu Preisen</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <span data-year>2026</span> CaspianTools. Caspian ERP ist ein Produkt von CaspianTools.</p>
+      <nav aria-label="Rechtliches">
+        <a href="/de/privacy">Datenschutzerklärung</a>
+        <a href="/de/terms">Nutzungsbedingungen</a>
+        <a href="/de/security">Sicherheit</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+<script src="/assets/js/site.js?v=20260908" defer></script>
+</body>
+</html>

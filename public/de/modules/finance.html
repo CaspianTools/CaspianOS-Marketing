@@ -1,0 +1,635 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="/assets/js/lang.js?v=20260908"></script>
+<title>Finanzen — Caspian ERP</title>
+<meta name="description" content="Kontenplan, Ausgangs- und Eingangsrechnungen, Auslagen, Zahlungen, Budgets, Steuersätze, Bankkonten und Berichte — doppelte Buchführung, gespeist aus dem Betrieb statt daraus abgetippt.">
+<link rel="canonical" href="https://caspianerp.com/de/modules/finance">
+<!--i18n:alternates-->
+<link rel="alternate" hreflang="en" href="https://caspianerp.com/modules/finance">
+<link rel="alternate" hreflang="az" href="https://caspianerp.com/az/modules/finance">
+<link rel="alternate" hreflang="tr" href="https://caspianerp.com/tr/modules/finance">
+<link rel="alternate" hreflang="ru" href="https://caspianerp.com/ru/modules/finance">
+<link rel="alternate" hreflang="nb" href="https://caspianerp.com/nb/modules/finance">
+<link rel="alternate" hreflang="de" href="https://caspianerp.com/de/modules/finance">
+<link rel="alternate" hreflang="fr" href="https://caspianerp.com/fr/modules/finance">
+<link rel="alternate" hreflang="x-default" href="https://caspianerp.com/modules/finance">
+<!--/i18n:alternates-->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Caspian ERP">
+<meta property="og:title" content="Finanzen — Caspian ERP">
+<meta property="og:description" content="Kontenplan, Ausgangs- und Eingangsrechnungen, Auslagen, Zahlungen, Budgets, Steuersätze, Bankkonten und Berichte — doppelte Buchführung, gespeist aus dem Betrieb statt daraus abgetippt.">
+<meta property="og:url" content="https://caspianerp.com/de/modules/finance">
+<meta property="og:image" content="https://caspianerp.com/assets/img/og-image.svg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#4f46e5">
+<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="/assets/css/site.css?v=20260908">
+<noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
+</head>
+<body>
+<a class="skip-link" href="#main">Zum Inhalt springen</a>
+<header class="site-header">
+  <div class="container">
+    <nav class="nav" aria-label="Haupt">
+      <a class="brand" href="/de">
+        <img class="brand-mark" src="/assets/img/logo-mark.svg" alt="" width="30" height="30">
+        <span class="brand-name">Caspian <b>ERP</b></span>
+      </a>
+      <ul class="nav-links">
+        <li><a class="nav-link" aria-current="page" href="/de/modules">Module</a></li>
+        <li><a class="nav-link" href="/de/industries">Branchen</a></li>
+        <li><a class="nav-link" href="/de/security">Sicherheit</a></li>
+        <li><a class="nav-link" href="/de/pricing">Preise</a></li>
+        <li><a class="nav-link" href="/de/about">Über uns</a></li>
+      </ul>
+      <div class="nav-actions">
+        <!--i18n:switcher-->
+        <details class="lang" data-lang-switcher>
+          <summary class="lang-button" title="Sprache wählen" aria-label="Sprache: Deutsch"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18"/></svg><span class="lang-code">DE</span><svg class="lang-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="lang-menu" role="group" aria-label="Sprache wählen">
+            <a class="lang-option" href="/modules/finance" hreflang="en" lang="en" data-lang="en">English</a>
+            <a class="lang-option" href="/az/modules/finance" hreflang="az" lang="az" data-lang="az">Azərbaycan dili</a>
+            <a class="lang-option" href="/tr/modules/finance" hreflang="tr" lang="tr" data-lang="tr">Türkçe</a>
+            <a class="lang-option" href="/ru/modules/finance" hreflang="ru" lang="ru" data-lang="ru">Русский</a>
+            <a class="lang-option" href="/nb/modules/finance" hreflang="nb" lang="nb" data-lang="nb">Norsk (bokmål)</a>
+            <a class="lang-option" href="/de/modules/finance" hreflang="de" lang="de" data-lang="de" aria-current="true">Deutsch</a>
+            <a class="lang-option" href="/fr/modules/finance" hreflang="fr" lang="fr" data-lang="fr">Français</a>
+          </div>
+        </details>
+        <!--/i18n:switcher-->
+        <a class="btn btn-ghost btn-sm" href="https://app.caspianerp.com">Anmelden</a>
+        <a class="btn btn-primary btn-sm" href="/de/contact#demo">Demo anfragen <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+        <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="mobile-menu" aria-label="Menü öffnen" data-text-open="Menü öffnen" data-text-close="Menü schließen">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </nav>
+  </div>
+  <div class="mobile-menu" id="mobile-menu">
+    <a class="nav-link" aria-current="page" href="/de/modules">Module</a>
+    <a class="nav-link" href="/de/industries">Branchen</a>
+    <a class="nav-link" href="/de/security">Sicherheit</a>
+    <a class="nav-link" href="/de/pricing">Preise</a>
+    <a class="nav-link" href="/de/about">Über uns</a>
+    <a class="nav-link" href="https://docs.caspianerp.com">Dokumentation</a>
+    <a class="nav-link" href="/de/contact">Kontakt</a>
+    <!--i18n:switcher-mobile-->
+    <div class="mobile-lang" role="group" aria-label="Sprache wählen">
+      <span class="mobile-lang-label">Sprache</span>
+      <div class="mobile-lang-options">
+        <a class="lang-option" href="/modules/finance" hreflang="en" lang="en" data-lang="en">English</a>
+        <a class="lang-option" href="/az/modules/finance" hreflang="az" lang="az" data-lang="az">Azərbaycan dili</a>
+        <a class="lang-option" href="/tr/modules/finance" hreflang="tr" lang="tr" data-lang="tr">Türkçe</a>
+        <a class="lang-option" href="/ru/modules/finance" hreflang="ru" lang="ru" data-lang="ru">Русский</a>
+        <a class="lang-option" href="/nb/modules/finance" hreflang="nb" lang="nb" data-lang="nb">Norsk (bokmål)</a>
+        <a class="lang-option" href="/de/modules/finance" hreflang="de" lang="de" data-lang="de" aria-current="true">Deutsch</a>
+        <a class="lang-option" href="/fr/modules/finance" hreflang="fr" lang="fr" data-lang="fr">Français</a>
+      </div>
+    </div>
+    <!--/i18n:switcher-mobile-->
+    <div class="mobile-cta">
+      <a class="btn btn-secondary" href="https://app.caspianerp.com">Anmelden</a>
+      <a class="btn btn-primary" href="/de/contact#demo">Demo anfragen</a>
+    </div>
+  </div>
+</header>
+<main id="main">
+
+  <section class="hero">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Brotkrümelnavigation">
+        <a href="/de/modules">Module</a>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg>
+        <span aria-current="page">Finanzen</span>
+      </nav>
+      <span class="eyebrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v20M17 6H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>Finanzen</span>
+      <h1>Ein Hauptbuch, gespeist <span class="grad">vom Betrieb selbst</span></h1>
+      <p class="hero-sub">Rechnungen, Eingangsbelege, Auslagen und Zahlungen auf einem echten Kontenplan — wo eine Lieferantenrechnung bereits mit Bestellung und Wareneingang abgeglichen eintrifft.</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary btn-lg" href="/de/contact#demo">Demo anfragen</a>
+        <a class="btn btn-secondary btn-lg" href="https://docs.caspianerp.com">Dokumentation lesen</a>
+      </div>
+      <p class="hero-note">Zehn Werkzeuge · Kontenplan und Budgets · Gespeist von Beschaffung und CRM</p>
+    </div>
+  </section>
+  <div class="container mock-wrap">
+    <p class="small muted text-center">Beispielhafte Produktansicht mit Musterdaten. <a href="/de/contact#demo">Live-Rundgang anfragen</a>.</p>
+    <div class="mock reveal" role="img" aria-label="Caspian ERP Finanzen mit Liquidität, Rechnungen zur Freigabe, Budgetverbrauch und überfälligen Forderungen">
+      <div class="mock-bar" aria-hidden="true">
+        <span class="mock-dot"></span><span class="mock-dot"></span><span class="mock-dot"></span>
+        <span class="mock-url">app.caspianerp.com/de/w/finance/dashboard</span>
+      </div>
+      <div class="mock-body" aria-hidden="true">
+        <div class="mock-rail">
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg>Start</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/></svg>Personalwesen</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>HSEQ</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>Untern.</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1"/><circle cx="18" cy="20" r="1"/><path d="M2 3h2.5l2.6 12.6a1 1 0 0 0 1 .8h8.9a1 1 0 0 0 1-.77L21 8H6"/></svg>Beschaff.</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V10l6 4V10l6 4V6l6 4v11z"/><path d="M7 17h.01M13 17h.01M18 17h.01"/></svg>Fertig.</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>CRM</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V9l9-6 9 6v12"/><path d="M7 21v-8h10v8"/></svg>Lager</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 16V6h11v10"/><path d="M14 9h4l3 3.5V16h-7z"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg>Logistik</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0 5 5L21 21l-3 .5L8.5 12A4 4 0 0 1 3 6.5l3 3 2.5-2.5-3-3z"/></svg>Instandh.</div>
+          <div class="mock-rail-item active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 6H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>Finanzen</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4.5 13.5H11l-1 8.5 8.5-11.5H12z"/></svg>Effizienz</div>
+        </div>
+        <div class="mock-side">
+          <div class="mock-side-title">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 6H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            Finanzen
+          </div>
+          <div class="mock-side-item active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19h16M7 16V9M12 16V5M17 16v-4"/></svg>Dashboard</div>
+          <div class="mock-side-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10 12 4l9 6"/><path d="M5 10v9M10 10v9M14 10v9M19 10v9"/><path d="M3 21h18"/></svg>Kontenplan</div>
+          <div class="mock-side-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3v18l2-1.5L9 21l2-1.5L13 21l2-1.5L17 21l2-1.5V3z"/><path d="M8 8h8M8 12h8"/></svg>Ausgangsrechnungen</div>
+          <div class="mock-side-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/></svg>Eingangsrechnungen</div>
+          <div class="mock-side-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="4" width="10" height="17" rx="2"/><path d="M9 4V3h6v1"/><path d="M10 10h4M10 14h4"/></svg>Auslagen</div>
+          <div class="mock-side-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 6H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>Zahlungen</div>
+          <div class="mock-side-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="1" fill="currentColor" stroke="none"/></svg>Budgets</div>
+          <div class="mock-side-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m19 5-14 14"/><circle cx="7.5" cy="7.5" r="2.5"/><circle cx="16.5" cy="16.5" r="2.5"/></svg>Steuersätze</div>
+          <div class="mock-side-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10 12 4l9 6"/><path d="M5 10v9M10 10v9M14 10v9M19 10v9"/><path d="M3 21h18"/></svg>Bankkonten</div>
+          <div class="mock-side-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19h16M7 16V9M12 16V5M17 16v-4"/></svg>Berichte</div>
+        </div>
+        <div class="mock-main">
+          <div class="mock-topbar">
+            <div class="mock-search">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.2-3.2"/></svg>
+              Personen, Aufträge, Anlagen suchen …
+            </div>
+            <div class="mock-plus"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></div>
+            <div class="mock-avatar"></div>
+          </div>
+          <div class="mock-h1">Finanz-Dashboard</div>
+          <div class="mock-tag">Monat 10 · 83 % des Jahresbudgets verbraucht</div>
+          <div class="mock-cards">
+            <div class="mock-card">
+              <div class="mock-card-head" style="color:#e11d48">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3v18l2-1.5L9 21l2-1.5L13 21l2-1.5L17 21l2-1.5V3z"/><path d="M8 8h8M8 12h8"/></svg>
+                Überfällige Forderungen
+              </div>
+              <div class="mock-row"><span>INV-2214 · 62 T</span><span class="mock-pill hot">Nachfassen</span></div>
+              <div class="mock-row"><span>INV-2231 · 31 T</span><span class="mock-pill warn">Gesendet</span></div>
+            </div>
+            <div class="mock-card">
+              <div class="mock-card-head" style="color:#0d9488">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10 12 4l9 6"/><path d="M5 10v9M10 10v9M14 10v9M19 10v9"/><path d="M3 21h18"/></svg>
+                Liquiditätslage
+              </div>
+              <div class="mock-kpi">4 Konten</div>
+              <div class="mock-kpi-sub">bis gestern abgestimmt</div>
+            </div>
+            <div class="mock-card">
+              <div class="mock-card-head" style="color:#d97706">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/></svg>
+                Rechnungen zur Freigabe
+              </div>
+              <div class="mock-row"><span>VIN-8841 · abgeglichen</span><span class="mock-pill ok">Bereit</span></div>
+              <div class="mock-row"><span>VIN-8846 · Preisrückfrage</span><span class="mock-pill warn">Zurückgestellt</span></div>
+            </div>
+            <div class="mock-card">
+              <div class="mock-card-head" style="color:#4f46e5">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="1" fill="currentColor" stroke="none"/></svg>
+                Budgetverbrauch
+              </div>
+              <div class="mock-bars"><span style="height:48%"></span><span style="height:55%"></span><span style="height:62%"></span><span style="height:70%"></span><span style="height:77%"></span><span style="height:83%"></span></div>
+              <div class="mock-kpi-sub" style="margin-top:8px">Liegt 4 Punkte vor Plan</div>
+            </div>
+            <div class="mock-card">
+              <div class="mock-card-head" style="color:#7c3aed">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="4" width="10" height="17" rx="2"/><path d="M9 4V3h6v1"/><path d="M10 10h4M10 14h4"/></svg>
+                Auslagen
+              </div>
+              <div class="mock-kpi">9</div>
+              <div class="mock-kpi-sub">Anträge warten auf Genehmigung</div>
+            </div>
+            <div class="mock-card">
+              <div class="mock-card-head" style="color:#0891b2">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m19 5-14 14"/><circle cx="7.5" cy="7.5" r="2.5"/><circle cx="16.5" cy="16.5" r="2.5"/></svg>
+                Steuer
+              </div>
+              <div class="mock-row"><span>Regelsatz</span><span class="mock-pill ok">Angewendet</span></div>
+              <div class="mock-row"><span>Befreite Positionen</span><span class="mock-pill">3 markiert</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="section section-soft">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Vor Caspian ERP</span>
+        <h2>Buchhaltung ist eine zweite Erfassungsarbeit</h2>
+        <p>Der Betrieb erfasst, was geschehen ist. Dann tippt jemand dieselben Vorgänge Wochen später aus PDFs in die Buchhaltungssoftware.</p>
+      </div>
+      <div class="grid grid-3">
+        <article class="card card-pad reveal">
+          <h3>Rechnungen werden aus Papier erfasst</h3>
+          <p class="mt-12">Die Lieferantenrechnung kommt als PDF, und jemand erfasst Positionen neu, die als Bestellung und Wareneingang längst in einem anderen System stehen.</p>
+        </article>
+        <article class="card card-pad reveal">
+          <h3>Budget gegen Ist kommt zu spät, um noch zu handeln</h3>
+          <p class="mt-12">Bis der Monat geschlossen und der Bericht gebaut ist, liegt die aufgedeckte Überschreitung zwei Monate zurück.</p>
+        </article>
+        <article class="card card-pad reveal">
+          <h3>Auslagen gehen auf Papier hinein und kommen als Streit zurück</h3>
+          <p class="mt-12">Anträge werden auf Formularen eingereicht, von wem auch immer gerade da ist genehmigt und gegen Belege abgeglichen, die niemand findet.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Was es leistet</span>
+        <h2>Richtige Finanzen, verbunden mit der Arbeit, die sie erzeugt hat</h2>
+        <p>Kontenplan, Budgets und Berichte — mit Buchungen, die aus den erzeugenden Modulen kommen.</p>
+      </div>
+      <div class="grid grid-2">
+        <article class="card card-pad reveal">
+          <span class="icon-tile t-emerald"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10 12 4l9 6"/><path d="M5 10v9M10 10v9M14 10v9M19 10v9"/><path d="M3 21h18"/></svg></span>
+          <h3 class="mt-16">Kontenplan und Bankkonten</h3>
+          <p class="mt-12">Eine echte Buchhaltungsstruktur, kein an ein Betriebswerkzeug geschraubtes Kategoriefeld.</p>
+          <ul class="check-list mt-16">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Ein Kontenplan, den Sie passend zu Ihrer Berichterstattung definieren</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Bankkonten mit Salden und Abstimmung</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Einheitliche Behandlung in jedem buchenden Modul</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Trennung zwischen Organisationen — keine Daten über die Grenze</li>
+          </ul>
+        </article>
+        <article class="card card-pad reveal">
+          <span class="icon-tile t-amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3v18l2-1.5L9 21l2-1.5L13 21l2-1.5L17 21l2-1.5V3z"/><path d="M8 8h8M8 12h8"/></svg></span>
+          <h3 class="mt-16">Rechnungen, Eingangsbelege und Zahlungen</h3>
+          <p class="mt-12">Forderungen und Verbindlichkeiten an einem Ort — aus dem Betrieb statt aus einem Papierstapel.</p>
+          <ul class="check-list mt-16">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Kundenrechnungen aus Kundenaufträgen im CRM</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Lieferantenrechnungen, die bereits mit Bestellung und Wareneingang abgeglichen ankommen</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Zahlungen, erfasst gegen Rechnungen und Eingangsbelege</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Der offene Stand ist ohne Tabelle sichtbar</li>
+          </ul>
+        </article>
+        <article class="card card-pad reveal">
+          <span class="icon-tile t-cyan"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/></svg></span>
+          <h3 class="mt-16">Auslagen mit Freigabepfad</h3>
+          <p class="mt-12">Anträge werden mit Nachweis eingereicht, genehmigt und gebucht.</p>
+          <ul class="check-list mt-16">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Auslagen werden von der Person eingereicht, die sie hatte</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Freigabe nach Ihren eigenen Regeln geleitet</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Belege hängen am Antrag statt in einem Umschlag</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Ohne Neuerfassung auf das richtige Konto gebucht</li>
+          </ul>
+        </article>
+        <article class="card card-pad reveal">
+          <span class="icon-tile t-violet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="1" fill="currentColor" stroke="none"/></svg></span>
+          <h3 class="mt-16">Budgets, die geprüft werden, solange noch Zeit ist</h3>
+          <p class="mt-12">Budgets je Konto und Periode, laufend gegen Ist verglichen.</p>
+          <ul class="check-list mt-16">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Budgets je Konto, Abteilung und Periode</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Ist gegen Budget jederzeit verfügbar</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Überschreitungen werden im Monat sichtbar, nicht danach</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Dieselben Zahlen, die das Kennzahlen-Dashboard liest</li>
+          </ul>
+        </article>
+        <article class="card card-pad reveal">
+          <span class="icon-tile t-rose"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m19 5-14 14"/><circle cx="7.5" cy="7.5" r="2.5"/><circle cx="16.5" cy="16.5" r="2.5"/></svg></span>
+          <h3 class="mt-16">Konsequent angewandte Steuersätze</h3>
+          <p class="mt-12">Die Steuerlogik wird einmal definiert und überall angewendet, wo ein Beleg entsteht.</p>
+          <ul class="check-list mt-16">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Steuersätze, konfiguriert für Ihre Rechtsordnung</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Einheitlich auf Angebote, Rechnungen und Eingangsbelege angewendet</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Auswertbar, weil die Behandlung strukturiert ist</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Keine Improvisation je Beleg</li>
+          </ul>
+        </article>
+        <article class="card card-pad reveal">
+          <span class="icon-tile t-teal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19h16M7 16V9M12 16V5M17 16v-4"/></svg></span>
+          <h3 class="mt-16">Berichte aus Live-Daten</h3>
+          <p class="mt-12">Finanzberichte, die das Hauptbuch selbst lesen statt einen Export davon.</p>
+          <ul class="check-list mt-16">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Standardfinanzberichte aus Live-Daten</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Von einer Zahl zu den dahinterliegenden Buchungen navigieren</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Periodenvergleiche, ohne eine Tabelle neu zu bauen</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Stimmt mit dem Betrieb überein, weil beide dieselben Daten teilen</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-tight section-soft">
+    <div class="container">
+      <div class="section-head">
+        <h2>Wie ein Einkauf ins Hauptbuch gelangt</h2>
+        <p>Wenn die Buchhaltung die Rechnung sieht, stimmen bereits drei Belege überein.</p>
+      </div>
+      <div class="flow reveal">
+        <div class="flow-step done"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="4" width="10" height="17" rx="2"/><path d="M9 4V3h6v1"/><path d="M10 10h4M10 14h4"/></svg>Anforderung</div>
+        <span class="flow-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
+        <div class="flow-step done"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/></svg>Bestellung</div>
+        <span class="flow-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
+        <div class="flow-step done"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m21 8-9-5-9 5v8l9 5 9-5z"/><path d="m3 8 9 5 9-5M12 13v9"/></svg>Wareneingang</div>
+        <span class="flow-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
+        <div class="flow-step"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3v18l2-1.5L9 21l2-1.5L13 21l2-1.5L17 21l2-1.5V3z"/><path d="M8 8h8M8 12h8"/></svg>Lieferantenrechnung</div>
+        <span class="flow-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
+        <div class="flow-step"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="m8 12 3 3 5-6"/></svg>Abgeglichen</div>
+        <span class="flow-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
+        <div class="flow-step"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v20M17 6H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>Bezahlt</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Jedes Werkzeug im Modul</span>
+        <h2>Zehn Werkzeuge für die Buchführung</h2>
+        <p>Genug Finanzfunktion, um das Geschäft zu führen — im selben System wie der Betrieb.</p>
+      </div>
+      <div class="grid grid-2">
+        <div class="feature-item reveal">
+          <span class="icon-tile sm t-emerald"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19h16M7 16V9M12 16V5M17 16v-4"/></svg></span>
+          <div>
+            <h4>Finanz-Dashboard</h4>
+            <p>Liquidität, Forderungen, Verbindlichkeiten und Budgetverbrauch auf einem Bildschirm.</p>
+          </div>
+        </div>
+        <div class="feature-item reveal">
+          <span class="icon-tile sm t-teal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10 12 4l9 6"/><path d="M5 10v9M10 10v9M14 10v9M19 10v9"/><path d="M3 21h18"/></svg></span>
+          <div>
+            <h4>Kontenplan</h4>
+            <p>Die Kontenstruktur, auf die alles bucht — definiert nach Ihrer Berichtsweise.</p>
+          </div>
+        </div>
+        <div class="feature-item reveal">
+          <span class="icon-tile sm t-cyan"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3v18l2-1.5L9 21l2-1.5L13 21l2-1.5L17 21l2-1.5V3z"/><path d="M8 8h8M8 12h8"/></svg></span>
+          <div>
+            <h4>Ausgangsrechnungen</h4>
+            <p>Kundenrechnungen aus Kundenaufträgen — verkauft und berechnet stimmen überein.</p>
+          </div>
+        </div>
+        <div class="feature-item reveal">
+          <span class="icon-tile sm t-amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/></svg></span>
+          <div>
+            <h4>Eingangsrechnungen</h4>
+            <p>Lieferantenrechnungen, die bereits gegen Bestellung und Wareneingang abgeglichen eintreffen.</p>
+          </div>
+        </div>
+        <div class="feature-item reveal">
+          <span class="icon-tile sm t-rose"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="4" width="10" height="17" rx="2"/><path d="M9 4V3h6v1"/><path d="M10 10h4M10 14h4"/></svg></span>
+          <div>
+            <h4>Auslagen</h4>
+            <p>Auslagenanträge von Mitarbeitenden mit Freigabeweg und am Antrag hängenden Belegen.</p>
+          </div>
+        </div>
+        <div class="feature-item reveal">
+          <span class="icon-tile sm t-violet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v20M17 6H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></span>
+          <div>
+            <h4>Zahlungen</h4>
+            <p>Ein- und Auszahlungen, erfasst gegen die Rechnungen, die sie ausgleichen.</p>
+          </div>
+        </div>
+        <div class="feature-item reveal">
+          <span class="icon-tile sm t-emerald"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="1" fill="currentColor" stroke="none"/></svg></span>
+          <div>
+            <h4>Budgets</h4>
+            <p>Budgets je Konto, Abteilung und Periode, laufend mit dem Ist verglichen.</p>
+          </div>
+        </div>
+        <div class="feature-item reveal">
+          <span class="icon-tile sm t-slate"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m19 5-14 14"/><circle cx="7.5" cy="7.5" r="2.5"/><circle cx="16.5" cy="16.5" r="2.5"/></svg></span>
+          <div>
+            <h4>Steuersätze</h4>
+            <p>Einmal konfigurierte Steuerlogik, konsequent auf jeden erzeugten Beleg angewendet.</p>
+          </div>
+        </div>
+        <div class="feature-item reveal">
+          <span class="icon-tile sm t-cyan"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10 12 4l9 6"/><path d="M5 10v9M10 10v9M14 10v9M19 10v9"/><path d="M3 21h18"/></svg></span>
+          <div>
+            <h4>Bankkonten</h4>
+            <p>Bankkontodatensätze mit Salden und Abstimmung gegen erfasste Zahlungen.</p>
+          </div>
+        </div>
+        <div class="feature-item reveal">
+          <span class="icon-tile sm t-violet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19h16M7 16V9M12 16V5M17 16v-4"/></svg></span>
+          <div>
+            <h4>Berichte</h4>
+            <p>Finanzberichte aus Live-Daten, mit Absprung zu den zugrunde liegenden Buchungen.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section dark-section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Verzahnt, nicht angeflanscht</span>
+        <h2>Finanzen sind keine Abtipparbeit mehr</h2>
+        <p>Jede Zahl hier ist entstanden, weil jemand die eigentliche Arbeit getan hat.</p>
+      </div>
+      <div class="grid grid-3">
+        <div class="dark-card reveal">
+          <span class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="20" r="1"/><circle cx="18" cy="20" r="1"/><path d="M2 3h2.5l2.6 12.6a1 1 0 0 0 1 .8h8.9a1 1 0 0 0 1-.77L21 8H6"/></svg></span>
+          <h3 class="mt-16">Bereits abgeglichene Rechnungen</h3>
+          <p>Die Lieferantenrechnung kommt mit Bestellung und Wareneingang — sie freizugeben ist eine Prüfung, keine Ermittlung.</p>
+          <p class="mt-12"><a class="link-arrow" href="/de/modules/procurement">Beschaffung ansehen<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></p>
+        </div>
+        <div class="dark-card reveal">
+          <span class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span>
+          <h3 class="mt-16">Rechnungen aus Kundenaufträgen</h3>
+          <p>Die Kundenfakturierung arbeitet aus dem angenommenen Auftrag und dem gemeinsamen Katalog — die Rechnung entspricht dem tatsächlich Verkauften.</p>
+          <p class="mt-12"><a class="link-arrow" href="/de/modules/crm">CRM ansehen<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></p>
+        </div>
+        <div class="dark-card reveal">
+          <span class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg></span>
+          <h3 class="mt-16">Budgets treffen auf Kennzahlen</h3>
+          <p>Budget gegen Ist ist eine Kennzahl wie jede andere — gelesen aus demselben Hauptbuch statt aus einer separaten Meldung.</p>
+          <p class="mt-12"><a class="link-arrow" href="/de/modules/business">Unternehmenssteuerung ansehen<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Wer darin arbeitet</span>
+        <h2>Für die, die die Zahlen unterschreiben müssen</h2>
+        <p>Controller, Buchhaltung und Budgetverantwortliche — auf einem Hauptbuch.</p>
+      </div>
+      <div class="grid grid-3">
+        <article class="card card-pad reveal">
+          <span class="icon-tile sm t-emerald"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v20M17 6H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></span>
+          <h3 class="mt-16">Finanzcontroller</h3>
+          <p class="mt-12">Gibt gegen den Dreiwege-Abgleich frei, sieht die Liquidität live und schließt den Monat ohne zwei Wochen Hinterherlaufen.</p>
+        </article>
+        <article class="card card-pad reveal">
+          <span class="icon-tile sm t-amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3v18l2-1.5L9 21l2-1.5L13 21l2-1.5L17 21l2-1.5V3z"/><path d="M8 8h8M8 12h8"/></svg></span>
+          <h3 class="mt-16">Kreditorenbuchhaltung</h3>
+          <p class="mt-12">Bearbeitet Rechnungen, die bereits abgeglichen ankommen, und zahlt mit am Datensatz hängendem Nachweis.</p>
+        </article>
+        <article class="card card-pad reveal">
+          <span class="icon-tile sm t-violet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="1" fill="currentColor" stroke="none"/></svg></span>
+          <h3 class="mt-16">Budgetverantwortlicher</h3>
+          <p class="mt-12">Verfolgt den eigenen Budgetverbrauch in Echtzeit und kann im Monat handeln, statt sich hinterher zu erklären.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-soft">
+    <div class="container split">
+      <div>
+        <span class="eyebrow">Von Ihnen zu gestalten</span>
+        <h2 class="mt-16">Finanzen an Ihre Rechtsordnung und Struktur anpassen</h2>
+        <p class="lead mt-12">Kontenstruktur und Steuerlogik gehören Ihnen; die Verknüpfungen sind das Produkt.</p>
+        <ul class="check-list mt-24">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Eigenen Kontenplan passend zu Ihrer Berichterstattung aufbauen</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Steuersätze für Ihre Rechtsordnung konfigurieren und einheitlich anwenden</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Budgets je Konto, Abteilung und Periode festlegen</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Freigabewege und Schwellen für Auslagen und Zahlungen festlegen</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Finanzwerkzeuge eng beschränken — dieses Modul wird meist am stärksten abgeschottet</li>
+        </ul>
+        <p class="mt-24"><a class="link-arrow" href="/de/modules/administration">Ansehen, was eine Administration steuert<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></p>
+      </div>
+      <div class="split-media">
+        <div class="panel reveal">
+          <div class="panel-head reveal">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21v-7M4 10V3M12 21v-9M12 8V3M20 21v-5M20 12V3M1 14h6M9 8h6M17 16h6"/></svg>
+            Finanzen · Einstellungen
+          </div>
+          <div class="panel-body reveal">
+            <table class="table-mock">
+              <thead><tr><th>Einstellung</th><th>Wert</th></tr></thead>
+              <tbody>
+                <tr><td>Kontenplan</td><td><span class="badge badge-emerald">Eigen</span></td></tr>
+                <tr><td>Rechnungsabgleich</td><td><span class="badge badge-amber">Dreiwege erforderlich</span></td></tr>
+                <tr><td>Auslagenfreigabe</td><td><span class="badge badge-cyan">Direkte Führungskraft</span></td></tr>
+                <tr><td>Budgetperiode</td><td><span class="badge badge-violet">Monatlich</span></td></tr>
+                <tr><td>Zugriff auf Finanzen</td><td><span class="badge badge-rose">Eingeschränkte Rolle</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2>Fragen zu den Finanzen, die uns gestellt werden</h2>
+      </div>
+      <div class="faq">
+        <details>
+          <summary>Ersetzt das unser Buchhaltungspaket für den Jahresabschluss?</summary>
+          <div class="faq-body">Es ist ein Arbeitshauptbuch zur Steuerung des Geschäfts — Konten, Rechnungen, Eingangsbelege, Auslagen, Zahlungen, Budgets, Steuern und Berichte. Ob es Ihr Paket für gesetzliche Meldungen ersetzt, hängt von Rechtsordnung und Steuerberatung ab — dieses Gespräch lohnt sich vor dem Wechsel.</div>
+        </details>
+        <details>
+          <summary>Kommen Lieferantenrechnungen wirklich abgeglichen an?</summary>
+          <div class="faq-body">Ja, wenn der Einkauf über die Beschaffung lief. Die Rechnung verweist auf Bestellung und Wareneingang — der Dreiwege-Abgleich ist damit eine Prüfung und keine Rekonstruktion aus PDFs.</div>
+        </details>
+        <details>
+          <summary>Können wir unseren eigenen Kontenplan festlegen?</summary>
+          <div class="faq-body">Ja. Sie definieren den Kontenplan, und jedes buchende Modul nutzt ihn — genau das hält operative und finanzielle Berichte konsistent.</div>
+        </details>
+        <details>
+          <summary>Wer darf Finanzdaten sehen?</summary>
+          <div class="faq-body">Nur die Rollen, denen Sie es gewähren — serverseitig durchgesetzt. Finanzen wird in den meisten Organisationen am stärksten beschränkt, und das Berechtigungsmodell trägt das bis auf Werkzeugebene.</div>
+        </details>
+        <details>
+          <summary>Wie bleibt Budget gegen Ist aktuell?</summary>
+          <div class="faq-body">Weil die Ist-Zahlen aus Belegen stammen, die der Betrieb im Arbeiten erzeugt — Rechnungen, Auslagen und Ausgangsrechnungen — statt aus einem Monatsimport. Sie sehen den Verbrauch in der Periode, solange noch Zeit zum Reagieren ist.</div>
+        </details>
+      </div>
+      <p class="text-center mt-32">
+        <a class="link-arrow" href="/de/modules">Alle Module durchsehen<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+      </p>
+    </div>
+  </section>
+
+
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-hero">
+      <div>
+        <p class="footer-kicker">Eine Frage? Oder lieber ein Rundgang?</p>
+        <h2>Ein System für den gesamten Betrieb.</h2>
+      </div>
+      <div>
+        <p>Erzählen Sie uns, wie Ihr Betrieb läuft. Wir sehen uns die passenden Arbeitsabläufe an, prüfen Ihre Daten und stimmen mit unserem Team die nächsten Schritte ab.</p>
+        <div class="footer-actions">
+          <a class="btn btn-onDark btn-lg" href="/de/contact#demo">Demo anfragen <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+          <a class="btn btn-outline-onDark btn-lg" href="https://docs.caspianerp.com">Dokumentation lesen</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="/de">
+          <img class="brand-mark" src="/assets/img/logo-mark.svg" alt="" width="30" height="30">
+          <span class="brand-name" style="color:#fff">Caspian <b>ERP</b></span>
+        </a>
+      </div>
+      <div class="footer-col">
+        <h4>Plattform</h4>
+        <ul>
+          <li><a href="/de/modules">Alle Module</a></li>
+          <li><a href="/de/industries">Branchen</a></li>
+          <li><a href="/de/security">Sicherheit und RBAC</a></li>
+          <li><a href="/de/pricing">Preise</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Module</h4>
+        <ul>
+          <li><a href="/de/modules/hseq">HSEQ</a></li>
+          <li><a href="/de/modules/hr">Personalwesen</a></li>
+          <li><a href="/de/modules/procurement">Beschaffung</a></li>
+          <li><a href="/de/modules/inventory">Lager</a></li>
+          <li><a href="/de/modules/maintenance">Instandhaltung</a></li>
+          <li><a href="/de/modules/finance">Finanzen</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Unternehmen</h4>
+        <ul>
+          <li><a href="/de/about">Über uns</a></li>
+          <li><a href="https://caspiantools.com" rel="noopener">CaspianTools</a></li>
+          <li><a href="/de/contact">Kontakt</a></li>
+          <li><a href="/de/contact#demo">Demo anfragen</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Erste Schritte</h4>
+        <ul>
+          <li><a href="https://app.caspianerp.com">Anmelden</a></li>
+          <li><a href="/de/contact#demo">Demo anfragen</a></li>
+          <li><a href="https://docs.caspianerp.com">Dokumentation</a></li>
+          <li><a href="https://admin.caspianerp.com">Admin-Portal</a></li>
+          <li><a href="/de/pricing#faq">Fragen zu Preisen</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <span data-year>2026</span> CaspianTools. Caspian ERP ist ein Produkt von CaspianTools.</p>
+      <nav aria-label="Rechtliches">
+        <a href="/de/privacy">Datenschutzerklärung</a>
+        <a href="/de/terms">Nutzungsbedingungen</a>
+        <a href="/de/security">Sicherheit</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+<script src="/assets/js/site.js?v=20260908" defer></script>
+</body>
+</html>

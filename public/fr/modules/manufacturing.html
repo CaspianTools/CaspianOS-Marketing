@@ -1,0 +1,574 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="/assets/js/lang.js?v=20260908"></script>
+<title>Production — Caspian ERP</title>
+<meta name="description" content="Ordres de fabrication, nomenclatures, lignes de production et contrôle qualité dans Caspian ERP — une production qui consomme les mêmes enregistrements de stock que le reste.">
+<link rel="canonical" href="https://caspianerp.com/fr/modules/manufacturing">
+<!--i18n:alternates-->
+<link rel="alternate" hreflang="en" href="https://caspianerp.com/modules/manufacturing">
+<link rel="alternate" hreflang="az" href="https://caspianerp.com/az/modules/manufacturing">
+<link rel="alternate" hreflang="tr" href="https://caspianerp.com/tr/modules/manufacturing">
+<link rel="alternate" hreflang="ru" href="https://caspianerp.com/ru/modules/manufacturing">
+<link rel="alternate" hreflang="nb" href="https://caspianerp.com/nb/modules/manufacturing">
+<link rel="alternate" hreflang="de" href="https://caspianerp.com/de/modules/manufacturing">
+<link rel="alternate" hreflang="fr" href="https://caspianerp.com/fr/modules/manufacturing">
+<link rel="alternate" hreflang="x-default" href="https://caspianerp.com/modules/manufacturing">
+<!--/i18n:alternates-->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Caspian ERP">
+<meta property="og:title" content="Production — Caspian ERP">
+<meta property="og:description" content="Ordres de fabrication, nomenclatures, lignes de production et contrôle qualité dans Caspian ERP — une production qui consomme les mêmes enregistrements de stock que le reste.">
+<meta property="og:url" content="https://caspianerp.com/fr/modules/manufacturing">
+<meta property="og:image" content="https://caspianerp.com/assets/img/og-image.svg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#4f46e5">
+<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="/assets/css/site.css?v=20260908">
+<noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
+</head>
+<body>
+<a class="skip-link" href="#main">Aller au contenu</a>
+<header class="site-header">
+  <div class="container">
+    <nav class="nav" aria-label="Principale">
+      <a class="brand" href="/fr">
+        <img class="brand-mark" src="/assets/img/logo-mark.svg" alt="" width="30" height="30">
+        <span class="brand-name">Caspian <b>ERP</b></span>
+      </a>
+      <ul class="nav-links">
+        <li><a class="nav-link" aria-current="page" href="/fr/modules">Modules</a></li>
+        <li><a class="nav-link" href="/fr/industries">Secteurs</a></li>
+        <li><a class="nav-link" href="/fr/security">Sécurité</a></li>
+        <li><a class="nav-link" href="/fr/pricing">Tarifs</a></li>
+        <li><a class="nav-link" href="/fr/about">À propos</a></li>
+      </ul>
+      <div class="nav-actions">
+        <!--i18n:switcher-->
+        <details class="lang" data-lang-switcher>
+          <summary class="lang-button" title="Choisir une langue" aria-label="Langue : Français"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18"/></svg><span class="lang-code">FR</span><svg class="lang-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="lang-menu" role="group" aria-label="Choisir une langue">
+            <a class="lang-option" href="/modules/manufacturing" hreflang="en" lang="en" data-lang="en">English</a>
+            <a class="lang-option" href="/az/modules/manufacturing" hreflang="az" lang="az" data-lang="az">Azərbaycan dili</a>
+            <a class="lang-option" href="/tr/modules/manufacturing" hreflang="tr" lang="tr" data-lang="tr">Türkçe</a>
+            <a class="lang-option" href="/ru/modules/manufacturing" hreflang="ru" lang="ru" data-lang="ru">Русский</a>
+            <a class="lang-option" href="/nb/modules/manufacturing" hreflang="nb" lang="nb" data-lang="nb">Norsk (bokmål)</a>
+            <a class="lang-option" href="/de/modules/manufacturing" hreflang="de" lang="de" data-lang="de">Deutsch</a>
+            <a class="lang-option" href="/fr/modules/manufacturing" hreflang="fr" lang="fr" data-lang="fr" aria-current="true">Français</a>
+          </div>
+        </details>
+        <!--/i18n:switcher-->
+        <a class="btn btn-ghost btn-sm" href="https://app.caspianerp.com">Se connecter</a>
+        <a class="btn btn-primary btn-sm" href="/fr/contact#demo">Demander une démo <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+        <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="mobile-menu" aria-label="Ouvrir le menu" data-text-open="Ouvrir le menu" data-text-close="Fermer le menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </nav>
+  </div>
+  <div class="mobile-menu" id="mobile-menu">
+    <a class="nav-link" aria-current="page" href="/fr/modules">Modules</a>
+    <a class="nav-link" href="/fr/industries">Secteurs</a>
+    <a class="nav-link" href="/fr/security">Sécurité</a>
+    <a class="nav-link" href="/fr/pricing">Tarifs</a>
+    <a class="nav-link" href="/fr/about">À propos</a>
+    <a class="nav-link" href="https://docs.caspianerp.com">Documentation</a>
+    <a class="nav-link" href="/fr/contact">Contact</a>
+    <!--i18n:switcher-mobile-->
+    <div class="mobile-lang" role="group" aria-label="Choisir une langue">
+      <span class="mobile-lang-label">Langue</span>
+      <div class="mobile-lang-options">
+        <a class="lang-option" href="/modules/manufacturing" hreflang="en" lang="en" data-lang="en">English</a>
+        <a class="lang-option" href="/az/modules/manufacturing" hreflang="az" lang="az" data-lang="az">Azərbaycan dili</a>
+        <a class="lang-option" href="/tr/modules/manufacturing" hreflang="tr" lang="tr" data-lang="tr">Türkçe</a>
+        <a class="lang-option" href="/ru/modules/manufacturing" hreflang="ru" lang="ru" data-lang="ru">Русский</a>
+        <a class="lang-option" href="/nb/modules/manufacturing" hreflang="nb" lang="nb" data-lang="nb">Norsk (bokmål)</a>
+        <a class="lang-option" href="/de/modules/manufacturing" hreflang="de" lang="de" data-lang="de">Deutsch</a>
+        <a class="lang-option" href="/fr/modules/manufacturing" hreflang="fr" lang="fr" data-lang="fr" aria-current="true">Français</a>
+      </div>
+    </div>
+    <!--/i18n:switcher-mobile-->
+    <div class="mobile-cta">
+      <a class="btn btn-secondary" href="https://app.caspianerp.com">Se connecter</a>
+      <a class="btn btn-primary" href="/fr/contact#demo">Demander une démo</a>
+    </div>
+  </div>
+</header>
+<main id="main">
+
+  <section class="hero">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Fil d’Ariane">
+        <a href="/fr/modules">Modules</a>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg>
+        <span aria-current="page">Production</span>
+      </nav>
+      <span class="eyebrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21V10l6 4V10l6 4V6l6 4v11z"/><path d="M7 17h.01M13 17h.01M18 17h.01"/></svg>Production</span>
+      <h1>Une production qui consomme <span class="grad">le stock que vous avez vraiment</span></h1>
+      <p class="hero-sub">Des ordres de fabrication adossés à une nomenclature, exécutés sur des lignes définies, avec les résultats qualité rattachés au produit et non dans un classeur qualité à part.</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary btn-lg" href="/fr/contact#demo">Demander une démo</a>
+        <a class="btn btn-secondary btn-lg" href="https://docs.caspianerp.com">Lire la documentation</a>
+      </div>
+      <p class="hero-note">Cinq outils · Consomme le stock · Alimente la finance en coût réel</p>
+    </div>
+  </section>
+  <div class="container mock-wrap">
+    <p class="small muted text-center">Vue produit illustrative avec des données d’exemple. <a href="/fr/contact#demo">Demander une présentation en direct</a>.</p>
+    <div class="mock reveal" role="img" aria-label="Caspian ERP Production affichant les ordres en cours, la charge des lignes, les manques de composants et les résultats qualité">
+      <div class="mock-bar" aria-hidden="true">
+        <span class="mock-dot"></span><span class="mock-dot"></span><span class="mock-dot"></span>
+        <span class="mock-url">app.caspianerp.com/fr/w/manufacturing/work-orders</span>
+      </div>
+      <div class="mock-body" aria-hidden="true">
+        <div class="mock-rail">
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg>Accueil</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/></svg>Ressources humaines</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>HSEQ</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>Pilot.</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1"/><circle cx="18" cy="20" r="1"/><path d="M2 3h2.5l2.6 12.6a1 1 0 0 0 1 .8h8.9a1 1 0 0 0 1-.77L21 8H6"/></svg>Achats</div>
+          <div class="mock-rail-item active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V10l6 4V10l6 4V6l6 4v11z"/><path d="M7 17h.01M13 17h.01M18 17h.01"/></svg>Prod.</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>CRM</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V9l9-6 9 6v12"/><path d="M7 21v-8h10v8"/></svg>Stocks</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 16V6h11v10"/><path d="M14 9h4l3 3.5V16h-7z"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg>Logist.</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0 5 5L21 21l-3 .5L8.5 12A4 4 0 0 1 3 6.5l3 3 2.5-2.5-3-3z"/></svg>Mainten.</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 6H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>Finance</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4.5 13.5H11l-1 8.5 8.5-11.5H12z"/></svg>Efficac.</div>
+        </div>
+        <div class="mock-side">
+          <div class="mock-side-title">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V10l6 4V10l6 4V6l6 4v11z"/><path d="M7 17h.01M13 17h.01M18 17h.01"/></svg>
+            Production
+          </div>
+          <div class="mock-side-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19h16M7 16V9M12 16V5M17 16v-4"/></svg>Tableau de bord</div>
+          <div class="mock-side-item active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="4" width="10" height="17" rx="2"/><path d="M9 4V3h6v1"/><path d="M10 10h4M10 14h4"/></svg>Ordres de travail</div>
+          <div class="mock-side-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 2 9 5-9 5-9-5z"/><path d="m3 12 9 5 9-5"/><path d="m3 17 9 5 9-5"/></svg>Nomenclature</div>
+          <div class="mock-side-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V10l6 4V10l6 4V6l6 4v11z"/><path d="M7 17h.01M13 17h.01M18 17h.01"/></svg>Lignes de production</div>
+          <div class="mock-side-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>Contrôle qualité</div>
+        </div>
+        <div class="mock-main">
+          <div class="mock-topbar">
+            <div class="mock-search">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.2-3.2"/></svg>
+              Rechercher personnes, commandes, actifs…
+            </div>
+            <div class="mock-plus"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></div>
+            <div class="mock-avatar"></div>
+          </div>
+          <div class="mock-h1">Ordres de fabrication</div>
+          <div class="mock-tag">9 en cours · 2 bloqués sur composants</div>
+          <div class="mock-cards">
+            <div class="mock-card">
+              <div class="mock-card-head" style="color:#7c3aed">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="4" width="10" height="17" rx="2"/><path d="M9 4V3h6v1"/><path d="M10 10h4M10 14h4"/></svg>
+                En cours
+              </div>
+              <div class="mock-row"><span>WO-1142 · Collecteur</span><span class="mock-pill ok">En marche</span></div>
+              <div class="mock-row"><span>WO-1143 · Châssis de skid</span><span class="mock-pill ok">En marche</span></div>
+              <div class="mock-row"><span>WO-1145 · Manchette</span><span class="mock-pill hot">Bloqué</span></div>
+            </div>
+            <div class="mock-card">
+              <div class="mock-card-head" style="color:#e11d48">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/><path d="M12 9v4M12 17h.01"/></svg>
+                Manque de composants
+              </div>
+              <div class="mock-row"><span>Bride 6" · WO-1145</span><span class="mock-pill hot">Manque 4</span></div>
+              <div class="mock-row"><span>Kit de joints · WO-1147</span><span class="mock-pill warn">Manque 2</span></div>
+            </div>
+            <div class="mock-card">
+              <div class="mock-card-head" style="color:#d97706">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V10l6 4V10l6 4V6l6 4v11z"/><path d="M7 17h.01M13 17h.01M18 17h.01"/></svg>
+                Charge des lignes
+              </div>
+              <div class="mock-bars"><span style="height:58%"></span><span style="height:72%"></span><span style="height:66%"></span><span style="height:84%"></span><span style="height:91%"></span><span style="height:77%"></span></div>
+              <div class="mock-kpi-sub" style="margin-top:8px">Ligne 2 à 91 % de sa capacité</div>
+            </div>
+            <div class="mock-card">
+              <div class="mock-card-head" style="color:#0d9488">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+                Résultats qualité
+              </div>
+              <div class="mock-kpi">98.2%</div>
+              <div class="mock-kpi-sub">rendement au premier passage ce mois-ci</div>
+            </div>
+            <div class="mock-card">
+              <div class="mock-card-head" style="color:#4f46e5">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 2 9 5-9 5-9-5z"/><path d="m3 12 9 5 9-5"/><path d="m3 17 9 5 9-5"/></svg>
+                Nomenclatures
+              </div>
+              <div class="mock-kpi">64</div>
+              <div class="mock-kpi-sub">actives · toutes sur le catalogue partagé</div>
+            </div>
+            <div class="mock-card">
+              <div class="mock-card-head" style="color:#0891b2">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0 5 5L21 21l-3 .5L8.5 12A4 4 0 0 1 3 6.5l3 3 2.5-2.5-3-3z"/></svg>
+                Arrêt planifié
+              </div>
+              <div class="mock-row"><span>Ligne 1 · Entretien</span><span class="mock-pill">jeu. 06:00</span></div>
+              <div class="mock-row"><span>Presse · Étalonnage</span><span class="mock-pill warn">ven.</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="section section-soft">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Avant Caspian ERP</span>
+        <h2>Le plan suppose une matière que le rayon n’a pas</h2>
+        <p>Planifier la production sur un chiffre de stock venu d’un autre système, c’est planifier sur une rumeur.</p>
+      </div>
+      <div class="grid grid-3">
+        <article class="card card-pad reveal">
+          <h3>La nomenclature vit dans un tableur</h3>
+          <p class="mt-12">Les listes de composants sont tenues à part du catalogue : un changement dans l’une est une divergence silencieuse avec l’autre.</p>
+        </article>
+        <article class="card card-pad reveal">
+          <h3>Les ordres de fabrication ne consomment rien</h3>
+          <p class="mt-12">La matière est prélevée pour une intervention et le stock corrigé après : entre les deux, ni le coût du travail ni le chiffre de stock ne sont justes.</p>
+        </article>
+        <article class="card card-pad reveal">
+          <h3>Les résultats qualité restent à l’écart du lot</h3>
+          <p class="mt-12">L’enregistrement d’inspection existe, mais le relier à ce qui a été produit et au lot d’origine est un travail manuel.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Ce qu’il fait</span>
+        <h2>Un module de production qui partage les données de l’exploitation</h2>
+        <p>Délibérément petit et ciblé — il utilise le catalogue, les stocks et les personnes que la plateforme tient déjà.</p>
+      </div>
+      <div class="grid grid-2">
+        <article class="card card-pad reveal">
+          <span class="icon-tile t-violet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="4" width="10" height="17" rx="2"/><path d="M9 4V3h6v1"/><path d="M10 10h4M10 14h4"/></svg></span>
+          <h3 class="mt-16">Des ordres qui consomment du stock réel</h3>
+          <p class="mt-12">Une intervention avec sa matière, sa ligne et son statut, puisant dans les mêmes enregistrements que le reste.</p>
+          <ul class="check-list mt-16">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Des ordres avec quantité, dates et statut</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Des composants sortis du stock comme un vrai mouvement</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Assignés à une ligne de production et à des personnes</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Le coût de l’ordre est bâti sur la matière réellement consommée</li>
+          </ul>
+        </article>
+        <article class="card card-pad reveal">
+          <span class="icon-tile t-cyan"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 2 9 5-9 5-9-5z"/><path d="m3 12 9 5 9-5"/><path d="m3 17 9 5 9-5"/></svg></span>
+          <h3 class="mt-16">Des nomenclatures sur le catalogue partagé</h3>
+          <p class="mt-12">Les composants de nomenclature sont des articles du catalogue : la disponibilité est un fait, pas une hypothèse.</p>
+          <ul class="check-list mt-16">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Des nomenclatures multi-composants bâties sur le catalogue partagé</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Disponibilité vérifiée sur le stock réel d’entrepôt</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Un manque se voit avant le lancement de l’ordre</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Une modification de l’article se propage partout où il est utilisé</li>
+          </ul>
+        </article>
+        <article class="card card-pad reveal">
+          <span class="icon-tile t-amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21V10l6 4V10l6 4V6l6 4v11z"/><path d="M7 17h.01M13 17h.01M18 17h.01"/></svg></span>
+          <h3 class="mt-16">Des lignes de production à charge visible</h3>
+          <p class="mt-12">Définissez les lignes que vous exploitez et voyez ce qui est planifié sur chacune.</p>
+          <ul class="check-list mt-16">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Des lignes comme enregistrements avec leur propre vue de capacité</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Des ordres planifiés sur une ligne</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>La charge actuelle visible avant de promettre une date</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>L’arrêt est relié à la maintenance plutôt que deviné</li>
+          </ul>
+        </article>
+        <article class="card card-pad reveal">
+          <span class="icon-tile t-emerald"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></span>
+          <h3 class="mt-16">Un contrôle qualité sur le produit</h3>
+          <p class="mt-12">Les résultats d’inspection rattachés à ce qui a été produit et au lot d’origine.</p>
+          <ul class="check-list mt-16">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Des contrôles enregistrés sur l’ordre de fabrication</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Conforme, rebut et retouche saisis plutôt que décrits</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Traçable jusqu’au lot de stock d’où venait la matière</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Les non-conformités peuvent générer des actions HSEQ avec responsables</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-tight section-soft">
+    <div class="container">
+      <div class="section-head">
+        <h2>De la nomenclature au produit contrôlé</h2>
+        <p>Chaque étape touche des enregistrements que d’autres modules possèdent déjà.</p>
+      </div>
+      <div class="flow reveal">
+        <div class="flow-step done"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 2 9 5-9 5-9-5z"/><path d="m3 12 9 5 9-5"/><path d="m3 17 9 5 9-5"/></svg>Nomenclature</div>
+        <span class="flow-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
+        <div class="flow-step done"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="4" width="10" height="17" rx="2"/><path d="M9 4V3h6v1"/><path d="M10 10h4M10 14h4"/></svg>Ordre de fabrication</div>
+        <span class="flow-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
+        <div class="flow-step"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m21 8-9-5-9 5v8l9 5 9-5z"/><path d="m3 8 9 5 9-5M12 13v9"/></svg>Composants sortis</div>
+        <span class="flow-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
+        <div class="flow-step"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21V10l6 4V10l6 4V6l6 4v11z"/><path d="M7 17h.01M13 17h.01M18 17h.01"/></svg>Ligne de production</div>
+        <span class="flow-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
+        <div class="flow-step"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>Contrôle qualité</div>
+        <span class="flow-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
+        <div class="flow-step"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21V9l9-6 9 6v12"/><path d="M7 21v-8h10v8"/></svg>Produit en stock</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Chaque outil du module</span>
+        <h2>Cinq outils pour la production</h2>
+        <p>Centré sur les opérations de production des entreprises industrielles et de fabrication.</p>
+      </div>
+      <div class="grid grid-2">
+        <div class="feature-item reveal">
+          <span class="icon-tile sm t-violet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19h16M7 16V9M12 16V5M17 16v-4"/></svg></span>
+          <div>
+            <h4>Tableau de bord production</h4>
+            <p>L’état courant de la production — ordres en cours, charge des lignes, sorties et résultats qualité dans une seule vue.</p>
+          </div>
+        </div>
+        <div class="feature-item reveal">
+          <span class="icon-tile sm t-amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="4" width="10" height="17" rx="2"/><path d="M9 4V3h6v1"/><path d="M10 10h4M10 14h4"/></svg></span>
+          <div>
+            <h4>Ordres de travail</h4>
+            <p>Des travaux de production avec quantité, dates, ligne affectée et les composants consommés au stock.</p>
+          </div>
+        </div>
+        <div class="feature-item reveal">
+          <span class="icon-tile sm t-cyan"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 2 9 5-9 5-9-5z"/><path d="m3 12 9 5 9-5"/><path d="m3 17 9 5 9-5"/></svg></span>
+          <div>
+            <h4>Nomenclature</h4>
+            <p>Des structures de composants bâties sur le catalogue partagé, pour que la disponibilité reflète l’entrepôt réel.</p>
+          </div>
+        </div>
+        <div class="feature-item reveal">
+          <span class="icon-tile sm t-emerald"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21V10l6 4V10l6 4V6l6 4v11z"/><path d="M7 17h.01M13 17h.01M18 17h.01"/></svg></span>
+          <div>
+            <h4>Lignes de production</h4>
+            <p>Les lignes ou îlots que vous exploitez réellement, avec ce qui y est planifié et leur niveau de charge.</p>
+          </div>
+        </div>
+        <div class="feature-item reveal">
+          <span class="icon-tile sm t-rose"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></span>
+          <div>
+            <h4>Contrôle qualité</h4>
+            <p>Des résultats d’inspection et d’essai enregistrés sur l’ordre et traçables jusqu’au lot utilisé.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section dark-section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Intégré, pas rapporté</span>
+        <h2>La production se tient entre stock, personnes et coût</h2>
+        <p>C’est précisément pourquoi elle fonctionne mieux dans l’ERP qu’à côté.</p>
+      </div>
+      <div class="grid grid-3">
+        <div class="dark-card reveal">
+          <span class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21V9l9-6 9 6v12"/><path d="M7 21v-8h10v8"/></svg></span>
+          <h3 class="mt-16">Les composants viennent du stock</h3>
+          <p>Sortir de la matière sur un ordre est un mouvement de stock : le chiffre du magasin et le coût bougent ensemble.</p>
+          <p class="mt-12"><a class="link-arrow" href="/fr/modules/inventory">Voir Stocks<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></p>
+        </div>
+        <div class="dark-card reveal">
+          <span class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a4 4 0 0 0 5 5L21 21l-3 .5L8.5 12A4 4 0 0 1 3 6.5l3 3 2.5-2.5-3-3z"/></svg></span>
+          <h3 class="mt-16">Les équipements de ligne sont maintenus</h3>
+          <p>Les machines d’une ligne sont des actifs avec plans préventifs : l’arrêt planifié est visible par le planificateur.</p>
+          <p class="mt-12"><a class="link-arrow" href="/fr/modules/maintenance">Voir Maintenance<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></p>
+        </div>
+        <div class="dark-card reveal">
+          <span class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v20M17 6H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></span>
+          <h3 class="mt-16">Un coût réel, pas un coût standard</h3>
+          <p>La matière consommée est la matière enregistrée : le coût d’un ordre se construit sur des mouvements plutôt qu’il ne s’estime.</p>
+          <p class="mt-12"><a class="link-arrow" href="/fr/modules/finance">Voir Finance<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Qui y travaille</span>
+        <h2>Pour ceux qui sont sur et autour de la ligne</h2>
+        <p>Planificateur, superviseur et contrôleur travaillent depuis un même enregistrement.</p>
+      </div>
+      <div class="grid grid-3">
+        <article class="card card-pad reveal">
+          <span class="icon-tile sm t-violet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M3 10h18M8 2v4M16 2v4"/></svg></span>
+          <h3 class="mt-16">Planificateur de production</h3>
+          <p class="mt-12">Libère les ordres en sachant si les composants sont en rayon et si la ligne a de la capacité.</p>
+        </article>
+        <article class="card card-pad reveal">
+          <span class="icon-tile sm t-amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21V10l6 4V10l6 4V6l6 4v11z"/><path d="M7 17h.01M13 17h.01M18 17h.01"/></svg></span>
+          <h3 class="mt-16">Chef de chantier</h3>
+          <p class="mt-12">Mène la journée depuis la liste des ordres, consigne l’avancement et voit la maintenance planifiée avant qu’elle n’interrompe une série.</p>
+        </article>
+        <article class="card card-pad reveal">
+          <span class="icon-tile sm t-emerald"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></span>
+          <h3 class="mt-16">Contrôleur qualité</h3>
+          <p class="mt-12">Enregistre les résultats sur l’ordre et le lot : la traçabilité devient une requête, pas un chantier archéologique.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-soft">
+    <div class="container split">
+      <div>
+        <span class="eyebrow">À vous de le façonner</span>
+        <h2 class="mt-16">Configurez la production selon ce que vous fabriquez</h2>
+        <p class="lead mt-12">Fabrication, assemblage et production par lots appellent des formes différentes. C’est du paramétrage, pas du développement sur mesure.</p>
+        <ul class="check-list mt-24">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Définissez vos lignes, îlots ou ateliers</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Construisez des nomenclatures à la profondeur qu’exigent vos produits</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Choisissez des statuts d’ordre qui collent au vocabulaire de l’atelier</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Décidez si un manque bloque le lancement ou déclenche un avertissement</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Définissez les contrôles par produit, et si un échec bloque l’entrée en stock</li>
+        </ul>
+        <p class="mt-24"><a class="link-arrow" href="/fr/modules/administration">Voir ce que contrôle un administrateur<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></p>
+      </div>
+      <div class="split-media">
+        <div class="panel reveal">
+          <div class="panel-head reveal">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21v-7M4 10V3M12 21v-9M12 8V3M20 21v-5M20 12V3M1 14h6M9 8h6M17 16h6"/></svg>
+            Production · Paramètres
+          </div>
+          <div class="panel-body reveal">
+            <table class="table-mock">
+              <thead><tr><th>Paramètre</th><th>Valeur</th></tr></thead>
+              <tbody>
+                <tr><td>Lignes de production</td><td><span class="badge badge-violet">4 actives</span></td></tr>
+                <tr><td>Manque de composants</td><td><span class="badge badge-amber">Avertir au lancement</span></td></tr>
+                <tr><td>Contrôle qualité avant stock</td><td><span class="badge badge-emerald">Requis</span></td></tr>
+                <tr><td>Statuts d’ordre</td><td><span class="badge badge-cyan">Personnalisées (6)</span></td></tr>
+                <tr><td>Déstockage automatique des matières</td><td><span class="badge badge-indigo">À l’achèvement</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2>Les questions sur la Production qu’on nous pose</h2>
+      </div>
+      <div class="faq">
+        <details>
+          <summary>Est-ce un MES complet ?</summary>
+          <div class="faq-body">Non. C’est la couche production d’un ERP : ordres, nomenclatures, lignes et contrôle qualité, partageant catalogue et stock avec le reste. Il ne fait pas de pilotage machine au niveau atelier.</div>
+        </details>
+        <details>
+          <summary>Un ordre de fabrication réduit-il vraiment le stock ?</summary>
+          <div class="faq-body">Oui. Sortir des composants sur un ordre crée de vrais mouvements de stock : c’est pourquoi le coût de l’ordre et le chiffre du stock restent cohérents.</div>
+        </details>
+        <details>
+          <summary>Peut-on voir si les composants sont là avant de lancer ?</summary>
+          <div class="faq-body">Oui — la nomenclature vient du catalogue partagé : la disponibilité est vérifiée sur le stock réel, pas sur une quantité supposée.</div>
+        </details>
+        <details>
+          <summary>Comment le contrôle qualité se relie-t-il à la traçabilité ?</summary>
+          <div class="faq-body">Les résultats sont enregistrés sur l’ordre, et lorsque les composants sont suivis par lot dans les Stocks, le produit remonte aux lots consommés.</div>
+        </details>
+        <details>
+          <summary>Et si nous n’assemblons qu’occasionnellement ?</summary>
+          <div class="faq-body">Alors activez le module et n’utilisez que les ordres. Chaque outil s’active séparément : un atelier qui assemble quelques unités par mois n’a pas à adopter des lignes et une profondeur de nomenclature qu’il n’utilisera pas.</div>
+        </details>
+      </div>
+      <p class="text-center mt-32">
+        <a class="link-arrow" href="/fr/modules">Parcourir tous les modules<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+      </p>
+    </div>
+  </section>
+
+
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-hero">
+      <div>
+        <p class="footer-kicker">Une question ? Envie d’une visite guidée ?</p>
+        <h2>Un seul système pour toute l’exploitation.</h2>
+      </div>
+      <div>
+        <p>Dites-nous comment fonctionne votre exploitation. Nous explorons les flux de travail pertinents, examinons vos données et convenons des prochaines étapes avec notre équipe.</p>
+        <div class="footer-actions">
+          <a class="btn btn-onDark btn-lg" href="/fr/contact#demo">Demander une démo <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+          <a class="btn btn-outline-onDark btn-lg" href="https://docs.caspianerp.com">Lire la documentation</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="/fr">
+          <img class="brand-mark" src="/assets/img/logo-mark.svg" alt="" width="30" height="30">
+          <span class="brand-name" style="color:#fff">Caspian <b>ERP</b></span>
+        </a>
+      </div>
+      <div class="footer-col">
+        <h4>Plateforme</h4>
+        <ul>
+          <li><a href="/fr/modules">Tous les modules</a></li>
+          <li><a href="/fr/industries">Secteurs</a></li>
+          <li><a href="/fr/security">Sécurité et RBAC</a></li>
+          <li><a href="/fr/pricing">Tarifs</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Modules</h4>
+        <ul>
+          <li><a href="/fr/modules/hseq">HSEQ</a></li>
+          <li><a href="/fr/modules/hr">Ressources humaines</a></li>
+          <li><a href="/fr/modules/procurement">Achats</a></li>
+          <li><a href="/fr/modules/inventory">Stocks</a></li>
+          <li><a href="/fr/modules/maintenance">Maintenance</a></li>
+          <li><a href="/fr/modules/finance">Finance</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Société</h4>
+        <ul>
+          <li><a href="/fr/about">À propos</a></li>
+          <li><a href="https://caspiantools.com" rel="noopener">CaspianTools</a></li>
+          <li><a href="/fr/contact">Contact</a></li>
+          <li><a href="/fr/contact#demo">Demander une démo</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Commencer</h4>
+        <ul>
+          <li><a href="https://app.caspianerp.com">Se connecter</a></li>
+          <li><a href="/fr/contact#demo">Demander une démo</a></li>
+          <li><a href="https://docs.caspianerp.com">Documentation</a></li>
+          <li><a href="https://admin.caspianerp.com">Portail d’administration</a></li>
+          <li><a href="/fr/pricing#faq">Questions de tarifs</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <span data-year>2026</span> CaspianTools. Caspian ERP est un produit CaspianTools.</p>
+      <nav aria-label="Mentions légales">
+        <a href="/fr/privacy">Politique de confidentialité</a>
+        <a href="/fr/terms">Conditions d’utilisation</a>
+        <a href="/fr/security">Sécurité</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+<script src="/assets/js/site.js?v=20260908" defer></script>
+</body>
+</html>

@@ -41,6 +41,11 @@ This file is the central index, while each supporting document keeps its purpose
 - Product views use labeled sample data; authentic screenshots and evidence remain outstanding.
 - Playwright Test is installed as a development dependency. Chromium launch and rendering
   were verified; a full browser suite has not yet been added. See README for setup.
+- The site ships in seven languages — en, az, tr, ru, nb, de, fr — matching the application's list.
+  English under `public/` is hand-written and is the source; the other six are generated into
+  `public/<lang>/` by `scripts/i18n-build.mjs` and committed, because hosting serves the repository
+  as-is. Never hand-edit a generated page. The translations were produced in-house; a native-speaker
+  copy review is recorded in future.md.
 - Track remaining work in future.md. Verify Git, PR and deployment state before claiming a
   change is committed, merged or live; a local edit or changelog entry is not deployment proof.
 
@@ -96,10 +101,25 @@ the same commands:
 node scripts/check-html.mjs     # unbalanced or mismatched tags
 node scripts/check-links.mjs    # internal links and #anchors that do not resolve
 node scripts/check-assets.mjs   # every page links the same ?v= asset version
-node --test scripts/check-interactions.mjs # navigation and email composer
+node --test scripts/check-interactions.mjs # navigation, email composer, language redirect
+node scripts/check-i18n.mjs     # translations complete, generated pages up to date
 ```
 
-All three walk `public/` recursively, so pages under `public/modules/` are checked like any other.
+They walk `public/` recursively, so pages under `public/modules/` — and every generated
+`public/<lang>/` tree — are checked like any other.
+
+**If you edit an English page, regenerate the translations before you push.** The generated trees
+are committed, so a page edited without a re-run ships a half-translated site:
+
+```bash
+node scripts/i18n-extract.mjs   # refresh i18n/_catalog.json
+# translate any new strings into every i18n/<lang>.json
+node scripts/i18n-build.mjs     # regenerate public/<lang>/ and sitemap.xml
+node scripts/check-i18n.mjs
+```
+
+`check-i18n.mjs` regenerates every page in memory and compares it with the committed file, so this
+is enforced rather than remembered.
 
 **If you edit `site.css` or `site.js`, bump the version.** Versions are `YYYYMMDD`, with a
 `.N` suffix for a second change on the same day (`20260904.2`). Hosting serves `/assets/**` with
@@ -132,7 +152,13 @@ npx firebase-tools emulators:start --only hosting
   Anything hidden until JS runs (`.reveal`) needs a `<noscript>` override in the page head.
 - **No third-party scripts, trackers or cookies.** The only external request is the Inter webfont.
 - **No template engine.** The header and footer are duplicated in every page on purpose. Change
-  the nav or footer in *all* pages, and keep `aria-current="page"` correct.
+  the nav or footer in *all* pages, and keep `aria-current="page"` correct. The three
+  `<!--i18n:…-->` regions inside them (hreflang alternates, header language menu, drawer language
+  row) are the exception: they belong to the generator, so edit `scripts/i18n-build.mjs`, never the
+  markup in a page.
+- **Every language must work with JavaScript off.** The switcher is a `<details>` of ordinary
+  links, and `/tr/pricing` serves Turkish to everyone. `lang.js` only redirects an unprefixed URL,
+  never one that names its language — that is what keeps shared links and crawlers intact.
 - **Root-relative links, no extension.** `/modules/hr`, never `modules/hr.html`.
 - **Escape bare ampersands** in copy (`&amp;`) — several module names contain one.
 - **Keep `DESIGN.md` in sync** with `public/assets/css/site.css`. Do not start a competing design

@@ -1,0 +1,628 @@
+<!doctype html>
+<html lang="az">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="/assets/js/lang.js?v=20260908"></script>
+<title>Satınalma — Caspian ERP</title>
+<meta name="description" content="Tələblər, satınalma sifarişləri, təchizatçılar, müqavilələr, mal qəbulları, təchizatçı fakturaları və qiymətləndirmə vərəqləri — tam mənbədən ödənişə zənciri, podratçı personalı isə işçilərlə eyni səriştə qaydalarına tabedir.">
+<link rel="canonical" href="https://caspianerp.com/az/modules/procurement">
+<!--i18n:alternates-->
+<link rel="alternate" hreflang="en" href="https://caspianerp.com/modules/procurement">
+<link rel="alternate" hreflang="az" href="https://caspianerp.com/az/modules/procurement">
+<link rel="alternate" hreflang="tr" href="https://caspianerp.com/tr/modules/procurement">
+<link rel="alternate" hreflang="ru" href="https://caspianerp.com/ru/modules/procurement">
+<link rel="alternate" hreflang="nb" href="https://caspianerp.com/nb/modules/procurement">
+<link rel="alternate" hreflang="de" href="https://caspianerp.com/de/modules/procurement">
+<link rel="alternate" hreflang="fr" href="https://caspianerp.com/fr/modules/procurement">
+<link rel="alternate" hreflang="x-default" href="https://caspianerp.com/modules/procurement">
+<!--/i18n:alternates-->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Caspian ERP">
+<meta property="og:title" content="Satınalma — Caspian ERP">
+<meta property="og:description" content="Tələblər, satınalma sifarişləri, təchizatçılar, müqavilələr, mal qəbulları, təchizatçı fakturaları və qiymətləndirmə vərəqləri — tam mənbədən ödənişə zənciri, podratçı personalı isə işçilərlə eyni səriştə qaydalarına tabedir.">
+<meta property="og:url" content="https://caspianerp.com/az/modules/procurement">
+<meta property="og:image" content="https://caspianerp.com/assets/img/og-image.svg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#4f46e5">
+<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="/assets/css/site.css?v=20260908">
+<noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
+</head>
+<body>
+<a class="skip-link" href="#main">Məzmuna keç</a>
+<header class="site-header">
+  <div class="container">
+    <nav class="nav" aria-label="Əsas">
+      <a class="brand" href="/az">
+        <img class="brand-mark" src="/assets/img/logo-mark.svg" alt="" width="30" height="30">
+        <span class="brand-name">Caspian <b>ERP</b></span>
+      </a>
+      <ul class="nav-links">
+        <li><a class="nav-link" aria-current="page" href="/az/modules">Modullar</a></li>
+        <li><a class="nav-link" href="/az/industries">Sənayelər</a></li>
+        <li><a class="nav-link" href="/az/security">Təhlükəsizlik</a></li>
+        <li><a class="nav-link" href="/az/pricing">Qiymətlər</a></li>
+        <li><a class="nav-link" href="/az/about">Haqqımızda</a></li>
+      </ul>
+      <div class="nav-actions">
+        <!--i18n:switcher-->
+        <details class="lang" data-lang-switcher>
+          <summary class="lang-button" title="Dil seçin" aria-label="Dil: Azərbaycan dili"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18"/></svg><span class="lang-code">AZ</span><svg class="lang-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="lang-menu" role="group" aria-label="Dil seçin">
+            <a class="lang-option" href="/modules/procurement" hreflang="en" lang="en" data-lang="en">English</a>
+            <a class="lang-option" href="/az/modules/procurement" hreflang="az" lang="az" data-lang="az" aria-current="true">Azərbaycan dili</a>
+            <a class="lang-option" href="/tr/modules/procurement" hreflang="tr" lang="tr" data-lang="tr">Türkçe</a>
+            <a class="lang-option" href="/ru/modules/procurement" hreflang="ru" lang="ru" data-lang="ru">Русский</a>
+            <a class="lang-option" href="/nb/modules/procurement" hreflang="nb" lang="nb" data-lang="nb">Norsk (bokmål)</a>
+            <a class="lang-option" href="/de/modules/procurement" hreflang="de" lang="de" data-lang="de">Deutsch</a>
+            <a class="lang-option" href="/fr/modules/procurement" hreflang="fr" lang="fr" data-lang="fr">Français</a>
+          </div>
+        </details>
+        <!--/i18n:switcher-->
+        <a class="btn btn-ghost btn-sm" href="https://app.caspianerp.com">Daxil olun</a>
+        <a class="btn btn-primary btn-sm" href="/az/contact#demo">Demo tələb edin <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+        <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="mobile-menu" aria-label="Menyunu aç" data-text-open="Menyunu aç" data-text-close="Menyunu bağla">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </nav>
+  </div>
+  <div class="mobile-menu" id="mobile-menu">
+    <a class="nav-link" aria-current="page" href="/az/modules">Modullar</a>
+    <a class="nav-link" href="/az/industries">Sənayelər</a>
+    <a class="nav-link" href="/az/security">Təhlükəsizlik</a>
+    <a class="nav-link" href="/az/pricing">Qiymətlər</a>
+    <a class="nav-link" href="/az/about">Haqqımızda</a>
+    <a class="nav-link" href="https://docs.caspianerp.com">Sənədləşmə</a>
+    <a class="nav-link" href="/az/contact">Əlaqə</a>
+    <!--i18n:switcher-mobile-->
+    <div class="mobile-lang" role="group" aria-label="Dil seçin">
+      <span class="mobile-lang-label">Dil</span>
+      <div class="mobile-lang-options">
+        <a class="lang-option" href="/modules/procurement" hreflang="en" lang="en" data-lang="en">English</a>
+        <a class="lang-option" href="/az/modules/procurement" hreflang="az" lang="az" data-lang="az" aria-current="true">Azərbaycan dili</a>
+        <a class="lang-option" href="/tr/modules/procurement" hreflang="tr" lang="tr" data-lang="tr">Türkçe</a>
+        <a class="lang-option" href="/ru/modules/procurement" hreflang="ru" lang="ru" data-lang="ru">Русский</a>
+        <a class="lang-option" href="/nb/modules/procurement" hreflang="nb" lang="nb" data-lang="nb">Norsk (bokmål)</a>
+        <a class="lang-option" href="/de/modules/procurement" hreflang="de" lang="de" data-lang="de">Deutsch</a>
+        <a class="lang-option" href="/fr/modules/procurement" hreflang="fr" lang="fr" data-lang="fr">Français</a>
+      </div>
+    </div>
+    <!--/i18n:switcher-mobile-->
+    <div class="mobile-cta">
+      <a class="btn btn-secondary" href="https://app.caspianerp.com">Daxil olun</a>
+      <a class="btn btn-primary" href="/az/contact#demo">Demo tələb edin</a>
+    </div>
+  </div>
+</header>
+<main id="main">
+
+  <section class="hero">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Naviqasiya yolu">
+        <a href="/az/modules">Modullar</a>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg>
+        <span aria-current="page">Satınalma</span>
+      </nav>
+      <span class="eyebrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="20" r="1"/><circle cx="18" cy="20" r="1"/><path d="M2 3h2.5l2.6 12.6a1 1 0 0 0 1 .8h8.9a1 1 0 0 0 1-.77L21 8H6"/></svg>Satınalma</span>
+      <h1>Mənbədən ödənişə, <span class="grad">sənədlər artıq hazır</span></h1>
+      <p class="hero-sub">Tələbdən satınalma sifarişinə, mal qəbulundan təchizatçı fakturasına — bir zəncir, bir material kataloqu və maliyyə komandanızın onsuz da istədiyi təsdiqlər.</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary btn-lg" href="/az/contact#demo">Demo tələb edin</a>
+        <a class="btn btn-secondary btn-lg" href="https://docs.caspianerp.com">Sənədləri oxuyun</a>
+      </div>
+      <p class="hero-note">Doqquz alət · Üçtərəfli uzlaşdırma · Material kataloqunu Anbar və İstehsalla paylaşır</p>
+    </div>
+  </section>
+  <div class="container mock-wrap">
+    <p class="small muted text-center">Nümunə məlumatlarla izahedici məhsul görünüşü. <a href="/az/contact#demo">Canlı baxış tələb edin</a>.</p>
+    <div class="mock reveal" role="img" aria-label="Açıq satınalma sifarişlərini, təsdiq gözləyən tələbləri, təchizatçı göstəricilərini və faktura uzlaşdırmasını göstərən Caspian ERP Satınalma">
+      <div class="mock-bar" aria-hidden="true">
+        <span class="mock-dot"></span><span class="mock-dot"></span><span class="mock-dot"></span>
+        <span class="mock-url">app.caspianerp.com/az/w/procurement/purchase-orders</span>
+      </div>
+      <div class="mock-body" aria-hidden="true">
+        <div class="mock-rail">
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg>Ana səhifə</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/></svg>İnsan Resursları</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>HSEQ</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>Biznes</div>
+          <div class="mock-rail-item active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1"/><circle cx="18" cy="20" r="1"/><path d="M2 3h2.5l2.6 12.6a1 1 0 0 0 1 .8h8.9a1 1 0 0 0 1-.77L21 8H6"/></svg>Satınalma</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V10l6 4V10l6 4V6l6 4v11z"/><path d="M7 17h.01M13 17h.01M18 17h.01"/></svg>İstehsal</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>CRM</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V9l9-6 9 6v12"/><path d="M7 21v-8h10v8"/></svg>Anbar</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 16V6h11v10"/><path d="M14 9h4l3 3.5V16h-7z"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg>Logistika</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0 5 5L21 21l-3 .5L8.5 12A4 4 0 0 1 3 6.5l3 3 2.5-2.5-3-3z"/></svg>Tex. xidmət</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 6H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>Maliyyə</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4.5 13.5H11l-1 8.5 8.5-11.5H12z"/></svg>Səmərəlilik</div>
+        </div>
+        <div class="mock-side">
+          <div class="mock-side-title">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1"/><circle cx="18" cy="20" r="1"/><path d="M2 3h2.5l2.6 12.6a1 1 0 0 0 1 .8h8.9a1 1 0 0 0 1-.77L21 8H6"/></svg>
+            Satınalma
+          </div>
+          <div class="mock-side-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="4" width="10" height="17" rx="2"/><path d="M9 4V3h6v1"/><path d="M10 10h4M10 14h4"/></svg>Tələblər</div>
+          <div class="mock-side-item active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/></svg>Satınalma Sifarişləri</div>
+          <div class="mock-side-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m11 17 2 2a1 1 0 0 0 1.4 0l3.6-3.6"/><path d="M3 11 8 6l4 4 3-3 6 6-4 4-3-3-4 4z"/></svg>Təchizatçılar</div>
+          <div class="mock-side-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/></svg>Kadrlar</div>
+          <div class="mock-side-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 2 9 5-9 5-9-5z"/><path d="m3 12 9 5 9-5"/><path d="m3 17 9 5 9-5"/></svg>Materiallar</div>
+          <div class="mock-side-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/></svg>Müqavilələr</div>
+          <div class="mock-side-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21 8-9-5-9 5v8l9 5 9-5z"/><path d="m3 8 9 5 9-5M12 13v9"/></svg>Mal Qəbulları</div>
+          <div class="mock-side-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3v18l2-1.5L9 21l2-1.5L13 21l2-1.5L17 21l2-1.5V3z"/><path d="M8 8h8M8 12h8"/></svg>Təchizatçı Fakturaları</div>
+          <div class="mock-side-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="1" fill="currentColor" stroke="none"/></svg>Təchizatçı Qiymətləndirmələri</div>
+        </div>
+        <div class="mock-main">
+          <div class="mock-topbar">
+            <div class="mock-search">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.2-3.2"/></svg>
+              İnsanları, sifarişləri, aktivləri axtarın…
+            </div>
+            <div class="mock-plus"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></div>
+            <div class="mock-avatar"></div>
+          </div>
+          <div class="mock-h1">Satınalma sifarişləri</div>
+          <div class="mock-tag">18 açıq · 4-ü təsdiq gözləyir · 2-si qismən qəbul edilib</div>
+          <div class="mock-cards">
+            <div class="mock-card">
+              <div class="mock-card-head" style="color:#0d9488">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/></svg>
+                Açıq sifarişlər
+              </div>
+              <div class="mock-row"><span>PO-2291 · Klapanlar</span><span class="mock-pill ok">Qəbul edilib</span></div>
+              <div class="mock-row"><span>PO-2292 · Kəmər boruları</span><span class="mock-pill">Göndərilib</span></div>
+              <div class="mock-row"><span>PO-2293 · FQV</span><span class="mock-pill warn">Təsdiq</span></div>
+            </div>
+            <div class="mock-card">
+              <div class="mock-card-head" style="color:#d97706">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="4" width="10" height="17" rx="2"/><path d="M9 4V3h6v1"/><path d="M10 10h4M10 14h4"/></svg>
+                Təsdiq gözləyir
+              </div>
+              <div class="mock-kpi">4</div>
+              <div class="mock-kpi-sub">ən köhnəsi 3 gündür gözləyir</div>
+            </div>
+            <div class="mock-card">
+              <div class="mock-card-head" style="color:#e11d48">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3v18l2-1.5L9 21l2-1.5L13 21l2-1.5L17 21l2-1.5V3z"/><path d="M8 8h8M8 12h8"/></svg>
+                Faktura istisnaları
+              </div>
+              <div class="mock-row"><span>INV-8841 · miqdar uyğunsuzluğu</span><span class="mock-pill hot">Gözlədilir</span></div>
+              <div class="mock-row"><span>INV-8846 · qiymət</span><span class="mock-pill warn">Baxış</span></div>
+            </div>
+            <div class="mock-card">
+              <div class="mock-card-head" style="color:#4f46e5">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="1" fill="currentColor" stroke="none"/></svg>
+                Vaxtında çatdırılma
+              </div>
+              <div class="mock-bars"><span style="height:62%"></span><span style="height:71%"></span><span style="height:68%"></span><span style="height:80%"></span><span style="height:76%"></span><span style="height:88%"></span></div>
+              <div class="mock-kpi-sub" style="margin-top:8px">İlk 10 təchizatçı, altı ay</div>
+            </div>
+            <div class="mock-card">
+              <div class="mock-card-head" style="color:#7c3aed">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m11 17 2 2a1 1 0 0 0 1.4 0l3.6-3.6"/><path d="M3 11 8 6l4 4 3-3 6 6-4 4-3-3-4 4z"/></svg>
+                Müqavilələr
+              </div>
+              <div class="mock-row"><span>Yoxlama xidmətləri</span><span class="mock-pill warn">60 gün sonra yenilənir</span></div>
+              <div class="mock-row"><span>Kran icarəsi</span><span class="mock-pill ok">Aktiv</span></div>
+            </div>
+            <div class="mock-card">
+              <div class="mock-card-head" style="color:#0891b2">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21 8-9-5-9 5v8l9 5 9-5z"/><path d="m3 8 9 5 9-5M12 13v9"/></svg>
+                Bu həftəki qəbullar
+              </div>
+              <div class="mock-kpi">23</div>
+              <div class="mock-kpi-sub">2-də uyğunsuzluq qeyd edilib</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="section section-soft">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Caspian ERP-dən əvvəl</span>
+        <h2>Almaq sürətlidir; nə aldığınızı sübut etmək yox</h2>
+        <p>Sifariş asandır. Üç həftə sonra sifarişi, çatdırılmanı və fakturanı uzlaşdırmaq isə xərcin oturduğu yerdir.</p>
+      </div>
+      <div class="grid grid-3">
+        <article class="card card-pad reveal">
+          <h3>Tələblər e-poçt kimi gəlir</h3>
+          <p class="mt-12">Kimsə nəsə istəyir, başqası cavabda təsdiqləyir və niyə alındığının yeganə qeydi bir poçt qutusunda qalır.</p>
+        </article>
+        <article class="card card-pad reveal">
+          <h3>Heç kim üç sənədi uzlaşdıra bilmir</h3>
+          <p class="mt-12">Sifariş bir miqdar deyir, qaimə başqasını, faktura üçüncüsünü. Onları uzlaşdırmaq əl ilə, yavaş və pulun səssizcə sızdığı yerdir.</p>
+        </article>
+        <article class="card card-pad reveal">
+          <h3>Təchizatçı göstəriciləri şifahi rəvayətdir</h3>
+          <p class="mt-12">Hansı təchizatçının gecikdiyini hamı bilir. Amma heç kim bunu müqavilə baxışında göstərə bilmir və eyni təchizatçı yenidən uzadılır.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Nə edir</span>
+        <h2>Bütün zəncir, başdan-başa bağlı</h2>
+        <p>Hər sənəd əvvəlkindən yaradılır, ona görə rəqəmlər bir-birindən uzaqlaşa bilmir.</p>
+      </div>
+      <div class="grid grid-2">
+        <article class="card card-pad reveal">
+          <span class="icon-tile t-amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="4" width="10" height="17" rx="2"/><path d="M9 4V3h6v1"/><path d="M10 10h4M10 14h4"/></svg></span>
+          <h3 class="mt-16">Real təsdiq marşrutu olan tələblər</h3>
+          <p class="mt-12">Tələb yarandığı yerdə qaldırılır, doğru şəxs tərəfindən təsdiqlənir və əsaslandırmasını özü ilə aparır.</p>
+          <ul class="check-list mt-16">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Materiala ehtiyacı olan şöbə tərəfindən qaldırılır</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Öz həddlərinizə görə təsdiqə yönləndirilir</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Yenidən yazılmadan satınalma sifarişinə çevrilir</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Alışın səbəbi ona bağlı qalır</li>
+          </ul>
+        </article>
+        <article class="card card-pad reveal">
+          <span class="icon-tile t-rose"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/></svg></span>
+          <h3 class="mt-16">Qəbula qədər izlənən satınalma sifarişləri</h3>
+          <p class="mt-12">Təsdiqlənmiş tələblərə əsasən verilən və çatdırılmaya qədər izlənilən sifarişlər.</p>
+          <ul class="check-list mt-16">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Reyestrdən bir təchizatçıya, razılaşdırılmış şərtlərlə verilir</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Sətir maddələri paylaşılan material kataloqundan götürülür</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Status qaralamadan tam qəbula qədər görünür</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Qismən çatdırılmalar uydurulmur, idarə olunur</li>
+          </ul>
+        </article>
+        <article class="card card-pad reveal">
+          <span class="icon-tile t-emerald"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m21 8-9-5-9 5v8l9 5 9-5z"/><path d="m3 8 9 5 9-5M12 13v9"/></svg></span>
+          <h3 class="mt-16">Mal qəbulları və üçtərəfli uzlaşdırma</h3>
+          <p class="mt-12">Nəyin gəldiyi, nəyin sifariş edildiyi və nəyin faktura edildiyi ilə tutuşdurulur.</p>
+          <ul class="check-list mt-16">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Qəbullar anbarda, sifarişə qarşı qeyd olunur</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Miqdarlar və uyğunsuzluqlar girişdə qeyd olunur</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Eyni əməliyyatla Anbarda ehtiyat yenilənir</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Faktura ödənilməzdən əvvəl sifariş və qəbulla uzlaşdırılır</li>
+          </ul>
+        </article>
+        <article class="card card-pad reveal">
+          <span class="icon-tile t-violet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m11 17 2 2a1 1 0 0 0 1.4 0l3.6-3.6"/><path d="M3 11 8 6l4 4 3-3 6 6-4 4-3-3-4 4z"/></svg></span>
+          <h3 class="mt-16">Təchizatçılar, müqavilələr və qiymətləndirmə vərəqləri</h3>
+          <p class="mt-12">Sadəcə ad və ünvan deyil, kommersiya münasibətini saxlayan bir təchizatçı reyestri.</p>
+          <ul class="check-list mt-16">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Kontaktları, şərtləri və sənədləri olan təchizatçı reyestri</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Tarixləri, dəyərləri və yenilənmə görünürlüyü olan müqavilələr</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Çatdırılma və keyfiyyət tarixçəsindən qurulan qiymətləndirmə vərəqləri</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Baxışda iddia etmək deyil, göstərə biləcəyiniz göstəricilər</li>
+          </ul>
+        </article>
+        <article class="card card-pad reveal">
+          <span class="icon-tile t-cyan"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/></svg></span>
+          <h3 class="mt-16">Sizin standartınıza tabe olan podratçı personalı</h3>
+          <p class="mt-12">Təchizatçının sahəyə göndərdiyi insanlar öz işçiləriniz üçün keçərli olan eyni səriştə qaydaları ilə izlənilir.</p>
+          <ul class="check-list mt-16">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Podratçı personalı öz təchizatçısına bağlı qeyd olunur</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Sertifikatlar və etibarlılıq işçi kimi izlənilir</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Səfərbərlikdən əvvəl eyni səriştə yoxlamalarında görünür</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Kimsə başqa əmək haqqı siyahısındadır deyə kor nöqtə yaranmır</li>
+          </ul>
+        </article>
+        <article class="card card-pad reveal">
+          <span class="icon-tile t-teal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 2 9 5-9 5-9-5z"/><path d="m3 12 9 5 9-5"/><path d="m3 17 9 5 9-5"/></svg></span>
+          <h3 class="mt-16">Bütün platforma üçün bir material kataloqu</h3>
+          <p class="mt-12">Aldığınız material, saxladığınız, istifadə etdiyiniz və faktura verdiyiniz materialdır.</p>
+          <ul class="check-list mt-16">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Modullar arasında paylaşılan tək bir kataloq qeydi</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Satınalma materialı, ehtiyat sətri, BOM komponenti və faktura sətri üst-üstə düşür</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Satınalma ilə anbar arasında uyğunluq cədvəli yoxdur</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Kodlar ardıcıl olduğu üçün mənası olan xərc təhlili</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-tight section-soft">
+    <div class="container">
+      <div class="section-head">
+        <h2>Tələbdən ödənişə, yenidən yazmadan</h2>
+        <p>Hər addım növbətisini yaradır və üçtərəfli uzlaşdırma baş verir, çünki sənədlər onsuz da bir-birinə istinad edir.</p>
+      </div>
+      <div class="flow reveal">
+        <div class="flow-step done"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="4" width="10" height="17" rx="2"/><path d="M9 4V3h6v1"/><path d="M10 10h4M10 14h4"/></svg>Tələb</div>
+        <span class="flow-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
+        <div class="flow-step done"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="m8 12 3 3 5-6"/></svg>Təsdiqlənib</div>
+        <span class="flow-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
+        <div class="flow-step done"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/></svg>Satınalma sifarişi</div>
+        <span class="flow-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
+        <div class="flow-step"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m21 8-9-5-9 5v8l9 5 9-5z"/><path d="m3 8 9 5 9-5M12 13v9"/></svg>Mal qəbulu</div>
+        <span class="flow-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
+        <div class="flow-step"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3v18l2-1.5L9 21l2-1.5L13 21l2-1.5L17 21l2-1.5V3z"/><path d="M8 8h8M8 12h8"/></svg>Təchizatçı fakturası</div>
+        <span class="flow-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
+        <div class="flow-step"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v20M17 6H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>Ödəniş</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Moduldakı hər alət</span>
+        <h2>Mənbədən ödənişə doqquz alət</h2>
+        <p>Tam zəncir, üstəgəl onun ətrafındakı təchizatçı münasibəti.</p>
+      </div>
+      <div class="grid grid-2">
+        <div class="feature-item reveal">
+          <span class="icon-tile sm t-amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="4" width="10" height="17" rx="2"/><path d="M9 4V3h6v1"/><path d="M10 10h4M10 14h4"/></svg></span>
+          <div>
+            <h4>Tələblər</h4>
+            <p>Materiala ehtiyacı olan şöbə tərəfindən qaldırılan, əsaslandırması və təsdiqi olan daxili satınalma sorğuları.</p>
+          </div>
+        </div>
+        <div class="feature-item reveal">
+          <span class="icon-tile sm t-rose"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/></svg></span>
+          <div>
+            <h4>Satınalma Sifarişləri</h4>
+            <p>Təsdiqlənmiş tələblərə əsasən təchizatçılara verilən və qaralamadan tam qəbula qədər izlənən sifarişlər.</p>
+          </div>
+        </div>
+        <div class="feature-item reveal">
+          <span class="icon-tile sm t-violet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m11 17 2 2a1 1 0 0 0 1.4 0l3.6-3.6"/><path d="M3 11 8 6l4 4 3-3 6 6-4 4-3-3-4 4z"/></svg></span>
+          <div>
+            <h4>Təchizatçılar</h4>
+            <p>Təchizatçı reyestri — kontaktlar, şərtlər, sənədlər və münasibətin arxasındakı tarixçə.</p>
+          </div>
+        </div>
+        <div class="feature-item reveal">
+          <span class="icon-tile sm t-cyan"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/></svg></span>
+          <div>
+            <h4>Kadrlar</h4>
+            <p>Təchizatçıların təqdim etdiyi podratçı personalı — işçilərlə eyni səriştə və sertifikat qaydaları ilə izlənilir.</p>
+          </div>
+        </div>
+        <div class="feature-item reveal">
+          <span class="icon-tile sm t-teal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 2 9 5-9 5-9-5z"/><path d="m3 12 9 5 9-5"/><path d="m3 17 9 5 9-5"/></svg></span>
+          <div>
+            <h4>Materiallar</h4>
+            <p>Satınalma, anbar, istehsal və maliyyənin eyni cür istifadə etdiyi paylaşılan material kataloqu.</p>
+          </div>
+        </div>
+        <div class="feature-item reveal">
+          <span class="icon-tile sm t-slate"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/></svg></span>
+          <div>
+            <h4>Müqavilələr</h4>
+            <p>Dəyərləri, tarixləri və yenilənmə görünürlüyü olan təchizatçı müqavilələri — beləliklə heç nə fərq edilmədən uzanmır.</p>
+          </div>
+        </div>
+        <div class="feature-item reveal">
+          <span class="icon-tile sm t-emerald"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m21 8-9-5-9 5v8l9 5 9-5z"/><path d="m3 8 9 5 9-5M12 13v9"/></svg></span>
+          <div>
+            <h4>Mal Qəbulları</h4>
+            <p>Sifarişə qarşı qeyd olunan, həqiqətən gələn mallar — və Anbarda ehtiyatı hərəkət etdirən eyni əməliyyat.</p>
+          </div>
+        </div>
+        <div class="feature-item reveal">
+          <span class="icon-tile sm t-amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3v18l2-1.5L9 21l2-1.5L13 21l2-1.5L17 21l2-1.5V3z"/><path d="M8 8h8M8 12h8"/></svg></span>
+          <div>
+            <h4>Təchizatçı Fakturaları</h4>
+            <p>Ödənişə çatmazdan əvvəl satınalma sifarişi və mal qəbulu ilə uzlaşdırılan təchizatçı fakturaları.</p>
+          </div>
+        </div>
+        <div class="feature-item reveal">
+          <span class="icon-tile sm t-emerald"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="1" fill="currentColor" stroke="none"/></svg></span>
+          <div>
+            <h4>Təchizatçı Qiymətləndirmələri</h4>
+            <p>Hər təchizatçı üzrə çatdırılma və keyfiyyət göstəriciləri — xatirədən deyil, qeydlərdən qurulur.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section dark-section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Bağlıdır, sonradan bərkidilməyib</span>
+        <h2>Zəncirin digər modullara keçdiyi yer</h2>
+        <p>Satınalma pulun, materialın və insanların əməliyyata daxil olduğu nöqtədir.</p>
+      </div>
+      <div class="grid grid-3">
+        <div class="dark-card reveal">
+          <span class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21V9l9-6 9 6v12"/><path d="M7 21v-8h10v8"/></svg></span>
+          <h3 class="mt-16">Ehtiyat qəbulla hərəkət edir</h3>
+          <p>Mal qəbulunu qeyd etmək materialı anbara qoyan şeydir — ehtiyatı dəqiq saxlamaq üçün ikinci məlumat girişi addımı yoxdur.</p>
+          <p class="mt-12"><a class="link-arrow" href="/az/modules/inventory">Anbara bax<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></p>
+        </div>
+        <div class="dark-card reveal">
+          <span class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v20M17 6H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></span>
+          <h3 class="mt-16">Fakturalar ödəniş sənədlərinə çevrilir</h3>
+          <p>Uzlaşdırılmış təchizatçı fakturası hesabı və vergi rejimi ilə birlikdə mühasibat kitabına axır və ödənişə hazır olur.</p>
+          <p class="mt-12"><a class="link-arrow" href="/az/modules/finance">Maliyyəyə bax<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></p>
+        </div>
+        <div class="dark-card reveal">
+          <span class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/></svg></span>
+          <h3 class="mt-16">Podratçılar matrisdə</h3>
+          <p>Təchizatçı personalının səriştəsi tam olaraq işçilər kimi yoxlanılır, ona görə podratçı briqadası sertifikatsız gələ bilməz.</p>
+          <p class="mt-12"><a class="link-arrow" href="/az/modules/hr">İnsan Resurslarına bax<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Orada kim yaşayır</span>
+        <h2>Satınalmaya toxunan hər kəs üçün</h2>
+        <p>Ona ehtiyacı olandan onun pulunu ödəyənə qədər.</p>
+      </div>
+      <div class="grid grid-3">
+        <article class="card card-pad reveal">
+          <span class="icon-tile sm t-amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="20" r="1"/><circle cx="18" cy="20" r="1"/><path d="M2 3h2.5l2.6 12.6a1 1 0 0 0 1 .8h8.9a1 1 0 0 0 1-.77L21 8H6"/></svg></span>
+          <h3 class="mt-16">Alıcı</h3>
+          <p class="mt-12">Təsdiqlənmiş tələbləri sifarişə çevirir, çatdırılmanı izləyir və növbəti baxışda təchizatçı göstəricilərini əlində saxlayır.</p>
+        </article>
+        <article class="card card-pad reveal">
+          <span class="icon-tile sm t-emerald"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m21 8-9-5-9 5v8l9 5 9-5z"/><path d="m3 8 9 5 9-5M12 13v9"/></svg></span>
+          <h3 class="mt-16">Anbardar</h3>
+          <p class="mt-12">Girişdə həqiqətən nə gəldiyini qeyd edir — və eyni əməliyyatla ehtiyatı yeniləyir və faktura uzlaşdırmasını mümkün edir.</p>
+        </article>
+        <article class="card card-pad reveal">
+          <span class="icon-tile sm t-violet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v20M17 6H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></span>
+          <h3 class="mt-16">Maliyyə nəzarətçisi</h3>
+          <p class="mt-12">PDF və ümidə deyil, üçtərəfli uzlaşdırmaya görə ödəyir və hər xərci öz tələbinə qədər izləyə bilir.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-soft">
+    <div class="container split">
+      <div>
+        <span class="eyebrow">Formalaşdırmaq sizin əlinizdə</span>
+        <h2 class="mt-16">Satınalmanı təsdiq mədəniyyətinizə uyğun konfiqurasiya edin</h2>
+        <p class="lead mt-12">Təsdiq həddləri məhsul məhdudiyyəti deyil, siyasət qərarıdır.</p>
+        <ul class="check-list mt-24">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Təsdiq həddlərini və hər səviyyədə kimin imzaladığını təyin edin</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Satınalma sifarişlərinin fakturadan əvvəl uzlaşdırılmış qəbul tələb edib-etməyəcəyinə qərar verin</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Material kataloqunu öz kateqoriya və kodlarınızla qurun</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Hansı şöbələrin tələb qaldıra, hansılarının sifariş verə biləcəyini seçin</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Podratçı personalını daxildə istifadə etdiyiniz eyni təlim modulları ilə izləyin</li>
+        </ul>
+        <p class="mt-24"><a class="link-arrow" href="/az/modules/administration">Administratorun nəyə nəzarət etdiyinə bax<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></p>
+      </div>
+      <div class="split-media">
+        <div class="panel reveal">
+          <div class="panel-head reveal">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21v-7M4 10V3M12 21v-9M12 8V3M20 21v-5M20 12V3M1 14h6M9 8h6M17 16h6"/></svg>
+            Satınalma · Parametrlər
+          </div>
+          <div class="panel-body reveal">
+            <table class="table-mock">
+              <thead><tr><th>Parametr</th><th>Dəyər</th></tr></thead>
+              <tbody>
+                <tr><td>Tələbin təsdiqi</td><td><span class="badge badge-amber">2 səviyyə</span></td></tr>
+                <tr><td>Üçtərəfli uzlaşdırma</td><td><span class="badge badge-emerald">Tələb olunur</span></td></tr>
+                <tr><td>Sifariş nömrələməsi</td><td><span class="badge badge-indigo">PO-#####</span></td></tr>
+                <tr><td>Təchizatçı qiymətləndirmələri</td><td><span class="badge badge-violet">Rüblük</span></td></tr>
+                <tr><td>Podratçı səriştəsi</td><td><span class="badge badge-cyan">İşçilərlə eyni</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2>Satınalmaya dair bizə verilən suallar</h2>
+      </div>
+      <div class="faq">
+        <details>
+          <summary>Mal qəbulu ehtiyatı avtomatik yeniləyirmi?</summary>
+          <div class="faq-body">Bəli. Qəbulun özü ehtiyat hərəkətidir — satınalma və anbar eyni material kataloqunu və eyni anbar qeydlərini paylaşır, ona görə ikinci giriş və aralarında uzlaşdırma yoxdur.</div>
+        </details>
+        <details>
+          <summary>Fakturaların ödənişdən əvvəl uzlaşdırılmasını məcburi edə bilərikmi?</summary>
+          <div class="faq-body">Bəli. Satınalma sifarişi, mal qəbulu və təchizatçı fakturası arasındakı üçtərəfli uzlaşdırma konfiqurasiya edilə bilən bir tələbdir. Nə qədər sərt olacağına administratorunuz qərar verir.</div>
+        </details>
+        <details>
+          <summary>Podratçı personalı işçilərdən nə ilə fərqlənir?</summary>
+          <div class="faq-body">Onlar sizin əmək haqqı siyahınıza deyil, bir təchizatçıya aiddir və elə buna görə Satınalmada qeyd olunur. Qalan hər şey eynidir: sertifikatlar, etibarlılıq tarixləri və işə buraxılmazdan əvvəl səriştə yoxlamaları.</div>
+        </details>
+        <details>
+          <summary>Təchizatçı qiymətləndirmələri haradan gəlir?</summary>
+          <div class="faq-body">Həmin təchizatçının sifarişləri və qəbulları üzrə artıq qeyd olunmuş çatdırılma və keyfiyyət tarixçəsindən. Kiminsə doldurmalı olduğu ayrıca bir sorğu deyil.</div>
+        </details>
+        <details>
+          <summary>Təchizatçı siyahımızı və material kataloqumuzu idxal edə bilərikmi?</summary>
+          <div class="faq-body">Bəli, hər ikisi CSV idxal və ixracını dəstəkləyir. Material kateqoriyalarınızı ilk idxaldan əvvəl razılaşdırmaq sonrakı yenidənişləmədən qurtarır, çünki kataloq anbar, istehsal və maliyyə ilə paylaşılır.</div>
+        </details>
+      </div>
+      <p class="text-center mt-32">
+        <a class="link-arrow" href="/az/modules">Bütün modullara bax<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+      </p>
+    </div>
+  </section>
+
+
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-hero">
+      <div>
+        <p class="footer-kicker">Sualınız var? Sizə göstərməyimizi istəyirsiniz?</p>
+        <h2>Bütün əməliyyat üçün bir sistem.</h2>
+      </div>
+      <div>
+        <p>Əməliyyatınızın necə işlədiyini bizə danışın. Uyğun iş axınlarını birlikdə nəzərdən keçirək, məlumatlarınıza baxaq və komandamızla növbəti addımları razılaşdıraq.</p>
+        <div class="footer-actions">
+          <a class="btn btn-onDark btn-lg" href="/az/contact#demo">Demo tələb edin <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+          <a class="btn btn-outline-onDark btn-lg" href="https://docs.caspianerp.com">Sənədləri oxuyun</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="/az">
+          <img class="brand-mark" src="/assets/img/logo-mark.svg" alt="" width="30" height="30">
+          <span class="brand-name" style="color:#fff">Caspian <b>ERP</b></span>
+        </a>
+      </div>
+      <div class="footer-col">
+        <h4>Platforma</h4>
+        <ul>
+          <li><a href="/az/modules">Bütün modullar</a></li>
+          <li><a href="/az/industries">Sənayelər</a></li>
+          <li><a href="/az/security">Təhlükəsizlik və RBAC</a></li>
+          <li><a href="/az/pricing">Qiymətlər</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Modullar</h4>
+        <ul>
+          <li><a href="/az/modules/hseq">HSEQ</a></li>
+          <li><a href="/az/modules/hr">İnsan Resursları</a></li>
+          <li><a href="/az/modules/procurement">Satınalma</a></li>
+          <li><a href="/az/modules/inventory">Anbar</a></li>
+          <li><a href="/az/modules/maintenance">Texniki xidmət</a></li>
+          <li><a href="/az/modules/finance">Maliyyə</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Şirkət</h4>
+        <ul>
+          <li><a href="/az/about">Haqqımızda</a></li>
+          <li><a href="https://caspiantools.com" rel="noopener">CaspianTools</a></li>
+          <li><a href="/az/contact">Əlaqə</a></li>
+          <li><a href="/az/contact#demo">Demo tələb edin</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Başlayın</h4>
+        <ul>
+          <li><a href="https://app.caspianerp.com">Daxil olun</a></li>
+          <li><a href="/az/contact#demo">Demo tələb edin</a></li>
+          <li><a href="https://docs.caspianerp.com">Sənədləşmə</a></li>
+          <li><a href="https://admin.caspianerp.com">Admin portalı</a></li>
+          <li><a href="/az/pricing#faq">Qiymət sualları</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <span data-year>2026</span> CaspianTools. Caspian ERP CaspianTools məhsuludur.</p>
+      <nav aria-label="Hüquqi">
+        <a href="/az/privacy">Məxfilik Siyasəti</a>
+        <a href="/az/terms">İstifadə Şərtləri</a>
+        <a href="/az/security">Təhlükəsizlik</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+<script src="/assets/js/site.js?v=20260908" defer></script>
+</body>
+</html>

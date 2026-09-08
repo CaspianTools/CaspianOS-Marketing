@@ -1,0 +1,598 @@
+<!doctype html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="/assets/js/lang.js?v=20260908"></script>
+<title>Effektivitet — Caspian ERP</title>
+<meta name="description" content="Oppgaver, møter, kalender, sjekklister, skjemaer, notater, dagbok og lean-styring — det daglige arbeidslaget i Caspian ERP, og der tiltak fra alle andre moduler havner.">
+<link rel="canonical" href="https://caspianerp.com/nb/modules/efficiency">
+<!--i18n:alternates-->
+<link rel="alternate" hreflang="en" href="https://caspianerp.com/modules/efficiency">
+<link rel="alternate" hreflang="az" href="https://caspianerp.com/az/modules/efficiency">
+<link rel="alternate" hreflang="tr" href="https://caspianerp.com/tr/modules/efficiency">
+<link rel="alternate" hreflang="ru" href="https://caspianerp.com/ru/modules/efficiency">
+<link rel="alternate" hreflang="nb" href="https://caspianerp.com/nb/modules/efficiency">
+<link rel="alternate" hreflang="de" href="https://caspianerp.com/de/modules/efficiency">
+<link rel="alternate" hreflang="fr" href="https://caspianerp.com/fr/modules/efficiency">
+<link rel="alternate" hreflang="x-default" href="https://caspianerp.com/modules/efficiency">
+<!--/i18n:alternates-->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Caspian ERP">
+<meta property="og:title" content="Effektivitet — Caspian ERP">
+<meta property="og:description" content="Oppgaver, møter, kalender, sjekklister, skjemaer, notater, dagbok og lean-styring — det daglige arbeidslaget i Caspian ERP, og der tiltak fra alle andre moduler havner.">
+<meta property="og:url" content="https://caspianerp.com/nb/modules/efficiency">
+<meta property="og:image" content="https://caspianerp.com/assets/img/og-image.svg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#4f46e5">
+<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="/assets/css/site.css?v=20260908">
+<noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
+</head>
+<body>
+<a class="skip-link" href="#main">Gå til innholdet</a>
+<header class="site-header">
+  <div class="container">
+    <nav class="nav" aria-label="Hoved">
+      <a class="brand" href="/nb">
+        <img class="brand-mark" src="/assets/img/logo-mark.svg" alt="" width="30" height="30">
+        <span class="brand-name">Caspian <b>ERP</b></span>
+      </a>
+      <ul class="nav-links">
+        <li><a class="nav-link" aria-current="page" href="/nb/modules">Moduler</a></li>
+        <li><a class="nav-link" href="/nb/industries">Bransjer</a></li>
+        <li><a class="nav-link" href="/nb/security">Sikkerhet</a></li>
+        <li><a class="nav-link" href="/nb/pricing">Priser</a></li>
+        <li><a class="nav-link" href="/nb/about">Om oss</a></li>
+      </ul>
+      <div class="nav-actions">
+        <!--i18n:switcher-->
+        <details class="lang" data-lang-switcher>
+          <summary class="lang-button" title="Velg språk" aria-label="Språk: Norsk (bokmål)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18"/></svg><span class="lang-code">NB</span><svg class="lang-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="lang-menu" role="group" aria-label="Velg språk">
+            <a class="lang-option" href="/modules/efficiency" hreflang="en" lang="en" data-lang="en">English</a>
+            <a class="lang-option" href="/az/modules/efficiency" hreflang="az" lang="az" data-lang="az">Azərbaycan dili</a>
+            <a class="lang-option" href="/tr/modules/efficiency" hreflang="tr" lang="tr" data-lang="tr">Türkçe</a>
+            <a class="lang-option" href="/ru/modules/efficiency" hreflang="ru" lang="ru" data-lang="ru">Русский</a>
+            <a class="lang-option" href="/nb/modules/efficiency" hreflang="nb" lang="nb" data-lang="nb" aria-current="true">Norsk (bokmål)</a>
+            <a class="lang-option" href="/de/modules/efficiency" hreflang="de" lang="de" data-lang="de">Deutsch</a>
+            <a class="lang-option" href="/fr/modules/efficiency" hreflang="fr" lang="fr" data-lang="fr">Français</a>
+          </div>
+        </details>
+        <!--/i18n:switcher-->
+        <a class="btn btn-ghost btn-sm" href="https://app.caspianerp.com">Logg inn</a>
+        <a class="btn btn-primary btn-sm" href="/nb/contact#demo">Be om en demo <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+        <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="mobile-menu" aria-label="Åpne menyen" data-text-open="Åpne menyen" data-text-close="Lukk menyen">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </nav>
+  </div>
+  <div class="mobile-menu" id="mobile-menu">
+    <a class="nav-link" aria-current="page" href="/nb/modules">Moduler</a>
+    <a class="nav-link" href="/nb/industries">Bransjer</a>
+    <a class="nav-link" href="/nb/security">Sikkerhet</a>
+    <a class="nav-link" href="/nb/pricing">Priser</a>
+    <a class="nav-link" href="/nb/about">Om oss</a>
+    <a class="nav-link" href="https://docs.caspianerp.com">Dokumentasjon</a>
+    <a class="nav-link" href="/nb/contact">Kontakt</a>
+    <!--i18n:switcher-mobile-->
+    <div class="mobile-lang" role="group" aria-label="Velg språk">
+      <span class="mobile-lang-label">Språk</span>
+      <div class="mobile-lang-options">
+        <a class="lang-option" href="/modules/efficiency" hreflang="en" lang="en" data-lang="en">English</a>
+        <a class="lang-option" href="/az/modules/efficiency" hreflang="az" lang="az" data-lang="az">Azərbaycan dili</a>
+        <a class="lang-option" href="/tr/modules/efficiency" hreflang="tr" lang="tr" data-lang="tr">Türkçe</a>
+        <a class="lang-option" href="/ru/modules/efficiency" hreflang="ru" lang="ru" data-lang="ru">Русский</a>
+        <a class="lang-option" href="/nb/modules/efficiency" hreflang="nb" lang="nb" data-lang="nb" aria-current="true">Norsk (bokmål)</a>
+        <a class="lang-option" href="/de/modules/efficiency" hreflang="de" lang="de" data-lang="de">Deutsch</a>
+        <a class="lang-option" href="/fr/modules/efficiency" hreflang="fr" lang="fr" data-lang="fr">Français</a>
+      </div>
+    </div>
+    <!--/i18n:switcher-mobile-->
+    <div class="mobile-cta">
+      <a class="btn btn-secondary" href="https://app.caspianerp.com">Logg inn</a>
+      <a class="btn btn-primary" href="/nb/contact#demo">Be om en demo</a>
+    </div>
+  </div>
+</header>
+<main id="main">
+
+  <section class="hero">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Brødsmulesti">
+        <a href="/nb/modules">Moduler</a>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg>
+        <span aria-current="page">Effektivitet</span>
+      </nav>
+      <span class="eyebrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 4.5 13.5H11l-1 8.5 8.5-11.5H12z"/></svg>Effektivitet</span>
+      <h1>Laget folk <span class="grad">logger inn for hver dag</span></h1>
+      <p class="hero-sub">Oppgaver, møter, sjekklister og skjemaer — pluss stedet der ethvert tiltak som opprettes andre steder i plattformen, havner foran den som eier det.</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary btn-lg" href="/nb/contact#demo">Be om en demo</a>
+        <a class="btn btn-secondary btn-lg" href="https://docs.caspianerp.com">Les dokumentasjonen</a>
+      </div>
+      <p class="hero-note">Åtte verktøy · Der tiltak fra HSEQ, Vedlikehold og Prosjekter havner</p>
+    </div>
+  </section>
+  <div class="container mock-wrap">
+    <p class="small muted text-center">Illustrerende produktvisning med eksempeldata. <a href="/nb/contact#demo">Be om en live gjennomgang</a>.</p>
+    <div class="mock reveal" role="img" aria-label="Caspian ERP Effektivitet som viser hastende oppgaver, kommende møter, sjekklistegjennomføring og lean-registeret">
+      <div class="mock-bar" aria-hidden="true">
+        <span class="mock-dot"></span><span class="mock-dot"></span><span class="mock-dot"></span>
+        <span class="mock-url">app.caspianerp.com/nb/w/efficiency/tasks</span>
+      </div>
+      <div class="mock-body" aria-hidden="true">
+        <div class="mock-rail">
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg>Hjem</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/></svg>Personal</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>HSEQ</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>Virks.</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1"/><circle cx="18" cy="20" r="1"/><path d="M2 3h2.5l2.6 12.6a1 1 0 0 0 1 .8h8.9a1 1 0 0 0 1-.77L21 8H6"/></svg>Innkjøp</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V10l6 4V10l6 4V6l6 4v11z"/><path d="M7 17h.01M13 17h.01M18 17h.01"/></svg>Prod.</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>CRM</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V9l9-6 9 6v12"/><path d="M7 21v-8h10v8"/></svg>Lager</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 16V6h11v10"/><path d="M14 9h4l3 3.5V16h-7z"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg>Logistikk</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0 5 5L21 21l-3 .5L8.5 12A4 4 0 0 1 3 6.5l3 3 2.5-2.5-3-3z"/></svg>Vedlikeh.</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 6H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>Økonomi</div>
+          <div class="mock-rail-item active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4.5 13.5H11l-1 8.5 8.5-11.5H12z"/></svg>Effektiv.</div>
+        </div>
+        <div class="mock-side">
+          <div class="mock-side-title">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4.5 13.5H11l-1 8.5 8.5-11.5H12z"/></svg>
+            Effektivitet
+          </div>
+          <div class="mock-side-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M3 10h18M8 2v4M16 2v4"/></svg>Kalender</div>
+          <div class="mock-side-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="m8 12 3 3 5-6"/></svg>Sjekklister</div>
+          <div class="mock-side-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5V5a2 2 0 0 1 2-2h13v18H6a2 2 0 0 1-2-2.5z"/></svg>Dagbok</div>
+          <div class="mock-side-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/></svg>Skjemaer</div>
+          <div class="mock-side-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z"/></svg>Lean-styring</div>
+          <div class="mock-side-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M3 10h18M8 2v4M16 2v4"/></svg>Møter</div>
+          <div class="mock-side-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5V5a2 2 0 0 1 2-2h13v18H6a2 2 0 0 1-2-2.5z"/></svg>Notater</div>
+          <div class="mock-side-item active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6h11M9 12h11M9 18h11M4 6h.01M4 12h.01M4 18h.01"/></svg>Oppgaver</div>
+        </div>
+        <div class="mock-main">
+          <div class="mock-topbar">
+            <div class="mock-search">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.2-3.2"/></svg>
+              Søk etter personer, ordrer, utstyr …
+            </div>
+            <div class="mock-plus"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></div>
+            <div class="mock-avatar"></div>
+          </div>
+          <div class="mock-h1">God ettermiddag, Leyla</div>
+          <div class="mock-tag">Her er det som trenger oppmerksomheten din</div>
+          <div class="mock-cards">
+            <div class="mock-card">
+              <div class="mock-card-head" style="color:#e11d48">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/><path d="M12 9v4M12 17h.01"/></svg>
+                Hastende oppgaver
+              </div>
+              <div class="mock-row"><span>Lukk tillatelse PTW-0241</span><span class="mock-pill hot">3 d forsinket</span></div>
+              <div class="mock-row"><span>Godkjenn PR-1180</span><span class="mock-pill warn">I dag</span></div>
+              <div class="mock-row"><span>Signer kalibreringen</span><span class="mock-pill">fre.</span></div>
+            </div>
+            <div class="mock-card">
+              <div class="mock-card-head" style="color:#7c3aed">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M3 10h18M8 2v4M16 2v4"/></svg>
+                Kommende møter
+              </div>
+              <div class="mock-row"><span>Ukentlig HMS-gjennomgang</span><span class="mock-pill">tir. 09:00</span></div>
+              <div class="mock-row"><span>Leverandørytelse</span><span class="mock-pill">ons. 14:00</span></div>
+            </div>
+            <div class="mock-card">
+              <div class="mock-card-head" style="color:#0d9488">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="m8 12 3 3 5-6"/></svg>
+                Sjekklister
+              </div>
+              <div class="mock-kpi">12/14</div>
+              <div class="mock-kpi-sub">fullført i dag på 3 lokasjoner</div>
+            </div>
+            <div class="mock-card">
+              <div class="mock-card-head" style="color:#4f46e5">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6h11M9 12h11M9 18h11M4 6h.01M4 12h.01M4 18h.01"/></svg>
+                Mine oppgaver
+              </div>
+              <div class="mock-bars"><span style="height:40%"></span><span style="height:58%"></span><span style="height:62%"></span><span style="height:55%"></span><span style="height:74%"></span><span style="height:88%"></span></div>
+              <div class="mock-kpi-sub" style="margin-top:8px">31 åpne · 6 forfaller denne uken</div>
+            </div>
+            <div class="mock-card">
+              <div class="mock-card-head" style="color:#d97706">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z"/></svg>
+                Lean-registeret
+              </div>
+              <div class="mock-row"><span>Utforming av pumpeskid</span><span class="mock-pill warn">Til vurdering</span></div>
+              <div class="mock-row"><span>Merking av lager</span><span class="mock-pill ok">Godkjent</span></div>
+            </div>
+            <div class="mock-card">
+              <div class="mock-card-head" style="color:#0891b2">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/></svg>
+                Skjemasvar
+              </div>
+              <div class="mock-kpi">46</div>
+              <div class="mock-kpi-sub">denne måneden via offentlige lenker</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="section section-soft">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Før Caspian ERP</span>
+        <h2>Arbeidet er ekte; oppfølgingen er spredt</h2>
+        <p>De fleste organisasjoner mangler ikke systemer. De mangler ett sted der en person kan se alt som er sitt.</p>
+      </div>
+      <div class="grid grid-3">
+        <article class="card card-pad reveal">
+          <h3>Tiltakene bor fem steder</h3>
+          <p class="mt-12">Ett i en hendelsesrapport, ett i et møtereferat, ett i en melding, to i hodet på noen. Ingen av dem på én liste med frist.</p>
+        </article>
+        <article class="card card-pad reveal">
+          <h3>Møter produserer referater, ikke bevegelse</h3>
+          <p class="mt-12">Tiltak avtales, skrives inn i et dokument, og deretter avhenger alt av at noen husker å lese dokumentet igjen.</p>
+        </article>
+        <article class="card card-pad reveal">
+          <h3>Forbedringsideer fordamper</h3>
+          <p class="mt-12">De beste forslagene kommer fra gulvet, nevnes én gang og blir aldri notert et sted som overlever skiftet.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Hva det gjør</span>
+        <h2>Én arbeidsflate for alt som er ditt</h2>
+        <p>Dette er modulen som får folk inn i systemet i en rolig uke — og det er nettopp det som får de andre modulene til å virke.</p>
+      </div>
+      <div class="grid grid-2">
+        <article class="card card-pad reveal">
+          <span class="icon-tile t-cyan"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6h11M9 12h11M9 18h11M4 6h.01M4 12h.01M4 18h.01"/></svg></span>
+          <h3 class="mt-16">Oppgaver med eiere og frister</h3>
+          <p class="mt-12">Én liste per person, matet av hele plattformen.</p>
+          <ul class="check-list mt-16">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Prioriteter, frister, ansvarlige og tavlevisning</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Tiltak fra hendelser, granskninger og møter havner her</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Forfalt arbeid løftes frem på startskjermen i stedet for å bli borte</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Tildelt en person, aldri en avdeling</li>
+          </ul>
+        </article>
+        <article class="card card-pad reveal">
+          <span class="icon-tile t-violet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M3 10h18M8 2v4M16 2v4"/></svg></span>
+          <h3 class="mt-16">Møter som ender i sporbare tiltak</h3>
+          <p class="mt-12">Agenda, oppmøte og resultater samlet, med tiltak som blir oppgaver.</p>
+          <ul class="check-list mt-16">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Agendaer forberedt på forhånd og synlige for deltakerne</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Oppmøte registreres mot personalpostene</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Tiltak tildeles i møtet og eies etterpå</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Tidligere møter er søkbare i stedet for arkivert</li>
+          </ul>
+        </article>
+        <article class="card card-pad reveal">
+          <span class="icon-tile t-emerald"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/></svg></span>
+          <h3 class="mt-16">Skjemaer, også for folk utenfor systemet</h3>
+          <p class="mt-12">Bygg et skjema, del en offentlig lenke og samle inn strukturerte svar.</p>
+          <ul class="check-list mt-16">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Egendefinerte skjemaer bygd uten utvikler</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Delbare offentlige lenker for entreprenører, besøkende og kunder</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Svar lagres som poster du kan filtrere og eksportere</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Ingen lisens kreves for den som fyller ut</li>
+          </ul>
+        </article>
+        <article class="card card-pad reveal">
+          <span class="icon-tile t-amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="m8 12 3 3 5-6"/></svg></span>
+          <h3 class="mt-16">Sjekklister, notater og en personlig dagbok</h3>
+          <p class="mt-12">Det daglige stillaset — rutinesjekker, arbeidsnotater og en logg over det som skjedde.</p>
+          <ul class="check-list mt-16">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Gjenbrukbare sjekklister for rutine- og førjobbkontroller</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Notater ligger ved arbeidet i stedet for i en egen app</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>En personlig dagbok for den loggen du alltid skulle ønske du hadde ført</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Alt sammen søkbart fra det samme globale søket</li>
+          </ul>
+        </article>
+        <article class="card card-pad reveal">
+          <span class="icon-tile t-rose"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z"/></svg></span>
+          <h3 class="mt-16">Lean-register</h3>
+          <p class="mt-12">Forbedringsideer fanges opp, vurderes og følges frem til gjennomføring.</p>
+          <ul class="check-list mt-16">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Forslag registreres fra hvem som helst, ikke bare ledelsen</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Vurdert, prioritert og gitt en eier</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Fremdriften er synlig, så de som foreslo, ser hva som skjedde med ideen</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Et spor over hva som ble endret og hva det var verdt</li>
+          </ul>
+        </article>
+        <article class="card card-pad reveal">
+          <span class="icon-tile t-teal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M3 10h18M8 2v4M16 2v4"/></svg></span>
+          <h3 class="mt-16">Én kalender på tvers av plattformen</h3>
+          <p class="mt-12">Møter, økter, fravær og planlagt arbeid i én visning.</p>
+          <ul class="check-list mt-16">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Opplæringsøkter fra Personal vises sammen med møtene</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Planlagt vedlikehold og reiser er synlige samme sted</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Personlige visninger og teamvisninger</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Ingenting å synkronisere, fordi ingenting er separat</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-soft">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Hvert verktøy i modulen</span>
+        <h2>Åtte verktøy for den daglige rytmen</h2>
+        <p>Bevisst enkelt, bevisst i bruk hver dag.</p>
+      </div>
+      <div class="grid grid-2">
+        <div class="feature-item reveal">
+          <span class="icon-tile sm t-cyan"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6h11M9 12h11M9 18h11M4 6h.01M4 12h.01M4 18h.01"/></svg></span>
+          <div>
+            <h4>Oppgaver</h4>
+            <p>Personlige og felles oppgavelister med prioriteter, frister, ansvarlige og tavlevisning.</p>
+          </div>
+        </div>
+        <div class="feature-item reveal">
+          <span class="icon-tile sm t-violet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M3 10h18M8 2v4M16 2v4"/></svg></span>
+          <div>
+            <h4>Møter</h4>
+            <p>Agendaer, oppmøte og resultater, med tiltak som blir sporbare oppgaver i stedet for referat.</p>
+          </div>
+        </div>
+        <div class="feature-item reveal">
+          <span class="icon-tile sm t-teal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M3 10h18M8 2v4M16 2v4"/></svg></span>
+          <div>
+            <h4>Kalender</h4>
+            <p>Én visning av møter, opplæringsøkter, fravær og planlagt arbeid i hele organisasjonen.</p>
+          </div>
+        </div>
+        <div class="feature-item reveal">
+          <span class="icon-tile sm t-amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="m8 12 3 3 5-6"/></svg></span>
+          <div>
+            <h4>Sjekklister</h4>
+            <p>Gjenbrukbare sjekklister for rutinekontroller, førjobbverifisering og overleveringer.</p>
+          </div>
+        </div>
+        <div class="feature-item reveal">
+          <span class="icon-tile sm t-emerald"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/></svg></span>
+          <div>
+            <h4>Skjemaer</h4>
+            <p>Egendefinerte skjemaer med delbare offentlige lenker, så folk utenfor systemet kan sende inn strukturerte data.</p>
+          </div>
+        </div>
+        <div class="feature-item reveal">
+          <span class="icon-tile sm t-slate"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5V5a2 2 0 0 1 2-2h13v18H6a2 2 0 0 1-2-2.5z"/></svg></span>
+          <div>
+            <h4>Notater</h4>
+            <p>Arbeidsnotater som ligger ved resten av driften og dekkes av det samme søket.</p>
+          </div>
+        </div>
+        <div class="feature-item reveal">
+          <span class="icon-tile sm t-slate"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5V5a2 2 0 0 1 2-2h13v18H6a2 2 0 0 1-2-2.5z"/></svg></span>
+          <div>
+            <h4>Dagbok</h4>
+            <p>En personlig dagslogg — nedtegnelsen av hva som skjedde, som ingen fører før de trenger den.</p>
+          </div>
+        </div>
+        <div class="feature-item reveal">
+          <span class="icon-tile sm t-rose"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z"/></svg></span>
+          <div>
+            <h4>Lean-styring</h4>
+            <p>Registeret for kontinuerlig forbedring: ideer fanges opp, vurderes, eies og følges til gjennomføring.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section dark-section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Sammenkoblet, ikke påmontert</span>
+        <h2>Alle moduler ender opp her</h2>
+        <p>Effektivitet er der arbeid fra resten av plattformen blir noens jobb i dag.</p>
+      </div>
+      <div class="grid grid-3">
+        <div class="dark-card reveal">
+          <span class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span>
+          <h3 class="mt-16">HSEQ-tiltak</h3>
+          <p>Granskningsfunn og oppfølging av observasjoner kommer som oppgaver med eier og frist, på listen personen allerede jobber fra.</p>
+          <p class="mt-12"><a class="link-arrow" href="/nb/modules/hseq">Se HSEQ<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></p>
+        </div>
+        <div class="dark-card reveal">
+          <span class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a4 4 0 0 0 5 5L21 21l-3 .5L8.5 12A4 4 0 0 1 3 6.5l3 3 2.5-2.5-3-3z"/></svg></span>
+          <h3 class="mt-16">Vedlikeholdsarbeid</h3>
+          <p>Forebyggende tiltak og vedlikeholdssjekklister deler den samme oppgave- og sjekklistemekanikken, så ingen trenger en parallell huskeliste.</p>
+          <p class="mt-12"><a class="link-arrow" href="/nb/modules/maintenance">Se Vedlikehold<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></p>
+        </div>
+        <div class="dark-card reveal">
+          <span class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg></span>
+          <h3 class="mt-16">Prosjektleveranse</h3>
+          <p>Prosjektoppgaver og -møter bor her, og det er derfor prosjektfremdrift kan måles i stedet for beskrives.</p>
+          <p class="mt-12"><a class="link-arrow" href="/nb/modules/business">Se Virksomhet<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Hvem som bor i den</span>
+        <h2>Modulen alle bruker, uansett rolle</h2>
+        <p>Innføringen av plattformen starter som regel her.</p>
+      </div>
+      <div class="grid grid-3">
+        <article class="card card-pad reveal">
+          <span class="icon-tile sm t-cyan"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span>
+          <h3 class="mt-16">Alle med en oppgaveliste</h3>
+          <p class="mt-12">Åpner én skjerm om morgenen og ser alle forfalte og forestående punkter som er sine, uansett hvor i plattformen de kom fra.</p>
+        </article>
+        <article class="card card-pad reveal">
+          <span class="icon-tile sm t-violet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/></svg></span>
+          <h3 class="mt-16">Teamleder</h3>
+          <p class="mt-12">Kjører ukemøtet fra agendaen, tildeler tiltak underveis, og starter neste møte med det som ble lukket og det som ikke ble det.</p>
+        </article>
+        <article class="card card-pad reveal">
+          <span class="icon-tile sm t-rose"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z"/></svg></span>
+          <h3 class="mt-16">Forbedringsansvarlig</h3>
+          <p class="mt-12">Holder lean-registeret i bevegelse, så forslag fra gulvet ender i en endring og ikke i en samtale.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-soft">
+    <div class="container split">
+      <div>
+        <span class="eyebrow">Din å forme</span>
+        <h2 class="mt-16">Form det daglige laget etter måten teamene deres jobber på</h2>
+        <p class="lead mt-12">Små innstillinger her avgjør om folk i det hele tatt tar plattformen i bruk.</p>
+        <ul class="check-list mt-24">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Bygg egne sjekkliste- og skjemamaler som gjenbrukes på tvers av lokasjoner og lag</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Velg oppgaveprioriteter og statuser som matcher språket dere allerede bruker</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Bestem om oppgavelister er private, synlige for teamet eller åpne for organisasjonen</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Publiser skjemaer med offentlige lenker, uten lisenskrav for dem som svarer</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Slå av verktøyene dere ikke trenger — mange organisasjoner kjører kun Oppgaver og Møter</li>
+        </ul>
+        <p class="mt-24"><a class="link-arrow" href="/nb/modules/administration">Se hva en administrator styrer<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></p>
+      </div>
+      <div class="split-media">
+        <div class="panel reveal">
+          <div class="panel-head reveal">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21v-7M4 10V3M12 21v-9M12 8V3M20 21v-5M20 12V3M1 14h6M9 8h6M17 16h6"/></svg>
+            Effektivitet · Innstillinger
+          </div>
+          <div class="panel-body reveal">
+            <table class="table-mock">
+              <thead><tr><th>Innstilling</th><th>Verdi</th></tr></thead>
+              <tbody>
+                <tr><td>Oppgavesynlighet</td><td><span class="badge badge-cyan">Team</span></td></tr>
+                <tr><td>Møtetiltak</td><td><span class="badge badge-violet">Oppretter oppgaver</span></td></tr>
+                <tr><td>Offentlige skjemalenker</td><td><span class="badge badge-emerald">På</span></td></tr>
+                <tr><td>Sjekklistemaler</td><td><span class="badge badge-amber">18 delt</span></td></tr>
+                <tr><td>Dagbok</td><td><span class="badge badge-indigo">Privat for eieren</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2>Spørsmål om Effektivitet vi ofte får</h2>
+      </div>
+      <div class="faq">
+        <details>
+          <summary>Hvorfor bruke dette hvis vi allerede har en oppgaveapp?</summary>
+          <div class="faq-body">Fordi en frittstående oppgaveapp ikke kan se hendelsene, arbeidsordrene eller prosjektene deres. Verdien her er ikke selve oppgavelisten — det er at et tiltak som opprettes i en granskning eller et møte, havner på den samme listen uten at noen taster det inn på nytt.</div>
+        </details>
+        <details>
+          <summary>Kan folk utenfor organisasjonen vår fylle ut et skjema?</summary>
+          <div class="faq-body">Ja. Skjemaer kan publiseres med en delbar offentlig lenke, så entreprenører, besøkende og kunder kan sende inn uten konto eller lisens. Svarene kommer tilbake som strukturerte poster.</div>
+        </details>
+        <details>
+          <summary>Er dagboken synlig for ledere?</summary>
+          <div class="faq-body">Dagboken er ment som en personlig logg, og synligheten styres av den samme tillatelsesmodellen som alt annet. De fleste organisasjoner holder den privat for eieren.</div>
+        </details>
+        <details>
+          <summary>Viser kalenderen mer enn møter?</summary>
+          <div class="faq-body">Ja — opplæringsøkter, fravær, planlagt vedlikehold og reiser kan vises i den samme visningen, fordi de er poster i det samme systemet og ikke oppføringer i separate kalendere.</div>
+        </details>
+        <details>
+          <summary>Kan vi starte med bare denne modulen?</summary>
+          <div class="faq-body">Mange gjør nettopp det. Effektivitet er det vanlige inngangspunktet fordi alle kan bruke den fra dag én, og de operative modulene slås på når folk har fått for vane å åpne plattformen.</div>
+        </details>
+      </div>
+      <p class="text-center mt-32">
+        <a class="link-arrow" href="/nb/modules">Bla gjennom alle moduler<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+      </p>
+    </div>
+  </section>
+
+
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-hero">
+      <div>
+        <p class="footer-kicker">Har du et spørsmål? Vil du ha en gjennomgang?</p>
+        <h2>Ett system for hele driften.</h2>
+      </div>
+      <div>
+        <p>Fortell oss hvordan driften din fungerer. Vi går gjennom de aktuelle arbeidsflytene, ser på dataene dine og blir enige om neste steg sammen med teamet vårt.</p>
+        <div class="footer-actions">
+          <a class="btn btn-onDark btn-lg" href="/nb/contact#demo">Be om en demo <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+          <a class="btn btn-outline-onDark btn-lg" href="https://docs.caspianerp.com">Les dokumentasjonen</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="/nb">
+          <img class="brand-mark" src="/assets/img/logo-mark.svg" alt="" width="30" height="30">
+          <span class="brand-name" style="color:#fff">Caspian <b>ERP</b></span>
+        </a>
+      </div>
+      <div class="footer-col">
+        <h4>Plattform</h4>
+        <ul>
+          <li><a href="/nb/modules">Alle moduler</a></li>
+          <li><a href="/nb/industries">Bransjer</a></li>
+          <li><a href="/nb/security">Sikkerhet og RBAC</a></li>
+          <li><a href="/nb/pricing">Priser</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Moduler</h4>
+        <ul>
+          <li><a href="/nb/modules/hseq">HSEQ</a></li>
+          <li><a href="/nb/modules/hr">Personal</a></li>
+          <li><a href="/nb/modules/procurement">Innkjøp</a></li>
+          <li><a href="/nb/modules/inventory">Lager</a></li>
+          <li><a href="/nb/modules/maintenance">Vedlikehold</a></li>
+          <li><a href="/nb/modules/finance">Økonomi</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Selskap</h4>
+        <ul>
+          <li><a href="/nb/about">Om oss</a></li>
+          <li><a href="https://caspiantools.com" rel="noopener">CaspianTools</a></li>
+          <li><a href="/nb/contact">Kontakt</a></li>
+          <li><a href="/nb/contact#demo">Be om en demo</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Kom i gang</h4>
+        <ul>
+          <li><a href="https://app.caspianerp.com">Logg inn</a></li>
+          <li><a href="/nb/contact#demo">Be om en demo</a></li>
+          <li><a href="https://docs.caspianerp.com">Dokumentasjon</a></li>
+          <li><a href="https://admin.caspianerp.com">Adminportal</a></li>
+          <li><a href="/nb/pricing#faq">Spørsmål om pris</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <span data-year>2026</span> CaspianTools. Caspian ERP er et CaspianTools-produkt.</p>
+      <nav aria-label="Juridisk">
+        <a href="/nb/privacy">Personvernerklæring</a>
+        <a href="/nb/terms">Vilkår for bruk</a>
+        <a href="/nb/security">Sikkerhet</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+<script src="/assets/js/site.js?v=20260908" defer></script>
+</body>
+</html>

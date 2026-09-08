@@ -1,0 +1,598 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="/assets/js/lang.js?v=20260908"></script>
+<title>Efficacité — Caspian ERP</title>
+<meta name="description" content="Tâches, réunions, calendrier, listes de contrôle, formulaires, notes, journal et management lean — la couche de travail quotidienne de Caspian ERP, et le point de chute des actions de tous les autres modules.">
+<link rel="canonical" href="https://caspianerp.com/fr/modules/efficiency">
+<!--i18n:alternates-->
+<link rel="alternate" hreflang="en" href="https://caspianerp.com/modules/efficiency">
+<link rel="alternate" hreflang="az" href="https://caspianerp.com/az/modules/efficiency">
+<link rel="alternate" hreflang="tr" href="https://caspianerp.com/tr/modules/efficiency">
+<link rel="alternate" hreflang="ru" href="https://caspianerp.com/ru/modules/efficiency">
+<link rel="alternate" hreflang="nb" href="https://caspianerp.com/nb/modules/efficiency">
+<link rel="alternate" hreflang="de" href="https://caspianerp.com/de/modules/efficiency">
+<link rel="alternate" hreflang="fr" href="https://caspianerp.com/fr/modules/efficiency">
+<link rel="alternate" hreflang="x-default" href="https://caspianerp.com/modules/efficiency">
+<!--/i18n:alternates-->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Caspian ERP">
+<meta property="og:title" content="Efficacité — Caspian ERP">
+<meta property="og:description" content="Tâches, réunions, calendrier, listes de contrôle, formulaires, notes, journal et management lean — la couche de travail quotidienne de Caspian ERP, et le point de chute des actions de tous les autres modules.">
+<meta property="og:url" content="https://caspianerp.com/fr/modules/efficiency">
+<meta property="og:image" content="https://caspianerp.com/assets/img/og-image.svg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#4f46e5">
+<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="/assets/css/site.css?v=20260908">
+<noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
+</head>
+<body>
+<a class="skip-link" href="#main">Aller au contenu</a>
+<header class="site-header">
+  <div class="container">
+    <nav class="nav" aria-label="Principale">
+      <a class="brand" href="/fr">
+        <img class="brand-mark" src="/assets/img/logo-mark.svg" alt="" width="30" height="30">
+        <span class="brand-name">Caspian <b>ERP</b></span>
+      </a>
+      <ul class="nav-links">
+        <li><a class="nav-link" aria-current="page" href="/fr/modules">Modules</a></li>
+        <li><a class="nav-link" href="/fr/industries">Secteurs</a></li>
+        <li><a class="nav-link" href="/fr/security">Sécurité</a></li>
+        <li><a class="nav-link" href="/fr/pricing">Tarifs</a></li>
+        <li><a class="nav-link" href="/fr/about">À propos</a></li>
+      </ul>
+      <div class="nav-actions">
+        <!--i18n:switcher-->
+        <details class="lang" data-lang-switcher>
+          <summary class="lang-button" title="Choisir une langue" aria-label="Langue : Français"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18"/></svg><span class="lang-code">FR</span><svg class="lang-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="lang-menu" role="group" aria-label="Choisir une langue">
+            <a class="lang-option" href="/modules/efficiency" hreflang="en" lang="en" data-lang="en">English</a>
+            <a class="lang-option" href="/az/modules/efficiency" hreflang="az" lang="az" data-lang="az">Azərbaycan dili</a>
+            <a class="lang-option" href="/tr/modules/efficiency" hreflang="tr" lang="tr" data-lang="tr">Türkçe</a>
+            <a class="lang-option" href="/ru/modules/efficiency" hreflang="ru" lang="ru" data-lang="ru">Русский</a>
+            <a class="lang-option" href="/nb/modules/efficiency" hreflang="nb" lang="nb" data-lang="nb">Norsk (bokmål)</a>
+            <a class="lang-option" href="/de/modules/efficiency" hreflang="de" lang="de" data-lang="de">Deutsch</a>
+            <a class="lang-option" href="/fr/modules/efficiency" hreflang="fr" lang="fr" data-lang="fr" aria-current="true">Français</a>
+          </div>
+        </details>
+        <!--/i18n:switcher-->
+        <a class="btn btn-ghost btn-sm" href="https://app.caspianerp.com">Se connecter</a>
+        <a class="btn btn-primary btn-sm" href="/fr/contact#demo">Demander une démo <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+        <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="mobile-menu" aria-label="Ouvrir le menu" data-text-open="Ouvrir le menu" data-text-close="Fermer le menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </nav>
+  </div>
+  <div class="mobile-menu" id="mobile-menu">
+    <a class="nav-link" aria-current="page" href="/fr/modules">Modules</a>
+    <a class="nav-link" href="/fr/industries">Secteurs</a>
+    <a class="nav-link" href="/fr/security">Sécurité</a>
+    <a class="nav-link" href="/fr/pricing">Tarifs</a>
+    <a class="nav-link" href="/fr/about">À propos</a>
+    <a class="nav-link" href="https://docs.caspianerp.com">Documentation</a>
+    <a class="nav-link" href="/fr/contact">Contact</a>
+    <!--i18n:switcher-mobile-->
+    <div class="mobile-lang" role="group" aria-label="Choisir une langue">
+      <span class="mobile-lang-label">Langue</span>
+      <div class="mobile-lang-options">
+        <a class="lang-option" href="/modules/efficiency" hreflang="en" lang="en" data-lang="en">English</a>
+        <a class="lang-option" href="/az/modules/efficiency" hreflang="az" lang="az" data-lang="az">Azərbaycan dili</a>
+        <a class="lang-option" href="/tr/modules/efficiency" hreflang="tr" lang="tr" data-lang="tr">Türkçe</a>
+        <a class="lang-option" href="/ru/modules/efficiency" hreflang="ru" lang="ru" data-lang="ru">Русский</a>
+        <a class="lang-option" href="/nb/modules/efficiency" hreflang="nb" lang="nb" data-lang="nb">Norsk (bokmål)</a>
+        <a class="lang-option" href="/de/modules/efficiency" hreflang="de" lang="de" data-lang="de">Deutsch</a>
+        <a class="lang-option" href="/fr/modules/efficiency" hreflang="fr" lang="fr" data-lang="fr" aria-current="true">Français</a>
+      </div>
+    </div>
+    <!--/i18n:switcher-mobile-->
+    <div class="mobile-cta">
+      <a class="btn btn-secondary" href="https://app.caspianerp.com">Se connecter</a>
+      <a class="btn btn-primary" href="/fr/contact#demo">Demander une démo</a>
+    </div>
+  </div>
+</header>
+<main id="main">
+
+  <section class="hero">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Fil d’Ariane">
+        <a href="/fr/modules">Modules</a>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg>
+        <span aria-current="page">Efficacité</span>
+      </nav>
+      <span class="eyebrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 4.5 13.5H11l-1 8.5 8.5-11.5H12z"/></svg>Efficacité</span>
+      <h1>La couche pour laquelle <span class="grad">on se connecte chaque jour</span></h1>
+      <p class="hero-sub">Tâches, réunions, listes de contrôle et formulaires — et l’endroit où toute action ouverte ailleurs dans la plateforme atterrit devant son responsable.</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary btn-lg" href="/fr/contact#demo">Demander une démo</a>
+        <a class="btn btn-secondary btn-lg" href="https://docs.caspianerp.com">Lire la documentation</a>
+      </div>
+      <p class="hero-note">Huit outils · Le point de chute des actions de HSEQ, Maintenance et Projets</p>
+    </div>
+  </section>
+  <div class="container mock-wrap">
+    <p class="small muted text-center">Vue produit illustrative avec des données d’exemple. <a href="/fr/contact#demo">Demander une présentation en direct</a>.</p>
+    <div class="mock reveal" role="img" aria-label="Caspian ERP Efficacité affichant les tâches urgentes, les réunions à venir, l’avancement des listes de contrôle et le registre lean">
+      <div class="mock-bar" aria-hidden="true">
+        <span class="mock-dot"></span><span class="mock-dot"></span><span class="mock-dot"></span>
+        <span class="mock-url">app.caspianerp.com/fr/w/efficiency/tasks</span>
+      </div>
+      <div class="mock-body" aria-hidden="true">
+        <div class="mock-rail">
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg>Accueil</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/></svg>Ressources humaines</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>HSEQ</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>Pilot.</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1"/><circle cx="18" cy="20" r="1"/><path d="M2 3h2.5l2.6 12.6a1 1 0 0 0 1 .8h8.9a1 1 0 0 0 1-.77L21 8H6"/></svg>Achats</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V10l6 4V10l6 4V6l6 4v11z"/><path d="M7 17h.01M13 17h.01M18 17h.01"/></svg>Prod.</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>CRM</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V9l9-6 9 6v12"/><path d="M7 21v-8h10v8"/></svg>Stocks</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 16V6h11v10"/><path d="M14 9h4l3 3.5V16h-7z"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg>Logist.</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0 5 5L21 21l-3 .5L8.5 12A4 4 0 0 1 3 6.5l3 3 2.5-2.5-3-3z"/></svg>Mainten.</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 6H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>Finance</div>
+          <div class="mock-rail-item active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4.5 13.5H11l-1 8.5 8.5-11.5H12z"/></svg>Efficac.</div>
+        </div>
+        <div class="mock-side">
+          <div class="mock-side-title">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4.5 13.5H11l-1 8.5 8.5-11.5H12z"/></svg>
+            Efficacité
+          </div>
+          <div class="mock-side-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M3 10h18M8 2v4M16 2v4"/></svg>Calendrier</div>
+          <div class="mock-side-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="m8 12 3 3 5-6"/></svg>Listes de contrôle</div>
+          <div class="mock-side-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5V5a2 2 0 0 1 2-2h13v18H6a2 2 0 0 1-2-2.5z"/></svg>Journal</div>
+          <div class="mock-side-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/></svg>Formulaires</div>
+          <div class="mock-side-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z"/></svg>Management lean</div>
+          <div class="mock-side-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M3 10h18M8 2v4M16 2v4"/></svg>Réunions</div>
+          <div class="mock-side-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5V5a2 2 0 0 1 2-2h13v18H6a2 2 0 0 1-2-2.5z"/></svg>Notes</div>
+          <div class="mock-side-item active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6h11M9 12h11M9 18h11M4 6h.01M4 12h.01M4 18h.01"/></svg>Tâches</div>
+        </div>
+        <div class="mock-main">
+          <div class="mock-topbar">
+            <div class="mock-search">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.2-3.2"/></svg>
+              Rechercher personnes, commandes, actifs…
+            </div>
+            <div class="mock-plus"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></div>
+            <div class="mock-avatar"></div>
+          </div>
+          <div class="mock-h1">Bonjour, Leyla</div>
+          <div class="mock-tag">Voici ce qui demande votre attention</div>
+          <div class="mock-cards">
+            <div class="mock-card">
+              <div class="mock-card-head" style="color:#e11d48">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/><path d="M12 9v4M12 17h.01"/></svg>
+                Tâches urgentes
+              </div>
+              <div class="mock-row"><span>Clôturer le permis PTW-0241</span><span class="mock-pill hot">3 j de retard</span></div>
+              <div class="mock-row"><span>Approuver PR-1180</span><span class="mock-pill warn">Aujourd’hui</span></div>
+              <div class="mock-row"><span>Valider l’étalonnage</span><span class="mock-pill">ven.</span></div>
+            </div>
+            <div class="mock-card">
+              <div class="mock-card-head" style="color:#7c3aed">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M3 10h18M8 2v4M16 2v4"/></svg>
+                Réunions à venir
+              </div>
+              <div class="mock-row"><span>Revue HSE hebdomadaire</span><span class="mock-pill">mar. 09:00</span></div>
+              <div class="mock-row"><span>Performance fournisseurs</span><span class="mock-pill">mer. 14:00</span></div>
+            </div>
+            <div class="mock-card">
+              <div class="mock-card-head" style="color:#0d9488">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="m8 12 3 3 5-6"/></svg>
+                Listes de contrôle
+              </div>
+              <div class="mock-kpi">12/14</div>
+              <div class="mock-kpi-sub">terminées aujourd’hui sur 3 sites</div>
+            </div>
+            <div class="mock-card">
+              <div class="mock-card-head" style="color:#4f46e5">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6h11M9 12h11M9 18h11M4 6h.01M4 12h.01M4 18h.01"/></svg>
+                Mes tâches
+              </div>
+              <div class="mock-bars"><span style="height:40%"></span><span style="height:58%"></span><span style="height:62%"></span><span style="height:55%"></span><span style="height:74%"></span><span style="height:88%"></span></div>
+              <div class="mock-kpi-sub" style="margin-top:8px">31 ouvertes · 6 à échéance cette semaine</div>
+            </div>
+            <div class="mock-card">
+              <div class="mock-card-head" style="color:#d97706">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z"/></svg>
+                Registre lean
+              </div>
+              <div class="mock-row"><span>Implantation du skid de pompage</span><span class="mock-pill warn">En revue</span></div>
+              <div class="mock-row"><span>Étiquetage du magasin</span><span class="mock-pill ok">Approuvé</span></div>
+            </div>
+            <div class="mock-card">
+              <div class="mock-card-head" style="color:#0891b2">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/></svg>
+                Réponses aux formulaires
+              </div>
+              <div class="mock-kpi">46</div>
+              <div class="mock-kpi-sub">ce mois-ci via des liens publics</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="section section-soft">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Avant Caspian ERP</span>
+        <h2>Le travail est réel ; son suivi est éparpillé</h2>
+        <p>La plupart des organisations ne manquent pas de systèmes. Il leur manque un endroit où une personne voit tout ce qui la concerne.</p>
+      </div>
+      <div class="grid grid-3">
+        <article class="card card-pad reveal">
+          <h3>Les actions vivent à cinq endroits</h3>
+          <p class="mt-12">Une dans un rapport d’incident, une dans un compte rendu, une dans un message, deux dans la tête de quelqu’un. Aucune sur une liste unique avec une échéance.</p>
+        </article>
+        <article class="card card-pad reveal">
+          <h3>Les réunions produisent des comptes rendus, pas du mouvement</h3>
+          <p class="mt-12">Les actions sont convenues, écrites dans un document, puis tout dépend de quelqu’un qui pensera à rouvrir ce document.</p>
+        </article>
+        <article class="card card-pad reveal">
+          <h3>Les idées d’amélioration s’évaporent</h3>
+          <p class="mt-12">Les meilleures suggestions viennent du terrain, sont évoquées une fois et ne sont consignées nulle part où elles survivraient au poste.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Ce qu’il fait</span>
+        <h2>Une seule surface de travail pour tout ce qui est à vous</h2>
+        <p>C’est le module qui fait venir les gens dans le système même une semaine calme — et c’est ce qui fait marcher tous les autres.</p>
+      </div>
+      <div class="grid grid-2">
+        <article class="card card-pad reveal">
+          <span class="icon-tile t-cyan"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6h11M9 12h11M9 18h11M4 6h.01M4 12h.01M4 18h.01"/></svg></span>
+          <h3 class="mt-16">Des tâches avec responsables et échéances</h3>
+          <p class="mt-12">Une liste par personne, alimentée par toute la plateforme.</p>
+          <ul class="check-list mt-16">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Priorités, échéances, assignations et vue tableau</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Les actions issues d’incidents, d’enquêtes et de réunions arrivent ici</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Le retard remonte sur l’écran d’accueil au lieu d’être enfoui</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Assignée à une personne, jamais à un service</li>
+          </ul>
+        </article>
+        <article class="card card-pad reveal">
+          <span class="icon-tile t-violet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M3 10h18M8 2v4M16 2v4"/></svg></span>
+          <h3 class="mt-16">Des réunions qui se terminent par des actions suivies</h3>
+          <p class="mt-12">Ordre du jour, présences et décisions au même endroit, avec des actions qui deviennent des tâches.</p>
+          <ul class="check-list mt-16">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Des ordres du jour préparés à l’avance et visibles des participants</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Les présences sont enregistrées sur les fiches du personnel</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Les actions sont attribuées pendant la réunion et portées ensuite</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Les réunions passées se recherchent au lieu d’être classées</li>
+          </ul>
+        </article>
+        <article class="card card-pad reveal">
+          <span class="icon-tile t-emerald"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/></svg></span>
+          <h3 class="mt-16">Des formulaires, y compris pour des personnes extérieures au système</h3>
+          <p class="mt-12">Construisez un formulaire, partagez un lien public et collectez des réponses structurées.</p>
+          <ul class="check-list mt-16">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Des formulaires sur mesure sans développeur</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Des liens publics partageables pour sous-traitants, visiteurs et clients</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Les réponses sont stockées comme des enregistrements filtrables et exportables</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Aucune licence nécessaire pour la personne qui le remplit</li>
+          </ul>
+        </article>
+        <article class="card card-pad reveal">
+          <span class="icon-tile t-amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="m8 12 3 3 5-6"/></svg></span>
+          <h3 class="mt-16">Listes de contrôle, notes et journal personnel</h3>
+          <p class="mt-12">L’échafaudage du quotidien — contrôles de routine, notes de travail et journal de ce qui s’est passé.</p>
+          <ul class="check-list mt-16">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Des listes réutilisables pour les contrôles de routine et d’avant-travaux</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Des notes gardées à côté du travail plutôt que dans une appli à part</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Un journal personnel pour le relevé qu’on regrette toujours de ne pas avoir tenu</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Le tout retrouvable depuis la même recherche globale</li>
+          </ul>
+        </article>
+        <article class="card card-pad reveal">
+          <span class="icon-tile t-rose"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z"/></svg></span>
+          <h3 class="mt-16">Registre de management lean</h3>
+          <p class="mt-12">Les idées d’amélioration sont recueillies, évaluées et suivies jusqu’à leur mise en œuvre.</p>
+          <ul class="check-list mt-16">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Des suggestions consignées de la part de chacun, pas seulement de l’encadrement</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Évaluées, priorisées et dotées d’un responsable</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>L’avancement est visible : ceux qui proposent voient ce qu’est devenue leur idée</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Une trace de ce qui a changé et de ce que cela valait</li>
+          </ul>
+        </article>
+        <article class="card card-pad reveal">
+          <span class="icon-tile t-teal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M3 10h18M8 2v4M16 2v4"/></svg></span>
+          <h3 class="mt-16">Un calendrier unique sur toute la plateforme</h3>
+          <p class="mt-12">Réunions, sessions, congés et travaux planifiés dans une seule vue.</p>
+          <ul class="check-list mt-16">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Les sessions de formation issues des RH apparaissent à côté des réunions</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>La maintenance planifiée et les déplacements sont visibles au même endroit</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Vues personnelles et vues d’équipe</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Rien à synchroniser, parce que rien n’est séparé</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-soft">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Chaque outil du module</span>
+        <h2>Huit outils pour le rythme quotidien</h2>
+        <p>Délibérément simples, délibérément utilisés chaque jour.</p>
+      </div>
+      <div class="grid grid-2">
+        <div class="feature-item reveal">
+          <span class="icon-tile sm t-cyan"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6h11M9 12h11M9 18h11M4 6h.01M4 12h.01M4 18h.01"/></svg></span>
+          <div>
+            <h4>Tâches</h4>
+            <p>Listes de tâches personnelles et d’équipe avec priorités, échéances, assignations et vue tableau.</p>
+          </div>
+        </div>
+        <div class="feature-item reveal">
+          <span class="icon-tile sm t-violet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M3 10h18M8 2v4M16 2v4"/></svg></span>
+          <div>
+            <h4>Réunions</h4>
+            <p>Ordres du jour, présences et décisions, avec des actions qui deviennent des tâches suivies plutôt qu’un compte rendu.</p>
+          </div>
+        </div>
+        <div class="feature-item reveal">
+          <span class="icon-tile sm t-teal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M3 10h18M8 2v4M16 2v4"/></svg></span>
+          <div>
+            <h4>Calendrier</h4>
+            <p>Une vue unique des réunions, sessions de formation, congés et travaux planifiés dans toute l’organisation.</p>
+          </div>
+        </div>
+        <div class="feature-item reveal">
+          <span class="icon-tile sm t-amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="m8 12 3 3 5-6"/></svg></span>
+          <div>
+            <h4>Listes de contrôle</h4>
+            <p>Des listes réutilisables pour les contrôles de routine, la vérification avant travaux et les passations.</p>
+          </div>
+        </div>
+        <div class="feature-item reveal">
+          <span class="icon-tile sm t-emerald"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/></svg></span>
+          <div>
+            <h4>Formulaires</h4>
+            <p>Des formulaires sur mesure avec liens publics partageables, pour que des personnes extérieures envoient des données structurées.</p>
+          </div>
+        </div>
+        <div class="feature-item reveal">
+          <span class="icon-tile sm t-slate"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5V5a2 2 0 0 1 2-2h13v18H6a2 2 0 0 1-2-2.5z"/></svg></span>
+          <div>
+            <h4>Notes</h4>
+            <p>Des notes de travail rangées près du reste de l’exploitation et couvertes par la même recherche.</p>
+          </div>
+        </div>
+        <div class="feature-item reveal">
+          <span class="icon-tile sm t-slate"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5V5a2 2 0 0 1 2-2h13v18H6a2 2 0 0 1-2-2.5z"/></svg></span>
+          <div>
+            <h4>Journal</h4>
+            <p>Un journal quotidien personnel — le relevé de ce qui s’est passé que personne ne tient avant d’en avoir besoin.</p>
+          </div>
+        </div>
+        <div class="feature-item reveal">
+          <span class="icon-tile sm t-rose"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z"/></svg></span>
+          <div>
+            <h4>Management lean</h4>
+            <p>Le registre d’amélioration continue : les idées sont recueillies, évaluées, portées et suivies jusqu’à la mise en œuvre.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section dark-section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Intégré, pas rapporté</span>
+        <h2>Tous les modules aboutissent ici</h2>
+        <p>Efficacité est l’endroit où le travail du reste de la plateforme devient le travail de quelqu’un aujourd’hui.</p>
+      </div>
+      <div class="grid grid-3">
+        <div class="dark-card reveal">
+          <span class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span>
+          <h3 class="mt-16">Actions HSEQ</h3>
+          <p>Les constats d’enquête et les suites d’observations arrivent comme des tâches avec responsable et date, sur la liste que cette personne utilise déjà.</p>
+          <p class="mt-12"><a class="link-arrow" href="/fr/modules/hseq">Voir HSEQ<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></p>
+        </div>
+        <div class="dark-card reveal">
+          <span class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a4 4 0 0 0 5 5L21 21l-3 .5L8.5 12A4 4 0 0 1 3 6.5l3 3 2.5-2.5-3-3z"/></svg></span>
+          <h3 class="mt-16">Travaux de maintenance</h3>
+          <p>Les actions préventives et les listes de maintenance partagent la même mécanique de tâches et de listes : aucune to-do parallèle n’est nécessaire.</p>
+          <p class="mt-12"><a class="link-arrow" href="/fr/modules/maintenance">Voir Maintenance<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></p>
+        </div>
+        <div class="dark-card reveal">
+          <span class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg></span>
+          <h3 class="mt-16">Réalisation de projet</h3>
+          <p>Les tâches et réunions de projet vivent ici, et c’est pourquoi l’avancement se mesure au lieu de se décrire.</p>
+          <p class="mt-12"><a class="link-arrow" href="/fr/modules/business">Voir Pilotage<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Qui y travaille</span>
+        <h2>Le module que tout le monde utilise, quel que soit son métier</h2>
+        <p>L’adoption de la plateforme commence généralement ici.</p>
+      </div>
+      <div class="grid grid-3">
+        <article class="card card-pad reveal">
+          <span class="icon-tile sm t-cyan"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span>
+          <h3 class="mt-16">Toute personne avec une liste de tâches</h3>
+          <p class="mt-12">Ouvre un écran le matin et voit tous ses éléments en retard ou à échéance, d’où qu’ils viennent dans la plateforme.</p>
+        </article>
+        <article class="card card-pad reveal">
+          <span class="icon-tile sm t-violet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/></svg></span>
+          <h3 class="mt-16">Chef d’équipe</h3>
+          <p class="mt-12">Anime la réunion hebdomadaire depuis l’ordre du jour, y attribue les actions, et commence la suivante par ce qui a été clos et ce qui ne l’a pas été.</p>
+        </article>
+        <article class="card card-pad reveal">
+          <span class="icon-tile sm t-rose"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z"/></svg></span>
+          <h3 class="mt-16">Responsable amélioration continue</h3>
+          <p class="mt-12">Fait vivre le registre lean, pour que les suggestions du terrain aboutissent à un changement et non à une conversation.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-soft">
+    <div class="container split">
+      <div>
+        <span class="eyebrow">À vous de le façonner</span>
+        <h2 class="mt-16">Adaptez la couche quotidienne à la façon dont vos équipes travaillent</h2>
+        <p class="lead mt-12">De petits réglages ici décident si les gens adoptent la plateforme, tout simplement.</p>
+        <ul class="check-list mt-24">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Créez vos modèles de listes et de formulaires, réutilisés d’un site et d’une équipe à l’autre</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Choisissez des priorités et des statuts de tâches qui collent à votre vocabulaire</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Décidez si les listes de tâches sont privées, visibles par l’équipe ou ouvertes à l’organisation</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Publiez des formulaires avec des liens publics, sans licence pour les répondants</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Désactivez les outils inutiles — beaucoup d’organisations n’utilisent que Tâches et Réunions</li>
+        </ul>
+        <p class="mt-24"><a class="link-arrow" href="/fr/modules/administration">Voir ce que contrôle un administrateur<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></p>
+      </div>
+      <div class="split-media">
+        <div class="panel reveal">
+          <div class="panel-head reveal">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21v-7M4 10V3M12 21v-9M12 8V3M20 21v-5M20 12V3M1 14h6M9 8h6M17 16h6"/></svg>
+            Efficacité · Paramètres
+          </div>
+          <div class="panel-body reveal">
+            <table class="table-mock">
+              <thead><tr><th>Paramètre</th><th>Valeur</th></tr></thead>
+              <tbody>
+                <tr><td>Visibilité des tâches</td><td><span class="badge badge-cyan">Équipe</span></td></tr>
+                <tr><td>Actions de réunion</td><td><span class="badge badge-violet">Créent des tâches</span></td></tr>
+                <tr><td>Liens publics de formulaires</td><td><span class="badge badge-emerald">Activé</span></td></tr>
+                <tr><td>Modèles de listes de contrôle</td><td><span class="badge badge-amber">18 partagés</span></td></tr>
+                <tr><td>Journal</td><td><span class="badge badge-indigo">Privé au propriétaire</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2>Les questions sur Efficacité qu’on nous pose</h2>
+      </div>
+      <div class="faq">
+        <details>
+          <summary>Pourquoi l’utiliser si nous avons déjà une appli de tâches ?</summary>
+          <div class="faq-body">Parce qu’une appli de tâches séparée ne voit ni vos incidents, ni vos ordres de travail, ni vos projets. La valeur n’est pas la liste elle-même : c’est qu’une action née d’une enquête ou d’une réunion atterrit sur cette liste sans que personne la ressaisisse.</div>
+        </details>
+        <details>
+          <summary>Des personnes extérieures à notre organisation peuvent-elles remplir un formulaire ?</summary>
+          <div class="faq-body">Oui. Un formulaire peut être publié avec un lien public partageable : sous-traitants, visiteurs et clients peuvent répondre sans compte ni licence. Les réponses reviennent sous forme d’enregistrements structurés.</div>
+        </details>
+        <details>
+          <summary>Le journal est-il visible par les managers ?</summary>
+          <div class="faq-body">Le journal est conçu comme un relevé personnel, et sa visibilité obéit au même modèle d’autorisations que tout le reste. La plupart des organisations le gardent privé.</div>
+        </details>
+        <details>
+          <summary>Le calendrier affiche-t-il autre chose que des réunions ?</summary>
+          <div class="faq-body">Oui — sessions de formation, congés, maintenance planifiée et déplacements peuvent apparaître dans la même vue, parce que ce sont des enregistrements du même système et non des entrées de calendriers séparés.</div>
+        </details>
+        <details>
+          <summary>Pouvons-nous commencer par ce seul module ?</summary>
+          <div class="faq-body">Beaucoup d’organisations le font. Efficacité est le point d’entrée habituel : tout le monde peut s’en servir dès le premier jour, et les modules opérationnels s’activent une fois l’habitude prise.</div>
+        </details>
+      </div>
+      <p class="text-center mt-32">
+        <a class="link-arrow" href="/fr/modules">Parcourir tous les modules<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+      </p>
+    </div>
+  </section>
+
+
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-hero">
+      <div>
+        <p class="footer-kicker">Une question ? Envie d’une visite guidée ?</p>
+        <h2>Un seul système pour toute l’exploitation.</h2>
+      </div>
+      <div>
+        <p>Dites-nous comment fonctionne votre exploitation. Nous explorons les flux de travail pertinents, examinons vos données et convenons des prochaines étapes avec notre équipe.</p>
+        <div class="footer-actions">
+          <a class="btn btn-onDark btn-lg" href="/fr/contact#demo">Demander une démo <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+          <a class="btn btn-outline-onDark btn-lg" href="https://docs.caspianerp.com">Lire la documentation</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="/fr">
+          <img class="brand-mark" src="/assets/img/logo-mark.svg" alt="" width="30" height="30">
+          <span class="brand-name" style="color:#fff">Caspian <b>ERP</b></span>
+        </a>
+      </div>
+      <div class="footer-col">
+        <h4>Plateforme</h4>
+        <ul>
+          <li><a href="/fr/modules">Tous les modules</a></li>
+          <li><a href="/fr/industries">Secteurs</a></li>
+          <li><a href="/fr/security">Sécurité et RBAC</a></li>
+          <li><a href="/fr/pricing">Tarifs</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Modules</h4>
+        <ul>
+          <li><a href="/fr/modules/hseq">HSEQ</a></li>
+          <li><a href="/fr/modules/hr">Ressources humaines</a></li>
+          <li><a href="/fr/modules/procurement">Achats</a></li>
+          <li><a href="/fr/modules/inventory">Stocks</a></li>
+          <li><a href="/fr/modules/maintenance">Maintenance</a></li>
+          <li><a href="/fr/modules/finance">Finance</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Société</h4>
+        <ul>
+          <li><a href="/fr/about">À propos</a></li>
+          <li><a href="https://caspiantools.com" rel="noopener">CaspianTools</a></li>
+          <li><a href="/fr/contact">Contact</a></li>
+          <li><a href="/fr/contact#demo">Demander une démo</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Commencer</h4>
+        <ul>
+          <li><a href="https://app.caspianerp.com">Se connecter</a></li>
+          <li><a href="/fr/contact#demo">Demander une démo</a></li>
+          <li><a href="https://docs.caspianerp.com">Documentation</a></li>
+          <li><a href="https://admin.caspianerp.com">Portail d’administration</a></li>
+          <li><a href="/fr/pricing#faq">Questions de tarifs</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <span data-year>2026</span> CaspianTools. Caspian ERP est un produit CaspianTools.</p>
+      <nav aria-label="Mentions légales">
+        <a href="/fr/privacy">Politique de confidentialité</a>
+        <a href="/fr/terms">Conditions d’utilisation</a>
+        <a href="/fr/security">Sécurité</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+<script src="/assets/js/site.js?v=20260908" defer></script>
+</body>
+</html>

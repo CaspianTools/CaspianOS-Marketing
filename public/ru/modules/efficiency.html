@@ -1,0 +1,598 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="/assets/js/lang.js?v=20260908"></script>
+<title>Эффективность — Caspian ERP</title>
+<meta name="description" content="Задачи, встречи, календарь, чек-листы, формы, заметки, дневник и бережливое управление — ежедневный рабочий слой Caspian ERP и место, куда стекаются действия из всех остальных модулей.">
+<link rel="canonical" href="https://caspianerp.com/ru/modules/efficiency">
+<!--i18n:alternates-->
+<link rel="alternate" hreflang="en" href="https://caspianerp.com/modules/efficiency">
+<link rel="alternate" hreflang="az" href="https://caspianerp.com/az/modules/efficiency">
+<link rel="alternate" hreflang="tr" href="https://caspianerp.com/tr/modules/efficiency">
+<link rel="alternate" hreflang="ru" href="https://caspianerp.com/ru/modules/efficiency">
+<link rel="alternate" hreflang="nb" href="https://caspianerp.com/nb/modules/efficiency">
+<link rel="alternate" hreflang="de" href="https://caspianerp.com/de/modules/efficiency">
+<link rel="alternate" hreflang="fr" href="https://caspianerp.com/fr/modules/efficiency">
+<link rel="alternate" hreflang="x-default" href="https://caspianerp.com/modules/efficiency">
+<!--/i18n:alternates-->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Caspian ERP">
+<meta property="og:title" content="Эффективность — Caspian ERP">
+<meta property="og:description" content="Задачи, встречи, календарь, чек-листы, формы, заметки, дневник и бережливое управление — ежедневный рабочий слой Caspian ERP и место, куда стекаются действия из всех остальных модулей.">
+<meta property="og:url" content="https://caspianerp.com/ru/modules/efficiency">
+<meta property="og:image" content="https://caspianerp.com/assets/img/og-image.svg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#4f46e5">
+<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="/assets/css/site.css?v=20260908">
+<noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
+</head>
+<body>
+<a class="skip-link" href="#main">Перейти к содержимому</a>
+<header class="site-header">
+  <div class="container">
+    <nav class="nav" aria-label="Основная">
+      <a class="brand" href="/ru">
+        <img class="brand-mark" src="/assets/img/logo-mark.svg" alt="" width="30" height="30">
+        <span class="brand-name">Caspian <b>ERP</b></span>
+      </a>
+      <ul class="nav-links">
+        <li><a class="nav-link" aria-current="page" href="/ru/modules">Модули</a></li>
+        <li><a class="nav-link" href="/ru/industries">Отрасли</a></li>
+        <li><a class="nav-link" href="/ru/security">Безопасность</a></li>
+        <li><a class="nav-link" href="/ru/pricing">Цены</a></li>
+        <li><a class="nav-link" href="/ru/about">О нас</a></li>
+      </ul>
+      <div class="nav-actions">
+        <!--i18n:switcher-->
+        <details class="lang" data-lang-switcher>
+          <summary class="lang-button" title="Выберите язык" aria-label="Язык: Русский"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18"/></svg><span class="lang-code">RU</span><svg class="lang-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="lang-menu" role="group" aria-label="Выберите язык">
+            <a class="lang-option" href="/modules/efficiency" hreflang="en" lang="en" data-lang="en">English</a>
+            <a class="lang-option" href="/az/modules/efficiency" hreflang="az" lang="az" data-lang="az">Azərbaycan dili</a>
+            <a class="lang-option" href="/tr/modules/efficiency" hreflang="tr" lang="tr" data-lang="tr">Türkçe</a>
+            <a class="lang-option" href="/ru/modules/efficiency" hreflang="ru" lang="ru" data-lang="ru" aria-current="true">Русский</a>
+            <a class="lang-option" href="/nb/modules/efficiency" hreflang="nb" lang="nb" data-lang="nb">Norsk (bokmål)</a>
+            <a class="lang-option" href="/de/modules/efficiency" hreflang="de" lang="de" data-lang="de">Deutsch</a>
+            <a class="lang-option" href="/fr/modules/efficiency" hreflang="fr" lang="fr" data-lang="fr">Français</a>
+          </div>
+        </details>
+        <!--/i18n:switcher-->
+        <a class="btn btn-ghost btn-sm" href="https://app.caspianerp.com">Войти</a>
+        <a class="btn btn-primary btn-sm" href="/ru/contact#demo">Запросить демо <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+        <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="mobile-menu" aria-label="Открыть меню" data-text-open="Открыть меню" data-text-close="Закрыть меню">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </nav>
+  </div>
+  <div class="mobile-menu" id="mobile-menu">
+    <a class="nav-link" aria-current="page" href="/ru/modules">Модули</a>
+    <a class="nav-link" href="/ru/industries">Отрасли</a>
+    <a class="nav-link" href="/ru/security">Безопасность</a>
+    <a class="nav-link" href="/ru/pricing">Цены</a>
+    <a class="nav-link" href="/ru/about">О нас</a>
+    <a class="nav-link" href="https://docs.caspianerp.com">Документация</a>
+    <a class="nav-link" href="/ru/contact">Контакты</a>
+    <!--i18n:switcher-mobile-->
+    <div class="mobile-lang" role="group" aria-label="Выберите язык">
+      <span class="mobile-lang-label">Язык</span>
+      <div class="mobile-lang-options">
+        <a class="lang-option" href="/modules/efficiency" hreflang="en" lang="en" data-lang="en">English</a>
+        <a class="lang-option" href="/az/modules/efficiency" hreflang="az" lang="az" data-lang="az">Azərbaycan dili</a>
+        <a class="lang-option" href="/tr/modules/efficiency" hreflang="tr" lang="tr" data-lang="tr">Türkçe</a>
+        <a class="lang-option" href="/ru/modules/efficiency" hreflang="ru" lang="ru" data-lang="ru" aria-current="true">Русский</a>
+        <a class="lang-option" href="/nb/modules/efficiency" hreflang="nb" lang="nb" data-lang="nb">Norsk (bokmål)</a>
+        <a class="lang-option" href="/de/modules/efficiency" hreflang="de" lang="de" data-lang="de">Deutsch</a>
+        <a class="lang-option" href="/fr/modules/efficiency" hreflang="fr" lang="fr" data-lang="fr">Français</a>
+      </div>
+    </div>
+    <!--/i18n:switcher-mobile-->
+    <div class="mobile-cta">
+      <a class="btn btn-secondary" href="https://app.caspianerp.com">Войти</a>
+      <a class="btn btn-primary" href="/ru/contact#demo">Запросить демо</a>
+    </div>
+  </div>
+</header>
+<main id="main">
+
+  <section class="hero">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Навигационная цепочка">
+        <a href="/ru/modules">Модули</a>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg>
+        <span aria-current="page">Эффективность</span>
+      </nav>
+      <span class="eyebrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 4.5 13.5H11l-1 8.5 8.5-11.5H12z"/></svg>Эффективность</span>
+      <h1>Слой, ради которого <span class="grad">входят каждый день</span></h1>
+      <p class="hero-sub">Задачи, встречи, чек-листы и формы — плюс место, где любое действие, поднятое где угодно в платформе, оказывается перед своим ответственным.</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary btn-lg" href="/ru/contact#demo">Запросить демо</a>
+        <a class="btn btn-secondary btn-lg" href="https://docs.caspianerp.com">Читать документацию</a>
+      </div>
+      <p class="hero-note">Восемь инструментов · Куда стекаются действия из HSEQ, техобслуживания и проектов</p>
+    </div>
+  </section>
+  <div class="container mock-wrap">
+    <p class="small muted text-center">Иллюстративный вид продукта с демонстрационными данными. <a href="/ru/contact#demo">Запросить живой обзор</a>.</p>
+    <div class="mock reveal" role="img" aria-label="Caspian ERP «Эффективность»: горящие задачи, ближайшие встречи, выполнение чек-листов и реестр улучшений">
+      <div class="mock-bar" aria-hidden="true">
+        <span class="mock-dot"></span><span class="mock-dot"></span><span class="mock-dot"></span>
+        <span class="mock-url">app.caspianerp.com/ru/w/efficiency/tasks</span>
+      </div>
+      <div class="mock-body" aria-hidden="true">
+        <div class="mock-rail">
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg>Главная</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/></svg>Персонал</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>HSEQ</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>Бизнес</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1"/><circle cx="18" cy="20" r="1"/><path d="M2 3h2.5l2.6 12.6a1 1 0 0 0 1 .8h8.9a1 1 0 0 0 1-.77L21 8H6"/></svg>Закупки</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V10l6 4V10l6 4V6l6 4v11z"/><path d="M7 17h.01M13 17h.01M18 17h.01"/></svg>Произв.</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>CRM</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V9l9-6 9 6v12"/><path d="M7 21v-8h10v8"/></svg>Склад</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 16V6h11v10"/><path d="M14 9h4l3 3.5V16h-7z"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg>Логист.</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0 5 5L21 21l-3 .5L8.5 12A4 4 0 0 1 3 6.5l3 3 2.5-2.5-3-3z"/></svg>Техобсл.</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 6H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>Финансы</div>
+          <div class="mock-rail-item active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4.5 13.5H11l-1 8.5 8.5-11.5H12z"/></svg>Эффект.</div>
+        </div>
+        <div class="mock-side">
+          <div class="mock-side-title">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4.5 13.5H11l-1 8.5 8.5-11.5H12z"/></svg>
+            Эффективность
+          </div>
+          <div class="mock-side-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M3 10h18M8 2v4M16 2v4"/></svg>Календарь</div>
+          <div class="mock-side-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="m8 12 3 3 5-6"/></svg>Чек-листы</div>
+          <div class="mock-side-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5V5a2 2 0 0 1 2-2h13v18H6a2 2 0 0 1-2-2.5z"/></svg>Дневник</div>
+          <div class="mock-side-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/></svg>Формы</div>
+          <div class="mock-side-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z"/></svg>Бережливое управление</div>
+          <div class="mock-side-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M3 10h18M8 2v4M16 2v4"/></svg>Встречи</div>
+          <div class="mock-side-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5V5a2 2 0 0 1 2-2h13v18H6a2 2 0 0 1-2-2.5z"/></svg>Заметки</div>
+          <div class="mock-side-item active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6h11M9 12h11M9 18h11M4 6h.01M4 12h.01M4 18h.01"/></svg>Задачи</div>
+        </div>
+        <div class="mock-main">
+          <div class="mock-topbar">
+            <div class="mock-search">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.2-3.2"/></svg>
+              Поиск людей, заказов, активов…
+            </div>
+            <div class="mock-plus"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></div>
+            <div class="mock-avatar"></div>
+          </div>
+          <div class="mock-h1">Добрый день, Лейла</div>
+          <div class="mock-tag">Вот что требует вашего внимания</div>
+          <div class="mock-cards">
+            <div class="mock-card">
+              <div class="mock-card-head" style="color:#e11d48">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/><path d="M12 9v4M12 17h.01"/></svg>
+                Горящие задачи
+              </div>
+              <div class="mock-row"><span>Закрыть допуск PTW-0241</span><span class="mock-pill hot">просрочено на 3 дн.</span></div>
+              <div class="mock-row"><span>Утвердить PR-1180</span><span class="mock-pill warn">Сегодня</span></div>
+              <div class="mock-row"><span>Подписать калибровку</span><span class="mock-pill">Пт</span></div>
+            </div>
+            <div class="mock-card">
+              <div class="mock-card-head" style="color:#7c3aed">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M3 10h18M8 2v4M16 2v4"/></svg>
+                Ближайшие встречи
+              </div>
+              <div class="mock-row"><span>Еженедельный обзор HSE</span><span class="mock-pill">Вт 09:00</span></div>
+              <div class="mock-row"><span>Показатели поставщиков</span><span class="mock-pill">Ср 14:00</span></div>
+            </div>
+            <div class="mock-card">
+              <div class="mock-card-head" style="color:#0d9488">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="m8 12 3 3 5-6"/></svg>
+                Чек-листы
+              </div>
+              <div class="mock-kpi">12/14</div>
+              <div class="mock-kpi-sub">выполнено сегодня на 3 площадках</div>
+            </div>
+            <div class="mock-card">
+              <div class="mock-card-head" style="color:#4f46e5">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6h11M9 12h11M9 18h11M4 6h.01M4 12h.01M4 18h.01"/></svg>
+                Мои задачи
+              </div>
+              <div class="mock-bars"><span style="height:40%"></span><span style="height:58%"></span><span style="height:62%"></span><span style="height:55%"></span><span style="height:74%"></span><span style="height:88%"></span></div>
+              <div class="mock-kpi-sub" style="margin-top:8px">31 открыта · 6 со сроком на этой неделе</div>
+            </div>
+            <div class="mock-card">
+              <div class="mock-card-head" style="color:#d97706">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z"/></svg>
+                Реестр улучшений
+              </div>
+              <div class="mock-row"><span>Компоновка насосного блока</span><span class="mock-pill warn">На рассмотрении</span></div>
+              <div class="mock-row"><span>Маркировка склада</span><span class="mock-pill ok">Согласован</span></div>
+            </div>
+            <div class="mock-card">
+              <div class="mock-card-head" style="color:#0891b2">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/></svg>
+                Ответы на формы
+              </div>
+              <div class="mock-kpi">46</div>
+              <div class="mock-kpi-sub">в этом месяце через публичные ссылки</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="section section-soft">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">До Caspian ERP</span>
+        <h2>Работа настоящая, а её учёт разбросан</h2>
+        <p>Большинству организаций не хватает не систем. Им не хватает одного места, где человек видит всё, что относится к нему.</p>
+      </div>
+      <div class="grid grid-3">
+        <article class="card card-pad reveal">
+          <h3>Действия живут в пяти местах</h3>
+          <p class="mt-12">Одно — в отчёте о происшествии, одно — в протоколе, одно — в сообщении, два — у кого-то в голове. И ни одного в едином списке со сроком.</p>
+        </article>
+        <article class="card card-pad reveal">
+          <h3>Встречи производят протоколы, а не движение</h3>
+          <p class="mt-12">Действия согласовали, записали в документ, а дальше всё зависит от того, вспомнит ли кто-нибудь этот документ открыть.</p>
+        </article>
+        <article class="card card-pad reveal">
+          <h3>Идеи улучшений испаряются</h3>
+          <p class="mt-12">Лучшие предложения приходят из цеха, звучат один раз и нигде не фиксируются так, чтобы пережить смену.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Что он делает</span>
+        <h2>Одна рабочая поверхность для всего, что ваше</h2>
+        <p>Это модуль, который приводит людей в систему даже в тихую неделю — и именно поэтому работают остальные модули.</p>
+      </div>
+      <div class="grid grid-2">
+        <article class="card card-pad reveal">
+          <span class="icon-tile t-cyan"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6h11M9 12h11M9 18h11M4 6h.01M4 12h.01M4 18h.01"/></svg></span>
+          <h3 class="mt-16">Задачи с ответственными и сроками</h3>
+          <p class="mt-12">Один список на человека, питаемый всей платформой.</p>
+          <ul class="check-list mt-16">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Приоритеты, сроки, исполнители и вид доски</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Действия из происшествий, расследований и встреч приходят сюда</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Просроченное видно на главном экране, а не закопано</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Назначается человеку, а не отделу</li>
+          </ul>
+        </article>
+        <article class="card card-pad reveal">
+          <span class="icon-tile t-violet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M3 10h18M8 2v4M16 2v4"/></svg></span>
+          <h3 class="mt-16">Встречи, которые заканчиваются отслеживаемыми действиями</h3>
+          <p class="mt-12">Повестка, присутствие и итоги вместе, а действия становятся задачами.</p>
+          <ul class="check-list mt-16">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Повестки, подготовленные заранее и видимые участникам</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Присутствие фиксируется по карточкам сотрудников</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Действия назначаются прямо на встрече, а дальше у них есть владелец</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Прошлые встречи ищутся, а не подшиваются</li>
+          </ul>
+        </article>
+        <article class="card card-pad reveal">
+          <span class="icon-tile t-emerald"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/></svg></span>
+          <h3 class="mt-16">Формы, в том числе для людей вне системы</h3>
+          <p class="mt-12">Соберите форму, поделитесь публичной ссылкой и собирайте структурированные ответы.</p>
+          <ul class="check-list mt-16">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Собственные формы без разработчика</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Публичные ссылки для подрядчиков, посетителей и клиентов</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Ответы хранятся как записи, которые можно фильтровать и выгружать</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Заполняющему форму лицензия не нужна</li>
+          </ul>
+        </article>
+        <article class="card card-pad reveal">
+          <span class="icon-tile t-amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="m8 12 3 3 5-6"/></svg></span>
+          <h3 class="mt-16">Чек-листы, заметки и личный дневник</h3>
+          <p class="mt-12">Повседневная опора — рутинные проверки, рабочие заметки и журнал происходящего.</p>
+          <ul class="check-list mt-16">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Многоразовые чек-листы для рутинных и предрабочих проверок</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Заметки хранятся рядом с работой, а не в отдельном приложении</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Личный дневник — та самая запись, о которой всегда жалеешь, что не вёл</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Всё это находится тем же общим поиском</li>
+          </ul>
+        </article>
+        <article class="card card-pad reveal">
+          <span class="icon-tile t-rose"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z"/></svg></span>
+          <h3 class="mt-16">Реестр бережливых улучшений</h3>
+          <p class="mt-12">Идеи улучшений фиксируются, оцениваются и отслеживаются до внедрения.</p>
+          <ul class="check-list mt-16">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Предложения фиксируются от любого, не только от руководства</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Оцениваются, приоритизируются и получают ответственного</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Прогресс виден, поэтому авторы видят, что стало с их идеей</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>След того, что изменилось и чего это стоило</li>
+          </ul>
+        </article>
+        <article class="card card-pad reveal">
+          <span class="icon-tile t-teal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M3 10h18M8 2v4M16 2v4"/></svg></span>
+          <h3 class="mt-16">Один календарь на всю платформу</h3>
+          <p class="mt-12">Встречи, сессии, отпуска и запланированные работы в одном виде.</p>
+          <ul class="check-list mt-16">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Учебные сессии из «Персонала» показываются рядом со встречами</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Плановое обслуживание и поездки видны там же</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Личный и командный виды</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Синхронизировать нечего, потому что ничего отдельного нет</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-soft">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Каждый инструмент модуля</span>
+        <h2>Восемь инструментов для ежедневного ритма</h2>
+        <p>Намеренно простые и намеренно ежедневные.</p>
+      </div>
+      <div class="grid grid-2">
+        <div class="feature-item reveal">
+          <span class="icon-tile sm t-cyan"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6h11M9 12h11M9 18h11M4 6h.01M4 12h.01M4 18h.01"/></svg></span>
+          <div>
+            <h4>Задачи</h4>
+            <p>Личные и командные списки задач с приоритетами, сроками, исполнителями и видом доски.</p>
+          </div>
+        </div>
+        <div class="feature-item reveal">
+          <span class="icon-tile sm t-violet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M3 10h18M8 2v4M16 2v4"/></svg></span>
+          <div>
+            <h4>Встречи</h4>
+            <p>Повестки, присутствие и итоги, где действия становятся отслеживаемыми задачами, а не строчкой протокола.</p>
+          </div>
+        </div>
+        <div class="feature-item reveal">
+          <span class="icon-tile sm t-teal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M3 10h18M8 2v4M16 2v4"/></svg></span>
+          <div>
+            <h4>Календарь</h4>
+            <p>Единый вид встреч, учебных сессий, отпусков и плановых работ по всей организации.</p>
+          </div>
+        </div>
+        <div class="feature-item reveal">
+          <span class="icon-tile sm t-amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="m8 12 3 3 5-6"/></svg></span>
+          <div>
+            <h4>Чек-листы</h4>
+            <p>Многоразовые чек-листы для рутинных проверок, предрабочего контроля и передачи смены.</p>
+          </div>
+        </div>
+        <div class="feature-item reveal">
+          <span class="icon-tile sm t-emerald"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/></svg></span>
+          <div>
+            <h4>Формы</h4>
+            <p>Собственные формы с публичными ссылками, чтобы люди вне системы могли присылать структурированные данные.</p>
+          </div>
+        </div>
+        <div class="feature-item reveal">
+          <span class="icon-tile sm t-slate"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5V5a2 2 0 0 1 2-2h13v18H6a2 2 0 0 1-2-2.5z"/></svg></span>
+          <div>
+            <h4>Заметки</h4>
+            <p>Рабочие заметки рядом с остальной работой и охваченные тем же поиском.</p>
+          </div>
+        </div>
+        <div class="feature-item reveal">
+          <span class="icon-tile sm t-slate"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5V5a2 2 0 0 1 2-2h13v18H6a2 2 0 0 1-2-2.5z"/></svg></span>
+          <div>
+            <h4>Дневник</h4>
+            <p>Личный ежедневный журнал — та запись о происходящем, которую никто не ведёт, пока она не понадобится.</p>
+          </div>
+        </div>
+        <div class="feature-item reveal">
+          <span class="icon-tile sm t-rose"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z"/></svg></span>
+          <div>
+            <h4>Бережливое управление</h4>
+            <p>Реестр непрерывных улучшений: идеи фиксируются, оцениваются, получают владельца и доводятся до внедрения.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section dark-section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Связано, а не прикручено сбоку</span>
+        <h2>Все модули заканчиваются здесь</h2>
+        <p>«Эффективность» — место, где работа из остальной платформы становится чьей-то задачей на сегодня.</p>
+      </div>
+      <div class="grid grid-3">
+        <div class="dark-card reveal">
+          <span class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span>
+          <h3 class="mt-16">Действия HSEQ</h3>
+          <p>Выводы расследований и меры по наблюдениям приходят как задачи с ответственным и датой — в тот список, с которым человек и так работает.</p>
+          <p class="mt-12"><a class="link-arrow" href="/ru/modules/hseq">Посмотреть HSEQ<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></p>
+        </div>
+        <div class="dark-card reveal">
+          <span class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a4 4 0 0 0 5 5L21 21l-3 .5L8.5 12A4 4 0 0 1 3 6.5l3 3 2.5-2.5-3-3z"/></svg></span>
+          <h3 class="mt-16">Работы по техобслуживанию</h3>
+          <p>Профилактические действия и чек-листы обслуживания используют тот же механизм задач и списков, поэтому параллельный to-do не нужен.</p>
+          <p class="mt-12"><a class="link-arrow" href="/ru/modules/maintenance">Посмотреть техобслуживание<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></p>
+        </div>
+        <div class="dark-card reveal">
+          <span class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg></span>
+          <h3 class="mt-16">Исполнение проектов</h3>
+          <p>Задачи и встречи проектов живут здесь — поэтому прогресс проекта можно измерить, а не описать.</p>
+          <p class="mt-12"><a class="link-arrow" href="/ru/modules/business">Посмотреть «Бизнес»<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Кто здесь работает</span>
+        <h2>Модуль, которым пользуются все, кем бы они ни работали</h2>
+        <p>Освоение платформы обычно начинается отсюда.</p>
+      </div>
+      <div class="grid grid-3">
+        <article class="card card-pad reveal">
+          <span class="icon-tile sm t-cyan"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span>
+          <h3 class="mt-16">Любой, у кого есть список задач</h3>
+          <p class="mt-12">Утром открывает один экран и видит все свои просроченные и подходящие по сроку пункты, откуда бы в платформе они ни пришли.</p>
+        </article>
+        <article class="card card-pad reveal">
+          <span class="icon-tile sm t-violet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/></svg></span>
+          <h3 class="mt-16">Руководитель группы</h3>
+          <p class="mt-12">Ведёт еженедельную встречу по повестке, назначает действия прямо в ней и начинает следующую с того, что закрылось и что нет.</p>
+        </article>
+        <article class="card card-pad reveal">
+          <span class="icon-tile sm t-rose"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z"/></svg></span>
+          <h3 class="mt-16">Руководитель улучшений</h3>
+          <p class="mt-12">Держит реестр улучшений в движении, чтобы предложения с площадки заканчивались изменением, а не разговором.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-soft">
+    <div class="container split">
+      <div>
+        <span class="eyebrow">Вам решать, каким ему быть</span>
+        <h2 class="mt-16">Настройте ежедневный слой под то, как работают ваши команды</h2>
+        <p class="lead mt-12">Мелкие настройки здесь решают, примут ли люди платформу вообще.</p>
+        <ul class="check-list mt-24">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Соберите свои шаблоны чек-листов и форм, переиспользуемые на площадках и в бригадах</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Выберите приоритеты и статусы задач, совпадающие с вашей терминологией</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Решите, будут ли списки задач личными, видимыми команде или открытыми всей организации</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Публикуйте формы по общедоступным ссылкам — респондентам лицензия не нужна</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Отключите ненужные инструменты — многие организации работают только с задачами и встречами</li>
+        </ul>
+        <p class="mt-24"><a class="link-arrow" href="/ru/modules/administration">Посмотреть, чем управляет администратор<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></p>
+      </div>
+      <div class="split-media">
+        <div class="panel reveal">
+          <div class="panel-head reveal">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21v-7M4 10V3M12 21v-9M12 8V3M20 21v-5M20 12V3M1 14h6M9 8h6M17 16h6"/></svg>
+            Эффективность · Настройки
+          </div>
+          <div class="panel-body reveal">
+            <table class="table-mock">
+              <thead><tr><th>Параметр</th><th>Значение</th></tr></thead>
+              <tbody>
+                <tr><td>Видимость задач</td><td><span class="badge badge-cyan">Команда</span></td></tr>
+                <tr><td>Действия из встреч</td><td><span class="badge badge-violet">Создают задачи</span></td></tr>
+                <tr><td>Публичные ссылки на формы</td><td><span class="badge badge-emerald">Включён</span></td></tr>
+                <tr><td>Шаблоны чек-листов</td><td><span class="badge badge-amber">18 общих</span></td></tr>
+                <tr><td>Дневник</td><td><span class="badge badge-indigo">Только владельцу</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2>Вопросы об «Эффективности», которые нам задают</h2>
+      </div>
+      <div class="faq">
+        <details>
+          <summary>Зачем это нужно, если у нас уже есть таск-приложение?</summary>
+          <div class="faq-body">Потому что отдельное приложение не видит ваших происшествий, нарядов и проектов. Ценность здесь не в самом списке, а в том, что действие, поднятое в расследовании или на встрече, попадает в тот же список без перепечатывания.</div>
+        </details>
+        <details>
+          <summary>Могут ли форму заполнять люди вне нашей организации?</summary>
+          <div class="faq-body">Да. Форму можно опубликовать по общедоступной ссылке, и подрядчики, посетители и клиенты отправят её без учётной записи и лицензии. Ответы возвращаются как структурированные записи.</div>
+        </details>
+        <details>
+          <summary>Виден ли дневник руководителям?</summary>
+          <div class="faq-body">Дневник задуман как личный журнал, и его видимость управляется той же моделью прав, что и всё остальное. Большинство организаций оставляют его закрытым для всех, кроме владельца.</div>
+        </details>
+        <details>
+          <summary>Показывает ли календарь что-то кроме встреч?</summary>
+          <div class="faq-body">Да — учебные сессии, отпуска, плановое обслуживание и поездки могут отображаться в том же виде, потому что это записи одной системы, а не записи разных календарей.</div>
+        </details>
+        <details>
+          <summary>Можно ли начать только с этого модуля?</summary>
+          <div class="faq-body">Многие так и делают. «Эффективность» — обычная точка входа: ею можно пользоваться с первого дня, а операционные модули включают, когда люди привыкли открывать платформу.</div>
+        </details>
+      </div>
+      <p class="text-center mt-32">
+        <a class="link-arrow" href="/ru/modules">Просмотреть все модули<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+      </p>
+    </div>
+  </section>
+
+
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-hero">
+      <div>
+        <p class="footer-kicker">Есть вопрос? Хотите, чтобы мы всё показали?</p>
+        <h2>Одна система для всего предприятия.</h2>
+      </div>
+      <div>
+        <p>Расскажите, как устроена ваша работа. Мы разберём подходящие процессы, посмотрим ваши данные и вместе с нашей командой согласуем следующие шаги.</p>
+        <div class="footer-actions">
+          <a class="btn btn-onDark btn-lg" href="/ru/contact#demo">Запросить демо <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+          <a class="btn btn-outline-onDark btn-lg" href="https://docs.caspianerp.com">Читать документацию</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="/ru">
+          <img class="brand-mark" src="/assets/img/logo-mark.svg" alt="" width="30" height="30">
+          <span class="brand-name" style="color:#fff">Caspian <b>ERP</b></span>
+        </a>
+      </div>
+      <div class="footer-col">
+        <h4>Платформа</h4>
+        <ul>
+          <li><a href="/ru/modules">Все модули</a></li>
+          <li><a href="/ru/industries">Отрасли</a></li>
+          <li><a href="/ru/security">Безопасность и RBAC</a></li>
+          <li><a href="/ru/pricing">Цены</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Модули</h4>
+        <ul>
+          <li><a href="/ru/modules/hseq">HSEQ</a></li>
+          <li><a href="/ru/modules/hr">Персонал</a></li>
+          <li><a href="/ru/modules/procurement">Закупки</a></li>
+          <li><a href="/ru/modules/inventory">Склад</a></li>
+          <li><a href="/ru/modules/maintenance">Техобслуживание</a></li>
+          <li><a href="/ru/modules/finance">Финансы</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Компания</h4>
+        <ul>
+          <li><a href="/ru/about">О нас</a></li>
+          <li><a href="https://caspiantools.com" rel="noopener">CaspianTools</a></li>
+          <li><a href="/ru/contact">Контакты</a></li>
+          <li><a href="/ru/contact#demo">Запросить демо</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Начало работы</h4>
+        <ul>
+          <li><a href="https://app.caspianerp.com">Войти</a></li>
+          <li><a href="/ru/contact#demo">Запросить демо</a></li>
+          <li><a href="https://docs.caspianerp.com">Документация</a></li>
+          <li><a href="https://admin.caspianerp.com">Портал администратора</a></li>
+          <li><a href="/ru/pricing#faq">Вопросы о ценах</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <span data-year>2026</span> CaspianTools. Caspian ERP — продукт CaspianTools.</p>
+      <nav aria-label="Правовая информация">
+        <a href="/ru/privacy">Политика конфиденциальности</a>
+        <a href="/ru/terms">Условия использования</a>
+        <a href="/ru/security">Безопасность</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+<script src="/assets/js/site.js?v=20260908" defer></script>
+</body>
+</html>

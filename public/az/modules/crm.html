@@ -1,0 +1,609 @@
+<!doctype html>
+<html lang="az">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="/assets/js/lang.js?v=20260908"></script>
+<title>CRM — Caspian ERP</title>
+<meta name="description" content="Kontaktlar, sövdələşmələr, təkliflər, satış sifarişləri, fəaliyyətlər, proqnoz və analitika — qazanılan sövdələşməni birbaşa onu icra edəcək əməliyyata ötürən CRM.">
+<link rel="canonical" href="https://caspianerp.com/az/modules/crm">
+<!--i18n:alternates-->
+<link rel="alternate" hreflang="en" href="https://caspianerp.com/modules/crm">
+<link rel="alternate" hreflang="az" href="https://caspianerp.com/az/modules/crm">
+<link rel="alternate" hreflang="tr" href="https://caspianerp.com/tr/modules/crm">
+<link rel="alternate" hreflang="ru" href="https://caspianerp.com/ru/modules/crm">
+<link rel="alternate" hreflang="nb" href="https://caspianerp.com/nb/modules/crm">
+<link rel="alternate" hreflang="de" href="https://caspianerp.com/de/modules/crm">
+<link rel="alternate" hreflang="fr" href="https://caspianerp.com/fr/modules/crm">
+<link rel="alternate" hreflang="x-default" href="https://caspianerp.com/modules/crm">
+<!--/i18n:alternates-->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Caspian ERP">
+<meta property="og:title" content="CRM — Caspian ERP">
+<meta property="og:description" content="Kontaktlar, sövdələşmələr, təkliflər, satış sifarişləri, fəaliyyətlər, proqnoz və analitika — qazanılan sövdələşməni birbaşa onu icra edəcək əməliyyata ötürən CRM.">
+<meta property="og:url" content="https://caspianerp.com/az/modules/crm">
+<meta property="og:image" content="https://caspianerp.com/assets/img/og-image.svg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#4f46e5">
+<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="/assets/css/site.css?v=20260908">
+<noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
+</head>
+<body>
+<a class="skip-link" href="#main">Məzmuna keç</a>
+<header class="site-header">
+  <div class="container">
+    <nav class="nav" aria-label="Əsas">
+      <a class="brand" href="/az">
+        <img class="brand-mark" src="/assets/img/logo-mark.svg" alt="" width="30" height="30">
+        <span class="brand-name">Caspian <b>ERP</b></span>
+      </a>
+      <ul class="nav-links">
+        <li><a class="nav-link" aria-current="page" href="/az/modules">Modullar</a></li>
+        <li><a class="nav-link" href="/az/industries">Sənayelər</a></li>
+        <li><a class="nav-link" href="/az/security">Təhlükəsizlik</a></li>
+        <li><a class="nav-link" href="/az/pricing">Qiymətlər</a></li>
+        <li><a class="nav-link" href="/az/about">Haqqımızda</a></li>
+      </ul>
+      <div class="nav-actions">
+        <!--i18n:switcher-->
+        <details class="lang" data-lang-switcher>
+          <summary class="lang-button" title="Dil seçin" aria-label="Dil: Azərbaycan dili"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18"/></svg><span class="lang-code">AZ</span><svg class="lang-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="lang-menu" role="group" aria-label="Dil seçin">
+            <a class="lang-option" href="/modules/crm" hreflang="en" lang="en" data-lang="en">English</a>
+            <a class="lang-option" href="/az/modules/crm" hreflang="az" lang="az" data-lang="az" aria-current="true">Azərbaycan dili</a>
+            <a class="lang-option" href="/tr/modules/crm" hreflang="tr" lang="tr" data-lang="tr">Türkçe</a>
+            <a class="lang-option" href="/ru/modules/crm" hreflang="ru" lang="ru" data-lang="ru">Русский</a>
+            <a class="lang-option" href="/nb/modules/crm" hreflang="nb" lang="nb" data-lang="nb">Norsk (bokmål)</a>
+            <a class="lang-option" href="/de/modules/crm" hreflang="de" lang="de" data-lang="de">Deutsch</a>
+            <a class="lang-option" href="/fr/modules/crm" hreflang="fr" lang="fr" data-lang="fr">Français</a>
+          </div>
+        </details>
+        <!--/i18n:switcher-->
+        <a class="btn btn-ghost btn-sm" href="https://app.caspianerp.com">Daxil olun</a>
+        <a class="btn btn-primary btn-sm" href="/az/contact#demo">Demo tələb edin <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+        <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="mobile-menu" aria-label="Menyunu aç" data-text-open="Menyunu aç" data-text-close="Menyunu bağla">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </nav>
+  </div>
+  <div class="mobile-menu" id="mobile-menu">
+    <a class="nav-link" aria-current="page" href="/az/modules">Modullar</a>
+    <a class="nav-link" href="/az/industries">Sənayelər</a>
+    <a class="nav-link" href="/az/security">Təhlükəsizlik</a>
+    <a class="nav-link" href="/az/pricing">Qiymətlər</a>
+    <a class="nav-link" href="/az/about">Haqqımızda</a>
+    <a class="nav-link" href="https://docs.caspianerp.com">Sənədləşmə</a>
+    <a class="nav-link" href="/az/contact">Əlaqə</a>
+    <!--i18n:switcher-mobile-->
+    <div class="mobile-lang" role="group" aria-label="Dil seçin">
+      <span class="mobile-lang-label">Dil</span>
+      <div class="mobile-lang-options">
+        <a class="lang-option" href="/modules/crm" hreflang="en" lang="en" data-lang="en">English</a>
+        <a class="lang-option" href="/az/modules/crm" hreflang="az" lang="az" data-lang="az" aria-current="true">Azərbaycan dili</a>
+        <a class="lang-option" href="/tr/modules/crm" hreflang="tr" lang="tr" data-lang="tr">Türkçe</a>
+        <a class="lang-option" href="/ru/modules/crm" hreflang="ru" lang="ru" data-lang="ru">Русский</a>
+        <a class="lang-option" href="/nb/modules/crm" hreflang="nb" lang="nb" data-lang="nb">Norsk (bokmål)</a>
+        <a class="lang-option" href="/de/modules/crm" hreflang="de" lang="de" data-lang="de">Deutsch</a>
+        <a class="lang-option" href="/fr/modules/crm" hreflang="fr" lang="fr" data-lang="fr">Français</a>
+      </div>
+    </div>
+    <!--/i18n:switcher-mobile-->
+    <div class="mobile-cta">
+      <a class="btn btn-secondary" href="https://app.caspianerp.com">Daxil olun</a>
+      <a class="btn btn-primary" href="/az/contact#demo">Demo tələb edin</a>
+    </div>
+  </div>
+</header>
+<main id="main">
+
+  <section class="hero">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Naviqasiya yolu">
+        <a href="/az/modules">Modullar</a>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg>
+        <span aria-current="page">CRM</span>
+      </nav>
+      <span class="eyebrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>Müştəri Münasibətlərinin İdarə Edilməsi</span>
+      <h1>Sonu icra edilmiş işlə <span class="grad">bitən bir satış boru xətti</span></h1>
+      <p class="hero-sub">Kontaktlar, sövdələşmələr, təkliflər və satış sifarişləri istehsalı, anbarı və maliyyəni idarə edən eyni platformada — beləliklə işi qazanmaq və işi görmək iki ayrı sistem deyil.</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary btn-lg" href="/az/contact#demo">Demo tələb edin</a>
+        <a class="btn btn-secondary btn-lg" href="https://docs.caspianerp.com">Sənədləri oxuyun</a>
+      </div>
+      <p class="hero-note">Səkkiz alət · Təklifdən satış sifarişinə və fakturaya · Satınalma ilə eyni kataloq</p>
+    </div>
+  </section>
+  <div class="container mock-wrap">
+    <p class="small muted text-center">Nümunə məlumatlarla izahedici məhsul görünüşü. <a href="/az/contact#demo">Canlı baxış tələb edin</a>.</p>
+    <div class="mock reveal" role="img" aria-label="Mərhələ üzrə boru xəttini, qərar gözləyən təklifləri, proqnozu və son fəaliyyətləri göstərən Caspian ERP CRM">
+      <div class="mock-bar" aria-hidden="true">
+        <span class="mock-dot"></span><span class="mock-dot"></span><span class="mock-dot"></span>
+        <span class="mock-url">app.caspianerp.com/az/w/crm/deals</span>
+      </div>
+      <div class="mock-body" aria-hidden="true">
+        <div class="mock-rail">
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg>Ana səhifə</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/></svg>İnsan Resursları</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>HSEQ</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>Biznes</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1"/><circle cx="18" cy="20" r="1"/><path d="M2 3h2.5l2.6 12.6a1 1 0 0 0 1 .8h8.9a1 1 0 0 0 1-.77L21 8H6"/></svg>Satınalma</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V10l6 4V10l6 4V6l6 4v11z"/><path d="M7 17h.01M13 17h.01M18 17h.01"/></svg>İstehsal</div>
+          <div class="mock-rail-item active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>CRM</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V9l9-6 9 6v12"/><path d="M7 21v-8h10v8"/></svg>Anbar</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 16V6h11v10"/><path d="M14 9h4l3 3.5V16h-7z"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg>Logistika</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0 5 5L21 21l-3 .5L8.5 12A4 4 0 0 1 3 6.5l3 3 2.5-2.5-3-3z"/></svg>Tex. xidmət</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 6H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>Maliyyə</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4.5 13.5H11l-1 8.5 8.5-11.5H12z"/></svg>Səmərəlilik</div>
+        </div>
+        <div class="mock-side">
+          <div class="mock-side-title">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            CRM
+          </div>
+          <div class="mock-side-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19h16M7 16V9M12 16V5M17 16v-4"/></svg>İdarə paneli</div>
+          <div class="mock-side-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17 10 10l4 4 7-7"/><path d="M15 7h6v6"/></svg>Proqnoz</div>
+          <div class="mock-side-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="1" fill="currentColor" stroke="none"/></svg>Analitika</div>
+          <div class="mock-side-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>Kontaktlar</div>
+          <div class="mock-side-item active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m11 17 2 2a1 1 0 0 0 1.4 0l3.6-3.6"/><path d="M3 11 8 6l4 4 3-3 6 6-4 4-3-3-4 4z"/></svg>Sövdələşmələr</div>
+          <div class="mock-side-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/></svg>Təkliflər</div>
+          <div class="mock-side-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="4" width="10" height="17" rx="2"/><path d="M9 4V3h6v1"/><path d="M10 10h4M10 14h4"/></svg>Satış Sifarişləri</div>
+          <div class="mock-side-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M3 10h18M8 2v4M16 2v4"/></svg>Fəaliyyətlər</div>
+        </div>
+        <div class="mock-main">
+          <div class="mock-topbar">
+            <div class="mock-search">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.2-3.2"/></svg>
+              İnsanları, sifarişləri, aktivləri axtarın…
+            </div>
+            <div class="mock-plus"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></div>
+            <div class="mock-avatar"></div>
+          </div>
+          <div class="mock-h1">Satış boru xətti</div>
+          <div class="mock-tag">24 açıq sövdələşmə · bu rübdə 6 bağlanır</div>
+          <div class="mock-cards">
+            <div class="mock-card">
+              <div class="mock-card-head" style="color:#e11d48">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m11 17 2 2a1 1 0 0 0 1.4 0l3.6-3.6"/><path d="M3 11 8 6l4 4 3-3 6 6-4 4-3-3-4 4z"/></svg>
+                Bu ay bağlanır
+              </div>
+              <div class="mock-row"><span>Manifold təchizatı · R4</span><span class="mock-pill warn">Danışıqlar</span></div>
+              <div class="mock-row"><span>Yoxlama müqaviləsi</span><span class="mock-pill ok">Şifahi razılıq</span></div>
+              <div class="mock-row"><span>Ehtiyat hissə çərçivə müqaviləsi</span><span class="mock-pill">Təklif</span></div>
+            </div>
+            <div class="mock-card">
+              <div class="mock-card-head" style="color:#4f46e5">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17 10 10l4 4 7-7"/><path d="M15 7h6v6"/></svg>
+                Proqnoz
+              </div>
+              <div class="mock-kpi">68%</div>
+              <div class="mock-kpi-sub">rüblük hədəfin öhdəliyə götürülüb</div>
+            </div>
+            <div class="mock-card">
+              <div class="mock-card-head" style="color:#d97706">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/></svg>
+                Göndərilmiş təkliflər
+              </div>
+              <div class="mock-row"><span>QT-0441 · 14 sətir</span><span class="mock-pill warn">9 gün</span></div>
+              <div class="mock-row"><span>QT-0443 · 3 sətir</span><span class="mock-pill">2 gün</span></div>
+            </div>
+            <div class="mock-card">
+              <div class="mock-card-head" style="color:#0d9488">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="4" width="10" height="17" rx="2"/><path d="M9 4V3h6v1"/><path d="M10 10h4M10 14h4"/></svg>
+                Satış sifarişləri
+              </div>
+              <div class="mock-kpi">11</div>
+              <div class="mock-kpi-sub">qəbul edilib · 4-ü artıq istehsalda</div>
+            </div>
+            <div class="mock-card">
+              <div class="mock-card-head" style="color:#7c3aed">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="1" fill="currentColor" stroke="none"/></svg>
+                Çevrilmə
+              </div>
+              <div class="mock-bars"><span style="height:34%"></span><span style="height:41%"></span><span style="height:38%"></span><span style="height:52%"></span><span style="height:47%"></span><span style="height:58%"></span></div>
+              <div class="mock-kpi-sub" style="margin-top:8px">Təklifdən sifarişə, altı ay</div>
+            </div>
+            <div class="mock-card">
+              <div class="mock-card-head" style="color:#0891b2">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M3 10h18M8 2v4M16 2v4"/></svg>
+                Gözləyən fəaliyyətlər
+              </div>
+              <div class="mock-row"><span>Zəng · Sahə ziyarətinin ardınca</span><span class="mock-pill warn">Bu gün</span></div>
+              <div class="mock-row"><span>Görüş · Çərçivə müqaviləsinə baxış</span><span class="mock-pill">Cüm</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="section section-soft">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Caspian ERP-dən əvvəl</span>
+        <h2>CRM tam olaraq işin başladığı yerdə dayanır</h2>
+        <p>Sövdələşmə qazanılmış kimi işarələnir, sonra kimsə hər şeyi onu həqiqətən icra edən sistemə yenidən yazır.</p>
+      </div>
+      <div class="grid grid-3">
+        <article class="card card-pad reveal">
+          <h3>Təkliflər mətn redaktorunda qurulur</h3>
+          <p class="mt-12">Qiymətlər bir cədvəldən, tərtibat keçən dəfədən gəlir və qapıdan çıxan heç nə həqiqətən təchiz edə biləcəyinizlə əlaqəli deyil.</p>
+        </article>
+        <article class="card card-pad reveal">
+          <h3>Qazanılan sövdələşmələr yenidən yazılır</h3>
+          <p class="mt-12">Sifariş əməliyyata yenidən daxil edilir və miqdarı, qiyməti və ya çatdırılma tarixini səhv salmaq üçün təzə bir şans yaranır.</p>
+        </article>
+        <article class="card card-pad reveal">
+          <h3>Proqnoz bir söhbətdir</h3>
+          <p class="mt-12">Boru xəttinin dəyəri cədvəlin hansı versiyasını açdığınızdan və son yeniləmənin nə qədər nikbin olduğundan asılıdır.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Nə edir</span>
+        <h2>İlk kontaktdan əməliyyatın icra edə biləcəyi satış sifarişinə qədər</h2>
+        <p>Eyni platformanın kommersiya tərəfi — eyni materiallar, insanlar və mühasibat kitabı ilə.</p>
+      </div>
+      <div class="grid grid-2">
+        <article class="card card-pad reveal">
+          <span class="icon-tile t-rose"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span>
+          <h3 class="mt-16">Kontaktlar və onların ətrafındakı münasibət</h3>
+          <p class="mt-12">Müştərilər və onların daxilindəki insanlar, tarixçəsi bir yerdə.</p>
+          <ul class="check-list mt-16">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Məsul şəxsi olan kontakt və şirkət qeydləri</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Fəaliyyət tarixçəsi poçt qutusunda deyil, münasibətə bağlı</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Ehtiyacı olanlara görünür, istədiyiniz yerdə məhdudlaşdırılıb</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Mövcud siyahınızdan idxal edin</li>
+          </ul>
+        </article>
+        <article class="card card-pad reveal">
+          <span class="icon-tile t-violet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m11 17 2 2a1 1 0 0 0 1.4 0l3.6-3.6"/><path d="M3 11 8 6l4 4 3-3 6 6-4 4-3-3-4 4z"/></svg></span>
+          <h3 class="mt-16">Mənası olan boru xətti ilə sövdələşmələr</h3>
+          <p class="mt-12">Mərhələsi, dəyəri və gözlənilən bağlanma tarixi olan imkanlar — onlara sahib insanlar tərəfindən yenilənir.</p>
+          <ul class="check-list mt-16">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Mərhələsi, dəyəri, ehtimalı və məsul şəxsi olan sövdələşmələr</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Mərhələ və məsul şəxs üzrə boru xətti görünüşü</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Sövdələşmə irəlilədikcə ona bağlı qeyd olunan fəaliyyətlər</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Qazanılan sövdələşmələr yenidən yazılmadan satış sifarişinə ötürülür</li>
+          </ul>
+        </article>
+        <article class="card card-pad reveal">
+          <span class="icon-tile t-cyan"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/></svg></span>
+          <h3 class="mt-16">Real kataloqdan qurulan təkliflər</h3>
+          <p class="mt-12">Platformanın qalan hissəsinin istifadə etdiyi eyni materiallardan yığılan təkliflər.</p>
+          <ul class="check-list mt-16">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Paylaşılan material kataloqundan sətir maddələri</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Ardıcıl qiymətqoyma və vergi rejimi</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Versiyalanır, ona görə müştərinin həqiqətən nə aldığını bilirsiniz</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Qəbul edildikdə satış sifarişinə çevrilir</li>
+          </ul>
+        </article>
+        <article class="card card-pad reveal">
+          <span class="icon-tile t-emerald"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="4" width="10" height="17" rx="2"/><path d="M9 4V3h6v1"/><path d="M10 10h4M10 14h4"/></svg></span>
+          <h3 class="mt-16">Əməliyyatın icra edə biləcəyi satış sifarişləri</h3>
+          <p class="mt-12">Qəbul edilmiş sifariş istehsal, yığım və ya göndərmə üçün göstərişə çevrilir.</p>
+          <ul class="check-list mt-16">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Sətirləri, tarixləri və statusu olan satış sifarişləri</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Yalnız satışa deyil, istehsala və anbara da görünür</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Ehtiyat mövcudluğu real anbar qeydlərinə görə yoxlanılır</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Maliyyədə eyni sifarişdən faktura verilir</li>
+          </ul>
+        </article>
+        <article class="card card-pad reveal">
+          <span class="icon-tile t-amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17 10 10l4 4 7-7"/><path d="M15 7h6v6"/></svg></span>
+          <h3 class="mt-16">Proqnoz və analitika</h3>
+          <p class="mt-12">İnsanların həqiqətən üzərində işlədiyi sövdələşmələrdən qurulan boru xətti proqnozu.</p>
+          <ul class="check-list mt-16">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Dövr, mərhələ və məsul şəxs üzrə proqnoz</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Boru xətti üzrə çevrilmə analitikası</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Uduş və itki məsul şəxs və müştəri üzrə görünür</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>KPI idarə panelinin oxuduğu eyni rəqəmlər</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-tight section-soft">
+    <div class="container">
+      <div class="section-head">
+        <h2>Kontaktdan nağd pula, yenidən yazmadan</h2>
+        <p>Hər sənəd əvvəlkindən yaradılır və əməliyyat sifarişi qazanılan kimi görür.</p>
+      </div>
+      <div class="flow reveal">
+        <div class="flow-step done"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>Əlaqə</div>
+        <span class="flow-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
+        <div class="flow-step done"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m11 17 2 2a1 1 0 0 0 1.4 0l3.6-3.6"/><path d="M3 11 8 6l4 4 3-3 6 6-4 4-3-3-4 4z"/></svg>Sövdələşmə</div>
+        <span class="flow-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
+        <div class="flow-step done"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/></svg>Təklif</div>
+        <span class="flow-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
+        <div class="flow-step"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="4" width="10" height="17" rx="2"/><path d="M9 4V3h6v1"/><path d="M10 10h4M10 14h4"/></svg>Satış sifarişi</div>
+        <span class="flow-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
+        <div class="flow-step"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21V10l6 4V10l6 4V6l6 4v11z"/><path d="M7 17h.01M13 17h.01M18 17h.01"/></svg>Çatdırılıb</div>
+        <span class="flow-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
+        <div class="flow-step"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3v18l2-1.5L9 21l2-1.5L13 21l2-1.5L17 21l2-1.5V3z"/><path d="M8 8h8M8 12h8"/></svg>Faktura verilib</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Moduldakı hər alət</span>
+        <h2>Kommersiya dövrü üzrə səkkiz alət</h2>
+        <p>Satış, amma onu icra etməli olan əməliyyatla bağlı.</p>
+      </div>
+      <div class="grid grid-2">
+        <div class="feature-item reveal">
+          <span class="icon-tile sm t-rose"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19h16M7 16V9M12 16V5M17 16v-4"/></svg></span>
+          <div>
+            <h4>CRM İdarə Paneli</h4>
+            <p>Rəqəmlərə cavabdeh olanlar üçün boru xətti, fəaliyyət və çevrilmə bir ekranda.</p>
+          </div>
+        </div>
+        <div class="feature-item reveal">
+          <span class="icon-tile sm t-amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17 10 10l4 4 7-7"/><path d="M15 7h6v6"/></svg></span>
+          <div>
+            <h4>Proqnoz</h4>
+            <p>Aylıq təqdimatdan deyil, canlı sövdələşmələrdən qurulan, dövr, mərhələ və məsul şəxs üzrə gözlənilən gəlir.</p>
+          </div>
+        </div>
+        <div class="feature-item reveal">
+          <span class="icon-tile sm t-violet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="1" fill="currentColor" stroke="none"/></svg></span>
+          <div>
+            <h4>Analitika</h4>
+            <p>Satış komandası üzrə çevrilmə nisbətləri, uduş-itki təhlili və boru xəttindəki hərəkət.</p>
+          </div>
+        </div>
+        <div class="feature-item reveal">
+          <span class="icon-tile sm t-cyan"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span>
+          <div>
+            <h4>Kontaktlar</h4>
+            <p>Məsul şəxsləri və münasibətin tam tarixçəsi olan müştəri və kontakt qeydləri.</p>
+          </div>
+        </div>
+        <div class="feature-item reveal">
+          <span class="icon-tile sm t-emerald"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m11 17 2 2a1 1 0 0 0 1.4 0l3.6-3.6"/><path d="M3 11 8 6l4 4 3-3 6 6-4 4-3-3-4 4z"/></svg></span>
+          <div>
+            <h4>Sövdələşmələr</h4>
+            <p>Mərhələsi, dəyəri, ehtimalı və gözlənilən bağlanma tarixi olan imkanlar.</p>
+          </div>
+        </div>
+        <div class="feature-item reveal">
+          <span class="icon-tile sm t-slate"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/></svg></span>
+          <div>
+            <h4>Təkliflər</h4>
+            <p>Paylaşılan material kataloqundan qurulan, versiyalanan və sifarişə çevrilə bilən müştəri təklifləri.</p>
+          </div>
+        </div>
+        <div class="feature-item reveal">
+          <span class="icon-tile sm t-teal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="4" width="10" height="17" rx="2"/><path d="M9 4V3h6v1"/><path d="M10 10h4M10 14h4"/></svg></span>
+          <div>
+            <h4>Satış Sifarişləri</h4>
+            <p>Anbarın və istehsalın birbaşa icra edə biləcəyi, Maliyyənin isə faktura verə biləcəyi qəbul edilmiş sifarişlər.</p>
+          </div>
+        </div>
+        <div class="feature-item reveal">
+          <span class="icon-tile sm t-amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M3 10h18M8 2v4M16 2v4"/></svg></span>
+          <div>
+            <h4>Fəaliyyətlər</h4>
+            <p>Kontaktlara və sövdələşmələrə bağlı qeyd olunan zənglər, görüşlər və izləmələr — beləliklə tarixçə təhvildən sonra da qalır.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section dark-section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Bağlıdır, sonradan bərkidilməyib</span>
+        <h2>İşi qazanmaq və işi görmək, bir sistemdə</h2>
+        <p>ERP daxilindəki CRM-in əsl mənası budur.</p>
+      </div>
+      <div class="grid grid-3">
+        <div class="dark-card reveal">
+          <span class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21V10l6 4V10l6 4V6l6 4v11z"/><path d="M7 17h.01M13 17h.01M18 17h.01"/></svg></span>
+          <h3 class="mt-16">Sifarişlər istehsala çevrilir</h3>
+          <p>Satış sifarişi istehsala görünür və real komponent mövcudluğuna qarşı iş sifarişləri ilə qarşılana bilər.</p>
+          <p class="mt-12"><a class="link-arrow" href="/az/modules/manufacturing">İstehsala bax<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></p>
+        </div>
+        <div class="dark-card reveal">
+          <span class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21V9l9-6 9 6v12"/><path d="M7 21v-8h10v8"/></svg></span>
+          <h3 class="mt-16">Vədlər ehtiyata görə yoxlanılır</h3>
+          <p>Mövcudluq faktiki anbar qeydlərindən gəlir, ona görə çatdırılma tarixi ümid deyil, öhdəlikdir.</p>
+          <p class="mt-12"><a class="link-arrow" href="/az/modules/inventory">Anbara bax<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></p>
+        </div>
+        <div class="dark-card reveal">
+          <span class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v20M17 6H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></span>
+          <h3 class="mt-16">Sifarişlər fakturalara çevrilir</h3>
+          <p>Faktura eyni sifariş və eyni kataloqdan işləyir, ona görə satılanla hesab edilən üst-üstə düşür.</p>
+          <p class="mt-12"><a class="link-arrow" href="/az/modules/finance">Maliyyəyə bax<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Orada kim yaşayır</span>
+        <h2>Əməliyyat biznesinin kommersiya tərəfi üçün</h2>
+        <p>Real bir tarix vəd edə bilməli olan satış.</p>
+      </div>
+      <div class="grid grid-3">
+        <article class="card card-pad reveal">
+          <span class="icon-tile sm t-rose"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m11 17 2 2a1 1 0 0 0 1.4 0l3.6-3.6"/><path d="M3 11 8 6l4 4 3-3 6 6-4 4-3-3-4 4z"/></svg></span>
+          <h3 class="mt-16">Müştəri meneceri</h3>
+          <p class="mt-12">Kontaktlara və sövdələşmələrə sahibdir, real kataloqdan təklif verir və əməliyyatın həqiqətən icra edə biləcəyini görür.</p>
+        </article>
+        <article class="card card-pad reveal">
+          <span class="icon-tile sm t-amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17 10 10l4 4 7-7"/><path d="M15 7h6v6"/></svg></span>
+          <h3 class="mt-16">Kommersiya meneceri</h3>
+          <p class="mt-12">Hər idarə heyəti iclasından əvvəl komandadan cədvəl istəmək əvəzinə canlı sövdələşmələrdən qurulan proqnoz oxuyur.</p>
+        </article>
+        <article class="card card-pad reveal">
+          <span class="icon-tile sm t-teal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="4" width="10" height="17" rx="2"/><path d="M9 4V3h6v1"/><path d="M10 10h4M10 14h4"/></svg></span>
+          <h3 class="mt-16">Əməliyyat planlayıcısı</h3>
+          <p class="mt-12">Satış sifarişini qəbul edilən anda görür və istehsalı ilə ehtiyatı ona görə planlaşdırır.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-soft">
+    <div class="container split">
+      <div>
+        <span class="eyebrow">Formalaşdırmaq sizin əlinizdə</span>
+        <h2 class="mt-16">CRM-i satış tərzinizə uyğun konfiqurasiya edin</h2>
+        <p class="lead mt-12">Layihə satışı, xidmət müqavilələri və məhsul təchizatı fərqli boru xətləri tələb edir.</p>
+        <ul class="check-list mt-24">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Öz boru xətti mərhələlərinizi və ehtimallarınızı təyin edin</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Təkliflərin müəyyən dəyər həddindən yuxarı təsdiq tələb edib-etmədiyinə qərar verin</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Sövdələşmələrin bütün komandaya, yoxsa yalnız məsul şəxsə görünəcəyini seçin</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Təkliflərdə və satış sifarişlərində görünən nömrələmə və şərtləri təyin edin</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Sadə bir sifariş kitabı aparırsınızsa, proqnoz və analitikanı söndürün</li>
+        </ul>
+        <p class="mt-24"><a class="link-arrow" href="/az/modules/administration">Administratorun nəyə nəzarət etdiyinə bax<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></p>
+      </div>
+      <div class="split-media">
+        <div class="panel reveal">
+          <div class="panel-head reveal">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21v-7M4 10V3M12 21v-9M12 8V3M20 21v-5M20 12V3M1 14h6M9 8h6M17 16h6"/></svg>
+            CRM · Parametrlər
+          </div>
+          <div class="panel-body reveal">
+            <table class="table-mock">
+              <thead><tr><th>Parametr</th><th>Dəyər</th></tr></thead>
+              <tbody>
+                <tr><td>Boru xətti mərhələləri</td><td><span class="badge badge-rose">Fərdi (6)</span></td></tr>
+                <tr><td>Təklifin təsdiqi</td><td><span class="badge badge-amber">Həddən yuxarı</span></td></tr>
+                <tr><td>Sövdələşmə görünürlüyü</td><td><span class="badge badge-violet">Komanda</span></td></tr>
+                <tr><td>Təklif → satış sifarişi</td><td><span class="badge badge-emerald">Bir kliklə</span></td></tr>
+                <tr><td>Proqnoz dövrü</td><td><span class="badge badge-cyan">Rüblük</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2>CRM-ə dair bizə verilən suallar</h2>
+      </div>
+      <div class="faq">
+        <details>
+          <summary>Qazanılan sövdələşmə əməliyyat işini yaradırmı?</summary>
+          <div class="faq-body">Qazanılan sövdələşmə satış sifarişinə çevrilir və satış sifarişi birbaşa anbara və istehsala görünür. ERP daxilində CRM işlətməyin mənası budur — heç kim sifarişi ikinci bir sistemə yenidən yazmır.</div>
+        </details>
+        <details>
+          <summary>Təklif qiymətləri haradan gəlir?</summary>
+          <div class="faq-body">Satınalmanın, anbarın və maliyyənin də istifadə etdiyi paylaşılan material kataloqundan. Təklif etdiyinizin, göndərdiyinizin və faktura verdiyinizin uzlaşmasını təmin edən də budur.</div>
+        </details>
+        <details>
+          <summary>Tarix vəd etməzdən əvvəl ehtiyatı yoxlaya bilərikmi?</summary>
+          <div class="faq-body">Bəli. Mövcudluq ayrıca aparılan bir rəqəmdən deyil, faktiki anbar qeydlərindən gəlir, ona görə vəd edilən tarix rəfdə həqiqətən olana əsaslana bilər.</div>
+        </details>
+        <details>
+          <summary>Proqnoz komandanın təqdim etməli olduğu bir şeydirmi?</summary>
+          <div class="faq-body">Xeyr. O, insanların onsuz da yenilədiyi sövdələşmələrdən, mərhələ və ehtimalla qurulur. Heç kim sövdələşmələrini yeniləmirsə, proqnoz bunu göstərəcək — bu da özlüyündə faydalıdır.</div>
+        </details>
+        <details>
+          <summary>Satış əməliyyat məlumatlarını görə bilərmi, yoxsa yalnız özününküləri?</summary>
+          <div class="faq-body">Nə qərar versəniz. Hər alətin öz icazələri var, ona görə müştəri menecerinə maliyyəyə və ya İnsan Resurslarına giriş vermədən ehtiyat və sifariş statusunu görmək imkanı verilə bilər.</div>
+        </details>
+      </div>
+      <p class="text-center mt-32">
+        <a class="link-arrow" href="/az/modules">Bütün modullara bax<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+      </p>
+    </div>
+  </section>
+
+
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-hero">
+      <div>
+        <p class="footer-kicker">Sualınız var? Sizə göstərməyimizi istəyirsiniz?</p>
+        <h2>Bütün əməliyyat üçün bir sistem.</h2>
+      </div>
+      <div>
+        <p>Əməliyyatınızın necə işlədiyini bizə danışın. Uyğun iş axınlarını birlikdə nəzərdən keçirək, məlumatlarınıza baxaq və komandamızla növbəti addımları razılaşdıraq.</p>
+        <div class="footer-actions">
+          <a class="btn btn-onDark btn-lg" href="/az/contact#demo">Demo tələb edin <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+          <a class="btn btn-outline-onDark btn-lg" href="https://docs.caspianerp.com">Sənədləri oxuyun</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="/az">
+          <img class="brand-mark" src="/assets/img/logo-mark.svg" alt="" width="30" height="30">
+          <span class="brand-name" style="color:#fff">Caspian <b>ERP</b></span>
+        </a>
+      </div>
+      <div class="footer-col">
+        <h4>Platforma</h4>
+        <ul>
+          <li><a href="/az/modules">Bütün modullar</a></li>
+          <li><a href="/az/industries">Sənayelər</a></li>
+          <li><a href="/az/security">Təhlükəsizlik və RBAC</a></li>
+          <li><a href="/az/pricing">Qiymətlər</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Modullar</h4>
+        <ul>
+          <li><a href="/az/modules/hseq">HSEQ</a></li>
+          <li><a href="/az/modules/hr">İnsan Resursları</a></li>
+          <li><a href="/az/modules/procurement">Satınalma</a></li>
+          <li><a href="/az/modules/inventory">Anbar</a></li>
+          <li><a href="/az/modules/maintenance">Texniki xidmət</a></li>
+          <li><a href="/az/modules/finance">Maliyyə</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Şirkət</h4>
+        <ul>
+          <li><a href="/az/about">Haqqımızda</a></li>
+          <li><a href="https://caspiantools.com" rel="noopener">CaspianTools</a></li>
+          <li><a href="/az/contact">Əlaqə</a></li>
+          <li><a href="/az/contact#demo">Demo tələb edin</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Başlayın</h4>
+        <ul>
+          <li><a href="https://app.caspianerp.com">Daxil olun</a></li>
+          <li><a href="/az/contact#demo">Demo tələb edin</a></li>
+          <li><a href="https://docs.caspianerp.com">Sənədləşmə</a></li>
+          <li><a href="https://admin.caspianerp.com">Admin portalı</a></li>
+          <li><a href="/az/pricing#faq">Qiymət sualları</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <span data-year>2026</span> CaspianTools. Caspian ERP CaspianTools məhsuludur.</p>
+      <nav aria-label="Hüquqi">
+        <a href="/az/privacy">Məxfilik Siyasəti</a>
+        <a href="/az/terms">İstifadə Şərtləri</a>
+        <a href="/az/security">Təhlükəsizlik</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+<script src="/assets/js/site.js?v=20260908" defer></script>
+</body>
+</html>

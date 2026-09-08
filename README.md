@@ -71,16 +71,26 @@ or billing commitments. The public pricing page now uses pricing-on-request mess
 │   ├── privacy.html        Privacy policy
 │   ├── terms.html          Terms of service
 │   ├── 404.html            Not-found page
+│   ├── az/ tr/ ru/ nb/ de/ fr/   Generated translations — same tree, one per language
 │   ├── robots.txt
-│   ├── sitemap.xml
+│   ├── sitemap.xml         Generated: every page in every language
 │   └── assets/
 │       ├── css/site.css    The whole design system, one file
 │       ├── js/site.js      Progressive enhancement only
+│       ├── js/lang.js      Browser-language redirect; runs before the page paints
 │       └── img/            logo-mark.svg · favicon.svg · og-image.svg
+├── i18n/
+│   ├── config.mjs          The seven languages, and how a path is localized
+│   ├── _catalog.json       Generated: every translatable string and where it appears
+│   └── <lang>.json         English string → translation, one file per language
 ├── scripts/
 │   ├── check-html.mjs      Fails on unbalanced tags
 │   ├── check-links.mjs     Fails on broken internal links and anchors
-│   └── check-assets.mjs    Fails when pages disagree on the ?v= asset version
+│   ├── check-assets.mjs    Fails when pages disagree on the ?v= asset version
+│   ├── check-i18n.mjs      Fails on an untranslated string or a stale generated page
+│   ├── i18n-extract.mjs    Rebuilds the catalogue from the English pages
+│   ├── i18n-build.mjs      Generates public/<lang>/ and sitemap.xml
+│   └── lib/html-i18n.mjs   The tolerant HTML walker both of those share
 └── DESIGN.md               Single source of truth for the design system
 ```
 
@@ -88,6 +98,20 @@ or billing commitments. The public pricing page now uses pricing-on-request mess
 
 There is no bundler, frontend framework, or runtime npm dependency. Edit the HTML and CSS directly; what is in
 `public/` is exactly what is served. Node runs the validation scripts; Playwright is a development dependency for browser testing.
+
+The one exception is the translations. English is hand-written in `public/`, and the other six
+languages are **generated into `public/<lang>/` and committed**, because hosting serves the
+repository as-is. After editing any English page:
+
+```bash
+node scripts/i18n-extract.mjs   # refresh i18n/_catalog.json
+# translate the new strings into each i18n/<lang>.json
+node scripts/i18n-build.mjs     # regenerate public/<lang>/ and sitemap.xml
+node scripts/check-i18n.mjs     # fails on a missing translation or a stale page
+```
+
+`check-i18n.mjs` regenerates every page in memory and compares it with the committed file, so an
+English edit that was never re-generated fails CI instead of shipping a half-translated site.
 
 ## Conventions
 
@@ -111,6 +135,14 @@ There is no bundler, frontend framework, or runtime npm dependency. Edit the HTM
   `site.js` only adds the `html.js` marker, the sticky-header shadow, the mobile drawer, the module
   filter tabs, scroll reveal, the scroller arrows, the mail-composing contact form and the footer year. Anything that hides content until JS
   runs (`.reveal`) must have a `<noscript>` override in the page head.
+- **Seven languages, one source.** English pages under `public/` are the source; `az`, `tr`, `ru`,
+  `nb`, `de` and `fr` are generated beneath them and must not be hand-edited. Three regions of every
+  page belong to the generator and are rewritten between `<!--i18n:…-->` markers: the `hreflang`
+  alternates, the header language menu and the drawer's language row. Strings that `site.js` writes
+  into the page live on `data-text-*` attributes so they are translated with everything else.
+- **The language menu works without JavaScript.** It is a `<details>` full of ordinary links, and
+  `/tr/pricing` always serves Turkish. `lang.js` only redirects an *unprefixed* URL, honouring a
+  remembered choice first and the browser's languages second — so a shared link is never overridden.
 - **No third-party scripts, trackers or cookies.** The only external request is the Inter webfont.
 - **Claims must be true.** No invented customer logos, testimonials, certifications or metrics.
 - **Caspian ERP is a CaspianTools product.** The footer of every page carries the credit and links to

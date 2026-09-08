@@ -3,9 +3,20 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="/assets/js/lang.js?v=20260908"></script>
 <title>Caspian ERP - Connected ERP for industrial and field operations</title>
 <meta name="description" content="Connect people, safety, procurement, inventory and maintenance with Caspian ERP. Explore workflows for industrial and field operations and request a demo.">
 <link rel="canonical" href="https://caspianerp.com/">
+<!--i18n:alternates-->
+<link rel="alternate" hreflang="en" href="https://caspianerp.com/">
+<link rel="alternate" hreflang="az" href="https://caspianerp.com/az">
+<link rel="alternate" hreflang="tr" href="https://caspianerp.com/tr">
+<link rel="alternate" hreflang="ru" href="https://caspianerp.com/ru">
+<link rel="alternate" hreflang="nb" href="https://caspianerp.com/nb">
+<link rel="alternate" hreflang="de" href="https://caspianerp.com/de">
+<link rel="alternate" hreflang="fr" href="https://caspianerp.com/fr">
+<link rel="alternate" hreflang="x-default" href="https://caspianerp.com/">
+<!--/i18n:alternates-->
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Caspian ERP">
 <meta property="og:title" content="Caspian ERP - Connected ERP for industrial and field operations">
@@ -18,7 +29,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
-<link rel="stylesheet" href="/assets/css/site.css?v=20260906.2">
+<link rel="stylesheet" href="/assets/css/site.css?v=20260908">
 <noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
 </head>
 <body>
@@ -38,9 +49,23 @@
         <li><a class="nav-link" href="/about">About</a></li>
       </ul>
       <div class="nav-actions">
+        <!--i18n:switcher-->
+        <details class="lang" data-lang-switcher>
+          <summary class="lang-button" title="Choose a language" aria-label="Language: English"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18"/></svg><span class="lang-code">EN</span><svg class="lang-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="lang-menu" role="group" aria-label="Choose a language">
+            <a class="lang-option" href="/" hreflang="en" lang="en" data-lang="en" aria-current="true">English</a>
+            <a class="lang-option" href="/az" hreflang="az" lang="az" data-lang="az">Azərbaycan dili</a>
+            <a class="lang-option" href="/tr" hreflang="tr" lang="tr" data-lang="tr">Türkçe</a>
+            <a class="lang-option" href="/ru" hreflang="ru" lang="ru" data-lang="ru">Русский</a>
+            <a class="lang-option" href="/nb" hreflang="nb" lang="nb" data-lang="nb">Norsk (bokmål)</a>
+            <a class="lang-option" href="/de" hreflang="de" lang="de" data-lang="de">Deutsch</a>
+            <a class="lang-option" href="/fr" hreflang="fr" lang="fr" data-lang="fr">Français</a>
+          </div>
+        </details>
+        <!--/i18n:switcher-->
         <a class="btn btn-ghost btn-sm" href="https://app.caspianerp.com">Sign in</a>
         <a class="btn btn-primary btn-sm" href="/contact#demo">Request a demo <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
-        <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+        <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu" data-text-open="Open menu" data-text-close="Close menu">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
         </button>
       </div>
@@ -54,6 +79,20 @@
     <a class="nav-link" href="/about">About</a>
     <a class="nav-link" href="https://docs.caspianerp.com">Documentation</a>
     <a class="nav-link" href="/contact">Contact</a>
+    <!--i18n:switcher-mobile-->
+    <div class="mobile-lang" role="group" aria-label="Choose a language">
+      <span class="mobile-lang-label">Language</span>
+      <div class="mobile-lang-options">
+        <a class="lang-option" href="/" hreflang="en" lang="en" data-lang="en" aria-current="true">English</a>
+        <a class="lang-option" href="/az" hreflang="az" lang="az" data-lang="az">Azərbaycan dili</a>
+        <a class="lang-option" href="/tr" hreflang="tr" lang="tr" data-lang="tr">Türkçe</a>
+        <a class="lang-option" href="/ru" hreflang="ru" lang="ru" data-lang="ru">Русский</a>
+        <a class="lang-option" href="/nb" hreflang="nb" lang="nb" data-lang="nb">Norsk (bokmål)</a>
+        <a class="lang-option" href="/de" hreflang="de" lang="de" data-lang="de">Deutsch</a>
+        <a class="lang-option" href="/fr" hreflang="fr" lang="fr" data-lang="fr">Français</a>
+      </div>
+    </div>
+    <!--/i18n:switcher-mobile-->
     <div class="mobile-cta">
       <a class="btn btn-secondary" href="https://app.caspianerp.com">Sign in</a>
       <a class="btn btn-primary" href="/contact#demo">Request a demo</a>
@@ -434,7 +473,7 @@
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg><strong>One account, many organizations.</strong> Consultants, groups and joint ventures switch between organizations from the same login — data never crosses the boundary.</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg><strong>Roles you define.</strong> Start from Owner, Admin, Manager and Member, then build roles from read / create / update / delete permissions per tool.</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg><strong>Audit log.</strong> Membership, role and permission changes are recorded and attributed, so you can answer “who changed this, and when?”.</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg><strong>Five languages.</strong> English, French, German, Norwegian and Turkish ship with the product — each member picks their own.</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg><strong>Seven languages.</strong> English, Azerbaijani, Turkish, Russian, Norwegian, German and French ship with the product — each member picks their own.</li>
         </ul>
       </div>
     </div>
@@ -586,6 +625,6 @@
     </div>
   </div>
 </footer>
-<script src="/assets/js/site.js?v=20260906.2" defer></script>
+<script src="/assets/js/site.js?v=20260908" defer></script>
 </body>
 </html>

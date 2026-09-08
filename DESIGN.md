@@ -83,6 +83,14 @@ the status tints only where they mean something. There are no gradients on text 
   is a filled indigo pill (`aria-current="page"`). Below 900px the middle track is empty and
   collapses, leaving the brand and the round menu button at the edges; the mobile drawer is a
   rounded card below the bar. There is no announcement bar.
+- **The language menu** (`.lang`) sits in `.nav-actions`, left of the sign-in button, at every
+  breakpoint — it is the only way to change language, so it never collapses into the drawer. It is a
+  native `<details>`: `.lang-button` is the pill `<summary>` (globe, the uppercase code, a chevron
+  that rotates when open), and `.lang-menu` is the absolutely positioned card of `.lang-option`
+  links, with the current language marked `aria-current` and tinted `--indigo-50`. The drawer
+  repeats the same links as `.mobile-lang`, a wrapping row of outlined pills under a small
+  uppercase label. Both regions are **generated** — see README's i18n section — so never hand-edit
+  them in a page.
 - **The footer** (`.site-footer`) is a dark rounded card, inset like a dark section, and it carries
   the site's closing call to action: `.footer-hero` (kicker, oversized `<h2>`, paragraph and two
   buttons) above the five-column `.footer-grid` and the `.footer-bottom` bar. Because the footer
@@ -159,6 +167,9 @@ about 0.6s. All of it lives in §20 of `site.css`.
 
 ### Rules
 
+- **Language switching works with JS off.** The menu is a `<details>` full of ordinary links; JS
+  only adds the click-outside/Escape close and remembers the choice. Never make a language reachable
+  only through script.
 - **JavaScript is an enhancement, never a requirement.** Every page must render, read and navigate
   with JS off. `public/assets/js/site.js` only adds the `html.js` marker, the sticky-header
   shadow, the mobile drawer, the module filter tabs, scroll reveal, the scroller arrows, the

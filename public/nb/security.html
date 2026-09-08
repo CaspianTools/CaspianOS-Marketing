@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="/assets/js/lang.js?v=20260908"></script>
+<title>Sikkerhet og tilgangskontroll — Caspian ERP</title>
+<meta name="description" content="Flerleier-isolasjon, tillatelsesbasert RBAC håndhevet på serversiden, verifiserte invitasjoner og revisjonslogg. Slik beskytter Caspian ERP organisasjonens data.">
+<link rel="canonical" href="https://caspianerp.com/nb/security">
+<!--i18n:alternates-->
+<link rel="alternate" hreflang="en" href="https://caspianerp.com/security">
+<link rel="alternate" hreflang="az" href="https://caspianerp.com/az/security">
+<link rel="alternate" hreflang="tr" href="https://caspianerp.com/tr/security">
+<link rel="alternate" hreflang="ru" href="https://caspianerp.com/ru/security">
+<link rel="alternate" hreflang="nb" href="https://caspianerp.com/nb/security">
+<link rel="alternate" hreflang="de" href="https://caspianerp.com/de/security">
+<link rel="alternate" hreflang="fr" href="https://caspianerp.com/fr/security">
+<link rel="alternate" hreflang="x-default" href="https://caspianerp.com/security">
+<!--/i18n:alternates-->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Caspian ERP">
+<meta property="og:title" content="Sikkerhet og tilgangskontroll — Caspian ERP">
+<meta property="og:description" content="Flerleier-isolasjon, tillatelsesbasert RBAC håndhevet på serversiden, verifiserte invitasjoner og revisjonslogg. Slik beskytter Caspian ERP organisasjonens data.">
+<meta property="og:url" content="https://caspianerp.com/nb/security">
+<meta property="og:image" content="https://caspianerp.com/assets/img/og-image.svg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#4f46e5">
+<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="/assets/css/site.css?v=20260908">
+<noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
+</head>
+<body>
+<a class="skip-link" href="#main">Gå til innholdet</a>
+<header class="site-header">
+  <div class="container">
+    <nav class="nav" aria-label="Hoved">
+      <a class="brand" href="/nb">
+        <img class="brand-mark" src="/assets/img/logo-mark.svg" alt="" width="30" height="30">
+        <span class="brand-name">Caspian <b>ERP</b></span>
+      </a>
+      <ul class="nav-links">
+        <li><a class="nav-link" href="/nb/modules">Moduler</a></li>
+        <li><a class="nav-link" href="/nb/industries">Bransjer</a></li>
+        <li><a class="nav-link" aria-current="page" href="/nb/security">Sikkerhet</a></li>
+        <li><a class="nav-link" href="/nb/pricing">Priser</a></li>
+        <li><a class="nav-link" href="/nb/about">Om oss</a></li>
+      </ul>
+      <div class="nav-actions">
+        <!--i18n:switcher-->
+        <details class="lang" data-lang-switcher>
+          <summary class="lang-button" title="Velg språk" aria-label="Språk: Norsk (bokmål)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18"/></svg><span class="lang-code">NB</span><svg class="lang-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="lang-menu" role="group" aria-label="Velg språk">
+            <a class="lang-option" href="/security" hreflang="en" lang="en" data-lang="en">English</a>
+            <a class="lang-option" href="/az/security" hreflang="az" lang="az" data-lang="az">Azərbaycan dili</a>
+            <a class="lang-option" href="/tr/security" hreflang="tr" lang="tr" data-lang="tr">Türkçe</a>
+            <a class="lang-option" href="/ru/security" hreflang="ru" lang="ru" data-lang="ru">Русский</a>
+            <a class="lang-option" href="/nb/security" hreflang="nb" lang="nb" data-lang="nb" aria-current="true">Norsk (bokmål)</a>
+            <a class="lang-option" href="/de/security" hreflang="de" lang="de" data-lang="de">Deutsch</a>
+            <a class="lang-option" href="/fr/security" hreflang="fr" lang="fr" data-lang="fr">Français</a>
+          </div>
+        </details>
+        <!--/i18n:switcher-->
+        <a class="btn btn-ghost btn-sm" href="https://app.caspianerp.com">Logg inn</a>
+        <a class="btn btn-primary btn-sm" href="/nb/contact#demo">Be om en demo <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+        <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="mobile-menu" aria-label="Åpne menyen" data-text-open="Åpne menyen" data-text-close="Lukk menyen">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </nav>
+  </div>
+  <div class="mobile-menu" id="mobile-menu">
+    <a class="nav-link" href="/nb/modules">Moduler</a>
+    <a class="nav-link" href="/nb/industries">Bransjer</a>
+    <a class="nav-link" aria-current="page" href="/nb/security">Sikkerhet</a>
+    <a class="nav-link" href="/nb/pricing">Priser</a>
+    <a class="nav-link" href="/nb/about">Om oss</a>
+    <a class="nav-link" href="https://docs.caspianerp.com">Dokumentasjon</a>
+    <a class="nav-link" href="/nb/contact">Kontakt</a>
+    <!--i18n:switcher-mobile-->
+    <div class="mobile-lang" role="group" aria-label="Velg språk">
+      <span class="mobile-lang-label">Språk</span>
+      <div class="mobile-lang-options">
+        <a class="lang-option" href="/security" hreflang="en" lang="en" data-lang="en">English</a>
+        <a class="lang-option" href="/az/security" hreflang="az" lang="az" data-lang="az">Azərbaycan dili</a>
+        <a class="lang-option" href="/tr/security" hreflang="tr" lang="tr" data-lang="tr">Türkçe</a>
+        <a class="lang-option" href="/ru/security" hreflang="ru" lang="ru" data-lang="ru">Русский</a>
+        <a class="lang-option" href="/nb/security" hreflang="nb" lang="nb" data-lang="nb" aria-current="true">Norsk (bokmål)</a>
+        <a class="lang-option" href="/de/security" hreflang="de" lang="de" data-lang="de">Deutsch</a>
+        <a class="lang-option" href="/fr/security" hreflang="fr" lang="fr" data-lang="fr">Français</a>
+      </div>
+    </div>
+    <!--/i18n:switcher-mobile-->
+    <div class="mobile-cta">
+      <a class="btn btn-secondary" href="https://app.caspianerp.com">Logg inn</a>
+      <a class="btn btn-primary" href="/nb/contact#demo">Be om en demo</a>
+    </div>
+  </div>
+</header>
+<main id="main">
+
+  <section class="hero">
+    <div class="container">
+      <span class="eyebrow">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
+        Sikkerhet og tilgangskontroll
+      </span>
+      <h1>Tillatelser håndhevet <span class="grad">i databasen</span></h1>
+      <p class="hero-sub">
+        Et ERP holder hendelsene, helsedataene, lønningene og kontraktene deres. Å skjule et menypunkt er ikke tilgangskontroll — derfor kontrolleres hver lesing og skriving i Caspian ERP på serversiden mot tillatelsene dere har gitt.
+      </p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <div class="grid grid-3">
+        <div class="card card-pad card-interactive reveal">
+          <span class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></span>
+          <h3 class="mt-16">Isolasjon mellom leietakere</h3>
+          <p class="muted mt-6">Hver post ligger under sin organisasjon og bærer organisasjonens ID. Et søk som strekker seg utenfor organisasjonen din, avvises av reglene og filtreres ikke av klienten.</p>
+        </div>
+        <div class="card card-pad card-interactive reveal">
+          <span class="icon-tile t-emerald"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></span>
+          <h3 class="mt-16">Tillatelsesbasert RBAC</h3>
+          <p class="muted mt-6">Hvert verktøy har egne tillatelser for lesing, oppretting, endring og sletting. En rolle er et sett av tillatelser; et medlem har én rolle per organisasjon. Ingenting følger implisitt av stillingstittel.</p>
+        </div>
+        <div class="card card-pad card-interactive reveal">
+          <span class="icon-tile t-violet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
+          <h3 class="mt-16">Revisjonslogg</h3>
+          <p class="muted mt-6">Endringer i medlemskap, roller og tillatelser skrives til en append-only-logg tilskrevet medlemmet som gjorde dem — oppføringer kan ikke forfalskes i et annet medlems navn.</p>
+        </div>
+        <div class="card card-pad card-interactive reveal">
+          <span class="icon-tile t-amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z"/><path d="m8 12 3 3 5-6"/></svg></span>
+          <h3 class="mt-16">Verifiserte invitasjoner</h3>
+          <p class="muted mt-6">En invitasjon kan bare finnes og aksepteres av en verifisert e-postadresse, så ingen blir med i organisasjonen din ved å registrere en annens adresse.</p>
+        </div>
+        <div class="card card-pad card-interactive reveal">
+          <span class="icon-tile t-cyan"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5v7c0 6 8 10 8 10s8-4 8-10V5z"/></svg></span>
+          <h3 class="mt-16">Minste privilegium som standard</h3>
+          <p class="muted mt-6">Eierskap, abonnement og medlemskvote er plattformeide felt — en administrator kan ikke forfremme seg selv til eier eller endre planen deres inne i appen.</p>
+        </div>
+        <div class="card card-pad card-interactive reveal">
+          <span class="icon-tile t-rose"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l3 8 4-16 3 8h4"/></svg></span>
+          <h3 class="mt-16">Herdet transport</h3>
+          <p class="muted mt-6">HTTPS overalt, sikkerhetshoder, en innholdssikkerhetspolicy og hastighetsgrenser per bruker på hver serverrute.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-soft">
+    <div class="container split">
+      <div>
+        <h2>Slik avgjøres tilgang</h2>
+        <p class="lead mt-16">
+          Fire spørsmål besvares på serveren for hver eneste operasjon. Er ett av svarene nei, feiler operasjonen — uansett hva nettleseren tror.
+        </p>
+        <div class="feature-list">
+          <div class="feature-item"><span class="icon-tile sm">1</span><div><h4>Er du innlogget?</h4><p>Autentisering via Google eller e-post og passord, med e-postverifisering påkrevd for passordkontoer.</p></div></div>
+          <div class="feature-item"><span class="icon-tile sm">2</span><div><h4>Er du et aktivt medlem av denne organisasjonen?</h4><p>Suspenderte og avsluttede medlemmer mister tilgang umiddelbart; suspenderte organisasjoner blir skrivebeskyttet.</p></div></div>
+          <div class="feature-item"><span class="icon-tile sm">3</span><div><h4>Har rollen din denne tillatelsen?</h4><p>Kontrollert per verktøy og per handling — lese, opprette, endre eller slette — mot tillatelsesregisteret.</p></div></div>
+          <div class="feature-item"><span class="icon-tile sm">4</span><div><h4>Tilhører posten din organisasjon?</h4><p>Håndhevet på dokumentstien og organisasjons-ID-en, både ved lesing og skriving.</p></div></div>
+        </div>
+      </div>
+      <div class="split-media reveal">
+        <div class="panel reveal">
+          <div class="panel-head reveal">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
+            Roller · Anleggsleder
+            <span class="badge badge-indigo">Egendefinert rolle</span>
+          </div>
+          <div class="panel-body reveal">
+            <table class="table-mock">
+              <caption class="sr-only">Eksempel på tillatelsessett for en egendefinert rolle</caption>
+              <thead><tr><th scope="col">Verktøy</th><th scope="col">Lese</th><th scope="col">Opprette</th><th scope="col">Endre</th><th scope="col">Slette</th></tr></thead>
+              <tbody>
+                <tr><td>Arbeidstillatelser</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="no">—</td></tr>
+                <tr><td>Observasjoner</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="no">—</td></tr>
+                <tr><td>Hendelser</td><td class="yes">✓</td><td class="yes">✓</td><td class="no">—</td><td class="no">—</td></tr>
+                <tr><td>Personal</td><td class="yes">✓</td><td class="no">—</td><td class="no">—</td><td class="no">—</td></tr>
+                <tr><td>Helse</td><td class="no">—</td><td class="no">—</td><td class="no">—</td><td class="no">—</td></tr>
+                <tr><td>Salgsfakturaer</td><td class="no">—</td><td class="no">—</td><td class="no">—</td><td class="no">—</td></tr>
+              </tbody>
+            </table>
+            <p class="small muted mt-16">Roller bygges verktøy for verktøy. En arbeidsleder som aldri skal se lønn eller helsedata, har rett og slett ikke den tillatelsen.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section dark-section">
+    <div class="container">
+      <div class="section-head">
+        <h2>Infrastruktur og data</h2>
+        <p>Caspian ERP kjører på Google Cloud. Vi bygger på forvaltet infrastruktur i stedet for å drifte egne servere.</p>
+      </div>
+      <div class="grid grid-3">
+        <div class="dark-card reveal">
+          <h3>Kryptering</h3>
+          <p>Trafikk går over HTTPS. Data i ro krypteres av de underliggende Google Cloud-tjenestene.</p>
+        </div>
+        <div class="dark-card reveal">
+          <h3>Sikkerhetskopier og tilgjengelighet</h3>
+          <p>Data lagres i en forvaltet, replikert database. Applikasjonen skalerer automatisk og har ikke noe vedlikeholdsvindu dere må planlegge rundt.</p>
+        </div>
+        <div class="dark-card reveal">
+          <h3>Dataene dine er dine</h3>
+          <p>Eksporter hvilken som helst liste til CSV når du vil, og be om en full eksport av organisasjonens data før dere avslutter en konto.</p>
+        </div>
+        <div class="dark-card reveal">
+          <h3>Vår egen tilgang</h3>
+          <p>Støttetilgang til en kundeorganisasjon er begrenset, målrettet og bare med deres samtykke — ikke en stående rettighet.</p>
+        </div>
+        <div class="dark-card reveal">
+          <h3>Ansvarlig varsling</h3>
+          <p>Fant du noe? Send e-post til <a href="mailto:security@caspianerp.com" style="color:#c7d2fe">security@caspianerp.com</a>. Vi bekrefter, undersøker og holder deg oppdatert.</p>
+        </div>
+        <div class="dark-card reveal">
+          <h3>Sertifiseringer</h3>
+          <p>Skyleverandøren vår har de store bransjesertifiseringene. Caspian ERP selv har ennå ingen uavhengig revisjon — vi sier det heller rett ut enn å antyde noe annet.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head"><h2>Vanlige sikkerhetsspørsmål</h2></div>
+      <div class="faq">
+        <details>
+          <summary>Hvor lagres dataene våre?</summary>
+          <div class="faq-body">I Google Cloud, i en forvaltet database dedikert til plattformen, med dataene deres navneinndelt under organisasjonen. Har virksomheten deres spesifikke krav til datalagring i eget land, ta det opp før dere signerer — vi sier rett ut om vi kan oppfylle det.</div>
+        </details>
+        <details>
+          <summary>Kan én kunde se en annen kundes data?</summary>
+          <div class="faq-body">Nei. Hvert dokument ligger under sin organisasjon og bærer organisasjons-ID-en, og sikkerhetsreglene sjekker både medlemskap og tillatelse ved hver lesing og skriving. Det finnes ingen klientside-filtrering du kan omgå.</div>
+        </details>
+        <details>
+          <summary>Hvordan fjerner vi noen som har sluttet?</summary>
+          <div class="faq-body">Suspender eller avslutt medlemskapet under Innstillinger → Team. Tilgangen opphører umiddelbart, historikken deres blir stående intakt og tilskrevet, og endringen loggføres i revisjonsloggen.</div>
+        </details>
+        <details>
+          <summary>Støtter dere enkel pålogging (SSO)?</summary>
+          <div class="faq-body">I dag støttes Google-pålogging ved siden av e-post og passord med verifisering. Trenger dere SAML eller en annen identitetsleverandør, si fra — det står på veikartet, og kundeetterspørsel avgjør rekkefølgen.</div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-hero">
+      <div>
+        <p class="footer-kicker">Har du et spørsmål? Vil du ha en gjennomgang?</p>
+        <h2>Ett system for hele driften.</h2>
+      </div>
+      <div>
+        <p>Fortell oss hvordan driften din fungerer. Vi går gjennom de aktuelle arbeidsflytene, ser på dataene dine og blir enige om neste steg sammen med teamet vårt.</p>
+        <div class="footer-actions">
+          <a class="btn btn-onDark btn-lg" href="/nb/contact#demo">Be om en demo <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+          <a class="btn btn-outline-onDark btn-lg" href="https://docs.caspianerp.com">Les dokumentasjonen</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="/nb">
+          <img class="brand-mark" src="/assets/img/logo-mark.svg" alt="" width="30" height="30">
+          <span class="brand-name" style="color:#fff">Caspian <b>ERP</b></span>
+        </a>
+      </div>
+      <div class="footer-col">
+        <h4>Plattform</h4>
+        <ul>
+          <li><a href="/nb/modules">Alle moduler</a></li>
+          <li><a href="/nb/industries">Bransjer</a></li>
+          <li><a href="/nb/security">Sikkerhet og RBAC</a></li>
+          <li><a href="/nb/pricing">Priser</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Moduler</h4>
+        <ul>
+          <li><a href="/nb/modules/hseq">HSEQ</a></li>
+          <li><a href="/nb/modules/hr">Personal</a></li>
+          <li><a href="/nb/modules/procurement">Innkjøp</a></li>
+          <li><a href="/nb/modules/inventory">Lager</a></li>
+          <li><a href="/nb/modules/maintenance">Vedlikehold</a></li>
+          <li><a href="/nb/modules/finance">Økonomi</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Selskap</h4>
+        <ul>
+          <li><a href="/nb/about">Om oss</a></li>
+          <li><a href="https://caspiantools.com" rel="noopener">CaspianTools</a></li>
+          <li><a href="/nb/contact">Kontakt</a></li>
+          <li><a href="/nb/contact#demo">Be om en demo</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Kom i gang</h4>
+        <ul>
+          <li><a href="https://app.caspianerp.com">Logg inn</a></li>
+          <li><a href="/nb/contact#demo">Be om en demo</a></li>
+          <li><a href="https://docs.caspianerp.com">Dokumentasjon</a></li>
+          <li><a href="https://admin.caspianerp.com">Adminportal</a></li>
+          <li><a href="/nb/pricing#faq">Spørsmål om pris</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <span data-year>2026</span> CaspianTools. Caspian ERP er et CaspianTools-produkt.</p>
+      <nav aria-label="Juridisk">
+        <a href="/nb/privacy">Personvernerklæring</a>
+        <a href="/nb/terms">Vilkår for bruk</a>
+        <a href="/nb/security">Sikkerhet</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+<script src="/assets/js/site.js?v=20260908" defer></script>
+</body>
+</html>

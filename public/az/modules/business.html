@@ -1,0 +1,538 @@
+<!doctype html>
+<html lang="az">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="/assets/js/lang.js?v=20260908"></script>
+<title>Biznes — Caspian ERP</title>
+<meta name="description" content="Caspian ERP-də KPI-lar və layihələr — bütün digər modullardan gələn canlı qeydlərə görə ölçülən hədəflər və əhatə dairəsi, büdcəsi və gedişatı bir yerdə olan layihələr.">
+<link rel="canonical" href="https://caspianerp.com/az/modules/business">
+<!--i18n:alternates-->
+<link rel="alternate" hreflang="en" href="https://caspianerp.com/modules/business">
+<link rel="alternate" hreflang="az" href="https://caspianerp.com/az/modules/business">
+<link rel="alternate" hreflang="tr" href="https://caspianerp.com/tr/modules/business">
+<link rel="alternate" hreflang="ru" href="https://caspianerp.com/ru/modules/business">
+<link rel="alternate" hreflang="nb" href="https://caspianerp.com/nb/modules/business">
+<link rel="alternate" hreflang="de" href="https://caspianerp.com/de/modules/business">
+<link rel="alternate" hreflang="fr" href="https://caspianerp.com/fr/modules/business">
+<link rel="alternate" hreflang="x-default" href="https://caspianerp.com/modules/business">
+<!--/i18n:alternates-->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Caspian ERP">
+<meta property="og:title" content="Biznes — Caspian ERP">
+<meta property="og:description" content="Caspian ERP-də KPI-lar və layihələr — bütün digər modullardan gələn canlı qeydlərə görə ölçülən hədəflər və əhatə dairəsi, büdcəsi və gedişatı bir yerdə olan layihələr.">
+<meta property="og:url" content="https://caspianerp.com/az/modules/business">
+<meta property="og:image" content="https://caspianerp.com/assets/img/og-image.svg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#4f46e5">
+<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="/assets/css/site.css?v=20260908">
+<noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
+</head>
+<body>
+<a class="skip-link" href="#main">Məzmuna keç</a>
+<header class="site-header">
+  <div class="container">
+    <nav class="nav" aria-label="Əsas">
+      <a class="brand" href="/az">
+        <img class="brand-mark" src="/assets/img/logo-mark.svg" alt="" width="30" height="30">
+        <span class="brand-name">Caspian <b>ERP</b></span>
+      </a>
+      <ul class="nav-links">
+        <li><a class="nav-link" aria-current="page" href="/az/modules">Modullar</a></li>
+        <li><a class="nav-link" href="/az/industries">Sənayelər</a></li>
+        <li><a class="nav-link" href="/az/security">Təhlükəsizlik</a></li>
+        <li><a class="nav-link" href="/az/pricing">Qiymətlər</a></li>
+        <li><a class="nav-link" href="/az/about">Haqqımızda</a></li>
+      </ul>
+      <div class="nav-actions">
+        <!--i18n:switcher-->
+        <details class="lang" data-lang-switcher>
+          <summary class="lang-button" title="Dil seçin" aria-label="Dil: Azərbaycan dili"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18"/></svg><span class="lang-code">AZ</span><svg class="lang-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="lang-menu" role="group" aria-label="Dil seçin">
+            <a class="lang-option" href="/modules/business" hreflang="en" lang="en" data-lang="en">English</a>
+            <a class="lang-option" href="/az/modules/business" hreflang="az" lang="az" data-lang="az" aria-current="true">Azərbaycan dili</a>
+            <a class="lang-option" href="/tr/modules/business" hreflang="tr" lang="tr" data-lang="tr">Türkçe</a>
+            <a class="lang-option" href="/ru/modules/business" hreflang="ru" lang="ru" data-lang="ru">Русский</a>
+            <a class="lang-option" href="/nb/modules/business" hreflang="nb" lang="nb" data-lang="nb">Norsk (bokmål)</a>
+            <a class="lang-option" href="/de/modules/business" hreflang="de" lang="de" data-lang="de">Deutsch</a>
+            <a class="lang-option" href="/fr/modules/business" hreflang="fr" lang="fr" data-lang="fr">Français</a>
+          </div>
+        </details>
+        <!--/i18n:switcher-->
+        <a class="btn btn-ghost btn-sm" href="https://app.caspianerp.com">Daxil olun</a>
+        <a class="btn btn-primary btn-sm" href="/az/contact#demo">Demo tələb edin <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+        <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="mobile-menu" aria-label="Menyunu aç" data-text-open="Menyunu aç" data-text-close="Menyunu bağla">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </nav>
+  </div>
+  <div class="mobile-menu" id="mobile-menu">
+    <a class="nav-link" aria-current="page" href="/az/modules">Modullar</a>
+    <a class="nav-link" href="/az/industries">Sənayelər</a>
+    <a class="nav-link" href="/az/security">Təhlükəsizlik</a>
+    <a class="nav-link" href="/az/pricing">Qiymətlər</a>
+    <a class="nav-link" href="/az/about">Haqqımızda</a>
+    <a class="nav-link" href="https://docs.caspianerp.com">Sənədləşmə</a>
+    <a class="nav-link" href="/az/contact">Əlaqə</a>
+    <!--i18n:switcher-mobile-->
+    <div class="mobile-lang" role="group" aria-label="Dil seçin">
+      <span class="mobile-lang-label">Dil</span>
+      <div class="mobile-lang-options">
+        <a class="lang-option" href="/modules/business" hreflang="en" lang="en" data-lang="en">English</a>
+        <a class="lang-option" href="/az/modules/business" hreflang="az" lang="az" data-lang="az" aria-current="true">Azərbaycan dili</a>
+        <a class="lang-option" href="/tr/modules/business" hreflang="tr" lang="tr" data-lang="tr">Türkçe</a>
+        <a class="lang-option" href="/ru/modules/business" hreflang="ru" lang="ru" data-lang="ru">Русский</a>
+        <a class="lang-option" href="/nb/modules/business" hreflang="nb" lang="nb" data-lang="nb">Norsk (bokmål)</a>
+        <a class="lang-option" href="/de/modules/business" hreflang="de" lang="de" data-lang="de">Deutsch</a>
+        <a class="lang-option" href="/fr/modules/business" hreflang="fr" lang="fr" data-lang="fr">Français</a>
+      </div>
+    </div>
+    <!--/i18n:switcher-mobile-->
+    <div class="mobile-cta">
+      <a class="btn btn-secondary" href="https://app.caspianerp.com">Daxil olun</a>
+      <a class="btn btn-primary" href="/az/contact#demo">Demo tələb edin</a>
+    </div>
+  </div>
+</header>
+<main id="main">
+
+  <section class="hero">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Naviqasiya yolu">
+        <a href="/az/modules">Modullar</a>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg>
+        <span aria-current="page">Biznes</span>
+      </nav>
+      <span class="eyebrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>Biznes</span>
+      <h1>Hədəflər və layihələr, <span class="grad">canlı məlumatlardan ölçülür</span></h1>
+      <p class="hero-sub">Əməliyyatla eyni qeydləri oxuyan KPI ondan uzaqlaşa bilməz. İşdən yığılan, slayda yazılmayan layihə statusu da eləcə.</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary btn-lg" href="/az/contact#demo">Demo tələb edin</a>
+        <a class="btn btn-secondary btn-lg" href="https://docs.caspianerp.com">Sənədləri oxuyun</a>
+      </div>
+      <p class="hero-note">Dörd alət · Bütün modullardan oxuyur · İdarə heyəti görünüşünün mənbəyi</p>
+    </div>
+  </section>
+  <div class="container mock-wrap">
+    <p class="small muted text-center">Nümunə məlumatlarla izahedici məhsul görünüşü. <a href="/az/contact#demo">Canlı baxış tələb edin</a>.</p>
+    <div class="mock reveal" role="img" aria-label="KPI sağlamlığını, layihə statusunu və büdcə ilə faktı göstərən Caspian ERP Biznes">
+      <div class="mock-bar" aria-hidden="true">
+        <span class="mock-dot"></span><span class="mock-dot"></span><span class="mock-dot"></span>
+        <span class="mock-url">app.caspianerp.com/az/w/business/kpis</span>
+      </div>
+      <div class="mock-body" aria-hidden="true">
+        <div class="mock-rail">
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg>Ana səhifə</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/></svg>İnsan Resursları</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>HSEQ</div>
+          <div class="mock-rail-item active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>Biznes</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1"/><circle cx="18" cy="20" r="1"/><path d="M2 3h2.5l2.6 12.6a1 1 0 0 0 1 .8h8.9a1 1 0 0 0 1-.77L21 8H6"/></svg>Satınalma</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V10l6 4V10l6 4V6l6 4v11z"/><path d="M7 17h.01M13 17h.01M18 17h.01"/></svg>İstehsal</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>CRM</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V9l9-6 9 6v12"/><path d="M7 21v-8h10v8"/></svg>Anbar</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 16V6h11v10"/><path d="M14 9h4l3 3.5V16h-7z"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg>Logistika</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0 5 5L21 21l-3 .5L8.5 12A4 4 0 0 1 3 6.5l3 3 2.5-2.5-3-3z"/></svg>Tex. xidmət</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 6H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>Maliyyə</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4.5 13.5H11l-1 8.5 8.5-11.5H12z"/></svg>Səmərəlilik</div>
+        </div>
+        <div class="mock-side">
+          <div class="mock-side-title">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
+            Biznes
+          </div>
+          <div class="mock-side-item active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="1" fill="currentColor" stroke="none"/></svg>KPI-lar</div>
+          <div class="mock-side-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 2 9 5-9 5-9-5z"/><path d="m3 12 9 5 9-5"/><path d="m3 17 9 5 9-5"/></svg>Layihələr</div>
+        </div>
+        <div class="mock-main">
+          <div class="mock-topbar">
+            <div class="mock-search">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.2-3.2"/></svg>
+              İnsanları, sifarişləri, aktivləri axtarın…
+            </div>
+            <div class="mock-plus"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></div>
+            <div class="mock-avatar"></div>
+          </div>
+          <div class="mock-h1">KPI idarə paneli</div>
+          <div class="mock-tag">10 izlənilir · 8 qrafikdə · 2 risk altında</div>
+          <div class="mock-cards">
+            <div class="mock-card">
+              <div class="mock-card-head" style="color:#4f46e5">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="1" fill="currentColor" stroke="none"/></svg>
+                KPI sağlamlığı
+              </div>
+              <div class="mock-bars"><span style="height:42%"></span><span style="height:64%"></span><span style="height:52%"></span><span style="height:78%"></span><span style="height:88%"></span><span style="height:70%"></span></div>
+              <div class="mock-kpi-sub" style="margin-top:8px">8 qrafikdə · 2 risk altında</div>
+            </div>
+            <div class="mock-card">
+              <div class="mock-card-head" style="color:#e11d48">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/><path d="M12 9v4M12 17h.01"/></svg>
+                Risk altında
+              </div>
+              <div class="mock-row"><span>TRIR</span><span class="mock-pill hot">Hədəfdən yuxarı</span></div>
+              <div class="mock-row"><span>Sifariş dövrü müddəti</span><span class="mock-pill warn">11,4 gün</span></div>
+            </div>
+            <div class="mock-card">
+              <div class="mock-card-head" style="color:#0d9488">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17 10 10l4 4 7-7"/><path d="M15 7h6v6"/></svg>
+                Vaxtında çatdırılma
+              </div>
+              <div class="mock-kpi">94%</div>
+              <div class="mock-kpi-sub">Hədəf 90% · 3 bənd artıb</div>
+            </div>
+            <div class="mock-card">
+              <div class="mock-card-head" style="color:#7c3aed">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 2 9 5-9 5-9-5z"/><path d="m3 12 9 5 9-5"/><path d="m3 17 9 5 9-5"/></svg>
+                Aktiv layihələr
+              </div>
+              <div class="mock-row"><span>Quyu SOR təkmilləşdirməsi</span><span class="mock-pill ok">Aktiv</span></div>
+              <div class="mock-row"><span>SLIA tətbiqi</span><span class="mock-pill">Planlaşdırma</span></div>
+              <div class="mock-row"><span>Anbarın köçürülməsi</span><span class="mock-pill warn">Risk altında</span></div>
+            </div>
+            <div class="mock-card">
+              <div class="mock-card-head" style="color:#d97706">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 6H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                Büdcə ilə fakt
+              </div>
+              <div class="mock-kpi">83%</div>
+              <div class="mock-kpi-sub">illik büdcənin istifadə olunub · 10-cu ay</div>
+            </div>
+            <div class="mock-card">
+              <div class="mock-card-head" style="color:#0891b2">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="m8 12 3 3 5-6"/></svg>
+                Bağlanmış tədbirlər
+              </div>
+              <div class="mock-bars"><span style="height:55%"></span><span style="height:61%"></span><span style="height:70%"></span><span style="height:66%"></span><span style="height:82%"></span><span style="height:90%"></span></div>
+              <div class="mock-kpi-sub" style="margin-top:8px">Altı aylıq bağlanma nisbəti</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="section section-soft">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Caspian ERP-dən əvvəl</span>
+        <h2>Slayddakı rəqəm heç kimin rəqəmi deyil</h2>
+        <p>Bir KPI ixrac edilib, yapışdırılıb, yenidən formatlanıb və təqdim edilənə qədər o, əməliyyatın deyil, təqdimatı hazırlayan şəxsin rəqəminə çevrilir.</p>
+      </div>
+      <div class="grid grid-3">
+        <article class="card card-pad reveal">
+          <h3>Hesabat özü aylıq bir layihəyə çevrilir</h3>
+          <p class="mt-12">Kimsə hər ayın ilk həftəsini ixracları bir araya gətirməyə sərf edir. Mükafat isə artıq bitmiş bir ayın şəklidir.</p>
+        </article>
+        <article class="card card-pad reveal">
+          <h3>Hər şöbə fərqli bir həqiqət bildirir</h3>
+          <p class="mt-12">Satınalma sifarişləri bir cür sayır, maliyyə başqa cür və iclas qərar vermək əvəzinə tərifləri uzlaşdırmaqla keçir.</p>
+        </article>
+        <article class="card card-pad reveal">
+          <h3>Layihə statusu bir hissdir</h3>
+          <p class="mt-12">Gedişat ölçülmək əvəzinə təsvir olunur və gecikmənin ilk möhkəm sübutu son tarixin özü olur.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Nə edir</span>
+        <h2>Əməliyyatları idarəetmə məlumatına çevirən qat</h2>
+        <p>Qəsdən dörd alət. Bu modul BI paketi olmağa çalışmır — platformanın onsuz da saxladığı qeydləri oxuyur.</p>
+      </div>
+      <div class="grid grid-2">
+        <article class="card card-pad reveal">
+          <span class="icon-tile t-emerald"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="1" fill="currentColor" stroke="none"/></svg></span>
+          <h3 class="mt-16">Bir dəfə təyin olunan, davamlı ölçülən KPI-lar</h3>
+          <p class="mt-12">Hədəfi, məsul şəxsi və dövrü təyin edin, dəyər isə qaynaq qeydlərdən gəlsin.</p>
+          <ul class="check-list mt-16">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Məsul şəxsləri, dövrləri və həddləri olan hədəflər</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Qrafikdə, risk altında və pozulmuş vəziyyətlər şərhə ehtiyac olmadan görünür</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Tarixçə saxlanılır, ona görə trend xatirə deyil, trenddir</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Hamının gördüyü eyni rəqəm, çünki yalnız biri var</li>
+          </ul>
+        </article>
+        <article class="card card-pad reveal">
+          <span class="icon-tile t-slate"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19h16M7 16V9M12 16V5M17 16v-4"/></svg></span>
+          <h3 class="mt-16">İnsanların həqiqətən açdığı bir idarə paneli</h3>
+          <p class="mt-12">KPI idarə paneli aylıq bir artefakt deyil, canlı bir görünüşdür.</p>
+          <ul class="check-list mt-16">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>İzlənilən bütün KPI-ların cari vəziyyəti bir ekranda</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Rəqəmdən arxasındakı qeydlərə doğru dərinləşin</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Cavabdeh olduğunuz şöbəyə və ya sahəyə görə süzün</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Əməliyyatla görünüş arasında ixrac addımı yoxdur</li>
+          </ul>
+        </article>
+        <article class="card card-pad reveal">
+          <span class="icon-tile t-violet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 2 9 5-9 5-9-5z"/><path d="m3 12 9 5 9-5"/><path d="m3 17 9 5 9-5"/></svg></span>
+          <h3 class="mt-16">Əhatə dairəsi və gedişatı olan layihələr</h3>
+          <p class="mt-12">Layihələr işi, insanları və vəziyyəti saxlayır — və platformanın başqa yerlərində baş verənlərlə əlaqəli qalır.</p>
+          <ul class="check-list mt-16">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Məsul şəxsi, tarixləri və statusu olan layihə reyestri</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Əhatə dairəsini, gedişatı və komandanı saxlayan detal görünüşü</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Tapşırıqlar və görüşlər ayrıca izlənilmək əvəzinə əlavə olunur</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Yalnız sponsor üçün deyil, işi görən insanlar üçün görünür</li>
+          </ul>
+        </article>
+        <article class="card card-pad reveal">
+          <span class="icon-tile t-cyan"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17 10 10l4 4 7-7"/><path d="M15 7h6v6"/></svg></span>
+          <h3 class="mt-16">Yığmadan idarəetmə hesabatı</h3>
+          <p class="mt-12">KPI ilə qeyd eyni obyekt olduqda, aylıq paket bir tikinti işi olmaqdan çıxır.</p>
+          <ul class="check-list mt-16">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Mənbəni paylaşdıqları üçün maliyyə ilə uzlaşan rəqəmlər</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Cədvəli yenidən qurmadan mövcud olan dövr müqayisələri</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Məsul şəxslər işlədikləri sistemdə öz KPI-larına cavabdehdir</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Əməliyyatla idarə heyəti paketi arasında yenidən yazılacaq heç nə yoxdur</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-soft">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Moduldakı hər alət</span>
+        <h2>Qalanların üstündə dayanan dörd alət</h2>
+        <p>Kiçik modul, böyük təsir — o, bütün digərlərindən asılıdır.</p>
+      </div>
+      <div class="grid grid-2">
+        <div class="feature-item reveal">
+          <span class="icon-tile sm t-emerald"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="1" fill="currentColor" stroke="none"/></svg></span>
+          <div>
+            <h4>KPI-lar</h4>
+            <p>Təşkilatınızın idarə olunduğu göstəriciləri müəyyən edin — hədəf, məsul şəxs, dövr və hədd — və onları canlı qeydlərə görə izləyin.</p>
+          </div>
+        </div>
+        <div class="feature-item reveal">
+          <span class="icon-tile sm t-slate"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19h16M7 16V9M12 16V5M17 16v-4"/></svg></span>
+          <div>
+            <h4>KPI İdarə Paneli</h4>
+            <p>İzlənilən hər KPI-ın cari vəziyyəti bir ekranda, trend və hədəfə qalan fərqlə birlikdə.</p>
+          </div>
+        </div>
+        <div class="feature-item reveal">
+          <span class="icon-tile sm t-violet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 2 9 5-9 5-9-5z"/><path d="m3 12 9 5 9-5"/><path d="m3 17 9 5 9-5"/></svg></span>
+          <div>
+            <h4>Layihələr</h4>
+            <p>Layihə reyestri: məsul şəxs, tarixlər, status və büdcə — iş isə təsvir edilmək əvəzinə əlavə olunur.</p>
+          </div>
+        </div>
+        <div class="feature-item reveal">
+          <span class="icon-tile sm t-cyan"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/></svg></span>
+          <div>
+            <h4>Layihə Detalı</h4>
+            <p>Bir layihə bütövlükdə — əhatə dairəsi, gedişat, komandası və onu irəli aparan tapşırıqlar və görüşlər.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section dark-section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Bağlıdır, sonradan bərkidilməyib</span>
+        <h2>KPI yalnız altındakı qeyd qədər yaxşıdır</h2>
+        <p>Bu modulun demək olar ki, öz məlumatı yoxdur. Məsələ elə budur.</p>
+      </div>
+      <div class="grid grid-3">
+        <div class="dark-card reveal">
+          <span class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span>
+          <h3 class="mt-16">Təhlükəsizlik göstəriciləri</h3>
+          <p>Müşahidə tezliyi, açıq hadisələr və gecikmiş tədbirlər əl ilə bildirilmək əvəzinə HSEQ reyestrindən sayılır.</p>
+          <p class="mt-12"><a class="link-arrow" href="/az/modules/hseq">HSEQ-ə bax<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></p>
+        </div>
+        <div class="dark-card reveal">
+          <span class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v20M17 6H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></span>
+          <h3 class="mt-16">Maliyyə göstəriciləri</h3>
+          <p>Büdcə ilə fakt mühasibinizin işlədiyi eyni mühasibat kitabından gəlir, ona görə iki versiya ziddiyyət təşkil edə bilməz.</p>
+          <p class="mt-12"><a class="link-arrow" href="/az/modules/finance">Maliyyəyə bax<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></p>
+        </div>
+        <div class="dark-card reveal">
+          <span class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 4.5 13.5H11l-1 8.5 8.5-11.5H12z"/></svg></span>
+          <h3 class="mt-16">İcra</h3>
+          <p>Layihə gedişatı insanların artıq Səmərəlilikdə tamamladığı tapşırıqlardan, görüşlərdən və tədbirlərdən qurulur.</p>
+          <p class="mt-12"><a class="link-arrow" href="/az/modules/efficiency">Səmərəliliyə bax<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Orada kim yaşayır</span>
+        <h2>İdarəetmə qatı, ayrıca sistem olmadan</h2>
+        <p>Hazırda bir cədvəli paylaşan üç nəfər.</p>
+      </div>
+      <div class="grid grid-3">
+        <article class="card card-pad reveal">
+          <span class="icon-tile sm t-emerald"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg></span>
+          <h3 class="mt-16">Baş direktor</h3>
+          <p class="mt-12">Bir idarə panelini açır və aylıq paketin yığılmasını gözləmədən təşkilatın hədəfdə olub-olmadığını görür.</p>
+        </article>
+        <article class="card card-pad reveal">
+          <span class="icon-tile sm t-violet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 2 9 5-9 5-9-5z"/><path d="m3 12 9 5 9-5"/><path d="m3 17 9 5 9-5"/></svg></span>
+          <h3 class="mt-16">Layihə meneceri</h3>
+          <p class="mt-12">Layihəni işin baş verdiyi yerdə aparır, ona görə status ayrıca hesabat işi deyil, işin nəticəsidir.</p>
+        </article>
+        <article class="card card-pad reveal">
+          <span class="icon-tile sm t-cyan"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="1" fill="currentColor" stroke="none"/></svg></span>
+          <h3 class="mt-16">Şöbə rəhbəri</h3>
+          <p class="mt-12">Bir neçə KPI-a sahibdir, onları şöbəsini idarə etdiyi eyni sistemdə görür və canlı rəqəmlərlə qiymətləndirilir.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-soft">
+    <div class="container split">
+      <div>
+        <span class="eyebrow">Formalaşdırmaq sizin əlinizdə</span>
+        <h2 class="mt-16">Təşkilatınızın həqiqətən nə ilə idarə olunduğunu müəyyən edin</h2>
+        <p class="lead mt-12">Heç bir iki əməliyyat eyni göstəriciləri izləmir. Burada heç nə sabit kodlanmayıb.</p>
+        <ul class="check-list mt-24">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>İstifadə etdiyiniz hədəflər, dövrlər və həddlərlə öz KPI-larınızı yaradın</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Hər KPI-a bir məsul şəxs təyin edin ki, məsuliyyətin adı olsun</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Hansı şöbələrin hansı KPI və layihələri görəcəyinə qərar verin</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Layihələri öz status dəyərləriniz və mərhələlərinizlə aparın</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>KPI ilə deyil, şöbə ilə idarə edirsinizsə, modulu tamamilə gizlədin</li>
+        </ul>
+        <p class="mt-24"><a class="link-arrow" href="/az/modules/administration">Administratorun nəyə nəzarət etdiyinə bax<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></p>
+      </div>
+      <div class="split-media">
+        <div class="panel reveal">
+          <div class="panel-head reveal">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21v-7M4 10V3M12 21v-9M12 8V3M20 21v-5M20 12V3M1 14h6M9 8h6M17 16h6"/></svg>
+            Biznes · Parametrlər
+          </div>
+          <div class="panel-body reveal">
+            <table class="table-mock">
+              <thead><tr><th>Parametr</th><th>Dəyər</th></tr></thead>
+              <tbody>
+                <tr><td>KPI dövrü</td><td><span class="badge badge-indigo">Aylıq</span></td></tr>
+                <tr><td>Risk həddi</td><td><span class="badge badge-amber">hədəfin 85%-i</span></td></tr>
+                <tr><td>KPI görünürlüyü</td><td><span class="badge badge-violet">Məsul şəxs və menecerlər</span></td></tr>
+                <tr><td>Layihə statusları</td><td><span class="badge badge-cyan">Fərdi (5)</span></td></tr>
+                <tr><td>İdarə panelinin yenilənməsi</td><td><span class="badge badge-emerald">Nümunə</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2>Biznesə dair bizə verilən suallar</h2>
+      </div>
+      <div class="faq">
+        <details>
+          <summary>KPI-lar avtomatik yenilənir?</summary>
+          <div class="faq-body">Onlar platformanın saxladığı qeydlərdən oxuyur, ona görə rəqəmlər iş kimi hərəkət edir. Sizin təyin etdiyiniz göstərici, onun hədəfi və məsul şəxsidir — rəqəmin özü deyil.</div>
+        </details>
+        <details>
+          <summary>Bu, BI alətinin əvəzidirmi?</summary>
+          <div class="faq-body">Xeyr və özünü elə göstərmir. Bu, artıq Caspian ERP-də olan məlumatın idarəetmə görünüşüdür. Xarici mənbələr üzrə modelləşdirmə lazımdırsa, ixrac edin və BI alətinizdən istifadə edin — buradakı dəyər gündəlik görünüş üçün heç bir ixracın lazım olmamasıdır.</div>
+        </details>
+        <details>
+          <summary>Bir layihə bir neçə modulu əhatə edə bilərmi?</summary>
+          <div class="faq-body">Bu, adi haldır. Bir layihə adətən Səmərəlilikdən tapşırıq və görüşləri, Maliyyədən xərcləri və İnsan Resurslarından insanları özünə çəkir. Layihə qeydi onların birlikdə göründüyü yerdir.</div>
+        </details>
+        <details>
+          <summary>İdarə panelini kim görə bilər?</summary>
+          <div class="faq-body">Kimə icazə versəniz. KPI görünürlüyü hər şey kimi icazə ilə idarə olunur, ona görə bəzi göstəriciləri bütün təşkilata aça, bəzilərini isə məsul şəxs və rəhbərliklə məhdudlaşdıra bilərsiniz.</div>
+        </details>
+      </div>
+      <p class="text-center mt-32">
+        <a class="link-arrow" href="/az/modules">Bütün modullara bax<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+      </p>
+    </div>
+  </section>
+
+
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-hero">
+      <div>
+        <p class="footer-kicker">Sualınız var? Sizə göstərməyimizi istəyirsiniz?</p>
+        <h2>Bütün əməliyyat üçün bir sistem.</h2>
+      </div>
+      <div>
+        <p>Əməliyyatınızın necə işlədiyini bizə danışın. Uyğun iş axınlarını birlikdə nəzərdən keçirək, məlumatlarınıza baxaq və komandamızla növbəti addımları razılaşdıraq.</p>
+        <div class="footer-actions">
+          <a class="btn btn-onDark btn-lg" href="/az/contact#demo">Demo tələb edin <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+          <a class="btn btn-outline-onDark btn-lg" href="https://docs.caspianerp.com">Sənədləri oxuyun</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="/az">
+          <img class="brand-mark" src="/assets/img/logo-mark.svg" alt="" width="30" height="30">
+          <span class="brand-name" style="color:#fff">Caspian <b>ERP</b></span>
+        </a>
+      </div>
+      <div class="footer-col">
+        <h4>Platforma</h4>
+        <ul>
+          <li><a href="/az/modules">Bütün modullar</a></li>
+          <li><a href="/az/industries">Sənayelər</a></li>
+          <li><a href="/az/security">Təhlükəsizlik və RBAC</a></li>
+          <li><a href="/az/pricing">Qiymətlər</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Modullar</h4>
+        <ul>
+          <li><a href="/az/modules/hseq">HSEQ</a></li>
+          <li><a href="/az/modules/hr">İnsan Resursları</a></li>
+          <li><a href="/az/modules/procurement">Satınalma</a></li>
+          <li><a href="/az/modules/inventory">Anbar</a></li>
+          <li><a href="/az/modules/maintenance">Texniki xidmət</a></li>
+          <li><a href="/az/modules/finance">Maliyyə</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Şirkət</h4>
+        <ul>
+          <li><a href="/az/about">Haqqımızda</a></li>
+          <li><a href="https://caspiantools.com" rel="noopener">CaspianTools</a></li>
+          <li><a href="/az/contact">Əlaqə</a></li>
+          <li><a href="/az/contact#demo">Demo tələb edin</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Başlayın</h4>
+        <ul>
+          <li><a href="https://app.caspianerp.com">Daxil olun</a></li>
+          <li><a href="/az/contact#demo">Demo tələb edin</a></li>
+          <li><a href="https://docs.caspianerp.com">Sənədləşmə</a></li>
+          <li><a href="https://admin.caspianerp.com">Admin portalı</a></li>
+          <li><a href="/az/pricing#faq">Qiymət sualları</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <span data-year>2026</span> CaspianTools. Caspian ERP CaspianTools məhsuludur.</p>
+      <nav aria-label="Hüquqi">
+        <a href="/az/privacy">Məxfilik Siyasəti</a>
+        <a href="/az/terms">İstifadə Şərtləri</a>
+        <a href="/az/security">Təhlükəsizlik</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+<script src="/assets/js/site.js?v=20260908" defer></script>
+</body>
+</html>

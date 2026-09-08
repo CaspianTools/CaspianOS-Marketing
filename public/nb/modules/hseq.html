@@ -1,0 +1,627 @@
+<!doctype html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="/assets/js/lang.js?v=20260908"></script>
+<title>HSEQ — Caspian ERP</title>
+<meta name="description" content="Risikovurderinger, observasjoner, hendelser, granskninger, arbeidstillatelser, løfteplaner, helse og overvåking — HSEQ som kjører på de samme person- og utstyrsdataene som resten av driften.">
+<link rel="canonical" href="https://caspianerp.com/nb/modules/hseq">
+<!--i18n:alternates-->
+<link rel="alternate" hreflang="en" href="https://caspianerp.com/modules/hseq">
+<link rel="alternate" hreflang="az" href="https://caspianerp.com/az/modules/hseq">
+<link rel="alternate" hreflang="tr" href="https://caspianerp.com/tr/modules/hseq">
+<link rel="alternate" hreflang="ru" href="https://caspianerp.com/ru/modules/hseq">
+<link rel="alternate" hreflang="nb" href="https://caspianerp.com/nb/modules/hseq">
+<link rel="alternate" hreflang="de" href="https://caspianerp.com/de/modules/hseq">
+<link rel="alternate" hreflang="fr" href="https://caspianerp.com/fr/modules/hseq">
+<link rel="alternate" hreflang="x-default" href="https://caspianerp.com/modules/hseq">
+<!--/i18n:alternates-->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Caspian ERP">
+<meta property="og:title" content="HSEQ — Caspian ERP">
+<meta property="og:description" content="Risikovurderinger, observasjoner, hendelser, granskninger, arbeidstillatelser, løfteplaner, helse og overvåking — HSEQ som kjører på de samme person- og utstyrsdataene som resten av driften.">
+<meta property="og:url" content="https://caspianerp.com/nb/modules/hseq">
+<meta property="og:image" content="https://caspianerp.com/assets/img/og-image.svg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#4f46e5">
+<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="/assets/css/site.css?v=20260908">
+<noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
+</head>
+<body>
+<a class="skip-link" href="#main">Gå til innholdet</a>
+<header class="site-header">
+  <div class="container">
+    <nav class="nav" aria-label="Hoved">
+      <a class="brand" href="/nb">
+        <img class="brand-mark" src="/assets/img/logo-mark.svg" alt="" width="30" height="30">
+        <span class="brand-name">Caspian <b>ERP</b></span>
+      </a>
+      <ul class="nav-links">
+        <li><a class="nav-link" aria-current="page" href="/nb/modules">Moduler</a></li>
+        <li><a class="nav-link" href="/nb/industries">Bransjer</a></li>
+        <li><a class="nav-link" href="/nb/security">Sikkerhet</a></li>
+        <li><a class="nav-link" href="/nb/pricing">Priser</a></li>
+        <li><a class="nav-link" href="/nb/about">Om oss</a></li>
+      </ul>
+      <div class="nav-actions">
+        <!--i18n:switcher-->
+        <details class="lang" data-lang-switcher>
+          <summary class="lang-button" title="Velg språk" aria-label="Språk: Norsk (bokmål)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18"/></svg><span class="lang-code">NB</span><svg class="lang-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="lang-menu" role="group" aria-label="Velg språk">
+            <a class="lang-option" href="/modules/hseq" hreflang="en" lang="en" data-lang="en">English</a>
+            <a class="lang-option" href="/az/modules/hseq" hreflang="az" lang="az" data-lang="az">Azərbaycan dili</a>
+            <a class="lang-option" href="/tr/modules/hseq" hreflang="tr" lang="tr" data-lang="tr">Türkçe</a>
+            <a class="lang-option" href="/ru/modules/hseq" hreflang="ru" lang="ru" data-lang="ru">Русский</a>
+            <a class="lang-option" href="/nb/modules/hseq" hreflang="nb" lang="nb" data-lang="nb" aria-current="true">Norsk (bokmål)</a>
+            <a class="lang-option" href="/de/modules/hseq" hreflang="de" lang="de" data-lang="de">Deutsch</a>
+            <a class="lang-option" href="/fr/modules/hseq" hreflang="fr" lang="fr" data-lang="fr">Français</a>
+          </div>
+        </details>
+        <!--/i18n:switcher-->
+        <a class="btn btn-ghost btn-sm" href="https://app.caspianerp.com">Logg inn</a>
+        <a class="btn btn-primary btn-sm" href="/nb/contact#demo">Be om en demo <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+        <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="mobile-menu" aria-label="Åpne menyen" data-text-open="Åpne menyen" data-text-close="Lukk menyen">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </nav>
+  </div>
+  <div class="mobile-menu" id="mobile-menu">
+    <a class="nav-link" aria-current="page" href="/nb/modules">Moduler</a>
+    <a class="nav-link" href="/nb/industries">Bransjer</a>
+    <a class="nav-link" href="/nb/security">Sikkerhet</a>
+    <a class="nav-link" href="/nb/pricing">Priser</a>
+    <a class="nav-link" href="/nb/about">Om oss</a>
+    <a class="nav-link" href="https://docs.caspianerp.com">Dokumentasjon</a>
+    <a class="nav-link" href="/nb/contact">Kontakt</a>
+    <!--i18n:switcher-mobile-->
+    <div class="mobile-lang" role="group" aria-label="Velg språk">
+      <span class="mobile-lang-label">Språk</span>
+      <div class="mobile-lang-options">
+        <a class="lang-option" href="/modules/hseq" hreflang="en" lang="en" data-lang="en">English</a>
+        <a class="lang-option" href="/az/modules/hseq" hreflang="az" lang="az" data-lang="az">Azərbaycan dili</a>
+        <a class="lang-option" href="/tr/modules/hseq" hreflang="tr" lang="tr" data-lang="tr">Türkçe</a>
+        <a class="lang-option" href="/ru/modules/hseq" hreflang="ru" lang="ru" data-lang="ru">Русский</a>
+        <a class="lang-option" href="/nb/modules/hseq" hreflang="nb" lang="nb" data-lang="nb" aria-current="true">Norsk (bokmål)</a>
+        <a class="lang-option" href="/de/modules/hseq" hreflang="de" lang="de" data-lang="de">Deutsch</a>
+        <a class="lang-option" href="/fr/modules/hseq" hreflang="fr" lang="fr" data-lang="fr">Français</a>
+      </div>
+    </div>
+    <!--/i18n:switcher-mobile-->
+    <div class="mobile-cta">
+      <a class="btn btn-secondary" href="https://app.caspianerp.com">Logg inn</a>
+      <a class="btn btn-primary" href="/nb/contact#demo">Be om en demo</a>
+    </div>
+  </div>
+</header>
+<main id="main">
+
+  <section class="hero">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Brødsmulesti">
+        <a href="/nb/modules">Moduler</a>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg>
+        <span aria-current="page">HSEQ</span>
+      </nav>
+      <span class="eyebrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Helse, miljø, sikkerhet og kvalitet</span>
+      <h1>Sikkerhet som kjører på <span class="grad">levende data, ikke permer</span></h1>
+      <p class="hero-sub">Tillatelser, risikovurderinger, observasjoner, hendelser og granskninger i ett register — signert av folk hvis kompetanse systemet allerede kjenner.</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary btn-lg" href="/nb/contact#demo">Be om en demo</a>
+        <a class="btn btn-secondary btn-lg" href="https://docs.caspianerp.com">Les dokumentasjonen</a>
+      </div>
+      <p class="hero-note">Ni verktøy · Bygd for arbeidstillatelsesdrift · Leser kompetanse fra Personal</p>
+    </div>
+  </section>
+  <div class="container mock-wrap">
+    <p class="small muted text-center">Illustrerende produktvisning med eksempeldata. <a href="/nb/contact#demo">Be om en live gjennomgang</a>.</p>
+    <div class="mock reveal" role="img" aria-label="Caspian ERP HSEQ som viser åpne arbeidstillatelser, hendelsesstatus, observasjonstrend og forfalte tiltak">
+      <div class="mock-bar" aria-hidden="true">
+        <span class="mock-dot"></span><span class="mock-dot"></span><span class="mock-dot"></span>
+        <span class="mock-url">app.caspianerp.com/nb/w/hseq/permits</span>
+      </div>
+      <div class="mock-body" aria-hidden="true">
+        <div class="mock-rail">
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg>Hjem</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/></svg>Personal</div>
+          <div class="mock-rail-item active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>HSEQ</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>Virks.</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1"/><circle cx="18" cy="20" r="1"/><path d="M2 3h2.5l2.6 12.6a1 1 0 0 0 1 .8h8.9a1 1 0 0 0 1-.77L21 8H6"/></svg>Innkjøp</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V10l6 4V10l6 4V6l6 4v11z"/><path d="M7 17h.01M13 17h.01M18 17h.01"/></svg>Prod.</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>CRM</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V9l9-6 9 6v12"/><path d="M7 21v-8h10v8"/></svg>Lager</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 16V6h11v10"/><path d="M14 9h4l3 3.5V16h-7z"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg>Logistikk</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0 5 5L21 21l-3 .5L8.5 12A4 4 0 0 1 3 6.5l3 3 2.5-2.5-3-3z"/></svg>Vedlikeh.</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 6H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>Økonomi</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4.5 13.5H11l-1 8.5 8.5-11.5H12z"/></svg>Effektiv.</div>
+        </div>
+        <div class="mock-side">
+          <div class="mock-side-title">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            HSEQ
+          </div>
+          <div class="mock-side-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/><path d="M12 9v4M12 17h.01"/></svg>Risikovurderinger</div>
+          <div class="mock-side-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg>Observasjoner</div>
+          <div class="mock-side-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/><path d="M12 9v4M12 17h.01"/></svg>Hendelser</div>
+          <div class="mock-side-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.2-3.2"/></svg>Granskninger</div>
+          <div class="mock-side-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 14 16 9"/><path d="M4.5 18a9 9 0 1 1 15 0"/><circle cx="12" cy="14" r="1.5"/></svg>Overvåking</div>
+          <div class="mock-side-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20s-7-4.3-7-9a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 4.7-7 9-7 9z"/></svg>Helse</div>
+          <div class="mock-side-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/></svg>Dokumenter</div>
+          <div class="mock-side-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3h6v6"/><path d="M10 14 20 4"/><path d="M20 13v6a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h6"/></svg>Løfteplaner</div>
+          <div class="mock-side-item active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>Arbeidstillatelser</div>
+        </div>
+        <div class="mock-main">
+          <div class="mock-topbar">
+            <div class="mock-search">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.2-3.2"/></svg>
+              Søk etter personer, ordrer, utstyr …
+            </div>
+            <div class="mock-plus"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></div>
+            <div class="mock-avatar"></div>
+          </div>
+          <div class="mock-h1">Arbeidstillatelser</div>
+          <div class="mock-tag">7 åpne · 2 venter på andre signatur</div>
+          <div class="mock-cards">
+            <div class="mock-card">
+              <div class="mock-card-head" style="color:#e11d48">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
+                Åpne tillatelser
+              </div>
+              <div class="mock-row"><span>PTW-0241 · Varmt arbeid</span><span class="mock-pill hot">Utløper om 2 t</span></div>
+              <div class="mock-row"><span>PTW-0244 · Trangt rom</span><span class="mock-pill">Åpen</span></div>
+              <div class="mock-row"><span>PTW-0245 · Isolering</span><span class="mock-pill warn">Signatur</span></div>
+            </div>
+            <div class="mock-card">
+              <div class="mock-card-head" style="color:#d97706">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/><path d="M12 9v4M12 17h.01"/></svg>
+                Åpne hendelser
+              </div>
+              <div class="mock-kpi">2</div>
+              <div class="mock-kpi-sub">1 under gransking · 0 meldepliktige</div>
+            </div>
+            <div class="mock-card">
+              <div class="mock-card-head" style="color:#0891b2">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg>
+                Observasjoner
+              </div>
+              <div class="mock-bars"><span style="height:32%"></span><span style="height:44%"></span><span style="height:41%"></span><span style="height:58%"></span><span style="height:66%"></span><span style="height:79%"></span></div>
+              <div class="mock-kpi-sub" style="margin-top:8px">318 dette kvartalet · 71 % sikre handlinger</div>
+            </div>
+            <div class="mock-card">
+              <div class="mock-card-head" style="color:#4f46e5">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6h11M9 12h11M9 18h11M4 6h.01M4 12h.01M4 18h.01"/></svg>
+                Forfalte tiltak
+              </div>
+              <div class="mock-row"><span>Rekkverk · Dekk 2</span><span class="mock-pill hot">6 d</span></div>
+              <div class="mock-row"><span>Oppfriskning av sikker-jobb-samtale</span><span class="mock-pill warn">2 d</span></div>
+              <div class="mock-row"><span>Skilting · Lager</span><span class="mock-pill">I dag</span></div>
+            </div>
+            <div class="mock-card">
+              <div class="mock-card-head" style="color:#7c3aed">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3h6v6"/><path d="M10 14 20 4"/><path d="M20 13v6a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h6"/></svg>
+                Løfteplaner
+              </div>
+              <div class="mock-row"><span>LP-118 · Flytting av skid</span><span class="mock-pill ok">Godkjent</span></div>
+              <div class="mock-row"><span>LP-119 · Stigerør</span><span class="mock-pill warn">Gjennomgang</span></div>
+            </div>
+            <div class="mock-card">
+              <div class="mock-card-head" style="color:#0d9488">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20s-7-4.3-7-9a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 4.7-7 9-7 9z"/></svg>
+                Helseattesters gyldighet
+              </div>
+              <div class="mock-kpi">96%</div>
+              <div class="mock-kpi-sub">5 helseattester utløper om 60 d</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="section section-soft">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Før Caspian ERP</span>
+        <h2>Sikkerhetssystemet og driften er to ulike systemer</h2>
+        <p>Enhver entreprenør kjenner formen på det: papirene sier én ting, arbeidsstedet gjør noe annet, og gapet blir først synlig etter at noe har skjedd.</p>
+      </div>
+      <div class="grid grid-3">
+        <article class="card card-pad reveal">
+          <h3>Tillatelser lever på papir ved porten</h3>
+          <p class="mt-12">En tillatelse signert på en skriveplate kan ikke sjekkes mot et opplæringsbevis, ikke finnes fra kontoret og ikke telles ved månedsslutt.</p>
+        </article>
+        <article class="card card-pad reveal">
+          <h3>Observasjoner havner i en kasse</h3>
+          <p class="mt-12">Kortene samles inn, skrives av uker senere, og trenden alle mistenkte, bekreftes lenge etter at vinduet for å handle er lukket.</p>
+        </article>
+        <article class="card card-pad reveal">
+          <h3>Granskninger gjenforteller hendelsen</h3>
+          <p class="mt-12">Uten en strukturert metode blir en gransking en fortelling. Tiltak tildeles en avdeling i stedet for en person, og ingen følger med på om de ble lukket.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Hva det gjør</span>
+        <h2>Hele HSEQ-syklusen, i ett register</h2>
+        <p>Fra fare til barriere, fra observasjon til trend, fra hendelse til lukket tiltak — holdt som data og ikke som dokumenter.</p>
+      </div>
+      <div class="grid grid-2">
+        <article class="card card-pad reveal">
+          <span class="icon-tile t-amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/><path d="M12 9v4M12 17h.01"/></svg></span>
+          <h3 class="mt-16">Risikovurderinger med reelle barrierer</h3>
+          <p class="mt-12">Farer, risikovurderinger og barrierene som reduserer dem, holdt som strukturerte data dere kan revidere og gjenbruke.</p>
+          <ul class="check-list mt-16">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Fare, risikovurdering og barrierer registrert per aktivitet</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Revidert og utstedt på nytt i stedet for kopiert</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Referert av tillatelser, så vurderingen ikke blir et eget ærend</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Filtrerbare på lokasjon, aktivitet og restrisiko</li>
+          </ul>
+        </article>
+        <article class="card card-pad reveal">
+          <span class="icon-tile t-rose"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></span>
+          <h3 class="mt-16">Arbeidstillatelser signert av navngitte personer</h3>
+          <p class="mt-12">En tillatelse opprettes, kontrolleres, godkjennes og lukkes — og hver signatur er en person systemet kjenner.</p>
+          <ul class="check-list mt-16">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Tillatelsestyper konfigurert etter hvordan driften faktisk fungerer</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Signatarene er personalposter med gyldige sertifikater</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Levende oversikt over hvilke tillatelser som er åpne, og hvor</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Lukkede tillatelser forblir søkbare som dokumentasjon</li>
+          </ul>
+        </article>
+        <article class="card card-pad reveal">
+          <span class="icon-tile t-cyan"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg></span>
+          <h3 class="mt-16">Observasjoner som blir en trend</h3>
+          <p class="mt-12">Sikre og usikre observasjoner registrert i felt på mobil, aggregert i det øyeblikket de sendes inn.</p>
+          <ul class="check-list mt-16">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Sendes inn fra mobilnettleseren på arbeidsstedet</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Kategorisert, så mønstre trer frem uten manuell koding</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Tiltak opprettes rett fra en observasjon</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Talt med i dashbordet samme dag, ikke neste måned</li>
+          </ul>
+        </article>
+        <article class="card card-pad reveal">
+          <span class="icon-tile t-violet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.2-3.2"/></svg></span>
+          <h3 class="mt-16">Hendelser og granskninger som lukkes</h3>
+          <p class="mt-12">Meld hendelsen, gjennomfør granskningen, tildel tiltak til personer, og følg dem til lukking.</p>
+          <ul class="check-list mt-16">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Hendelsespost med klassifisering, lokasjon og strakstiltak</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Granskningen er knyttet til hendelsen sin, ikke arkivert for seg</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Tiltak eies av en navngitt person med frist</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Åpne tiltak er synlige på startskjermen til den som eier dem</li>
+          </ul>
+        </article>
+        <article class="card card-pad reveal">
+          <span class="icon-tile t-emerald"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-7-4.3-7-9a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 4.7-7 9-7 9z"/></svg></span>
+          <h3 class="mt-16">Helse og overvåking</h3>
+          <p class="mt-12">Helseattester og helse- eller miljøovervåking holdes sammen med personen og lokasjonen de hører til.</p>
+          <ul class="check-list mt-16">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Helseattester med utløpsdato mater de samme kompetansekontrollene</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Overvåkingsrunder og målinger registrert mot en lokasjon</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Avvik løftes frem i stedet for å bli borte i en logg</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Begrenset til rollene som skal se dem</li>
+          </ul>
+        </article>
+        <article class="card card-pad reveal">
+          <span class="icon-tile t-teal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3h6v6"/><path d="M10 14 20 4"/><path d="M20 13v6a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h6"/></svg></span>
+          <h3 class="mt-16">Løfteplaner og styrte dokumenter</h3>
+          <p class="mt-12">Aktivitetene med høyest konsekvens og dokumentene som styrer dem, versjonert og mulige å finne.</p>
+          <ul class="check-list mt-16">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Løfteplaner med utstyr, personell og godkjenning</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>HSEQ-dokumentregister med gjeldende versjoner</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Dokumenter refereres fra aktivitetene som bruker dem</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Ett søk på tvers av planer, tillatelser og dokumenter</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-tight section-soft">
+    <div class="container">
+      <div class="section-head">
+        <h2>Fra en observasjon til et lukket tiltak</h2>
+        <p>Den samme kjeden gjelder enten det startet som et kort i felt eller som en meldepliktig hendelse.</p>
+      </div>
+      <div class="flow reveal">
+        <div class="flow-step done"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg>Observasjon</div>
+        <span class="flow-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
+        <div class="flow-step done"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/><path d="M12 9v4M12 17h.01"/></svg>Hendelse opprettet</div>
+        <span class="flow-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
+        <div class="flow-step"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.2-3.2"/></svg>Granskning</div>
+        <span class="flow-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
+        <div class="flow-step"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6h11M9 12h11M9 18h11M4 6h.01M4 12h.01M4 18h.01"/></svg>Tiltak tildelt</div>
+        <span class="flow-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
+        <div class="flow-step"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="m8 12 3 3 5-6"/></svg>Lukking verifisert</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Hvert verktøy i modulen</span>
+        <h2>Ni verktøy på tvers av helse, miljø, sikkerhet og kvalitet</h2>
+        <p>Hva hvert av dem er, sagt enkelt.</p>
+      </div>
+      <div class="grid grid-2">
+        <div class="feature-item reveal">
+          <span class="icon-tile sm t-amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/><path d="M12 9v4M12 17h.01"/></svg></span>
+          <div>
+            <h4>Risikovurderinger</h4>
+            <p>Farer, risikovurderinger og barrierer per aktivitet, revidert i sykluser og referert av arbeidet som støtter seg på dem.</p>
+          </div>
+        </div>
+        <div class="feature-item reveal">
+          <span class="icon-tile sm t-cyan"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg></span>
+          <div>
+            <h4>Observasjoner</h4>
+            <p>Sikre og usikre observasjoner registrert i felt, kategorisert, trendet og omgjort til tiltak.</p>
+          </div>
+        </div>
+        <div class="feature-item reveal">
+          <span class="icon-tile sm t-rose"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/><path d="M12 9v4M12 17h.01"/></svg></span>
+          <div>
+            <h4>Hendelser</h4>
+            <p>Hendelsesregisteret — klassifisering, lokasjon, involverte personer, strakstiltak og status.</p>
+          </div>
+        </div>
+        <div class="feature-item reveal">
+          <span class="icon-tile sm t-violet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.2-3.2"/></svg></span>
+          <div>
+            <h4>Granskninger</h4>
+            <p>Strukturert oppfølging knyttet til hendelsen, med funn og tiltak som har eiere og frister.</p>
+          </div>
+        </div>
+        <div class="feature-item reveal">
+          <span class="icon-tile sm t-teal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 14 16 9"/><path d="M4.5 18a9 9 0 1 1 15 0"/><circle cx="12" cy="14" r="1.5"/></svg></span>
+          <div>
+            <h4>Overvåking</h4>
+            <p>Planlagt helse-, hygiene- og miljøovervåking registrert mot lokasjoner, med avvik løftet frem.</p>
+          </div>
+        </div>
+        <div class="feature-item reveal">
+          <span class="icon-tile sm t-emerald"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-7-4.3-7-9a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 4.7-7 9-7 9z"/></svg></span>
+          <div>
+            <h4>Helse</h4>
+            <p>Helseattester og medisinske data holdt på personen, med utløpsdatoer som mater kompetansekontrollene.</p>
+          </div>
+        </div>
+        <div class="feature-item reveal">
+          <span class="icon-tile sm t-slate"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/></svg></span>
+          <div>
+            <h4>Dokumenter</h4>
+            <p>HSEQ-dokumentregisteret — prosedyrer, standarder og skjemaer, versjonert og søkbart.</p>
+          </div>
+        </div>
+        <div class="feature-item reveal">
+          <span class="icon-tile sm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3h6v6"/><path d="M10 14 20 4"/><path d="M20 13v6a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h6"/></svg></span>
+          <div>
+            <h4>Løfteplaner</h4>
+            <p>Løfteplanlegging med utstyr, personell, metode og godkjenning, holdt som data og ikke som en utskrift.</p>
+          </div>
+        </div>
+        <div class="feature-item reveal">
+          <span class="icon-tile sm t-rose"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></span>
+          <div>
+            <h4>Arbeidstillatelser</h4>
+            <p>Opprett, kontroller, godkjenn og lukk tillatelser, med signatarer hentet fra personalposter som har gyldige sertifikater.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section dark-section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Sammenkoblet, ikke påmontert</span>
+        <h2>Hvorfor sikkerhet fungerer bedre inne i ERP-et</h2>
+        <p>En tillatelse som kan lese opplæringsmatrisen, er et helt annet instrument enn en som ikke kan.</p>
+      </div>
+      <div class="grid grid-3">
+        <div class="dark-card reveal">
+          <span class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/></svg></span>
+          <h3 class="mt-16">Kompetanse fra Personal</h3>
+          <p>Signatarer, tillatelsesinnehavere og løfteledere er personalposter — så et utløpt sertifikat er synlig før jobben starter, ikke etterpå.</p>
+          <p class="mt-12"><a class="link-arrow" href="/nb/modules/hr">Se Personal<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></p>
+        </div>
+        <div class="dark-card reveal">
+          <span class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a4 4 0 0 0 5 5L21 21l-3 .5L8.5 12A4 4 0 0 1 3 6.5l3 3 2.5-2.5-3-3z"/></svg></span>
+          <h3 class="mt-16">Utstyr fra Vedlikehold</h3>
+          <p>Utstyret i en løfteplan eller en hendelse er den samme utstyrsposten som bærer kalibrerings- og servicehistorikken.</p>
+          <p class="mt-12"><a class="link-arrow" href="/nb/modules/maintenance">Se Vedlikehold<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></p>
+        </div>
+        <div class="dark-card reveal">
+          <span class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 4.5 13.5H11l-1 8.5 8.5-11.5H12z"/></svg></span>
+          <h3 class="mt-16">Tiltak blir til arbeid</h3>
+          <p>Granskningstiltak havner i Oppgaver med eier og frist, på den samme listen folk allerede jobber fra.</p>
+          <p class="mt-12"><a class="link-arrow" href="/nb/modules/efficiency">Se Effektivitet<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Hvem som bor i den</span>
+        <h2>For dem som bærer ansvaret</h2>
+        <p>Fra HMS-rådgiveren til den som signerer på arbeidsstedet.</p>
+      </div>
+      <div class="grid grid-3">
+        <article class="card card-pad reveal">
+          <span class="icon-tile sm t-amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></span>
+          <h3 class="mt-16">HMS-rådgiver</h3>
+          <p class="mt-12">Driver observasjonsprogrammet, gransker, følger tiltak til lukking og henter månedstallene fra levende data.</p>
+        </article>
+        <article class="card card-pad reveal">
+          <span class="icon-tile sm t-rose"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></span>
+          <h3 class="mt-16">Tillatelsesutsteder</h3>
+          <p class="mt-12">Oppretter og lukker tillatelser i visshet om at hver signatars kompetanse allerede er sjekket mot matrisen.</p>
+        </article>
+        <article class="card card-pad reveal">
+          <span class="icon-tile sm t-violet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg></span>
+          <h3 class="mt-16">Driftsleder</h3>
+          <p class="mt-12">Ser åpne hendelser, forfalte tiltak og tillatelsesbelastning på én skjerm, uten å be tre personer om et regneark.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-soft">
+    <div class="container split">
+      <div>
+        <span class="eyebrow">Din å forme</span>
+        <h2 class="mt-16">Konfigurer HSEQ etter deres egen standard</h2>
+        <p class="lead mt-12">Ulike virksomheter klassifiserer, vurderer og godkjenner ulikt. Modulen bøyer seg etter deres måte.</p>
+        <ul class="check-list mt-24">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Definer egne tillatelsestyper og hvilken godkjenning hver av dem krever</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Sett risikoskalaer og tersklene som krever eskalering</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Velg observasjonskategorier som matcher programmet dere har</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Begrens helsedata til én navngitt rolle mens observasjoner er åpne for alle</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Slå av verktøy dere ikke bruker — en organisasjon uten løfteoperasjoner kan skjule løfteplaner</li>
+        </ul>
+        <p class="mt-24"><a class="link-arrow" href="/nb/modules/administration">Se hva en administrator styrer<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></p>
+      </div>
+      <div class="split-media">
+        <div class="panel reveal">
+          <div class="panel-head reveal">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21v-7M4 10V3M12 21v-9M12 8V3M20 21v-5M20 12V3M1 14h6M9 8h6M17 16h6"/></svg>
+            HSEQ · Innstillinger
+          </div>
+          <div class="panel-body reveal">
+            <table class="table-mock">
+              <thead><tr><th>Innstilling</th><th>Verdi</th></tr></thead>
+              <tbody>
+                <tr><td>Godkjenning av tillatelse</td><td><span class="badge badge-rose">To signaturer</span></td></tr>
+                <tr><td>Risikomatrise</td><td><span class="badge badge-amber">5 × 5</span></td></tr>
+                <tr><td>Observasjonskategorier</td><td><span class="badge badge-cyan">Egendefinert (12)</span></td></tr>
+                <tr><td>Helsedata</td><td><span class="badge badge-violet">Begrenset rolle</span></td></tr>
+                <tr><td>Granskning påkrevd</td><td><span class="badge badge-indigo">Over moderat</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2>Spørsmål om HSEQ vi ofte får</h2>
+      </div>
+      <div class="faq">
+        <details>
+          <summary>Kan arbeidstillatelser opprettes og lukkes ute i felt?</summary>
+          <div class="faq-body">Ja. Appen kjører i mobilnettleseren, og det er slik tillatelser, observasjoner og oppmøte på sikker-jobb-samtaler er ment å brukes. Ingenting å installere på en enhet ute på anlegget.</div>
+        </details>
+        <details>
+          <summary>Håndhever den at en signatar er kompetent?</summary>
+          <div class="faq-body">Signatarene er personalposter, og de postene bærer gyldighet for opplæring og helse. Det betyr at et utløpt sertifikat er synlig i signeringsøyeblikket, ikke ved neste revisjon. Hvor hard stopp dere vil ha, er et konfigurasjonsvalg og ikke en kodeendring.</div>
+        </details>
+        <details>
+          <summary>Kan vi beholde risikomatrisen og kategoriene vi har?</summary>
+          <div class="faq-body">Ja. Risikoskalaer, tillatelsestyper og observasjonskategorier konfigureres av deres administrator. Modulen påtvinger dere ingen metodikk.</div>
+        </details>
+        <details>
+          <summary>Hva skjer med granskningstiltakene?</summary>
+          <div class="faq-body">De blir oppgaver med navngitt eier og frist, og dukker opp på den personens startskjerm sammen med resten av arbeidet. Et tiltak som bare finnes inne i en rapport, er et tiltak ingen ser.</div>
+        </details>
+        <details>
+          <summary>Er HSEQ-data skilt fra resten av organisasjonen?</summary>
+          <div class="faq-body">De ligger i den samme organisasjonen, under den samme tillatelsesmodellen. Sensitive verktøy — særlig helse — begrenses gjerne til én rolle, mens observasjoner holdes åpne for alle så det er lett å melde fra.</div>
+        </details>
+      </div>
+      <p class="text-center mt-32">
+        <a class="link-arrow" href="/nb/modules">Bla gjennom alle moduler<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+      </p>
+    </div>
+  </section>
+
+
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-hero">
+      <div>
+        <p class="footer-kicker">Har du et spørsmål? Vil du ha en gjennomgang?</p>
+        <h2>Ett system for hele driften.</h2>
+      </div>
+      <div>
+        <p>Fortell oss hvordan driften din fungerer. Vi går gjennom de aktuelle arbeidsflytene, ser på dataene dine og blir enige om neste steg sammen med teamet vårt.</p>
+        <div class="footer-actions">
+          <a class="btn btn-onDark btn-lg" href="/nb/contact#demo">Be om en demo <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+          <a class="btn btn-outline-onDark btn-lg" href="https://docs.caspianerp.com">Les dokumentasjonen</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="/nb">
+          <img class="brand-mark" src="/assets/img/logo-mark.svg" alt="" width="30" height="30">
+          <span class="brand-name" style="color:#fff">Caspian <b>ERP</b></span>
+        </a>
+      </div>
+      <div class="footer-col">
+        <h4>Plattform</h4>
+        <ul>
+          <li><a href="/nb/modules">Alle moduler</a></li>
+          <li><a href="/nb/industries">Bransjer</a></li>
+          <li><a href="/nb/security">Sikkerhet og RBAC</a></li>
+          <li><a href="/nb/pricing">Priser</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Moduler</h4>
+        <ul>
+          <li><a href="/nb/modules/hseq">HSEQ</a></li>
+          <li><a href="/nb/modules/hr">Personal</a></li>
+          <li><a href="/nb/modules/procurement">Innkjøp</a></li>
+          <li><a href="/nb/modules/inventory">Lager</a></li>
+          <li><a href="/nb/modules/maintenance">Vedlikehold</a></li>
+          <li><a href="/nb/modules/finance">Økonomi</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Selskap</h4>
+        <ul>
+          <li><a href="/nb/about">Om oss</a></li>
+          <li><a href="https://caspiantools.com" rel="noopener">CaspianTools</a></li>
+          <li><a href="/nb/contact">Kontakt</a></li>
+          <li><a href="/nb/contact#demo">Be om en demo</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Kom i gang</h4>
+        <ul>
+          <li><a href="https://app.caspianerp.com">Logg inn</a></li>
+          <li><a href="/nb/contact#demo">Be om en demo</a></li>
+          <li><a href="https://docs.caspianerp.com">Dokumentasjon</a></li>
+          <li><a href="https://admin.caspianerp.com">Adminportal</a></li>
+          <li><a href="/nb/pricing#faq">Spørsmål om pris</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <span data-year>2026</span> CaspianTools. Caspian ERP er et CaspianTools-produkt.</p>
+      <nav aria-label="Juridisk">
+        <a href="/nb/privacy">Personvernerklæring</a>
+        <a href="/nb/terms">Vilkår for bruk</a>
+        <a href="/nb/security">Sikkerhet</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+<script src="/assets/js/site.js?v=20260908" defer></script>
+</body>
+</html>

@@ -1,0 +1,538 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="/assets/js/lang.js?v=20260908"></script>
+<title>Бизнес — Caspian ERP</title>
+<meta name="description" content="KPI и проекты в Caspian ERP — цели, измеряемые по живым записям из всех остальных модулей, и проекты, где объём, бюджет и прогресс в одном месте.">
+<link rel="canonical" href="https://caspianerp.com/ru/modules/business">
+<!--i18n:alternates-->
+<link rel="alternate" hreflang="en" href="https://caspianerp.com/modules/business">
+<link rel="alternate" hreflang="az" href="https://caspianerp.com/az/modules/business">
+<link rel="alternate" hreflang="tr" href="https://caspianerp.com/tr/modules/business">
+<link rel="alternate" hreflang="ru" href="https://caspianerp.com/ru/modules/business">
+<link rel="alternate" hreflang="nb" href="https://caspianerp.com/nb/modules/business">
+<link rel="alternate" hreflang="de" href="https://caspianerp.com/de/modules/business">
+<link rel="alternate" hreflang="fr" href="https://caspianerp.com/fr/modules/business">
+<link rel="alternate" hreflang="x-default" href="https://caspianerp.com/modules/business">
+<!--/i18n:alternates-->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Caspian ERP">
+<meta property="og:title" content="Бизнес — Caspian ERP">
+<meta property="og:description" content="KPI и проекты в Caspian ERP — цели, измеряемые по живым записям из всех остальных модулей, и проекты, где объём, бюджет и прогресс в одном месте.">
+<meta property="og:url" content="https://caspianerp.com/ru/modules/business">
+<meta property="og:image" content="https://caspianerp.com/assets/img/og-image.svg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#4f46e5">
+<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="/assets/css/site.css?v=20260908">
+<noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
+</head>
+<body>
+<a class="skip-link" href="#main">Перейти к содержимому</a>
+<header class="site-header">
+  <div class="container">
+    <nav class="nav" aria-label="Основная">
+      <a class="brand" href="/ru">
+        <img class="brand-mark" src="/assets/img/logo-mark.svg" alt="" width="30" height="30">
+        <span class="brand-name">Caspian <b>ERP</b></span>
+      </a>
+      <ul class="nav-links">
+        <li><a class="nav-link" aria-current="page" href="/ru/modules">Модули</a></li>
+        <li><a class="nav-link" href="/ru/industries">Отрасли</a></li>
+        <li><a class="nav-link" href="/ru/security">Безопасность</a></li>
+        <li><a class="nav-link" href="/ru/pricing">Цены</a></li>
+        <li><a class="nav-link" href="/ru/about">О нас</a></li>
+      </ul>
+      <div class="nav-actions">
+        <!--i18n:switcher-->
+        <details class="lang" data-lang-switcher>
+          <summary class="lang-button" title="Выберите язык" aria-label="Язык: Русский"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18"/></svg><span class="lang-code">RU</span><svg class="lang-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="lang-menu" role="group" aria-label="Выберите язык">
+            <a class="lang-option" href="/modules/business" hreflang="en" lang="en" data-lang="en">English</a>
+            <a class="lang-option" href="/az/modules/business" hreflang="az" lang="az" data-lang="az">Azərbaycan dili</a>
+            <a class="lang-option" href="/tr/modules/business" hreflang="tr" lang="tr" data-lang="tr">Türkçe</a>
+            <a class="lang-option" href="/ru/modules/business" hreflang="ru" lang="ru" data-lang="ru" aria-current="true">Русский</a>
+            <a class="lang-option" href="/nb/modules/business" hreflang="nb" lang="nb" data-lang="nb">Norsk (bokmål)</a>
+            <a class="lang-option" href="/de/modules/business" hreflang="de" lang="de" data-lang="de">Deutsch</a>
+            <a class="lang-option" href="/fr/modules/business" hreflang="fr" lang="fr" data-lang="fr">Français</a>
+          </div>
+        </details>
+        <!--/i18n:switcher-->
+        <a class="btn btn-ghost btn-sm" href="https://app.caspianerp.com">Войти</a>
+        <a class="btn btn-primary btn-sm" href="/ru/contact#demo">Запросить демо <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+        <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="mobile-menu" aria-label="Открыть меню" data-text-open="Открыть меню" data-text-close="Закрыть меню">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </nav>
+  </div>
+  <div class="mobile-menu" id="mobile-menu">
+    <a class="nav-link" aria-current="page" href="/ru/modules">Модули</a>
+    <a class="nav-link" href="/ru/industries">Отрасли</a>
+    <a class="nav-link" href="/ru/security">Безопасность</a>
+    <a class="nav-link" href="/ru/pricing">Цены</a>
+    <a class="nav-link" href="/ru/about">О нас</a>
+    <a class="nav-link" href="https://docs.caspianerp.com">Документация</a>
+    <a class="nav-link" href="/ru/contact">Контакты</a>
+    <!--i18n:switcher-mobile-->
+    <div class="mobile-lang" role="group" aria-label="Выберите язык">
+      <span class="mobile-lang-label">Язык</span>
+      <div class="mobile-lang-options">
+        <a class="lang-option" href="/modules/business" hreflang="en" lang="en" data-lang="en">English</a>
+        <a class="lang-option" href="/az/modules/business" hreflang="az" lang="az" data-lang="az">Azərbaycan dili</a>
+        <a class="lang-option" href="/tr/modules/business" hreflang="tr" lang="tr" data-lang="tr">Türkçe</a>
+        <a class="lang-option" href="/ru/modules/business" hreflang="ru" lang="ru" data-lang="ru" aria-current="true">Русский</a>
+        <a class="lang-option" href="/nb/modules/business" hreflang="nb" lang="nb" data-lang="nb">Norsk (bokmål)</a>
+        <a class="lang-option" href="/de/modules/business" hreflang="de" lang="de" data-lang="de">Deutsch</a>
+        <a class="lang-option" href="/fr/modules/business" hreflang="fr" lang="fr" data-lang="fr">Français</a>
+      </div>
+    </div>
+    <!--/i18n:switcher-mobile-->
+    <div class="mobile-cta">
+      <a class="btn btn-secondary" href="https://app.caspianerp.com">Войти</a>
+      <a class="btn btn-primary" href="/ru/contact#demo">Запросить демо</a>
+    </div>
+  </div>
+</header>
+<main id="main">
+
+  <section class="hero">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Навигационная цепочка">
+        <a href="/ru/modules">Модули</a>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg>
+        <span aria-current="page">Бизнес</span>
+      </nav>
+      <span class="eyebrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>Бизнес</span>
+      <h1>Цели и проекты, <span class="grad">измеряемые по живым данным</span></h1>
+      <p class="hero-sub">KPI, читающий те же записи, что и производство, не может от него оторваться. Как и статус проекта, собранный из работы, а не набранный в слайде.</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary btn-lg" href="/ru/contact#demo">Запросить демо</a>
+        <a class="btn btn-secondary btn-lg" href="https://docs.caspianerp.com">Читать документацию</a>
+      </div>
+      <p class="hero-note">Четыре инструмента · Читает из всех модулей · Отсюда берётся взгляд руководства</p>
+    </div>
+  </section>
+  <div class="container mock-wrap">
+    <p class="small muted text-center">Иллюстративный вид продукта с демонстрационными данными. <a href="/ru/contact#demo">Запросить живой обзор</a>.</p>
+    <div class="mock reveal" role="img" aria-label="Модуль «Бизнес» Caspian ERP: состояние KPI, статус проектов и бюджет против факта">
+      <div class="mock-bar" aria-hidden="true">
+        <span class="mock-dot"></span><span class="mock-dot"></span><span class="mock-dot"></span>
+        <span class="mock-url">app.caspianerp.com/ru/w/business/kpis</span>
+      </div>
+      <div class="mock-body" aria-hidden="true">
+        <div class="mock-rail">
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg>Главная</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/></svg>Персонал</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>HSEQ</div>
+          <div class="mock-rail-item active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>Бизнес</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1"/><circle cx="18" cy="20" r="1"/><path d="M2 3h2.5l2.6 12.6a1 1 0 0 0 1 .8h8.9a1 1 0 0 0 1-.77L21 8H6"/></svg>Закупки</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V10l6 4V10l6 4V6l6 4v11z"/><path d="M7 17h.01M13 17h.01M18 17h.01"/></svg>Произв.</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>CRM</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V9l9-6 9 6v12"/><path d="M7 21v-8h10v8"/></svg>Склад</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 16V6h11v10"/><path d="M14 9h4l3 3.5V16h-7z"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg>Логист.</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0 5 5L21 21l-3 .5L8.5 12A4 4 0 0 1 3 6.5l3 3 2.5-2.5-3-3z"/></svg>Техобсл.</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 6H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>Финансы</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4.5 13.5H11l-1 8.5 8.5-11.5H12z"/></svg>Эффект.</div>
+        </div>
+        <div class="mock-side">
+          <div class="mock-side-title">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
+            Бизнес
+          </div>
+          <div class="mock-side-item active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="1" fill="currentColor" stroke="none"/></svg>KPI</div>
+          <div class="mock-side-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 2 9 5-9 5-9-5z"/><path d="m3 12 9 5 9-5"/><path d="m3 17 9 5 9-5"/></svg>Проекты</div>
+        </div>
+        <div class="mock-main">
+          <div class="mock-topbar">
+            <div class="mock-search">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.2-3.2"/></svg>
+              Поиск людей, заказов, активов…
+            </div>
+            <div class="mock-plus"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></div>
+            <div class="mock-avatar"></div>
+          </div>
+          <div class="mock-h1">Панель KPI</div>
+          <div class="mock-tag">10 отслеживается · 8 в норме · 2 под угрозой</div>
+          <div class="mock-cards">
+            <div class="mock-card">
+              <div class="mock-card-head" style="color:#4f46e5">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="1" fill="currentColor" stroke="none"/></svg>
+                Состояние KPI
+              </div>
+              <div class="mock-bars"><span style="height:42%"></span><span style="height:64%"></span><span style="height:52%"></span><span style="height:78%"></span><span style="height:88%"></span><span style="height:70%"></span></div>
+              <div class="mock-kpi-sub" style="margin-top:8px">8 в норме · 2 под угрозой</div>
+            </div>
+            <div class="mock-card">
+              <div class="mock-card-head" style="color:#e11d48">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/><path d="M12 9v4M12 17h.01"/></svg>
+                Под угрозой
+              </div>
+              <div class="mock-row"><span>TRIR</span><span class="mock-pill hot">Выше целевого</span></div>
+              <div class="mock-row"><span>Цикл заказа на закупку</span><span class="mock-pill warn">11,4 дн.</span></div>
+            </div>
+            <div class="mock-card">
+              <div class="mock-card-head" style="color:#0d9488">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17 10 10l4 4 7-7"/><path d="M15 7h6v6"/></svg>
+                Поставки в срок
+              </div>
+              <div class="mock-kpi">94%</div>
+              <div class="mock-kpi-sub">Цель 90% · рост на 3 пункта</div>
+            </div>
+            <div class="mock-card">
+              <div class="mock-card-head" style="color:#7c3aed">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 2 9 5-9 5-9-5z"/><path d="m3 12 9 5 9-5"/><path d="m3 17 9 5 9-5"/></svg>
+                Активные проекты
+              </div>
+              <div class="mock-row"><span>Модернизация SOR скважины</span><span class="mock-pill ok">Активен</span></div>
+              <div class="mock-row"><span>Внедрение SLIA</span><span class="mock-pill">Планирование</span></div>
+              <div class="mock-row"><span>Переезд склада</span><span class="mock-pill warn">Под угрозой</span></div>
+            </div>
+            <div class="mock-card">
+              <div class="mock-card-head" style="color:#d97706">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 6H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                Бюджет и факт
+              </div>
+              <div class="mock-kpi">83%</div>
+              <div class="mock-kpi-sub">годового бюджета израсходовано · 10-й месяц</div>
+            </div>
+            <div class="mock-card">
+              <div class="mock-card-head" style="color:#0891b2">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="m8 12 3 3 5-6"/></svg>
+                Закрытые действия
+              </div>
+              <div class="mock-bars"><span style="height:55%"></span><span style="height:61%"></span><span style="height:70%"></span><span style="height:66%"></span><span style="height:82%"></span><span style="height:90%"></span></div>
+              <div class="mock-kpi-sub" style="margin-top:8px">Доля закрытий за полгода</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="section section-soft">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">До Caspian ERP</span>
+        <h2>Цифра на слайде — ничья цифра</h2>
+        <p>Пока KPI выгружали, вставляли, переформатировали и показывали, он перестал принадлежать производству и стал числом того, кто собрал презентацию.</p>
+      </div>
+      <div class="grid grid-3">
+        <article class="card card-pad reveal">
+          <h3>Отчётность становится отдельным ежемесячным проектом</h3>
+          <p class="mt-12">Кто-то тратит первую неделю каждого месяца на сведение выгрузок. Награда — картина уже закончившегося месяца.</p>
+        </article>
+        <article class="card card-pad reveal">
+          <h3>Каждый отдел отчитывается о своей правде</h3>
+          <p class="mt-12">Закупки считают заказы одним способом, финансы — другим, и совещание уходит на согласование определений вместо решений.</p>
+        </article>
+        <article class="card card-pad reveal">
+          <h3>Статус проекта — это ощущение</h3>
+          <p class="mt-12">Прогресс описывают, а не измеряют, и первым твёрдым доказательством срыва становится сам срок.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Что он делает</span>
+        <h2>Слой, который превращает операции в управленческую информацию</h2>
+        <p>Всего четыре инструмента — намеренно. Этот модуль не пытается быть BI-системой: он читает записи, которые платформа и так ведёт.</p>
+      </div>
+      <div class="grid grid-2">
+        <article class="card card-pad reveal">
+          <span class="icon-tile t-emerald"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="1" fill="currentColor" stroke="none"/></svg></span>
+          <h3 class="mt-16">KPI определяются один раз и измеряются постоянно</h3>
+          <p class="mt-12">Задайте цель, ответственного и период, а значение пусть приходит из исходных записей.</p>
+          <ul class="check-list mt-16">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Цели с ответственными, периодами и порогами</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Состояния «в норме», «под угрозой» и «не достигнуто» видны без толкований</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>История сохраняется, поэтому тренд — это тренд, а не воспоминание</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Одно и то же число для всех, потому что оно единственное</li>
+          </ul>
+        </article>
+        <article class="card card-pad reveal">
+          <span class="icon-tile t-slate"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19h16M7 16V9M12 16V5M17 16v-4"/></svg></span>
+          <h3 class="mt-16">Панель, которую действительно открывают</h3>
+          <p class="mt-12">Панель KPI — это живой вид, а не ежемесячный артефакт.</p>
+          <ul class="check-list mt-16">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Текущее состояние всех отслеживаемых KPI на одном экране</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Проваливайтесь от числа к записям, которые за ним стоят</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Фильтруйте по отделу или площадке, за которую вы отвечаете</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Между производством и этим видом нет шага выгрузки</li>
+          </ul>
+        </article>
+        <article class="card card-pad reveal">
+          <span class="icon-tile t-violet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 2 9 5-9 5-9-5z"/><path d="m3 12 9 5 9-5"/><path d="m3 17 9 5 9-5"/></svg></span>
+          <h3 class="mt-16">Проекты с объёмом работ и прогрессом</h3>
+          <p class="mt-12">Проекты держат работу, людей и состояние — и остаются связанными с тем, что происходит в остальной платформе.</p>
+          <ul class="check-list mt-16">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Реестр проектов с ответственным, датами и статусом</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Карточка с объёмом, прогрессом и командой</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Задачи и встречи прикрепляются, а не ведутся отдельно</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Виден тем, кто делает работу, а не только спонсору</li>
+          </ul>
+        </article>
+        <article class="card card-pad reveal">
+          <span class="icon-tile t-cyan"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17 10 10l4 4 7-7"/><path d="M15 7h6v6"/></svg></span>
+          <h3 class="mt-16">Управленческая отчётность без сборки</h3>
+          <p class="mt-12">Когда KPI и запись — один и тот же объект, ежемесячный пакет перестаёт быть стройкой.</p>
+          <ul class="check-list mt-16">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Числа, которые сходятся с финансами, потому что источник общий</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Сравнение периодов без пересборки таблицы</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Ответственные отвечают за свои KPI в той же системе, где работают</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Между производством и пакетом для совета директоров нечего перебивать заново</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-soft">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Каждый инструмент модуля</span>
+        <h2>Четыре инструмента, стоящие над остальными</h2>
+        <p>Небольшой модуль с большим рычагом — он опирается на все остальные.</p>
+      </div>
+      <div class="grid grid-2">
+        <div class="feature-item reveal">
+          <span class="icon-tile sm t-emerald"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="1" fill="currentColor" stroke="none"/></svg></span>
+          <div>
+            <h4>KPI</h4>
+            <p>Определите показатели, по которым управляется ваша организация — цель, ответственный, период и порог — и отслеживайте их по живым записям.</p>
+          </div>
+        </div>
+        <div class="feature-item reveal">
+          <span class="icon-tile sm t-slate"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19h16M7 16V9M12 16V5M17 16v-4"/></svg></span>
+          <div>
+            <h4>Панель KPI</h4>
+            <p>Текущее состояние каждого отслеживаемого KPI на одном экране, с трендом и разрывом до цели.</p>
+          </div>
+        </div>
+        <div class="feature-item reveal">
+          <span class="icon-tile sm t-violet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 2 9 5-9 5-9-5z"/><path d="m3 12 9 5 9-5"/><path d="m3 17 9 5 9-5"/></svg></span>
+          <div>
+            <h4>Проекты</h4>
+            <p>Реестр проектов: ответственный, даты, статус и бюджет, а работа прикреплена, а не описана.</p>
+          </div>
+        </div>
+        <div class="feature-item reveal">
+          <span class="icon-tile sm t-cyan"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/></svg></span>
+          <div>
+            <h4>Карточка проекта</h4>
+            <p>Проект целиком — объём, прогресс, команда и задачи со встречами, которые его двигают.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section dark-section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Связано, а не прикручено сбоку</span>
+        <h2>KPI хорош ровно настолько, насколько хороша запись под ним</h2>
+        <p>У этого модуля почти нет собственных данных. В этом и смысл.</p>
+      </div>
+      <div class="grid grid-3">
+        <div class="dark-card reveal">
+          <span class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span>
+          <h3 class="mt-16">Показатели безопасности</h3>
+          <p>Частота наблюдений, открытые происшествия и просроченные действия считаются по реестру HSEQ, а не сообщаются вручную.</p>
+          <p class="mt-12"><a class="link-arrow" href="/ru/modules/hseq">Посмотреть HSEQ<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></p>
+        </div>
+        <div class="dark-card reveal">
+          <span class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v20M17 6H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></span>
+          <h3 class="mt-16">Финансовые показатели</h3>
+          <p>Бюджет и факт берутся из той же книги, в которой работает ваш бухгалтер, поэтому две версии не могут разойтись.</p>
+          <p class="mt-12"><a class="link-arrow" href="/ru/modules/finance">Посмотреть финансы<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></p>
+        </div>
+        <div class="dark-card reveal">
+          <span class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 4.5 13.5H11l-1 8.5 8.5-11.5H12z"/></svg></span>
+          <h3 class="mt-16">Исполнение</h3>
+          <p>Прогресс проекта складывается из задач, встреч и действий, которые люди и так закрывают в модуле «Эффективность».</p>
+          <p class="mt-12"><a class="link-arrow" href="/ru/modules/efficiency">Посмотреть «Эффективность»<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Кто здесь работает</span>
+        <h2>Управленческий слой без отдельной системы</h2>
+        <p>Три человека, которые сегодня делят одну таблицу.</p>
+      </div>
+      <div class="grid grid-3">
+        <article class="card card-pad reveal">
+          <span class="icon-tile sm t-emerald"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg></span>
+          <h3 class="mt-16">Генеральный директор</h3>
+          <p class="mt-12">Открывает одну панель и видит, укладывается ли организация в цели, не дожидаясь сборки месячного пакета.</p>
+        </article>
+        <article class="card card-pad reveal">
+          <span class="icon-tile sm t-violet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 2 9 5-9 5-9-5z"/><path d="m3 12 9 5 9-5"/><path d="m3 17 9 5 9-5"/></svg></span>
+          <h3 class="mt-16">Руководитель проекта</h3>
+          <p class="mt-12">Ведёт проект там, где идёт работа, поэтому статус — следствие работы, а не отдельная отчётная задача.</p>
+        </article>
+        <article class="card card-pad reveal">
+          <span class="icon-tile sm t-cyan"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="1" fill="currentColor" stroke="none"/></svg></span>
+          <h3 class="mt-16">Руководитель отдела</h3>
+          <p class="mt-12">Отвечает за несколько KPI, видит их в той же системе, где ведёт свой отдел, и оценивается по живым числам.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-soft">
+    <div class="container split">
+      <div>
+        <span class="eyebrow">Вам решать, каким ему быть</span>
+        <h2 class="mt-16">Определите, чем на самом деле управляется ваша организация</h2>
+        <p class="lead mt-12">Двух одинаковых наборов показателей не бывает. Здесь ничто не зашито в код.</p>
+        <ul class="check-list mt-24">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Создавайте собственные KPI с теми целями, периодами и порогами, которыми пользуетесь</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Назначьте каждому KPI ответственного, чтобы у ответственности было имя</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Решайте, какие отделы видят какие KPI и проекты</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Ведите проекты со своими значениями статусов и этапами</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Скройте модуль целиком, если управляете по отделам, а не по KPI</li>
+        </ul>
+        <p class="mt-24"><a class="link-arrow" href="/ru/modules/administration">Посмотреть, чем управляет администратор<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></p>
+      </div>
+      <div class="split-media">
+        <div class="panel reveal">
+          <div class="panel-head reveal">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21v-7M4 10V3M12 21v-9M12 8V3M20 21v-5M20 12V3M1 14h6M9 8h6M17 16h6"/></svg>
+            Бизнес · Настройки
+          </div>
+          <div class="panel-body reveal">
+            <table class="table-mock">
+              <thead><tr><th>Параметр</th><th>Значение</th></tr></thead>
+              <tbody>
+                <tr><td>Период KPI</td><td><span class="badge badge-indigo">Ежемесячно</span></td></tr>
+                <tr><td>Порог риска</td><td><span class="badge badge-amber">85% от цели</span></td></tr>
+                <tr><td>Видимость KPI</td><td><span class="badge badge-violet">Ответственный и руководители</span></td></tr>
+                <tr><td>Статусы проектов</td><td><span class="badge badge-cyan">Свои (5)</span></td></tr>
+                <tr><td>Обновление панели</td><td><span class="badge badge-emerald">Пример</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2>Вопросы о модуле «Бизнес», которые нам задают</h2>
+      </div>
+      <div class="faq">
+        <details>
+          <summary>Обновляются ли KPI автоматически?</summary>
+          <div class="faq-body">Они читают записи, которые ведёт остальная платформа, поэтому цифры движутся вместе с работой. Вы задаёте показатель, его цель и ответственного — но не само число.</div>
+        </details>
+        <details>
+          <summary>Это замена BI-инструменту?</summary>
+          <div class="faq-body">Нет, и он на это не претендует. Это управленческий взгляд на данные, которые уже есть в Caspian ERP. Нужна модель по внешним источникам — выгрузите и работайте в своём BI. Ценность здесь в том, что для повседневного взгляда выгрузка не нужна.</div>
+        </details>
+        <details>
+          <summary>Может ли проект охватывать несколько модулей?</summary>
+          <div class="faq-body">Это обычный случай. Проект обычно втягивает задачи и встречи из «Эффективности», расходы из «Финансов» и людей из «Персонала». Карточка проекта — место, где всё это видно вместе.</div>
+        </details>
+        <details>
+          <summary>Кто может видеть панель?</summary>
+          <div class="faq-body">Тот, кому вы разрешите. Видимость KPI управляется правами, как и всё остальное: часть показателей можно открыть всей организации, а часть оставить владельцу и руководству.</div>
+        </details>
+      </div>
+      <p class="text-center mt-32">
+        <a class="link-arrow" href="/ru/modules">Просмотреть все модули<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+      </p>
+    </div>
+  </section>
+
+
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-hero">
+      <div>
+        <p class="footer-kicker">Есть вопрос? Хотите, чтобы мы всё показали?</p>
+        <h2>Одна система для всего предприятия.</h2>
+      </div>
+      <div>
+        <p>Расскажите, как устроена ваша работа. Мы разберём подходящие процессы, посмотрим ваши данные и вместе с нашей командой согласуем следующие шаги.</p>
+        <div class="footer-actions">
+          <a class="btn btn-onDark btn-lg" href="/ru/contact#demo">Запросить демо <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+          <a class="btn btn-outline-onDark btn-lg" href="https://docs.caspianerp.com">Читать документацию</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="/ru">
+          <img class="brand-mark" src="/assets/img/logo-mark.svg" alt="" width="30" height="30">
+          <span class="brand-name" style="color:#fff">Caspian <b>ERP</b></span>
+        </a>
+      </div>
+      <div class="footer-col">
+        <h4>Платформа</h4>
+        <ul>
+          <li><a href="/ru/modules">Все модули</a></li>
+          <li><a href="/ru/industries">Отрасли</a></li>
+          <li><a href="/ru/security">Безопасность и RBAC</a></li>
+          <li><a href="/ru/pricing">Цены</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Модули</h4>
+        <ul>
+          <li><a href="/ru/modules/hseq">HSEQ</a></li>
+          <li><a href="/ru/modules/hr">Персонал</a></li>
+          <li><a href="/ru/modules/procurement">Закупки</a></li>
+          <li><a href="/ru/modules/inventory">Склад</a></li>
+          <li><a href="/ru/modules/maintenance">Техобслуживание</a></li>
+          <li><a href="/ru/modules/finance">Финансы</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Компания</h4>
+        <ul>
+          <li><a href="/ru/about">О нас</a></li>
+          <li><a href="https://caspiantools.com" rel="noopener">CaspianTools</a></li>
+          <li><a href="/ru/contact">Контакты</a></li>
+          <li><a href="/ru/contact#demo">Запросить демо</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Начало работы</h4>
+        <ul>
+          <li><a href="https://app.caspianerp.com">Войти</a></li>
+          <li><a href="/ru/contact#demo">Запросить демо</a></li>
+          <li><a href="https://docs.caspianerp.com">Документация</a></li>
+          <li><a href="https://admin.caspianerp.com">Портал администратора</a></li>
+          <li><a href="/ru/pricing#faq">Вопросы о ценах</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <span data-year>2026</span> CaspianTools. Caspian ERP — продукт CaspianTools.</p>
+      <nav aria-label="Правовая информация">
+        <a href="/ru/privacy">Политика конфиденциальности</a>
+        <a href="/ru/terms">Условия использования</a>
+        <a href="/ru/security">Безопасность</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+<script src="/assets/js/site.js?v=20260908" defer></script>
+</body>
+</html>
