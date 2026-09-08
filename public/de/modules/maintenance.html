@@ -1,0 +1,642 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="/assets/js/lang.js?v=20260908"></script>
+<title>Instandhaltung — Caspian ERP</title>
+<meta name="description" content="Ein Instandhaltungssystem im ERP — Anlagen, Meldungen, Pläne, Zählerstände, Kalibrierung, Gewährleistungsfälle, Fehlercodes, Checklisten und Wartungspläne, mit Ersatzteilen aus dem echten Lager.">
+<link rel="canonical" href="https://caspianerp.com/de/modules/maintenance">
+<!--i18n:alternates-->
+<link rel="alternate" hreflang="en" href="https://caspianerp.com/modules/maintenance">
+<link rel="alternate" hreflang="az" href="https://caspianerp.com/az/modules/maintenance">
+<link rel="alternate" hreflang="tr" href="https://caspianerp.com/tr/modules/maintenance">
+<link rel="alternate" hreflang="ru" href="https://caspianerp.com/ru/modules/maintenance">
+<link rel="alternate" hreflang="nb" href="https://caspianerp.com/nb/modules/maintenance">
+<link rel="alternate" hreflang="de" href="https://caspianerp.com/de/modules/maintenance">
+<link rel="alternate" hreflang="fr" href="https://caspianerp.com/fr/modules/maintenance">
+<link rel="alternate" hreflang="x-default" href="https://caspianerp.com/modules/maintenance">
+<!--/i18n:alternates-->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Caspian ERP">
+<meta property="og:title" content="Instandhaltung — Caspian ERP">
+<meta property="og:description" content="Ein Instandhaltungssystem im ERP — Anlagen, Meldungen, Pläne, Zählerstände, Kalibrierung, Gewährleistungsfälle, Fehlercodes, Checklisten und Wartungspläne, mit Ersatzteilen aus dem echten Lager.">
+<meta property="og:url" content="https://caspianerp.com/de/modules/maintenance">
+<meta property="og:image" content="https://caspianerp.com/assets/img/og-image.svg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#4f46e5">
+<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="/assets/css/site.css?v=20260908">
+<noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
+</head>
+<body>
+<a class="skip-link" href="#main">Zum Inhalt springen</a>
+<header class="site-header">
+  <div class="container">
+    <nav class="nav" aria-label="Haupt">
+      <a class="brand" href="/de">
+        <img class="brand-mark" src="/assets/img/logo-mark.svg" alt="" width="30" height="30">
+        <span class="brand-name">Caspian <b>ERP</b></span>
+      </a>
+      <ul class="nav-links">
+        <li><a class="nav-link" aria-current="page" href="/de/modules">Module</a></li>
+        <li><a class="nav-link" href="/de/industries">Branchen</a></li>
+        <li><a class="nav-link" href="/de/security">Sicherheit</a></li>
+        <li><a class="nav-link" href="/de/pricing">Preise</a></li>
+        <li><a class="nav-link" href="/de/about">Über uns</a></li>
+      </ul>
+      <div class="nav-actions">
+        <!--i18n:switcher-->
+        <details class="lang" data-lang-switcher>
+          <summary class="lang-button" title="Sprache wählen" aria-label="Sprache: Deutsch"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18"/></svg><span class="lang-code">DE</span><svg class="lang-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="lang-menu" role="group" aria-label="Sprache wählen">
+            <a class="lang-option" href="/modules/maintenance" hreflang="en" lang="en" data-lang="en">English</a>
+            <a class="lang-option" href="/az/modules/maintenance" hreflang="az" lang="az" data-lang="az">Azərbaycan dili</a>
+            <a class="lang-option" href="/tr/modules/maintenance" hreflang="tr" lang="tr" data-lang="tr">Türkçe</a>
+            <a class="lang-option" href="/ru/modules/maintenance" hreflang="ru" lang="ru" data-lang="ru">Русский</a>
+            <a class="lang-option" href="/nb/modules/maintenance" hreflang="nb" lang="nb" data-lang="nb">Norsk (bokmål)</a>
+            <a class="lang-option" href="/de/modules/maintenance" hreflang="de" lang="de" data-lang="de" aria-current="true">Deutsch</a>
+            <a class="lang-option" href="/fr/modules/maintenance" hreflang="fr" lang="fr" data-lang="fr">Français</a>
+          </div>
+        </details>
+        <!--/i18n:switcher-->
+        <a class="btn btn-ghost btn-sm" href="https://app.caspianerp.com">Anmelden</a>
+        <a class="btn btn-primary btn-sm" href="/de/contact#demo">Demo anfragen <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+        <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="mobile-menu" aria-label="Menü öffnen" data-text-open="Menü öffnen" data-text-close="Menü schließen">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </nav>
+  </div>
+  <div class="mobile-menu" id="mobile-menu">
+    <a class="nav-link" aria-current="page" href="/de/modules">Module</a>
+    <a class="nav-link" href="/de/industries">Branchen</a>
+    <a class="nav-link" href="/de/security">Sicherheit</a>
+    <a class="nav-link" href="/de/pricing">Preise</a>
+    <a class="nav-link" href="/de/about">Über uns</a>
+    <a class="nav-link" href="https://docs.caspianerp.com">Dokumentation</a>
+    <a class="nav-link" href="/de/contact">Kontakt</a>
+    <!--i18n:switcher-mobile-->
+    <div class="mobile-lang" role="group" aria-label="Sprache wählen">
+      <span class="mobile-lang-label">Sprache</span>
+      <div class="mobile-lang-options">
+        <a class="lang-option" href="/modules/maintenance" hreflang="en" lang="en" data-lang="en">English</a>
+        <a class="lang-option" href="/az/modules/maintenance" hreflang="az" lang="az" data-lang="az">Azərbaycan dili</a>
+        <a class="lang-option" href="/tr/modules/maintenance" hreflang="tr" lang="tr" data-lang="tr">Türkçe</a>
+        <a class="lang-option" href="/ru/modules/maintenance" hreflang="ru" lang="ru" data-lang="ru">Русский</a>
+        <a class="lang-option" href="/nb/modules/maintenance" hreflang="nb" lang="nb" data-lang="nb">Norsk (bokmål)</a>
+        <a class="lang-option" href="/de/modules/maintenance" hreflang="de" lang="de" data-lang="de" aria-current="true">Deutsch</a>
+        <a class="lang-option" href="/fr/modules/maintenance" hreflang="fr" lang="fr" data-lang="fr">Français</a>
+      </div>
+    </div>
+    <!--/i18n:switcher-mobile-->
+    <div class="mobile-cta">
+      <a class="btn btn-secondary" href="https://app.caspianerp.com">Anmelden</a>
+      <a class="btn btn-primary" href="/de/contact#demo">Demo anfragen</a>
+    </div>
+  </div>
+</header>
+<main id="main">
+
+  <section class="hero">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Brotkrümelnavigation">
+        <a href="/de/modules">Module</a>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg>
+        <span aria-current="page">Instandhaltung</span>
+      </nav>
+      <span class="eyebrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a4 4 0 0 0 5 5L21 21l-3 .5L8.5 12A4 4 0 0 1 3 6.5l3 3 2.5-2.5-3-3z"/></svg>Instandhaltung</span>
+      <h1>Ein CMMS, das Ihre Leute <span class="grad">und Ersatzteile schon kennt</span></h1>
+      <p class="hero-sub">Störmeldungen und Wartungspläne in einem Anlagenregister — mit Teilen aus dem Lager und Fachkräften, deren Qualifikation das System bereits geprüft hat.</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary btn-lg" href="/de/contact#demo">Demo anfragen</a>
+        <a class="btn btn-secondary btn-lg" href="https://docs.caspianerp.com">Dokumentation lesen</a>
+      </div>
+      <p class="hero-note">Elf Werkzeuge · Vorbeugend und reaktiv · Entnimmt Ersatzteile aus dem Lager</p>
+    </div>
+  </section>
+  <div class="container mock-wrap">
+    <p class="small muted text-center">Beispielhafte Produktansicht mit Musterdaten. <a href="/de/contact#demo">Live-Rundgang anfragen</a>.</p>
+    <div class="mock reveal" role="img" aria-label="Caspian ERP Instandhaltung mit überfälliger Wartung, offenen Meldungen, fälliger Kalibrierung und Ersatzteilverbrauch">
+      <div class="mock-bar" aria-hidden="true">
+        <span class="mock-dot"></span><span class="mock-dot"></span><span class="mock-dot"></span>
+        <span class="mock-url">app.caspianerp.com/de/w/maintenance/schedule</span>
+      </div>
+      <div class="mock-body" aria-hidden="true">
+        <div class="mock-rail">
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg>Start</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/></svg>Personalwesen</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>HSEQ</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>Untern.</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1"/><circle cx="18" cy="20" r="1"/><path d="M2 3h2.5l2.6 12.6a1 1 0 0 0 1 .8h8.9a1 1 0 0 0 1-.77L21 8H6"/></svg>Beschaff.</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V10l6 4V10l6 4V6l6 4v11z"/><path d="M7 17h.01M13 17h.01M18 17h.01"/></svg>Fertig.</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>CRM</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V9l9-6 9 6v12"/><path d="M7 21v-8h10v8"/></svg>Lager</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 16V6h11v10"/><path d="M14 9h4l3 3.5V16h-7z"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg>Logistik</div>
+          <div class="mock-rail-item active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0 5 5L21 21l-3 .5L8.5 12A4 4 0 0 1 3 6.5l3 3 2.5-2.5-3-3z"/></svg>Instandh.</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 6H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>Finanzen</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4.5 13.5H11l-1 8.5 8.5-11.5H12z"/></svg>Effizienz</div>
+        </div>
+        <div class="mock-side">
+          <div class="mock-side-title">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0 5 5L21 21l-3 .5L8.5 12A4 4 0 0 1 3 6.5l3 3 2.5-2.5-3-3z"/></svg>
+            Instandhaltung
+          </div>
+          <div class="mock-side-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0 5 5L21 21l-3 .5L8.5 12A4 4 0 0 1 3 6.5l3 3 2.5-2.5-3-3z"/></svg>Anlagen</div>
+          <div class="mock-side-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/><path d="M12 9v4M12 17h.01"/></svg>Meldungen</div>
+          <div class="mock-side-item active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M3 10h18M8 2v4M16 2v4"/></svg>Terminplan</div>
+          <div class="mock-side-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19h16M7 16V9M12 16V5M17 16v-4"/></svg>Dashboard</div>
+          <div class="mock-side-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 14 16 9"/><path d="M4.5 18a9 9 0 1 1 15 0"/><circle cx="12" cy="14" r="1.5"/></svg>Zählerstände</div>
+          <div class="mock-side-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 15 15 3l6 6L9 21z"/><path d="m7 11 2 2M11 7l2 2M9.5 15.5l1.5 1.5"/></svg>Kalibrierung</div>
+          <div class="mock-side-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3v18l2-1.5L9 21l2-1.5L13 21l2-1.5L17 21l2-1.5V3z"/><path d="M8 8h8M8 12h8"/></svg>Gewährleistungsfälle</div>
+          <div class="mock-side-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6h11M9 12h11M9 18h11M4 6h.01M4 12h.01M4 18h.01"/></svg>Fehlercodes</div>
+          <div class="mock-side-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>Wartungspläne</div>
+        </div>
+        <div class="mock-main">
+          <div class="mock-topbar">
+            <div class="mock-search">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.2-3.2"/></svg>
+              Personen, Aufträge, Anlagen suchen …
+            </div>
+            <div class="mock-plus"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></div>
+            <div class="mock-avatar"></div>
+          </div>
+          <div class="mock-h1">Instandhaltungsplan</div>
+          <div class="mock-tag">31 Aufträge diese Woche · 4 überfällige Wartungen</div>
+          <div class="mock-cards">
+            <div class="mock-card">
+              <div class="mock-card-head" style="color:#e11d48">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/><path d="M12 9v4M12 17h.01"/></svg>
+                Überfällige Wartung
+              </div>
+              <div class="mock-row"><span>Pumpe P-104 · 500 Std</span><span class="mock-pill hot">12 T</span></div>
+              <div class="mock-row"><span>Aggregat G-2 · Service</span><span class="mock-pill warn">5 T</span></div>
+              <div class="mock-row"><span>Kran · Prüfung</span><span class="mock-pill warn">2 T</span></div>
+            </div>
+            <div class="mock-card">
+              <div class="mock-card-head" style="color:#d97706">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="4" width="10" height="17" rx="2"/><path d="M9 4V3h6v1"/><path d="M10 10h4M10 14h4"/></svg>
+                Offene Meldungen
+              </div>
+              <div class="mock-kpi">14</div>
+              <div class="mock-kpi-sub">3 an kritischen Anlagen</div>
+            </div>
+            <div class="mock-card">
+              <div class="mock-card-head" style="color:#7c3aed">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 15 15 3l6 6L9 21z"/><path d="m7 11 2 2M11 7l2 2M9.5 15.5l1.5 1.5"/></svg>
+                Kalibrierung fällig
+              </div>
+              <div class="mock-row"><span>Drehmomentschlüssel 04</span><span class="mock-pill warn">18 T</span></div>
+              <div class="mock-row"><span>Gaswarngerät 11</span><span class="mock-pill">26 T</span></div>
+            </div>
+            <div class="mock-card">
+              <div class="mock-card-head" style="color:#0d9488">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21 8-9-5-9 5v8l9 5 9-5z"/><path d="m3 8 9 5 9-5M12 13v9"/></svg>
+                Verbrauchte Ersatzteile
+              </div>
+              <div class="mock-bars"><span style="height:38%"></span><span style="height:54%"></span><span style="height:47%"></span><span style="height:62%"></span><span style="height:71%"></span><span style="height:58%"></span></div>
+              <div class="mock-kpi-sub" style="margin-top:8px">Aus dem Lager entnommen, sechs Wochen</div>
+            </div>
+            <div class="mock-card">
+              <div class="mock-card-head" style="color:#4f46e5">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 14 16 9"/><path d="M4.5 18a9 9 0 1 1 15 0"/><circle cx="12" cy="14" r="1.5"/></svg>
+                Zählerstände
+              </div>
+              <div class="mock-kpi">92%</div>
+              <div class="mock-kpi-sub">Anlagen planmäßig abgelesen in diesem Monat</div>
+            </div>
+            <div class="mock-card">
+              <div class="mock-card-head" style="color:#0891b2">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3v18l2-1.5L9 21l2-1.5L13 21l2-1.5L17 21l2-1.5V3z"/><path d="M8 8h8M8 12h8"/></svg>
+                Gewährleistungsfälle
+              </div>
+              <div class="mock-row"><span>Kompressordichtung</span><span class="mock-pill">Eingereicht</span></div>
+              <div class="mock-row"><span>Steuerkarte</span><span class="mock-pill ok">Genehmigt</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="section section-soft">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Vor Caspian ERP</span>
+        <h2>Das Instandhaltungssystem kennt die Maschine und sonst nichts</h2>
+        <p>Ein eigenständiges CMMS hat eine eigene Anlagenliste, eine eigene Personenliste und eine eigene Teileliste. Drei Listen im Gleichschritt zu halten, ist die eigentliche Arbeit.</p>
+      </div>
+      <div class="grid grid-3">
+        <article class="card card-pad reveal">
+          <h3>Störungen werden telefonisch gemeldet</h3>
+          <p class="mt-12">Eine Meldung kommt als Anruf, landet an einer Tafel, und ihre Historie existiert nur im Gedächtnis dessen, der abgenommen hat.</p>
+        </article>
+        <article class="card card-pad reveal">
+          <h3>Wartungspläne verrutschen leise</h3>
+          <p class="mt-12">Der Plan sagt vierteljährlich. Das letzte Mal war vor sieben Monaten. Nichts hat sich gemeldet, weil nichts hingesehen hat.</p>
+        </article>
+        <article class="card card-pad reveal">
+          <h3>Ersatzteile verlassen das Regal ungezählt</h3>
+          <p class="mt-12">Die Fachkraft nimmt, was sie braucht. Der Bestand stimmt nicht, die Auftragskosten stimmen nicht, und die nächste Planung arbeitet mit beidem.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Was es leistet</span>
+        <h2>Alles, was die Technik braucht, in einem Register</h2>
+        <p>Reaktive Arbeiten, geplante Arbeiten, Kalibrierung und Gewährleistung — an denselben Anlagen.</p>
+      </div>
+      <div class="grid grid-2">
+        <article class="card card-pad reveal">
+          <span class="icon-tile t-emerald"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a4 4 0 0 0 5 5L21 21l-3 .5L8.5 12A4 4 0 0 1 3 6.5l3 3 2.5-2.5-3-3z"/></svg></span>
+          <h3 class="mt-16">Ein Anlagenregister, das seine Historie trägt</h3>
+          <p class="mt-12">Jedes Betriebsmittel ist ein Datensatz: was es ist, wo es steht und alles, was ihm widerfahren ist.</p>
+          <ul class="check-list mt-16">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Anlagen mit Standort, Kritikalität und Dokumenten</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Vollständige Arbeitshistorie an der Anlage statt im Gedächtnis einer Person</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Fahrzeuge und Produktionstechnik im selben Register</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Fehlercodes, damit Muster wirklich sichtbar werden</li>
+          </ul>
+        </article>
+        <article class="card card-pad reveal">
+          <span class="icon-tile t-amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="4" width="10" height="17" rx="2"/><path d="M9 4V3h6v1"/><path d="M10 10h4M10 14h4"/></svg></span>
+          <h3 class="mt-16">Meldungen und Arbeitsaufträge</h3>
+          <p class="mt-12">Reaktive Arbeiten, die jeder melden kann — gesichtet, zugewiesen und mit dem Ergebnis abgeschlossen.</p>
+          <ul class="check-list mt-16">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Meldungen aus dem Feld per Handy</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>In geplante Arbeit mit Verantwortlichem und Priorität überführt</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Teile werden beim Abschluss des Auftrags aus dem Lager entnommen</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Die Auftragskosten entstehen aus tatsächlich verbrauchter Arbeit und Material</li>
+          </ul>
+        </article>
+        <article class="card card-pad reveal">
+          <span class="icon-tile t-cyan"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M3 10h18M8 2v4M16 2v4"/></svg></span>
+          <h3 class="mt-16">Wartungspläne, die ihre Arbeit selbst erzeugen</h3>
+          <p class="mt-12">Zeit- und zählerbasierte Pläne, die die Arbeit erzeugen statt auf eine Erinnerung zu bauen.</p>
+          <ul class="check-list mt-16">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Wartungspläne je Anlage mit Intervall und Umfang</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Zählerstände, die nutzungsabhängige Wartung steuern</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Wartungschecklisten am geplanten Auftrag</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Überfällige Wartung ist sichtbar, bevor sie zum Ausfall wird</li>
+          </ul>
+        </article>
+        <article class="card card-pad reveal">
+          <span class="icon-tile t-violet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 15 15 3l6 6L9 21z"/><path d="m7 11 2 2M11 7l2 2M9.5 15.5l1.5 1.5"/></svg></span>
+          <h3 class="mt-16">Kalibrierung mit Zertifikaten</h3>
+          <p class="mt-12">Messmittel werden mit Kalibrierstatus, Fälligkeiten und Zertifikaten geführt.</p>
+          <ul class="check-list mt-16">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Kalibrierplan je Messmittel</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Zertifikate an der Anlage gespeichert</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Nicht kalibrierte Geräte werden vor dem Einsatz markiert</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Der Nachweis, den Kunde oder Auditor verlangt — auf Abruf</li>
+          </ul>
+        </article>
+        <article class="card card-pad reveal">
+          <span class="icon-tile t-rose"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3v18l2-1.5L9 21l2-1.5L13 21l2-1.5L17 21l2-1.5V3z"/><path d="M8 8h8M8 12h8"/></svg></span>
+          <h3 class="mt-16">Gewährleistungsfälle, die tatsächlich geltend gemacht werden</h3>
+          <p class="mt-12">Der Gewährleistungsstatus liegt bei der Anlage — Ansprüche werden geltend gemacht, solange sie gelten.</p>
+          <ul class="check-list mt-16">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Gewährleistungsfristen je Anlage erfasst</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Ansprüche gegenüber dem Lieferanten erhoben und verfolgt</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Verknüpft mit dem Ausfall, der sie ausgelöst hat</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Zurückgeholtes Geld statt stiller Abschreibung</li>
+          </ul>
+        </article>
+        <article class="card card-pad reveal">
+          <span class="icon-tile t-teal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 14 16 9"/><path d="M4.5 18a9 9 0 1 1 15 0"/><circle cx="12" cy="14" r="1.5"/></svg></span>
+          <h3 class="mt-16">Zählerstände und Ausfallanalyse</h3>
+          <p class="mt-12">Nutzungs- und Ausfalldaten werden routinemäßig erfasst, damit Zuverlässigkeitsarbeit eine Grundlage hat.</p>
+          <ul class="check-list mt-16">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Zählerstände, im Feld erfasst</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Fehlercodes, beim Abschluss konsequent vergeben</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Wiederholungsausfälle je Anlage und Code sichtbar</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Wartungsintervalle anhand von Belegen angepasst</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-tight section-soft">
+    <div class="container">
+      <div class="section-head">
+        <h2>Vom Störanruf zum abgeschlossenen Auftrag</h2>
+        <p>Dasselbe Register steuert auch die vorbeugende Arbeit, die den Anruf verhindert.</p>
+      </div>
+      <div class="flow reveal">
+        <div class="flow-step done"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/><path d="M12 9v4M12 17h.01"/></svg>Meldung erstellt</div>
+        <span class="flow-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
+        <div class="flow-step done"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a4 4 0 0 0 5 5L21 21l-3 .5L8.5 12A4 4 0 0 1 3 6.5l3 3 2.5-2.5-3-3z"/></svg>Zugewiesen</div>
+        <span class="flow-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
+        <div class="flow-step"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m21 8-9-5-9 5v8l9 5 9-5z"/><path d="m3 8 9 5 9-5M12 13v9"/></svg>Ersatzteile ausgegeben</div>
+        <span class="flow-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
+        <div class="flow-step"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="m8 12 3 3 5-6"/></svg>Checkliste erledigt</div>
+        <span class="flow-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
+        <div class="flow-step"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6h11M9 12h11M9 18h11M4 6h.01M4 12h.01M4 18h.01"/></svg>Fehlercode</div>
+        <span class="flow-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
+        <div class="flow-step"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>Abgeschlossen</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Jedes Werkzeug im Modul</span>
+        <h2>Elf Werkzeuge, damit die Technik läuft</h2>
+        <p>Reaktiv, vorbeugend, Kalibrierung und Gewährleistung in einem Modul.</p>
+      </div>
+      <div class="grid grid-2">
+        <div class="feature-item reveal">
+          <span class="icon-tile sm t-emerald"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a4 4 0 0 0 5 5L21 21l-3 .5L8.5 12A4 4 0 0 1 3 6.5l3 3 2.5-2.5-3-3z"/></svg></span>
+          <div>
+            <h4>Anlagen</h4>
+            <p>Das Anlagenregister — Standort, Kritikalität, Dokumente, Gewährleistung und vollständige Arbeitshistorie.</p>
+          </div>
+        </div>
+        <div class="feature-item reveal">
+          <span class="icon-tile sm t-rose"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/><path d="M12 9v4M12 17h.01"/></svg></span>
+          <div>
+            <h4>Meldungen</h4>
+            <p>Reaktive Instandhaltung, die jede Person der Organisation per Handy melden kann und die zu Arbeit wird.</p>
+          </div>
+        </div>
+        <div class="feature-item reveal">
+          <span class="icon-tile sm t-cyan"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M3 10h18M8 2v4M16 2v4"/></svg></span>
+          <div>
+            <h4>Terminplan</h4>
+            <p>Die Vorausschau auf geplante und zugewiesene Instandhaltungsarbeiten über Anlagen und Fachkräfte hinweg.</p>
+          </div>
+        </div>
+        <div class="feature-item reveal">
+          <span class="icon-tile sm t-violet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19h16M7 16V9M12 16V5M17 16v-4"/></svg></span>
+          <div>
+            <h4>Instandhaltungs-Dashboard</h4>
+            <p>Rückstand, überfällige Wartung, Ausfallhäufigkeit und Kosten auf einem Bildschirm.</p>
+          </div>
+        </div>
+        <div class="feature-item reveal">
+          <span class="icon-tile sm t-teal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 14 16 9"/><path d="M4.5 18a9 9 0 1 1 15 0"/><circle cx="12" cy="14" r="1.5"/></svg></span>
+          <div>
+            <h4>Zählerstände</h4>
+            <p>Stunden, Kilometer und Zyklen, im Feld erfasst, um nutzungsabhängige Wartung zu steuern.</p>
+          </div>
+        </div>
+        <div class="feature-item reveal">
+          <span class="icon-tile sm t-amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 15 15 3l6 6L9 21z"/><path d="m7 11 2 2M11 7l2 2M9.5 15.5l1.5 1.5"/></svg></span>
+          <div>
+            <h4>Kalibrierung</h4>
+            <p>Kalibrierpläne, -status und -zertifikate für Messmittel, die verifiziert bleiben müssen.</p>
+          </div>
+        </div>
+        <div class="feature-item reveal">
+          <span class="icon-tile sm t-rose"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3v18l2-1.5L9 21l2-1.5L13 21l2-1.5L17 21l2-1.5V3z"/><path d="M8 8h8M8 12h8"/></svg></span>
+          <div>
+            <h4>Gewährleistungsfälle</h4>
+            <p>Ansprüche gegenüber Lieferanten, solange die Gewährleistung läuft, verknüpft mit dem auslösenden Ausfall.</p>
+          </div>
+        </div>
+        <div class="feature-item reveal">
+          <span class="icon-tile sm t-slate"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6h11M9 12h11M9 18h11M4 6h.01M4 12h.01M4 18h.01"/></svg></span>
+          <div>
+            <h4>Fehlercodes</h4>
+            <p>Ein einheitliches Vokabular dafür, was schiefging — genau das macht Zuverlässigkeitsanalysen möglich.</p>
+          </div>
+        </div>
+        <div class="feature-item reveal">
+          <span class="icon-tile sm t-emerald"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="m8 12 3 3 5-6"/></svg></span>
+          <div>
+            <h4>Wartungschecklisten</h4>
+            <p>Standardaufgabenlisten an geplanten Aufträgen, damit die Arbeit jedes Mal gleich abläuft.</p>
+          </div>
+        </div>
+        <div class="feature-item reveal">
+          <span class="icon-tile sm t-cyan"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></span>
+          <div>
+            <h4>Wartungspläne</h4>
+            <p>Zeit- und zählerbasierte Pläne, die planmäßig eigene Arbeitsaufträge erzeugen.</p>
+          </div>
+        </div>
+        <div class="feature-item reveal">
+          <span class="icon-tile sm t-violet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 0 1 15-6.7L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-15 6.7L3 16"/><path d="M3 21v-5h5"/></svg></span>
+          <div>
+            <h4>Vorbeugende Maßnahmen</h4>
+            <p>Die einzelnen Maßnahmen, die ein Plan erzeugt — bis zum Abschluss verfolgt wie jede andere Arbeit.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section dark-section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Verzahnt, nicht angeflanscht</span>
+        <h2>Die drei Listen, die ein eigenständiges CMMS doppeln muss</h2>
+        <p>Hier sind es dieselben Datensätze, die der Rest der Organisation nutzt.</p>
+      </div>
+      <div class="grid grid-3">
+        <div class="dark-card reveal">
+          <span class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21V9l9-6 9 6v12"/><path d="M7 21v-8h10v8"/></svg></span>
+          <h3 class="mt-16">Ersatzteile aus echtem Bestand</h3>
+          <p>An einen Auftrag ausgegebene Teile sind Bestandsbewegungen — Lagerzahl und Auftragskosten bleiben deckungsgleich.</p>
+          <p class="mt-12"><a class="link-arrow" href="/de/modules/inventory">Lager ansehen<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></p>
+        </div>
+        <div class="dark-card reveal">
+          <span class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/></svg></span>
+          <h3 class="mt-16">Fachkräfte mit gültigen Nachweisen</h3>
+          <p>Arbeit geht an Personen, deren Nachweise und Schulungen die Plattform bereits führt — die Qualifikation ist vor dem Einsatz geprüft.</p>
+          <p class="mt-12"><a class="link-arrow" href="/de/modules/hr">Personalwesen ansehen<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></p>
+        </div>
+        <div class="dark-card reveal">
+          <span class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span>
+          <h3 class="mt-16">Erlaubnisse und Freischaltungen</h3>
+          <p>Instandhaltung an laufender Anlage braucht eine Erlaubnis — und Erlaubnis, Anlage und Fachkraft sind Datensätze desselben Systems.</p>
+          <p class="mt-12"><a class="link-arrow" href="/de/modules/hseq">HSEQ ansehen<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Wer darin arbeitet</span>
+        <h2>Für alle zwischen Störung und Reparatur</h2>
+        <p>Melder, Planer und Fachkraft auf einem Register.</p>
+      </div>
+      <div class="grid grid-3">
+        <article class="card card-pad reveal">
+          <span class="icon-tile sm t-emerald"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a4 4 0 0 0 5 5L21 21l-3 .5L8.5 12A4 4 0 0 1 3 6.5l3 3 2.5-2.5-3-3z"/></svg></span>
+          <h3 class="mt-16">Instandhaltungsplaner</h3>
+          <p class="mt-12">Wägt Wartungspläne gegen den reaktiven Rückstand ab und sieht Überfälliges, bevor daraus ein Ausfall wird.</p>
+        </article>
+        <article class="card card-pad reveal">
+          <span class="icon-tile sm t-amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span>
+          <h3 class="mt-16">Techniker</h3>
+          <p class="mt-12">Arbeitet die Auftragsliste am Handy ab, folgt der Checkliste, entnimmt die Teile und trägt beim Abschluss den Fehlercode ein.</p>
+        </article>
+        <article class="card card-pad reveal">
+          <span class="icon-tile sm t-violet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21V10l6 4V10l6 4V6l6 4v11z"/><path d="M7 17h.01M13 17h.01M18 17h.01"/></svg></span>
+          <h3 class="mt-16">Betriebsaufsicht</h3>
+          <p class="mt-12">Meldet in Sekunden und sieht den Stand, statt in der Werkstatt anzurufen.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-soft">
+    <div class="container split">
+      <div>
+        <span class="eyebrow">Von Ihnen zu gestalten</span>
+        <h2 class="mt-16">Instandhaltung an Ihre Anlagenstrategie anpassen</h2>
+        <p class="lead mt-12">Kritikalität, Intervalle und Codes gehören Ihnen — das ist die gesamte Zuverlässigkeitsstrategie.</p>
+        <ul class="check-list mt-24">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Anlagenkritikalität definieren und daraus die Priorität von Meldungen ableiten</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Wartungsintervalle nach Zeit, Zählerstand oder beidem festlegen</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Eigene Fehlercodeliste aufbauen, damit die Analyse zu Ihrer Technik passt</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Standardchecklisten je Anlagentyp an geplante Aufträge hängen</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Festlegen, wer melden, wer planen und wer einen Auftrag abschließen darf</li>
+        </ul>
+        <p class="mt-24"><a class="link-arrow" href="/de/modules/administration">Ansehen, was eine Administration steuert<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></p>
+      </div>
+      <div class="split-media">
+        <div class="panel reveal">
+          <div class="panel-head reveal">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21v-7M4 10V3M12 21v-9M12 8V3M20 21v-5M20 12V3M1 14h6M9 8h6M17 16h6"/></svg>
+            Instandhaltung · Einstellungen
+          </div>
+          <div class="panel-body reveal">
+            <table class="table-mock">
+              <thead><tr><th>Einstellung</th><th>Wert</th></tr></thead>
+              <tbody>
+                <tr><td>Auslöser für Wartung</td><td><span class="badge badge-cyan">Zeit + Zähler</span></td></tr>
+                <tr><td>Meldung erstellt von</td><td><span class="badge badge-emerald">Jedes Mitglied</span></td></tr>
+                <tr><td>Ersatzteilentnahme</td><td><span class="badge badge-amber">Aus dem Lager, verpflichtend</span></td></tr>
+                <tr><td>Fehlercode beim Abschluss</td><td><span class="badge badge-violet">Erforderlich</span></td></tr>
+                <tr><td>Kalibrierwarnung</td><td><span class="badge badge-rose">30 Tage</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2>Fragen zur Instandhaltung, die uns gestellt werden</h2>
+      </div>
+      <div class="faq">
+        <details>
+          <summary>Erzeugen Wartungspläne die Arbeit automatisch?</summary>
+          <div class="faq-body">Ja — Pläne erzeugen vorbeugende Maßnahmen in ihrem Intervall, nach Datum oder Zählerstand, sodass überfällige Wartung von selbst auftaucht statt von einer Erinnerung abzuhängen.</div>
+        </details>
+        <details>
+          <summary>Werden Fahrzeuge hier oder in der Logistik gewartet?</summary>
+          <div class="faq-body">Hier. Ein Fahrzeug ist eine Anlage, daher laufen Service, Zählerstände und Wartungspläne über die Instandhaltung. Die Logistik verwaltet seine Fahrten und Dokumente.</div>
+        </details>
+        <details>
+          <summary>Können Fachkräfte im Feld vom Handy arbeiten?</summary>
+          <div class="faq-body">Ja. Meldungen, Auftragslisten, Checklisten und Zählerstände sind für den Handy-Browser gemacht — dort passiert diese Arbeit ohnehin.</div>
+        </details>
+        <details>
+          <summary>Aktualisiert die Ausgabe eines Ersatzteils den Bestand?</summary>
+          <div class="faq-body">Ja. An einen Arbeitsauftrag ausgegebene Teile sind echte Bestandsbewegungen — das hält den Bestand korrekt und gibt dem Auftrag die echten Materialkosten.</div>
+        </details>
+        <details>
+          <summary>Können wir Kalibrierzertifikate für Kundenaudits verfolgen?</summary>
+          <div class="faq-body">Kalibrierpläne, -status und -zertifikate liegen am Messmittel — Nachweise zu liefern ist ein Filter, keine Ordnersuche.</div>
+        </details>
+      </div>
+      <p class="text-center mt-32">
+        <a class="link-arrow" href="/de/modules">Alle Module durchsehen<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+      </p>
+    </div>
+  </section>
+
+
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-hero">
+      <div>
+        <p class="footer-kicker">Eine Frage? Oder lieber ein Rundgang?</p>
+        <h2>Ein System für den gesamten Betrieb.</h2>
+      </div>
+      <div>
+        <p>Erzählen Sie uns, wie Ihr Betrieb läuft. Wir sehen uns die passenden Arbeitsabläufe an, prüfen Ihre Daten und stimmen mit unserem Team die nächsten Schritte ab.</p>
+        <div class="footer-actions">
+          <a class="btn btn-onDark btn-lg" href="/de/contact#demo">Demo anfragen <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+          <a class="btn btn-outline-onDark btn-lg" href="https://docs.caspianerp.com">Dokumentation lesen</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="/de">
+          <img class="brand-mark" src="/assets/img/logo-mark.svg" alt="" width="30" height="30">
+          <span class="brand-name" style="color:#fff">Caspian <b>ERP</b></span>
+        </a>
+      </div>
+      <div class="footer-col">
+        <h4>Plattform</h4>
+        <ul>
+          <li><a href="/de/modules">Alle Module</a></li>
+          <li><a href="/de/industries">Branchen</a></li>
+          <li><a href="/de/security">Sicherheit und RBAC</a></li>
+          <li><a href="/de/pricing">Preise</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Module</h4>
+        <ul>
+          <li><a href="/de/modules/hseq">HSEQ</a></li>
+          <li><a href="/de/modules/hr">Personalwesen</a></li>
+          <li><a href="/de/modules/procurement">Beschaffung</a></li>
+          <li><a href="/de/modules/inventory">Lager</a></li>
+          <li><a href="/de/modules/maintenance">Instandhaltung</a></li>
+          <li><a href="/de/modules/finance">Finanzen</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Unternehmen</h4>
+        <ul>
+          <li><a href="/de/about">Über uns</a></li>
+          <li><a href="https://caspiantools.com" rel="noopener">CaspianTools</a></li>
+          <li><a href="/de/contact">Kontakt</a></li>
+          <li><a href="/de/contact#demo">Demo anfragen</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Erste Schritte</h4>
+        <ul>
+          <li><a href="https://app.caspianerp.com">Anmelden</a></li>
+          <li><a href="/de/contact#demo">Demo anfragen</a></li>
+          <li><a href="https://docs.caspianerp.com">Dokumentation</a></li>
+          <li><a href="https://admin.caspianerp.com">Admin-Portal</a></li>
+          <li><a href="/de/pricing#faq">Fragen zu Preisen</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <span data-year>2026</span> CaspianTools. Caspian ERP ist ein Produkt von CaspianTools.</p>
+      <nav aria-label="Rechtliches">
+        <a href="/de/privacy">Datenschutzerklärung</a>
+        <a href="/de/terms">Nutzungsbedingungen</a>
+        <a href="/de/security">Sicherheit</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+<script src="/assets/js/site.js?v=20260908" defer></script>
+</body>
+</html>

@@ -1,0 +1,632 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="/assets/js/lang.js?v=20260908"></script>
+<title>Yönetim — Caspian ERP</title>
+<meta name="description" content="Caspian ERP’nin özelleştirme katmanı — modülleri ve araçları açıp kapatın, tek tek izinlerden roller kurun, kuruluşu şekillendirin, markalayın ve istediğiniz zaman fikrinizi değiştirin.">
+<link rel="canonical" href="https://caspianerp.com/tr/modules/administration">
+<!--i18n:alternates-->
+<link rel="alternate" hreflang="en" href="https://caspianerp.com/modules/administration">
+<link rel="alternate" hreflang="az" href="https://caspianerp.com/az/modules/administration">
+<link rel="alternate" hreflang="tr" href="https://caspianerp.com/tr/modules/administration">
+<link rel="alternate" hreflang="ru" href="https://caspianerp.com/ru/modules/administration">
+<link rel="alternate" hreflang="nb" href="https://caspianerp.com/nb/modules/administration">
+<link rel="alternate" hreflang="de" href="https://caspianerp.com/de/modules/administration">
+<link rel="alternate" hreflang="fr" href="https://caspianerp.com/fr/modules/administration">
+<link rel="alternate" hreflang="x-default" href="https://caspianerp.com/modules/administration">
+<!--/i18n:alternates-->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Caspian ERP">
+<meta property="og:title" content="Yönetim — Caspian ERP">
+<meta property="og:description" content="Caspian ERP’nin özelleştirme katmanı — modülleri ve araçları açıp kapatın, tek tek izinlerden roller kurun, kuruluşu şekillendirin, markalayın ve istediğiniz zaman fikrinizi değiştirin.">
+<meta property="og:url" content="https://caspianerp.com/tr/modules/administration">
+<meta property="og:image" content="https://caspianerp.com/assets/img/og-image.svg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#4f46e5">
+<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="/assets/css/site.css?v=20260908">
+<noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
+</head>
+<body>
+<a class="skip-link" href="#main">İçeriğe geç</a>
+<header class="site-header">
+  <div class="container">
+    <nav class="nav" aria-label="Ana">
+      <a class="brand" href="/tr">
+        <img class="brand-mark" src="/assets/img/logo-mark.svg" alt="" width="30" height="30">
+        <span class="brand-name">Caspian <b>ERP</b></span>
+      </a>
+      <ul class="nav-links">
+        <li><a class="nav-link" aria-current="page" href="/tr/modules">Modüller</a></li>
+        <li><a class="nav-link" href="/tr/industries">Sektörler</a></li>
+        <li><a class="nav-link" href="/tr/security">Güvenlik</a></li>
+        <li><a class="nav-link" href="/tr/pricing">Fiyatlandırma</a></li>
+        <li><a class="nav-link" href="/tr/about">Hakkımızda</a></li>
+      </ul>
+      <div class="nav-actions">
+        <!--i18n:switcher-->
+        <details class="lang" data-lang-switcher>
+          <summary class="lang-button" title="Bir dil seçin" aria-label="Dil: Türkçe"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18"/></svg><span class="lang-code">TR</span><svg class="lang-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="lang-menu" role="group" aria-label="Bir dil seçin">
+            <a class="lang-option" href="/modules/administration" hreflang="en" lang="en" data-lang="en">English</a>
+            <a class="lang-option" href="/az/modules/administration" hreflang="az" lang="az" data-lang="az">Azərbaycan dili</a>
+            <a class="lang-option" href="/tr/modules/administration" hreflang="tr" lang="tr" data-lang="tr" aria-current="true">Türkçe</a>
+            <a class="lang-option" href="/ru/modules/administration" hreflang="ru" lang="ru" data-lang="ru">Русский</a>
+            <a class="lang-option" href="/nb/modules/administration" hreflang="nb" lang="nb" data-lang="nb">Norsk (bokmål)</a>
+            <a class="lang-option" href="/de/modules/administration" hreflang="de" lang="de" data-lang="de">Deutsch</a>
+            <a class="lang-option" href="/fr/modules/administration" hreflang="fr" lang="fr" data-lang="fr">Français</a>
+          </div>
+        </details>
+        <!--/i18n:switcher-->
+        <a class="btn btn-ghost btn-sm" href="https://app.caspianerp.com">Oturum açın</a>
+        <a class="btn btn-primary btn-sm" href="/tr/contact#demo">Demo talep edin <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+        <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="mobile-menu" aria-label="Menüyü aç" data-text-open="Menüyü aç" data-text-close="Menüyü kapat">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </nav>
+  </div>
+  <div class="mobile-menu" id="mobile-menu">
+    <a class="nav-link" aria-current="page" href="/tr/modules">Modüller</a>
+    <a class="nav-link" href="/tr/industries">Sektörler</a>
+    <a class="nav-link" href="/tr/security">Güvenlik</a>
+    <a class="nav-link" href="/tr/pricing">Fiyatlandırma</a>
+    <a class="nav-link" href="/tr/about">Hakkımızda</a>
+    <a class="nav-link" href="https://docs.caspianerp.com">Dokümantasyon</a>
+    <a class="nav-link" href="/tr/contact">İletişim</a>
+    <!--i18n:switcher-mobile-->
+    <div class="mobile-lang" role="group" aria-label="Bir dil seçin">
+      <span class="mobile-lang-label">Dil</span>
+      <div class="mobile-lang-options">
+        <a class="lang-option" href="/modules/administration" hreflang="en" lang="en" data-lang="en">English</a>
+        <a class="lang-option" href="/az/modules/administration" hreflang="az" lang="az" data-lang="az">Azərbaycan dili</a>
+        <a class="lang-option" href="/tr/modules/administration" hreflang="tr" lang="tr" data-lang="tr" aria-current="true">Türkçe</a>
+        <a class="lang-option" href="/ru/modules/administration" hreflang="ru" lang="ru" data-lang="ru">Русский</a>
+        <a class="lang-option" href="/nb/modules/administration" hreflang="nb" lang="nb" data-lang="nb">Norsk (bokmål)</a>
+        <a class="lang-option" href="/de/modules/administration" hreflang="de" lang="de" data-lang="de">Deutsch</a>
+        <a class="lang-option" href="/fr/modules/administration" hreflang="fr" lang="fr" data-lang="fr">Français</a>
+      </div>
+    </div>
+    <!--/i18n:switcher-mobile-->
+    <div class="mobile-cta">
+      <a class="btn btn-secondary" href="https://app.caspianerp.com">Oturum açın</a>
+      <a class="btn btn-primary" href="/tr/contact#demo">Demo talep edin</a>
+    </div>
+  </div>
+</header>
+<main id="main">
+
+  <section class="hero">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Site haritası yolu">
+        <a href="/tr/modules">Modüller</a>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg>
+        <span aria-current="page">Yönetim</span>
+      </nav>
+      <span class="eyebrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21v-7M4 10V3M12 21v-9M12 8V3M20 21v-5M20 12V3M1 14h6M9 8h6M17 16h6"/></svg>Yönetim ve özelleştirme</span>
+      <h1>Sizin ERP’niz, <span class="grad">kuruluşunuza göre şekillendirildi</span></h1>
+      <p class="hero-sub">Her modül ve her tek araç açılıp kapatılabilir. Roller tek tek izinlerden kurulur. Altı ay sonra kullandığınız sistemin, başladığınız sistem olması gerekmez.</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary btn-lg" href="/tr/contact#demo">Demo talep edin</a>
+        <a class="btn btn-secondary btn-lg" href="https://docs.caspianerp.com">Dokümanları okuyun</a>
+      </div>
+      <p class="hero-note">Paylaşılan platform yapılandırması</p>
+    </div>
+  </section>
+  <div class="container mock-wrap">
+    <p class="small muted text-center">Örnek verilerle açıklayıcı ürün görünümü. <a href="/tr/contact#demo">Canlı bir tanıtım talep edin</a>.</p>
+    <div class="mock reveal" role="img" aria-label="Modül anahtarlarını, özel rolleri, üye davetlerini ve denetim kaydını gösteren Caspian ERP Yönetimi">
+      <div class="mock-bar" aria-hidden="true">
+        <span class="mock-dot"></span><span class="mock-dot"></span><span class="mock-dot"></span>
+        <span class="mock-url">app.caspianerp.com/tr/w/settings/roles</span>
+      </div>
+      <div class="mock-body" aria-hidden="true">
+        <div class="mock-rail">
+          <div class="mock-rail-item active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg>Ana sayfa</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/></svg>İnsan Kaynakları</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>HSEQ</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>İş</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1"/><circle cx="18" cy="20" r="1"/><path d="M2 3h2.5l2.6 12.6a1 1 0 0 0 1 .8h8.9a1 1 0 0 0 1-.77L21 8H6"/></svg>Satınalma</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V10l6 4V10l6 4V6l6 4v11z"/><path d="M7 17h.01M13 17h.01M18 17h.01"/></svg>Üretim</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>CRM</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V9l9-6 9 6v12"/><path d="M7 21v-8h10v8"/></svg>Envanter</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 16V6h11v10"/><path d="M14 9h4l3 3.5V16h-7z"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg>Lojistik</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0 5 5L21 21l-3 .5L8.5 12A4 4 0 0 1 3 6.5l3 3 2.5-2.5-3-3z"/></svg>Bakım</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 6H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>Finans</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4.5 13.5H11l-1 8.5 8.5-11.5H12z"/></svg>Verimlilik</div>
+        </div>
+        <div class="mock-side">
+          <div class="mock-side-title">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21v-7M4 10V3M12 21v-9M12 8V3M20 21v-5M20 12V3M1 14h6M9 8h6M17 16h6"/></svg>
+            Yönetim
+          </div>
+          <div class="mock-side-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21V4a1 1 0 0 1 1-1h9a1 1 0 0 1 1 1v17"/><path d="M15 9h4a1 1 0 0 1 1 1v11"/><path d="M8 7h3M8 11h3M8 15h3M4 21h16"/></svg>Kuruluş</div>
+          <div class="mock-side-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/></svg>Üyeler</div>
+          <div class="mock-side-item active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="15" r="4"/><path d="m11 12 9-9 2 2-2 2 2 2-3 3-2-2-2 2"/></svg>Roller</div>
+          <div class="mock-side-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>İzinler</div>
+          <div class="mock-side-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3h6v6"/><path d="M10 14 20 4"/><path d="M20 13v6a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h6"/></svg>Davetler</div>
+          <div class="mock-side-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>Departmanlar ve Araçlar</div>
+          <div class="mock-side-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Denetim Kaydı</div>
+          <div class="mock-side-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="1" fill="currentColor" stroke="none"/></svg>Marka</div>
+          <div class="mock-side-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18 15 15 0 0 1 0-18z"/></svg>Dil</div>
+        </div>
+        <div class="mock-main">
+          <div class="mock-topbar">
+            <div class="mock-search">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.2-3.2"/></svg>
+              Kişileri, siparişleri, varlıkları arayın…
+            </div>
+            <div class="mock-plus"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></div>
+            <div class="mock-avatar"></div>
+          </div>
+          <div class="mock-h1">Roller ve izinler</div>
+          <div class="mock-tag">7 özel rol · 148 üye · değişiklikler anında geçerli</div>
+          <div class="mock-cards">
+            <div class="mock-card">
+              <div class="mock-card-head" style="color:#4f46e5">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="15" r="4"/><path d="m11 12 9-9 2 2-2 2 2 2-3 3-2-2-2 2"/></svg>
+                Özel roller
+              </div>
+              <div class="mock-row"><span>İzin veren</span><span class="mock-pill">14 araç</span></div>
+              <div class="mock-row"><span>Depo görevlisi</span><span class="mock-pill">6 araç</span></div>
+              <div class="mock-row"><span>Bütçe sahibi</span><span class="mock-pill ok">4 araç</span></div>
+            </div>
+            <div class="mock-card">
+              <div class="mock-card-head" style="color:#0d9488">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>
+                Açık modüller
+              </div>
+              <div class="mock-kpi">11 / 9</div>
+              <div class="mock-kpi-sub">Üretim ve CRM kapalı</div>
+            </div>
+            <div class="mock-card">
+              <div class="mock-card-head" style="color:#7c3aed">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
+                İzin değişiklikleri
+              </div>
+              <div class="mock-row"><span>Finans · kısıtlandı</span><span class="mock-pill warn">Bugün</span></div>
+              <div class="mock-row"><span>HSEQ · genişletildi</span><span class="mock-pill">3 gün önce</span></div>
+            </div>
+            <div class="mock-card">
+              <div class="mock-card-head" style="color:#d97706">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3h6v6"/><path d="M10 14 20 4"/><path d="M20 13v6a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h6"/></svg>
+                Davetler
+              </div>
+              <div class="mock-kpi">5</div>
+              <div class="mock-kpi-sub">beklemede · rol önceden atandı</div>
+            </div>
+            <div class="mock-card">
+              <div class="mock-card-head" style="color:#0891b2">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18 15 15 0 0 1 0-18z"/></svg>
+                Kullanılan diller
+              </div>
+              <div class="mock-bars"><span style="height:88%"></span><span style="height:34%"></span><span style="height:22%"></span><span style="height:18%"></span><span style="height:41%"></span></div>
+              <div class="mock-kpi-sub" style="margin-top:8px">EN · AZ · TR · RU · NO · DE · FR</div>
+            </div>
+            <div class="mock-card">
+              <div class="mock-card-head" style="color:#e11d48">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+                Denetim kaydı
+              </div>
+              <div class="mock-row"><span>Rol güncellendi · Operasyon</span><span class="mock-pill">12:04</span></div>
+              <div class="mock-row"><span>Üye kaldırıldı</span><span class="mock-pill">09:31</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="section section-soft">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Caspian ERP’den önce</span>
+        <h2>Çoğu ERP bir kez ve başkası tarafından yapılandırılır</h2>
+        <p>Bir uygulama projesine ödeme yaparsınız, biçim dondurulur ve sonraki her değişiklik fiyatı olan bir değişiklik talebine dönüşür.</p>
+      </div>
+      <div class="grid grid-3">
+        <article class="card card-pad reveal">
+          <h3>Asla kullanmayacağınız modülleri satın alırsınız</h3>
+          <p class="mt-12">Lisans her şeyi kapsar, kenar çubuğu her şeyi gösterir ve çalışanlarınız bir yıl boyunca kendilerini ilgilendirmeyen üçte ikinin yanından geçmekle uğraşır.</p>
+        </article>
+        <article class="card card-pad reveal">
+          <h3>İzinler üç bedende gelir</h3>
+          <p class="mt-12">Yönetici, müdür, kullanıcı. Bundan daha ayrıntılı her şey bir danışmanla görüşme ve bir teklif gerektirir.</p>
+        </article>
+        <article class="card card-pad reveal">
+          <h3>Fikir değiştirmek pahalıdır</h3>
+          <p class="mt-12">Kuruluş gelişir, sistem gelişmez — çünkü her ayar bir ayar değil, bir projedir.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Ne yapar</span>
+        <h2>Onu sizin sisteminiz yapan kontroller</h2>
+        <p>Bir yöneticinin bize danışmadan, danışman olmadan ve bir sürüm beklemeden yapabilecekleri şunlardır.</p>
+      </div>
+      <div class="grid grid-2">
+        <article class="card card-pad reveal">
+          <span class="icon-tile t-slate"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></span>
+          <h3 class="mt-16">Departmanları ve araçları açıp kapatın</h3>
+          <p class="mt-12">Kenar çubuğu, arama ve izinler bu anahtarları izler.</p>
+          <ul class="check-list mt-16">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Kuruluşunuz için bütün modülleri açın ya da kapatın</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Kullandığınız bir modülün içindeki tek tek araçları kapatın</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Herkes yalnızca kendisini ilgilendireni görür — gereksiz yığının yanından geçmek yok</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Sonradan açın; veriler yerinde durur ve araç yeniden görünür</li>
+          </ul>
+        </article>
+        <article class="card card-pad reveal">
+          <span class="icon-tile t-violet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="15" r="4"/><path d="m11 12 9-9 2 2-2 2 2 2-3 3-2-2-2 2"/></svg></span>
+          <h3 class="mt-16">Kendi kurduğunuz roller</h3>
+          <p class="mt-12">Varsayılanlardan başlayın, ardından bir rolün ne yapabileceğini araç araç tanımlayın.</p>
+          <ul class="check-list mt-16">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Başlangıç için Sahip, Yönetici, Müdür ve Üye</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Tek tek okuma / oluşturma / güncelleme / silme izinlerinden kurulan özel roller</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Her gerçek görev için bir rol — izin veren, depo görevlisi, bütçe sahibi</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Her üye her kuruluşta tam olarak bir rol taşır</li>
+          </ul>
+        </article>
+        <article class="card card-pad reveal">
+          <span class="icon-tile t-rose"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></span>
+          <h3 class="mt-16">Arayüzde değil, sunucu tarafında uygulanır</h3>
+          <p class="mt-12">Bir düğmeyi gizlemek denetim değildir, hiç olmadı.</p>
+          <ul class="check-list mt-16">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>İzinler sunucu tarafındaki güvenlik kurallarıyla değerlendirilir</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Vermediğiniz bir izne hiçbir istemci erişemez</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Kuruluşlar arasında çok kiracılı yalıtım</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Denetim kaydı, erişimi kimin ne zaman değiştirdiğini kaydeder</li>
+          </ul>
+        </article>
+        <article class="card card-pad reveal">
+          <span class="icon-tile t-emerald"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21V4a1 1 0 0 1 1-1h9a1 1 0 0 1 1 1v17"/><path d="M15 9h4a1 1 0 0 1 1 1v11"/><path d="M8 7h3M8 11h3M8 15h3M4 21h16"/></svg></span>
+          <h3 class="mt-16">Kuruluşun kendisini şekillendirin</h3>
+          <p class="mt-12">Departmanlar, görev unvanları ve üyeler sizin tanımlayıp değiştirdiğiniz şeylerdir.</p>
+          <ul class="check-list mt-16">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Kuruluş profili, departmanlar ve görev unvanları</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Üyeleri e-postayla davet edin; sizin seçtiğiniz rolle katılırlar</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Bir hesap birden çok kuruluşa ait olabilir, tamamen ayrılmış hâlde</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Yapıyı bir geçiş olmadan değiştirin</li>
+          </ul>
+        </article>
+        <article class="card card-pad reveal">
+          <span class="icon-tile t-cyan"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18 15 15 0 0 1 0-18z"/></svg></span>
+          <h3 class="mt-16">Marka ve dil</h3>
+          <p class="mt-12">Sistem sizin gibi okunur, herkesin tercih ettiği dilde.</p>
+          <ul class="check-list mt-16">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Çalışma alanı içinde kuruluşunuzun markası</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>İngilizce, Azerbaycanca, Türkçe, Rusça, Norveççe, Almanca ve Fransızca dâhil</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Her üye kendi dilini seçer</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Farklı bir saha için ayrı bir kurulum gerekmez</li>
+          </ul>
+        </article>
+        <article class="card card-pad reveal">
+          <span class="icon-tile t-amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
+          <h3 class="mt-16">Yapılandırmanın denetim izi</h3>
+          <p class="mt-12">Kimin ne yapabileceğine dair değişiklikler kaydedilir, çünkü önemlidir.</p>
+          <ul class="check-list mt-16">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Üyelik, rol ve izin değişiklikleri kaydedilir ve kime ait olduğu belirtilir</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Tahmine gerek kalmadan “bunu kim, ne zaman değiştirdi?” sorusunu yanıtlar</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Hem müşteri denetiminde hem de iç denetimde işe yarar</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Yalnızca veri geçmişi değil, yapılandırma geçmişi</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-tight section-soft">
+    <div class="container">
+      <div class="section-head">
+        <h2>Boş bir kuruluştan çalışan bir sisteme</h2>
+        <p>Bu bir uygulama projesi değil, bir ayar işidir.</p>
+      </div>
+      <div class="flow reveal">
+        <div class="flow-step done"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21V4a1 1 0 0 1 1-1h9a1 1 0 0 1 1 1v17"/><path d="M15 9h4a1 1 0 0 1 1 1v11"/><path d="M8 7h3M8 11h3M8 15h3M4 21h16"/></svg>Kuruluş oluşturun</div>
+        <span class="flow-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
+        <div class="flow-step done"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>Modülleri seçin</div>
+        <span class="flow-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
+        <div class="flow-step done"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="15" r="4"/><path d="m11 12 9-9 2 2-2 2 2 2-3 3-2-2-2 2"/></svg>Rolleri tanımlayın</div>
+        <span class="flow-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
+        <div class="flow-step"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/></svg>Üyeleri davet edin</div>
+        <span class="flow-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
+        <div class="flow-step"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21v-7M4 10V3M12 21v-9M12 8V3M20 21v-5M20 12V3M1 14h6M9 8h6M17 16h6"/></svg>Ayarları ince ayar yapın</div>
+        <span class="flow-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
+        <div class="flow-step"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 4.5 13.5H11l-1 8.5 8.5-11.5H12z"/></svg>Kullanımda</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Modüldeki her araç</span>
+        <h2>Bir yöneticinin neleri kontrol ettiği</h2>
+        <p>Paylaşılan platformu tek bir yerden yapılandırın.</p>
+      </div>
+      <div class="grid grid-2">
+        <div class="feature-item reveal">
+          <span class="icon-tile sm t-slate"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21V4a1 1 0 0 1 1-1h9a1 1 0 0 1 1 1v17"/><path d="M15 9h4a1 1 0 0 1 1 1v11"/><path d="M8 7h3M8 11h3M8 15h3M4 21h16"/></svg></span>
+          <div>
+            <h4>Kuruluş Profili</h4>
+            <p>Kuruluşun kendi bilgileri, yapısı ve varsayılanları — diğer her şeyin başlangıcı.</p>
+          </div>
+        </div>
+        <div class="feature-item reveal">
+          <span class="icon-tile sm t-cyan"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/></svg></span>
+          <div>
+            <h4>Üyeler</h4>
+            <p>Bu kuruluşa kimlerin ait olduğu, her birinin hangi rolü taşıdığı ve mevcut durumları.</p>
+          </div>
+        </div>
+        <div class="feature-item reveal">
+          <span class="icon-tile sm t-violet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="15" r="4"/><path d="m11 12 9-9 2 2-2 2 2 2-3 3-2-2-2 2"/></svg></span>
+          <div>
+            <h4>Roller</h4>
+            <p>İzin kaydından derlenen özel roller — böylece bir rol gerçek bir göreve karşılık gelir.</p>
+          </div>
+        </div>
+        <div class="feature-item reveal">
+          <span class="icon-tile sm t-rose"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></span>
+          <div>
+            <h4>İzinler</h4>
+            <p>Her araç için okuma, oluşturma, güncelleme ve silme — her rolün kurulduğu kayıt.</p>
+          </div>
+        </div>
+        <div class="feature-item reveal">
+          <span class="icon-tile sm t-emerald"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3h6v6"/><path d="M10 14 20 4"/><path d="M20 13v6a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h6"/></svg></span>
+          <div>
+            <h4>Davetler</h4>
+            <p>E-postayla davet edin; kişi gelmeden önce seçtiğiniz rolle katılır.</p>
+          </div>
+        </div>
+        <div class="feature-item reveal">
+          <span class="icon-tile sm t-amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></span>
+          <div>
+            <h4>Departmanlar ve Araçlar</h4>
+            <p>Kuruluşunuzun hangi modülleri ve hangi tekil araçları göreceğine karar veren anahtarlar.</p>
+          </div>
+        </div>
+        <div class="feature-item reveal">
+          <span class="icon-tile sm t-teal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
+          <div>
+            <h4>Denetim Kaydı</h4>
+            <p>Üyelik, rol ve izin değişikliklerinin kaydedilmiş, kime ait olduğu belirtilen geçmişi.</p>
+          </div>
+        </div>
+        <div class="feature-item reveal">
+          <span class="icon-tile sm t-violet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="1" fill="currentColor" stroke="none"/></svg></span>
+          <div>
+            <h4>Marka</h4>
+            <p>Çalışma alanı içinde kuruluşunuzun kimliği — böylece jenerik bir yazılım gibi görünmez.</p>
+          </div>
+        </div>
+        <div class="feature-item reveal">
+          <span class="icon-tile sm t-cyan"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18 15 15 0 0 1 0-18z"/></svg></span>
+          <div>
+            <h4>Dil</h4>
+            <p>Ürünle birlikte gelen yedi dil — kurulum başına değil, üye başına seçilir.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section dark-section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Bağlı, sonradan takılmış değil</span>
+        <h2>Yapılandırma her modüle uzanır</h2>
+        <p>Bu ayarlar, aynı platformdaki iki kuruluşun neden birbirine hiç benzemeyebileceğinin sebebidir.</p>
+      </div>
+      <div class="grid grid-3">
+        <div class="dark-card reveal">
+          <span class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span>
+          <h3 class="mt-16">Sizin izin türleriniz ve risk matrisiniz</h3>
+          <p>HSEQ sizin güvenlik yönetim sisteminize uyum sağlar — izin türleri, risk ölçekleri ve gözlem kategorilerinin tamamı yapılandırmadır.</p>
+          <p class="mt-12"><a class="link-arrow" href="/tr/modules/hseq">HSEQ’i görün<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></p>
+        </div>
+        <div class="dark-card reveal">
+          <span class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="20" r="1"/><circle cx="18" cy="20" r="1"/><path d="M2 3h2.5l2.6 12.6a1 1 0 0 0 1 .8h8.9a1 1 0 0 0 1-.77L21 8H6"/></svg></span>
+          <h3 class="mt-16">Sizin onay eşikleriniz</h3>
+          <p>Kimin hangi tutarda imzaladığı ve ödemeden önce üç yönlü eşleştirmenin gerekip gerekmediği, burada belirlediğiniz politika kararlarıdır.</p>
+          <p class="mt-12"><a class="link-arrow" href="/tr/modules/procurement">Satın almayı görün<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></p>
+        </div>
+        <div class="dark-card reveal">
+          <span class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v20M17 6H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></span>
+          <h3 class="mt-16">Sizin hesap planınız</h3>
+          <p>Hesap yapısı, vergi oranları ve bütçe dönemleri sizin tarafınızdan tanımlanır ve kayıt üreten her modül bunlara uyar.</p>
+          <p class="mt-12"><a class="link-arrow" href="/tr/modules/finance">Finansı görün<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Burada kimler var</span>
+        <h2>Bu işi kim yapar</h2>
+        <p>Çoğu kuruluşta bir ya da iki kişi — ve çok uzun sürmez.</p>
+      </div>
+      <div class="grid grid-3">
+        <article class="card card-pad reveal">
+          <span class="icon-tile sm t-slate"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21v-7M4 10V3M12 21v-9M12 8V3M20 21v-5M20 12V3M1 14h6M9 8h6M17 16h6"/></svg></span>
+          <h3 class="mt-16">Sistem yöneticisi</h3>
+          <p class="mt-12">Kuruluşu kurar, hangi modüllerin açık olacağına karar verir, rolleri oluşturur ve kişileri davet eder. Genelde birkaç saat, bir proje değil.</p>
+        </article>
+        <article class="card card-pad reveal">
+          <span class="icon-tile sm t-rose"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></span>
+          <h3 class="mt-16">Uyum sorumlusu</h3>
+          <p class="mt-12">Erişimin doğru kısıtlandığını ve denetim kaydının kimin neyi değiştirdiğini yanıtlayabildiğini önemser.</p>
+        </article>
+        <article class="card card-pad reveal">
+          <span class="icon-tile sm t-emerald"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg></span>
+          <h3 class="mt-16">Departman müdürü</h3>
+          <p class="mt-12">Bir aracın açılmasını ister ve yönetici erişimi yapılandırdığında onu kullanabilir.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-soft">
+    <div class="container split">
+      <div>
+        <span class="eyebrow">Şekli sizin elinizde</span>
+        <h2 class="mt-16">Sınırlar, dürüstçe söylenmiş</h2>
+        <p class="lead mt-12">Yapılandırma derindir, ama yapılandırmadır — sınır tam burada.</p>
+        <ul class="check-list mt-24">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Modüller ve araçlar: istediğiniz zaman, anında açın ya da kapatın</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Roller ve izinler: her araç için okuma, oluşturma, güncelleme ve silmenin herhangi bir bileşimini kurun</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Yapı: departmanlar, görev unvanları, üyeler ve tek hesap altında birden çok kuruluş</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>İş akışı ayarları: onay eşikleri, durumlar, kategoriler, aralıklar ve uyarı pencereleri</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Ne değildir: özel kod, size özel veritabanı alanları ya da özel bir sürüm — bunlara ihtiyacınız varsa önce bizimle konuşun</li>
+        </ul>
+        <p class="mt-24"><a class="link-arrow" href="/tr/modules/administration">Bir yöneticinin neleri kontrol ettiğini görün<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></p>
+      </div>
+      <div class="split-media">
+        <div class="panel reveal">
+          <div class="panel-head reveal">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21v-7M4 10V3M12 21v-9M12 8V3M20 21v-5M20 12V3M1 14h6M9 8h6M17 16h6"/></svg>
+            Yönetim · Ayarlar
+          </div>
+          <div class="panel-body reveal">
+            <table class="table-mock">
+              <thead><tr><th>Ayar</th><th>Değer</th></tr></thead>
+              <tbody>
+                <tr><td>Aktif modüller</td><td><span class="badge badge-indigo">11 / 9</span></td></tr>
+                <tr><td>Özel roller</td><td><span class="badge badge-violet">7 tanımlı</span></td></tr>
+                <tr><td>İzin uygulaması</td><td><span class="badge badge-rose">Sunucu tarafında</span></td></tr>
+                <tr><td>Diller</td><td><span class="badge badge-cyan">7 mevcut</span></td></tr>
+                <tr><td>Denetim kaydı</td><td><span class="badge badge-emerald">Tüm erişim değişiklikleri</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2>Yönetimle ilgili bize sorulan sorular</h2>
+      </div>
+      <div class="faq">
+        <details>
+          <summary>Kullanmadığımız modülleri gerçekten kapatabilir miyiz?</summary>
+          <div class="faq-body">Evet — bütün departmanları ya da tek tek araçları, istediğiniz zaman. Kenar çubuğu, genel arama ve izin kaydı anahtarları izler; böylece kimse kendisini ilgilendirmeyen özelliklerin arasında dolaşmaz.</div>
+        </details>
+        <details>
+          <summary>Bir modülü kapatırsak verilere ne olur?</summary>
+          <div class="faq-body">Veriler kalır. Bir modülü kapatmak onu arayüzden gizler; sonra yeniden açtığınızda kayıtları eksiksiz geri gelir.</div>
+        </details>
+        <details>
+          <summary>Özel bir rol ne kadar ayrıntılı olabilir?</summary>
+          <div class="faq-body">Tek bir araçta okuma, oluşturma, güncelleme ve silme düzeyine kadar. Bu, gerçek bir göreve karşılık gelen bir rol kurmaya yeter — imzalayabilen ama yapılandıramayan bir izin veren; stok çıkışı yapabilen ama düzeltme yapamayan bir depo görevlisi.</div>
+        </details>
+        <details>
+          <summary>Bir aracı gizlemek onu güvenceye almakla aynı şey mi?</summary>
+          <div class="faq-body">Hayır ve biz de öyle davranmıyoruz. İzinler sunucu tarafındaki güvenlik kurallarıyla uygulanır; arayüz ne gösterirse göstersin, vermediğiniz bir izne hiçbir istemci erişemez.</div>
+        </details>
+        <details>
+          <summary>Bunu kurmak için bir danışmana ihtiyacımız var mı?</summary>
+          <div class="faq-body">Hayır. Kuruluşu oluşturmak, modülleri seçmek, rolleri tanımlamak ve kişileri davet etmek, bir yöneticinin doğrudan yaptığı bir ayar işidir. Büyük bir geçişte yardım isterseniz bize sorun — ama yapılandırmanın kendisi sizin.</div>
+        </details>
+        <details>
+          <summary>Bir şirket birden çok kuruluş yürütebilir mi?</summary>
+          <div class="faq-body">Evet. Gruplar, ortak girişimler ve danışmanlık firmaları genelde böyle yapar. Bir hesap birden çok kuruluşa ait olabilir ve aralarında geçiş yapabilir; veriler aralarındaki sınırı asla aşmaz.</div>
+        </details>
+      </div>
+      <p class="text-center mt-32">
+        <a class="link-arrow" href="/tr/modules">Her modüle göz atın<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+      </p>
+    </div>
+  </section>
+
+
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-hero">
+      <div>
+        <p class="footer-kicker">Sorunuz mu var? Ürünü birlikte gezelim mi?</p>
+        <h2>Tüm operasyon için tek sistem.</h2>
+      </div>
+      <div>
+        <p>Operasyonunuzun nasıl işlediğini bize anlatın. İlgili iş akışlarını inceleyelim, verilerinizi gözden geçirelim ve ekibimizle sonraki adımları birlikte belirleyelim.</p>
+        <div class="footer-actions">
+          <a class="btn btn-onDark btn-lg" href="/tr/contact#demo">Demo talep edin <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+          <a class="btn btn-outline-onDark btn-lg" href="https://docs.caspianerp.com">Dokümanları okuyun</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="/tr">
+          <img class="brand-mark" src="/assets/img/logo-mark.svg" alt="" width="30" height="30">
+          <span class="brand-name" style="color:#fff">Caspian <b>ERP</b></span>
+        </a>
+      </div>
+      <div class="footer-col">
+        <h4>Platform</h4>
+        <ul>
+          <li><a href="/tr/modules">Tüm modüller</a></li>
+          <li><a href="/tr/industries">Sektörler</a></li>
+          <li><a href="/tr/security">Güvenlik ve RBAC</a></li>
+          <li><a href="/tr/pricing">Fiyatlandırma</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Modüller</h4>
+        <ul>
+          <li><a href="/tr/modules/hseq">HSEQ</a></li>
+          <li><a href="/tr/modules/hr">İnsan Kaynakları</a></li>
+          <li><a href="/tr/modules/procurement">Satın alma</a></li>
+          <li><a href="/tr/modules/inventory">Envanter</a></li>
+          <li><a href="/tr/modules/maintenance">Bakım</a></li>
+          <li><a href="/tr/modules/finance">Finans</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Şirket</h4>
+        <ul>
+          <li><a href="/tr/about">Hakkımızda</a></li>
+          <li><a href="https://caspiantools.com" rel="noopener">CaspianTools</a></li>
+          <li><a href="/tr/contact">İletişim</a></li>
+          <li><a href="/tr/contact#demo">Demo talep edin</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Başlayın</h4>
+        <ul>
+          <li><a href="https://app.caspianerp.com">Oturum açın</a></li>
+          <li><a href="/tr/contact#demo">Demo talep edin</a></li>
+          <li><a href="https://docs.caspianerp.com">Dokümantasyon</a></li>
+          <li><a href="https://admin.caspianerp.com">Yönetim portalı</a></li>
+          <li><a href="/tr/pricing#faq">Fiyat soruları</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <span data-year>2026</span> CaspianTools. Caspian ERP bir CaspianTools ürünüdür.</p>
+      <nav aria-label="Yasal">
+        <a href="/tr/privacy">Gizlilik Politikası</a>
+        <a href="/tr/terms">Hizmet Şartları</a>
+        <a href="/tr/security">Güvenlik</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+<script src="/assets/js/site.js?v=20260908" defer></script>
+</body>
+</html>

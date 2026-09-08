@@ -1,0 +1,628 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="/assets/js/lang.js?v=20260908"></script>
+<title>Beschaffung — Caspian ERP</title>
+<meta name="description" content="Anforderungen, Bestellungen, Lieferanten, Verträge, Wareneingänge, Lieferantenrechnungen und Lieferantenbewertungen — die gesamte Source-to-Pay-Kette, mit Fremdpersonal unter denselben Qualifikationsregeln wie Angestellte.">
+<link rel="canonical" href="https://caspianerp.com/de/modules/procurement">
+<!--i18n:alternates-->
+<link rel="alternate" hreflang="en" href="https://caspianerp.com/modules/procurement">
+<link rel="alternate" hreflang="az" href="https://caspianerp.com/az/modules/procurement">
+<link rel="alternate" hreflang="tr" href="https://caspianerp.com/tr/modules/procurement">
+<link rel="alternate" hreflang="ru" href="https://caspianerp.com/ru/modules/procurement">
+<link rel="alternate" hreflang="nb" href="https://caspianerp.com/nb/modules/procurement">
+<link rel="alternate" hreflang="de" href="https://caspianerp.com/de/modules/procurement">
+<link rel="alternate" hreflang="fr" href="https://caspianerp.com/fr/modules/procurement">
+<link rel="alternate" hreflang="x-default" href="https://caspianerp.com/modules/procurement">
+<!--/i18n:alternates-->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Caspian ERP">
+<meta property="og:title" content="Beschaffung — Caspian ERP">
+<meta property="og:description" content="Anforderungen, Bestellungen, Lieferanten, Verträge, Wareneingänge, Lieferantenrechnungen und Lieferantenbewertungen — die gesamte Source-to-Pay-Kette, mit Fremdpersonal unter denselben Qualifikationsregeln wie Angestellte.">
+<meta property="og:url" content="https://caspianerp.com/de/modules/procurement">
+<meta property="og:image" content="https://caspianerp.com/assets/img/og-image.svg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#4f46e5">
+<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="/assets/css/site.css?v=20260908">
+<noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
+</head>
+<body>
+<a class="skip-link" href="#main">Zum Inhalt springen</a>
+<header class="site-header">
+  <div class="container">
+    <nav class="nav" aria-label="Haupt">
+      <a class="brand" href="/de">
+        <img class="brand-mark" src="/assets/img/logo-mark.svg" alt="" width="30" height="30">
+        <span class="brand-name">Caspian <b>ERP</b></span>
+      </a>
+      <ul class="nav-links">
+        <li><a class="nav-link" aria-current="page" href="/de/modules">Module</a></li>
+        <li><a class="nav-link" href="/de/industries">Branchen</a></li>
+        <li><a class="nav-link" href="/de/security">Sicherheit</a></li>
+        <li><a class="nav-link" href="/de/pricing">Preise</a></li>
+        <li><a class="nav-link" href="/de/about">Über uns</a></li>
+      </ul>
+      <div class="nav-actions">
+        <!--i18n:switcher-->
+        <details class="lang" data-lang-switcher>
+          <summary class="lang-button" title="Sprache wählen" aria-label="Sprache: Deutsch"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18"/></svg><span class="lang-code">DE</span><svg class="lang-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="lang-menu" role="group" aria-label="Sprache wählen">
+            <a class="lang-option" href="/modules/procurement" hreflang="en" lang="en" data-lang="en">English</a>
+            <a class="lang-option" href="/az/modules/procurement" hreflang="az" lang="az" data-lang="az">Azərbaycan dili</a>
+            <a class="lang-option" href="/tr/modules/procurement" hreflang="tr" lang="tr" data-lang="tr">Türkçe</a>
+            <a class="lang-option" href="/ru/modules/procurement" hreflang="ru" lang="ru" data-lang="ru">Русский</a>
+            <a class="lang-option" href="/nb/modules/procurement" hreflang="nb" lang="nb" data-lang="nb">Norsk (bokmål)</a>
+            <a class="lang-option" href="/de/modules/procurement" hreflang="de" lang="de" data-lang="de" aria-current="true">Deutsch</a>
+            <a class="lang-option" href="/fr/modules/procurement" hreflang="fr" lang="fr" data-lang="fr">Français</a>
+          </div>
+        </details>
+        <!--/i18n:switcher-->
+        <a class="btn btn-ghost btn-sm" href="https://app.caspianerp.com">Anmelden</a>
+        <a class="btn btn-primary btn-sm" href="/de/contact#demo">Demo anfragen <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+        <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="mobile-menu" aria-label="Menü öffnen" data-text-open="Menü öffnen" data-text-close="Menü schließen">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </nav>
+  </div>
+  <div class="mobile-menu" id="mobile-menu">
+    <a class="nav-link" aria-current="page" href="/de/modules">Module</a>
+    <a class="nav-link" href="/de/industries">Branchen</a>
+    <a class="nav-link" href="/de/security">Sicherheit</a>
+    <a class="nav-link" href="/de/pricing">Preise</a>
+    <a class="nav-link" href="/de/about">Über uns</a>
+    <a class="nav-link" href="https://docs.caspianerp.com">Dokumentation</a>
+    <a class="nav-link" href="/de/contact">Kontakt</a>
+    <!--i18n:switcher-mobile-->
+    <div class="mobile-lang" role="group" aria-label="Sprache wählen">
+      <span class="mobile-lang-label">Sprache</span>
+      <div class="mobile-lang-options">
+        <a class="lang-option" href="/modules/procurement" hreflang="en" lang="en" data-lang="en">English</a>
+        <a class="lang-option" href="/az/modules/procurement" hreflang="az" lang="az" data-lang="az">Azərbaycan dili</a>
+        <a class="lang-option" href="/tr/modules/procurement" hreflang="tr" lang="tr" data-lang="tr">Türkçe</a>
+        <a class="lang-option" href="/ru/modules/procurement" hreflang="ru" lang="ru" data-lang="ru">Русский</a>
+        <a class="lang-option" href="/nb/modules/procurement" hreflang="nb" lang="nb" data-lang="nb">Norsk (bokmål)</a>
+        <a class="lang-option" href="/de/modules/procurement" hreflang="de" lang="de" data-lang="de" aria-current="true">Deutsch</a>
+        <a class="lang-option" href="/fr/modules/procurement" hreflang="fr" lang="fr" data-lang="fr">Français</a>
+      </div>
+    </div>
+    <!--/i18n:switcher-mobile-->
+    <div class="mobile-cta">
+      <a class="btn btn-secondary" href="https://app.caspianerp.com">Anmelden</a>
+      <a class="btn btn-primary" href="/de/contact#demo">Demo anfragen</a>
+    </div>
+  </div>
+</header>
+<main id="main">
+
+  <section class="hero">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Brotkrümelnavigation">
+        <a href="/de/modules">Module</a>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg>
+        <span aria-current="page">Beschaffung</span>
+      </nav>
+      <span class="eyebrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="20" r="1"/><circle cx="18" cy="20" r="1"/><path d="M2 3h2.5l2.6 12.6a1 1 0 0 0 1 .8h8.9a1 1 0 0 0 1-.77L21 8H6"/></svg>Beschaffung</span>
+      <h1>Von der Beschaffung zur Zahlung — <span class="grad">der Papierkram ist schon erledigt</span></h1>
+      <p class="hero-sub">Von der Anforderung über die Bestellung und den Wareneingang zur Lieferantenrechnung — eine Kette, ein Artikelkatalog und die Freigaben, die Ihre Buchhaltung ohnehin verlangt.</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary btn-lg" href="/de/contact#demo">Demo anfragen</a>
+        <a class="btn btn-secondary btn-lg" href="https://docs.caspianerp.com">Dokumentation lesen</a>
+      </div>
+      <p class="hero-note">Neun Werkzeuge · Dreiwege-Abgleich · Teilt den Artikelkatalog mit Lager und Fertigung</p>
+    </div>
+  </section>
+  <div class="container mock-wrap">
+    <p class="small muted text-center">Beispielhafte Produktansicht mit Musterdaten. <a href="/de/contact#demo">Live-Rundgang anfragen</a>.</p>
+    <div class="mock reveal" role="img" aria-label="Caspian ERP Beschaffung mit offenen Bestellungen, Anforderungen zur Freigabe, Lieferantenleistung und Rechnungsabgleich">
+      <div class="mock-bar" aria-hidden="true">
+        <span class="mock-dot"></span><span class="mock-dot"></span><span class="mock-dot"></span>
+        <span class="mock-url">app.caspianerp.com/de/w/procurement/purchase-orders</span>
+      </div>
+      <div class="mock-body" aria-hidden="true">
+        <div class="mock-rail">
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg>Start</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/></svg>Personalwesen</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>HSEQ</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>Untern.</div>
+          <div class="mock-rail-item active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1"/><circle cx="18" cy="20" r="1"/><path d="M2 3h2.5l2.6 12.6a1 1 0 0 0 1 .8h8.9a1 1 0 0 0 1-.77L21 8H6"/></svg>Beschaff.</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V10l6 4V10l6 4V6l6 4v11z"/><path d="M7 17h.01M13 17h.01M18 17h.01"/></svg>Fertig.</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>CRM</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V9l9-6 9 6v12"/><path d="M7 21v-8h10v8"/></svg>Lager</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 16V6h11v10"/><path d="M14 9h4l3 3.5V16h-7z"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg>Logistik</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0 5 5L21 21l-3 .5L8.5 12A4 4 0 0 1 3 6.5l3 3 2.5-2.5-3-3z"/></svg>Instandh.</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 6H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>Finanzen</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4.5 13.5H11l-1 8.5 8.5-11.5H12z"/></svg>Effizienz</div>
+        </div>
+        <div class="mock-side">
+          <div class="mock-side-title">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1"/><circle cx="18" cy="20" r="1"/><path d="M2 3h2.5l2.6 12.6a1 1 0 0 0 1 .8h8.9a1 1 0 0 0 1-.77L21 8H6"/></svg>
+            Beschaffung
+          </div>
+          <div class="mock-side-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="4" width="10" height="17" rx="2"/><path d="M9 4V3h6v1"/><path d="M10 10h4M10 14h4"/></svg>Anforderungen</div>
+          <div class="mock-side-item active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/></svg>Bestellungen</div>
+          <div class="mock-side-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m11 17 2 2a1 1 0 0 0 1.4 0l3.6-3.6"/><path d="M3 11 8 6l4 4 3-3 6 6-4 4-3-3-4 4z"/></svg>Lieferanten</div>
+          <div class="mock-side-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/></svg>Personal</div>
+          <div class="mock-side-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 2 9 5-9 5-9-5z"/><path d="m3 12 9 5 9-5"/><path d="m3 17 9 5 9-5"/></svg>Artikel</div>
+          <div class="mock-side-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/></svg>Verträge</div>
+          <div class="mock-side-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21 8-9-5-9 5v8l9 5 9-5z"/><path d="m3 8 9 5 9-5M12 13v9"/></svg>Wareneingänge</div>
+          <div class="mock-side-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3v18l2-1.5L9 21l2-1.5L13 21l2-1.5L17 21l2-1.5V3z"/><path d="M8 8h8M8 12h8"/></svg>Lieferantenrechnungen</div>
+          <div class="mock-side-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="1" fill="currentColor" stroke="none"/></svg>Lieferantenbewertungen</div>
+        </div>
+        <div class="mock-main">
+          <div class="mock-topbar">
+            <div class="mock-search">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.2-3.2"/></svg>
+              Personen, Aufträge, Anlagen suchen …
+            </div>
+            <div class="mock-plus"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></div>
+            <div class="mock-avatar"></div>
+          </div>
+          <div class="mock-h1">Bestellungen</div>
+          <div class="mock-tag">18 offen · 4 warten auf Freigabe · 2 teilweise erhalten</div>
+          <div class="mock-cards">
+            <div class="mock-card">
+              <div class="mock-card-head" style="color:#0d9488">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/></svg>
+                Offene Bestellungen
+              </div>
+              <div class="mock-row"><span>PO-2291 · Ventile</span><span class="mock-pill ok">Erhalten</span></div>
+              <div class="mock-row"><span>PO-2292 · Futterrohr</span><span class="mock-pill">Gesendet</span></div>
+              <div class="mock-row"><span>PO-2293 · PSA</span><span class="mock-pill warn">Genehmigung</span></div>
+            </div>
+            <div class="mock-card">
+              <div class="mock-card-head" style="color:#d97706">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="4" width="10" height="17" rx="2"/><path d="M9 4V3h6v1"/><path d="M10 10h4M10 14h4"/></svg>
+                Warten auf Freigabe
+              </div>
+              <div class="mock-kpi">4</div>
+              <div class="mock-kpi-sub">die älteste wartet seit 3 Tagen</div>
+            </div>
+            <div class="mock-card">
+              <div class="mock-card-head" style="color:#e11d48">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3v18l2-1.5L9 21l2-1.5L13 21l2-1.5L17 21l2-1.5V3z"/><path d="M8 8h8M8 12h8"/></svg>
+                Rechnungsabweichungen
+              </div>
+              <div class="mock-row"><span>INV-8841 · Mengenabweichung</span><span class="mock-pill hot">Zurückgestellt</span></div>
+              <div class="mock-row"><span>INV-8846 · Preis</span><span class="mock-pill warn">Prüfung</span></div>
+            </div>
+            <div class="mock-card">
+              <div class="mock-card-head" style="color:#4f46e5">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="1" fill="currentColor" stroke="none"/></svg>
+                Termintreue
+              </div>
+              <div class="mock-bars"><span style="height:62%"></span><span style="height:71%"></span><span style="height:68%"></span><span style="height:80%"></span><span style="height:76%"></span><span style="height:88%"></span></div>
+              <div class="mock-kpi-sub" style="margin-top:8px">Top-10-Lieferanten, sechs Monate</div>
+            </div>
+            <div class="mock-card">
+              <div class="mock-card-head" style="color:#7c3aed">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m11 17 2 2a1 1 0 0 0 1.4 0l3.6-3.6"/><path d="M3 11 8 6l4 4 3-3 6 6-4 4-3-3-4 4z"/></svg>
+                Verträge
+              </div>
+              <div class="mock-row"><span>Prüfdienstleistungen</span><span class="mock-pill warn">Verlängerung in 60 T</span></div>
+              <div class="mock-row"><span>Kranmiete</span><span class="mock-pill ok">Aktiv</span></div>
+            </div>
+            <div class="mock-card">
+              <div class="mock-card-head" style="color:#0891b2">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21 8-9-5-9 5v8l9 5 9-5z"/><path d="m3 8 9 5 9-5M12 13v9"/></svg>
+                Wareneingänge diese Woche
+              </div>
+              <div class="mock-kpi">23</div>
+              <div class="mock-kpi-sub">2 mit erfassten Abweichungen</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="section section-soft">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Vor Caspian ERP</span>
+        <h2>Kaufen geht schnell; zu belegen, was Sie gekauft haben, nicht</h2>
+        <p>Die Bestellung ist einfach. Bestellung, Lieferung und Rechnung drei Wochen später abzugleichen — dort liegen die Kosten.</p>
+      </div>
+      <div class="grid grid-3">
+        <article class="card card-pad reveal">
+          <h3>Anforderungen kommen als E-Mails</h3>
+          <p class="mt-12">Jemand fragt etwas an, jemand anderes genehmigt in der Antwort, und der einzige Beleg für das Warum liegt in einem Postfach.</p>
+        </article>
+        <article class="card card-pad reveal">
+          <h3>Niemand bekommt drei Belege zusammen</h3>
+          <p class="mt-12">Die Bestellung nennt eine Menge, der Lieferschein eine andere, die Rechnung eine dritte. Der Abgleich ist manuell, langsam — und dort versickert das Geld.</p>
+        </article>
+        <article class="card card-pad reveal">
+          <h3>Lieferantenleistung ist Anekdote</h3>
+          <p class="mt-12">Alle wissen, welcher Lieferant zu spät ist. Niemand kann es beim Vertragsreview zeigen, also wird derselbe wieder verlängert.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Was es leistet</span>
+        <h2>Die ganze Kette, Ende zu Ende verbunden</h2>
+        <p>Jeder Beleg entsteht aus dem vorigen — die Zahlen können nicht auseinanderdriften.</p>
+      </div>
+      <div class="grid grid-2">
+        <article class="card card-pad reveal">
+          <span class="icon-tile t-amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="4" width="10" height="17" rx="2"/><path d="M9 4V3h6v1"/><path d="M10 10h4M10 14h4"/></svg></span>
+          <h3 class="mt-16">Anforderungen mit echtem Freigabeweg</h3>
+          <p class="mt-12">Bedarf wird dort gemeldet, wo er entsteht, von der richtigen Person genehmigt und trägt seine Begründung weiter.</p>
+          <ul class="check-list mt-16">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Von der Abteilung angelegt, die den Artikel braucht</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Nach Ihren eigenen Grenzen zur Freigabe geleitet</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Ohne Neuerfassung in eine Bestellung überführt</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Der Grund des Kaufs bleibt daran gebunden</li>
+          </ul>
+        </article>
+        <article class="card card-pad reveal">
+          <span class="icon-tile t-rose"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/></svg></span>
+          <h3 class="mt-16">Bestellungen, bis zum Wareneingang verfolgt</h3>
+          <p class="mt-12">Bestellungen aus genehmigten Anforderungen, bis zur Lieferung verfolgt.</p>
+          <ul class="check-list mt-16">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>An einen Lieferanten aus dem Stamm mit vereinbarten Konditionen erteilt</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Positionen aus dem gemeinsamen Artikelkatalog</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Status vom Entwurf bis zum vollständigen Eingang sichtbar</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Teillieferungen werden behandelt statt verwischt</li>
+          </ul>
+        </article>
+        <article class="card card-pad reveal">
+          <span class="icon-tile t-emerald"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m21 8-9-5-9 5v8l9 5 9-5z"/><path d="m3 8 9 5 9-5M12 13v9"/></svg></span>
+          <h3 class="mt-16">Wareneingänge und Dreiwege-Abgleich</h3>
+          <p class="mt-12">Was ankam, geprüft gegen das Bestellte und das Berechnete.</p>
+          <ul class="check-list mt-16">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Eingänge werden im Lager gegen die Bestellung erfasst</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Mengen und Abweichungen am Tor erfasst</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Der Bestand im Lager wird durch dieselbe Handlung aktualisiert</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Die Rechnung wird vor der Zahlung gegen Bestellung und Eingang abgeglichen</li>
+          </ul>
+        </article>
+        <article class="card card-pad reveal">
+          <span class="icon-tile t-violet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m11 17 2 2a1 1 0 0 0 1.4 0l3.6-3.6"/><path d="M3 11 8 6l4 4 3-3 6 6-4 4-3-3-4 4z"/></svg></span>
+          <h3 class="mt-16">Lieferanten, Verträge und Bewertungen</h3>
+          <p class="mt-12">Ein Lieferantenstamm, der die Geschäftsbeziehung hält — nicht nur Name und Adresse.</p>
+          <ul class="check-list mt-16">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Lieferantenstamm mit Kontakten, Konditionen und Dokumenten</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Verträge mit Terminen, Werten und sichtbarer Verlängerung</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Bewertungen aus Liefer- und Qualitätshistorie</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Leistung, die Sie im Review zeigen können statt nur zu behaupten</li>
+          </ul>
+        </article>
+        <article class="card card-pad reveal">
+          <span class="icon-tile t-cyan"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/></svg></span>
+          <h3 class="mt-16">Fremdpersonal nach Ihrem Standard</h3>
+          <p class="mt-12">Die Personen, die ein Lieferant auf die Baustelle schickt, werden nach denselben Qualifikationsregeln geführt wie Ihre Beschäftigten.</p>
+          <ul class="check-list mt-16">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Fremdpersonal wird seinem Lieferanten zugeordnet erfasst</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Nachweise und Gültigkeit werden wie bei Angestellten verfolgt</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>In denselben Qualifikationsprüfungen vor der Mobilisierung sichtbar</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Kein blinder Fleck, nur weil jemand auf einer anderen Lohnliste steht</li>
+          </ul>
+        </article>
+        <article class="card card-pad reveal">
+          <span class="icon-tile t-teal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 2 9 5-9 5-9-5z"/><path d="m3 12 9 5 9-5"/><path d="m3 17 9 5 9-5"/></svg></span>
+          <h3 class="mt-16">Ein Artikelkatalog für die gesamte Plattform</h3>
+          <p class="mt-12">Der Artikel, den Sie kaufen, ist der Artikel, den Sie lagern, verbrauchen und abrechnen.</p>
+          <ul class="check-list mt-16">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Ein Katalogeintrag, über Module hinweg geteilt</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Beschaffungsposition, Lagerzeile, Stücklistenkomponente und Rechnungszeile stimmen überein</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Keine Zuordnungstabelle zwischen Einkauf und Lager</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Ausgabenanalyse, die etwas aussagt, weil die Codes einheitlich sind</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-tight section-soft">
+    <div class="container">
+      <div class="section-head">
+        <h2>Von der Anforderung zur Zahlung, ohne Neuerfassung</h2>
+        <p>Jeder Schritt erzeugt den nächsten, und der Dreiwege-Abgleich gelingt, weil die Belege einander bereits referenzieren.</p>
+      </div>
+      <div class="flow reveal">
+        <div class="flow-step done"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="4" width="10" height="17" rx="2"/><path d="M9 4V3h6v1"/><path d="M10 10h4M10 14h4"/></svg>Anforderung</div>
+        <span class="flow-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
+        <div class="flow-step done"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="m8 12 3 3 5-6"/></svg>Genehmigt</div>
+        <span class="flow-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
+        <div class="flow-step done"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/></svg>Bestellung</div>
+        <span class="flow-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
+        <div class="flow-step"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m21 8-9-5-9 5v8l9 5 9-5z"/><path d="m3 8 9 5 9-5M12 13v9"/></svg>Wareneingang</div>
+        <span class="flow-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
+        <div class="flow-step"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3v18l2-1.5L9 21l2-1.5L13 21l2-1.5L17 21l2-1.5V3z"/><path d="M8 8h8M8 12h8"/></svg>Lieferantenrechnung</div>
+        <span class="flow-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
+        <div class="flow-step"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v20M17 6H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>Zahlung</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Jedes Werkzeug im Modul</span>
+        <h2>Neun Werkzeuge von der Beschaffung zur Zahlung</h2>
+        <p>Die ganze Kette plus die Lieferantenbeziehung darum herum.</p>
+      </div>
+      <div class="grid grid-2">
+        <div class="feature-item reveal">
+          <span class="icon-tile sm t-amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="4" width="10" height="17" rx="2"/><path d="M9 4V3h6v1"/><path d="M10 10h4M10 14h4"/></svg></span>
+          <div>
+            <h4>Anforderungen</h4>
+            <p>Interne Bedarfsanforderungen mit Begründung und Freigabe, gestellt von der Abteilung, die den Artikel braucht.</p>
+          </div>
+        </div>
+        <div class="feature-item reveal">
+          <span class="icon-tile sm t-rose"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/></svg></span>
+          <div>
+            <h4>Bestellungen</h4>
+            <p>Bestellungen an Lieferanten aus genehmigten Anforderungen, vom Entwurf bis zum vollständigen Eingang verfolgt.</p>
+          </div>
+        </div>
+        <div class="feature-item reveal">
+          <span class="icon-tile sm t-violet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m11 17 2 2a1 1 0 0 0 1.4 0l3.6-3.6"/><path d="M3 11 8 6l4 4 3-3 6 6-4 4-3-3-4 4z"/></svg></span>
+          <div>
+            <h4>Lieferanten</h4>
+            <p>Der Lieferantenstamm — Kontakte, Konditionen, Dokumente und die Historie der Beziehung.</p>
+          </div>
+        </div>
+        <div class="feature-item reveal">
+          <span class="icon-tile sm t-cyan"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/></svg></span>
+          <div>
+            <h4>Personal</h4>
+            <p>Von Lieferanten gestelltes Fremdpersonal, geführt nach denselben Qualifikations- und Nachweisregeln wie Angestellte.</p>
+          </div>
+        </div>
+        <div class="feature-item reveal">
+          <span class="icon-tile sm t-teal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 2 9 5-9 5-9-5z"/><path d="m3 12 9 5 9-5"/><path d="m3 17 9 5 9-5"/></svg></span>
+          <div>
+            <h4>Artikel</h4>
+            <p>Der gemeinsame Artikelkatalog, den Beschaffung, Lager, Fertigung und Finanzen gleichermaßen nutzen.</p>
+          </div>
+        </div>
+        <div class="feature-item reveal">
+          <span class="icon-tile sm t-slate"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/></svg></span>
+          <div>
+            <h4>Verträge</h4>
+            <p>Lieferantenverträge mit Werten, Terminen und sichtbarer Verlängerung — nichts läuft unbemerkt weiter.</p>
+          </div>
+        </div>
+        <div class="feature-item reveal">
+          <span class="icon-tile sm t-emerald"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m21 8-9-5-9 5v8l9 5 9-5z"/><path d="m3 8 9 5 9-5M12 13v9"/></svg></span>
+          <div>
+            <h4>Wareneingänge</h4>
+            <p>Was tatsächlich ankam, gegen die Bestellung erfasst — und dieselbe Handlung, die den Bestand im Lager bewegt.</p>
+          </div>
+        </div>
+        <div class="feature-item reveal">
+          <span class="icon-tile sm t-amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3v18l2-1.5L9 21l2-1.5L13 21l2-1.5L17 21l2-1.5V3z"/><path d="M8 8h8M8 12h8"/></svg></span>
+          <div>
+            <h4>Lieferantenrechnungen</h4>
+            <p>Lieferantenrechnungen, vor der Zahlung gegen Bestellung und Wareneingang abgeglichen.</p>
+          </div>
+        </div>
+        <div class="feature-item reveal">
+          <span class="icon-tile sm t-emerald"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="1" fill="currentColor" stroke="none"/></svg></span>
+          <div>
+            <h4>Lieferantenbewertungen</h4>
+            <p>Liefer- und Qualitätsleistung je Lieferant, aus Daten statt aus Erinnerung gebaut.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section dark-section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Verzahnt, nicht angeflanscht</span>
+        <h2>Wo die Kette in andere Module übergeht</h2>
+        <p>Die Beschaffung ist der Punkt, an dem Geld, Material und Menschen in den Betrieb kommen.</p>
+      </div>
+      <div class="grid grid-3">
+        <div class="dark-card reveal">
+          <span class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21V9l9-6 9 6v12"/><path d="M7 21v-8h10v8"/></svg></span>
+          <h3 class="mt-16">Der Bestand bewegt sich beim Eingang</h3>
+          <p>Den Wareneingang zu erfassen bringt den Artikel ins Lager — einen zweiten Erfassungsschritt für korrekte Bestände gibt es nicht.</p>
+          <p class="mt-12"><a class="link-arrow" href="/de/modules/inventory">Lager ansehen<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></p>
+        </div>
+        <div class="dark-card reveal">
+          <span class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v20M17 6H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></span>
+          <h3 class="mt-16">Rechnungen werden zu Verbindlichkeiten</h3>
+          <p>Eine abgeglichene Lieferantenrechnung fließt mit Konto und Steuerlogik ins Hauptbuch und ist zahlungsbereit.</p>
+          <p class="mt-12"><a class="link-arrow" href="/de/modules/finance">Finanzen ansehen<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></p>
+        </div>
+        <div class="dark-card reveal">
+          <span class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/></svg></span>
+          <h3 class="mt-16">Fremdkräfte in der Matrix</h3>
+          <p>Fremdpersonal wird genau wie Angestellte auf Qualifikation geprüft — eine Fremdmannschaft kann nicht unzertifiziert anrücken.</p>
+          <p class="mt-12"><a class="link-arrow" href="/de/modules/hr">Personalwesen ansehen<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Wer darin arbeitet</span>
+        <h2>Für alle, die einen Einkauf berühren</h2>
+        <p>Von dem, der es braucht, bis zu dem, der es bezahlt.</p>
+      </div>
+      <div class="grid grid-3">
+        <article class="card card-pad reveal">
+          <span class="icon-tile sm t-amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="20" r="1"/><circle cx="18" cy="20" r="1"/><path d="M2 3h2.5l2.6 12.6a1 1 0 0 0 1 .8h8.9a1 1 0 0 0 1-.77L21 8H6"/></svg></span>
+          <h3 class="mt-16">Einkäufer</h3>
+          <p class="mt-12">Macht aus genehmigten Anforderungen Bestellungen, hakt bei Lieferungen nach und hat die Lieferantenleistung fürs nächste Review parat.</p>
+        </article>
+        <article class="card card-pad reveal">
+          <span class="icon-tile sm t-emerald"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m21 8-9-5-9 5v8l9 5 9-5z"/><path d="m3 8 9 5 9-5M12 13v9"/></svg></span>
+          <h3 class="mt-16">Lagerverwalter</h3>
+          <p class="mt-12">Erfasst am Tor, was wirklich ankam — und aktualisiert damit den Bestand und ermöglicht den Rechnungsabgleich.</p>
+        </article>
+        <article class="card card-pad reveal">
+          <span class="icon-tile sm t-violet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v20M17 6H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></span>
+          <h3 class="mt-16">Finanzcontroller</h3>
+          <p class="mt-12">Zahlt gegen den Dreiwege-Abgleich statt gegen ein PDF und Hoffnung — und kann jede Ausgabe bis zur Anforderung zurückverfolgen.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-soft">
+    <div class="container split">
+      <div>
+        <span class="eyebrow">Von Ihnen zu gestalten</span>
+        <h2 class="mt-16">Beschaffung an Ihre Freigabekultur anpassen</h2>
+        <p class="lead mt-12">Genehmigungsgrenzen sind eine Richtlinienentscheidung, keine Produktgrenze.</p>
+        <ul class="check-list mt-24">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Genehmigungsgrenzen und Zeichnungsberechtigte je Stufe festlegen</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Entscheiden, ob Bestellungen vor der Fakturierung einen abgeglichenen Eingang verlangen</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Den Artikelkatalog mit eigenen Kategorien und Codes strukturieren</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Wählen, welche Abteilungen anfordern und welche bestellen dürfen</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Fremdpersonal an denselben Schulungsmodulen führen, die Sie intern nutzen</li>
+        </ul>
+        <p class="mt-24"><a class="link-arrow" href="/de/modules/administration">Ansehen, was eine Administration steuert<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></p>
+      </div>
+      <div class="split-media">
+        <div class="panel reveal">
+          <div class="panel-head reveal">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21v-7M4 10V3M12 21v-9M12 8V3M20 21v-5M20 12V3M1 14h6M9 8h6M17 16h6"/></svg>
+            Beschaffung · Einstellungen
+          </div>
+          <div class="panel-body reveal">
+            <table class="table-mock">
+              <thead><tr><th>Einstellung</th><th>Wert</th></tr></thead>
+              <tbody>
+                <tr><td>Anforderungsfreigabe</td><td><span class="badge badge-amber">2 Stufen</span></td></tr>
+                <tr><td>Dreiwege-Abgleich</td><td><span class="badge badge-emerald">Erforderlich</span></td></tr>
+                <tr><td>Bestellnummernkreis</td><td><span class="badge badge-indigo">PO-#####</span></td></tr>
+                <tr><td>Lieferantenbewertungen</td><td><span class="badge badge-violet">Quartalsweise</span></td></tr>
+                <tr><td>Qualifikation von Fremdkräften</td><td><span class="badge badge-cyan">Wie bei Angestellten</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2>Fragen zur Beschaffung, die uns gestellt werden</h2>
+      </div>
+      <div class="faq">
+        <details>
+          <summary>Aktualisiert ein Wareneingang den Bestand automatisch?</summary>
+          <div class="faq-body">Ja. Der Eingang ist die Bestandsbewegung — Beschaffung und Lager teilen Artikelkatalog und Lagerdaten, es gibt also weder eine zweite Erfassung noch einen Abgleich dazwischen.</div>
+        </details>
+        <details>
+          <summary>Können wir erzwingen, dass Rechnungen vor der Zahlung abgeglichen sind?</summary>
+          <div class="faq-body">Ja. Der Dreiwege-Abgleich zwischen Bestellung, Wareneingang und Lieferantenrechnung ist eine konfigurierbare Pflicht. Wie streng sie ist, entscheidet Ihre Administration.</div>
+        </details>
+        <details>
+          <summary>Worin unterscheidet sich Fremdpersonal von Angestellten?</summary>
+          <div class="faq-body">Sie gehören zu einem Lieferanten und nicht zu Ihrer Lohnliste, deshalb werden sie in der Beschaffung geführt. Alles andere ist gleich: Nachweise, Gültigkeiten und Qualifikationsprüfungen vor dem Einsatz.</div>
+        </details>
+        <details>
+          <summary>Woher stammen die Lieferantenbewertungen?</summary>
+          <div class="faq-body">Aus der Liefer- und Qualitätshistorie, die bereits an dessen Bestellungen und Eingängen erfasst ist. Es ist keine separate Umfrage, die jemand ausfüllen muss.</div>
+        </details>
+        <details>
+          <summary>Können wir Lieferantenliste und Artikelkatalog importieren?</summary>
+          <div class="faq-body">Ja, beide unterstützen CSV-Import und -Export. Ihre Artikelkategorien vor dem ersten Import festzulegen erspart Nacharbeit, denn der Katalog wird mit Lager, Fertigung und Finanzen geteilt.</div>
+        </details>
+      </div>
+      <p class="text-center mt-32">
+        <a class="link-arrow" href="/de/modules">Alle Module durchsehen<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+      </p>
+    </div>
+  </section>
+
+
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-hero">
+      <div>
+        <p class="footer-kicker">Eine Frage? Oder lieber ein Rundgang?</p>
+        <h2>Ein System für den gesamten Betrieb.</h2>
+      </div>
+      <div>
+        <p>Erzählen Sie uns, wie Ihr Betrieb läuft. Wir sehen uns die passenden Arbeitsabläufe an, prüfen Ihre Daten und stimmen mit unserem Team die nächsten Schritte ab.</p>
+        <div class="footer-actions">
+          <a class="btn btn-onDark btn-lg" href="/de/contact#demo">Demo anfragen <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+          <a class="btn btn-outline-onDark btn-lg" href="https://docs.caspianerp.com">Dokumentation lesen</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="/de">
+          <img class="brand-mark" src="/assets/img/logo-mark.svg" alt="" width="30" height="30">
+          <span class="brand-name" style="color:#fff">Caspian <b>ERP</b></span>
+        </a>
+      </div>
+      <div class="footer-col">
+        <h4>Plattform</h4>
+        <ul>
+          <li><a href="/de/modules">Alle Module</a></li>
+          <li><a href="/de/industries">Branchen</a></li>
+          <li><a href="/de/security">Sicherheit und RBAC</a></li>
+          <li><a href="/de/pricing">Preise</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Module</h4>
+        <ul>
+          <li><a href="/de/modules/hseq">HSEQ</a></li>
+          <li><a href="/de/modules/hr">Personalwesen</a></li>
+          <li><a href="/de/modules/procurement">Beschaffung</a></li>
+          <li><a href="/de/modules/inventory">Lager</a></li>
+          <li><a href="/de/modules/maintenance">Instandhaltung</a></li>
+          <li><a href="/de/modules/finance">Finanzen</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Unternehmen</h4>
+        <ul>
+          <li><a href="/de/about">Über uns</a></li>
+          <li><a href="https://caspiantools.com" rel="noopener">CaspianTools</a></li>
+          <li><a href="/de/contact">Kontakt</a></li>
+          <li><a href="/de/contact#demo">Demo anfragen</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Erste Schritte</h4>
+        <ul>
+          <li><a href="https://app.caspianerp.com">Anmelden</a></li>
+          <li><a href="/de/contact#demo">Demo anfragen</a></li>
+          <li><a href="https://docs.caspianerp.com">Dokumentation</a></li>
+          <li><a href="https://admin.caspianerp.com">Admin-Portal</a></li>
+          <li><a href="/de/pricing#faq">Fragen zu Preisen</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <span data-year>2026</span> CaspianTools. Caspian ERP ist ein Produkt von CaspianTools.</p>
+      <nav aria-label="Rechtliches">
+        <a href="/de/privacy">Datenschutzerklärung</a>
+        <a href="/de/terms">Nutzungsbedingungen</a>
+        <a href="/de/security">Sicherheit</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+<script src="/assets/js/site.js?v=20260908" defer></script>
+</body>
+</html>

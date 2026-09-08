@@ -1,0 +1,635 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="/assets/js/lang.js?v=20260908"></script>
+<title>Lager — Caspian ERP</title>
+<meta name="description" content="Mehrlager-Bestandsführung in Caspian ERP — Artikel, Lagerbestände, Bewegungen, Korrekturen, Chargen, Umlagerungsaufträge, Zyklusinventuren und Bedarfsprognosen.">
+<link rel="canonical" href="https://caspianerp.com/de/modules/inventory">
+<!--i18n:alternates-->
+<link rel="alternate" hreflang="en" href="https://caspianerp.com/modules/inventory">
+<link rel="alternate" hreflang="az" href="https://caspianerp.com/az/modules/inventory">
+<link rel="alternate" hreflang="tr" href="https://caspianerp.com/tr/modules/inventory">
+<link rel="alternate" hreflang="ru" href="https://caspianerp.com/ru/modules/inventory">
+<link rel="alternate" hreflang="nb" href="https://caspianerp.com/nb/modules/inventory">
+<link rel="alternate" hreflang="de" href="https://caspianerp.com/de/modules/inventory">
+<link rel="alternate" hreflang="fr" href="https://caspianerp.com/fr/modules/inventory">
+<link rel="alternate" hreflang="x-default" href="https://caspianerp.com/modules/inventory">
+<!--/i18n:alternates-->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Caspian ERP">
+<meta property="og:title" content="Lager — Caspian ERP">
+<meta property="og:description" content="Mehrlager-Bestandsführung in Caspian ERP — Artikel, Lagerbestände, Bewegungen, Korrekturen, Chargen, Umlagerungsaufträge, Zyklusinventuren und Bedarfsprognosen.">
+<meta property="og:url" content="https://caspianerp.com/de/modules/inventory">
+<meta property="og:image" content="https://caspianerp.com/assets/img/og-image.svg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#4f46e5">
+<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="/assets/css/site.css?v=20260908">
+<noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
+</head>
+<body>
+<a class="skip-link" href="#main">Zum Inhalt springen</a>
+<header class="site-header">
+  <div class="container">
+    <nav class="nav" aria-label="Haupt">
+      <a class="brand" href="/de">
+        <img class="brand-mark" src="/assets/img/logo-mark.svg" alt="" width="30" height="30">
+        <span class="brand-name">Caspian <b>ERP</b></span>
+      </a>
+      <ul class="nav-links">
+        <li><a class="nav-link" aria-current="page" href="/de/modules">Module</a></li>
+        <li><a class="nav-link" href="/de/industries">Branchen</a></li>
+        <li><a class="nav-link" href="/de/security">Sicherheit</a></li>
+        <li><a class="nav-link" href="/de/pricing">Preise</a></li>
+        <li><a class="nav-link" href="/de/about">Über uns</a></li>
+      </ul>
+      <div class="nav-actions">
+        <!--i18n:switcher-->
+        <details class="lang" data-lang-switcher>
+          <summary class="lang-button" title="Sprache wählen" aria-label="Sprache: Deutsch"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18"/></svg><span class="lang-code">DE</span><svg class="lang-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="lang-menu" role="group" aria-label="Sprache wählen">
+            <a class="lang-option" href="/modules/inventory" hreflang="en" lang="en" data-lang="en">English</a>
+            <a class="lang-option" href="/az/modules/inventory" hreflang="az" lang="az" data-lang="az">Azərbaycan dili</a>
+            <a class="lang-option" href="/tr/modules/inventory" hreflang="tr" lang="tr" data-lang="tr">Türkçe</a>
+            <a class="lang-option" href="/ru/modules/inventory" hreflang="ru" lang="ru" data-lang="ru">Русский</a>
+            <a class="lang-option" href="/nb/modules/inventory" hreflang="nb" lang="nb" data-lang="nb">Norsk (bokmål)</a>
+            <a class="lang-option" href="/de/modules/inventory" hreflang="de" lang="de" data-lang="de" aria-current="true">Deutsch</a>
+            <a class="lang-option" href="/fr/modules/inventory" hreflang="fr" lang="fr" data-lang="fr">Français</a>
+          </div>
+        </details>
+        <!--/i18n:switcher-->
+        <a class="btn btn-ghost btn-sm" href="https://app.caspianerp.com">Anmelden</a>
+        <a class="btn btn-primary btn-sm" href="/de/contact#demo">Demo anfragen <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+        <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="mobile-menu" aria-label="Menü öffnen" data-text-open="Menü öffnen" data-text-close="Menü schließen">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </nav>
+  </div>
+  <div class="mobile-menu" id="mobile-menu">
+    <a class="nav-link" aria-current="page" href="/de/modules">Module</a>
+    <a class="nav-link" href="/de/industries">Branchen</a>
+    <a class="nav-link" href="/de/security">Sicherheit</a>
+    <a class="nav-link" href="/de/pricing">Preise</a>
+    <a class="nav-link" href="/de/about">Über uns</a>
+    <a class="nav-link" href="https://docs.caspianerp.com">Dokumentation</a>
+    <a class="nav-link" href="/de/contact">Kontakt</a>
+    <!--i18n:switcher-mobile-->
+    <div class="mobile-lang" role="group" aria-label="Sprache wählen">
+      <span class="mobile-lang-label">Sprache</span>
+      <div class="mobile-lang-options">
+        <a class="lang-option" href="/modules/inventory" hreflang="en" lang="en" data-lang="en">English</a>
+        <a class="lang-option" href="/az/modules/inventory" hreflang="az" lang="az" data-lang="az">Azərbaycan dili</a>
+        <a class="lang-option" href="/tr/modules/inventory" hreflang="tr" lang="tr" data-lang="tr">Türkçe</a>
+        <a class="lang-option" href="/ru/modules/inventory" hreflang="ru" lang="ru" data-lang="ru">Русский</a>
+        <a class="lang-option" href="/nb/modules/inventory" hreflang="nb" lang="nb" data-lang="nb">Norsk (bokmål)</a>
+        <a class="lang-option" href="/de/modules/inventory" hreflang="de" lang="de" data-lang="de" aria-current="true">Deutsch</a>
+        <a class="lang-option" href="/fr/modules/inventory" hreflang="fr" lang="fr" data-lang="fr">Français</a>
+      </div>
+    </div>
+    <!--/i18n:switcher-mobile-->
+    <div class="mobile-cta">
+      <a class="btn btn-secondary" href="https://app.caspianerp.com">Anmelden</a>
+      <a class="btn btn-primary" href="/de/contact#demo">Demo anfragen</a>
+    </div>
+  </div>
+</header>
+<main id="main">
+
+  <section class="hero">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Brotkrümelnavigation">
+        <a href="/de/modules">Module</a>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg>
+        <span aria-current="page">Lager</span>
+      </nav>
+      <span class="eyebrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21V9l9-6 9 6v12"/><path d="M7 21v-8h10v8"/></svg>Lager</span>
+      <h1>Bestandsführung, die beim <span class="grad">Regal ehrlich bleibt</span></h1>
+      <p class="hero-sub">Mengen über mehrere Lager, die sich mit der Arbeit bewegen — weil Eingänge, Entnahmen und Umlagerungen von denselben Handlungen erfasst werden, die die Arbeit tun.</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary btn-lg" href="/de/contact#demo">Demo anfragen</a>
+        <a class="btn btn-secondary btn-lg" href="https://docs.caspianerp.com">Dokumentation lesen</a>
+      </div>
+      <p class="hero-note">Zehn Werkzeuge · Mehrere Lager · Chargenrückverfolgung und Zyklusinventur</p>
+    </div>
+  </section>
+  <div class="container mock-wrap">
+    <p class="small muted text-center">Beispielhafte Produktansicht mit Musterdaten. <a href="/de/contact#demo">Live-Rundgang anfragen</a>.</p>
+    <div class="mock reveal" role="img" aria-label="Caspian ERP Lager mit Beständen unter Minimum, Zählgenauigkeit, Umlagerungen im Transit und letzten Bewegungen">
+      <div class="mock-bar" aria-hidden="true">
+        <span class="mock-dot"></span><span class="mock-dot"></span><span class="mock-dot"></span>
+        <span class="mock-url">app.caspianerp.com/de/w/inventory/warehouse-stock</span>
+      </div>
+      <div class="mock-body" aria-hidden="true">
+        <div class="mock-rail">
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg>Start</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/></svg>Personalwesen</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>HSEQ</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>Untern.</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1"/><circle cx="18" cy="20" r="1"/><path d="M2 3h2.5l2.6 12.6a1 1 0 0 0 1 .8h8.9a1 1 0 0 0 1-.77L21 8H6"/></svg>Beschaff.</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V10l6 4V10l6 4V6l6 4v11z"/><path d="M7 17h.01M13 17h.01M18 17h.01"/></svg>Fertig.</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>CRM</div>
+          <div class="mock-rail-item active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V9l9-6 9 6v12"/><path d="M7 21v-8h10v8"/></svg>Lager</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 16V6h11v10"/><path d="M14 9h4l3 3.5V16h-7z"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg>Logistik</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0 5 5L21 21l-3 .5L8.5 12A4 4 0 0 1 3 6.5l3 3 2.5-2.5-3-3z"/></svg>Instandh.</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 6H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>Finanzen</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4.5 13.5H11l-1 8.5 8.5-11.5H12z"/></svg>Effizienz</div>
+        </div>
+        <div class="mock-side">
+          <div class="mock-side-title">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V9l9-6 9 6v12"/><path d="M7 21v-8h10v8"/></svg>
+            Lager
+          </div>
+          <div class="mock-side-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 2 9 5-9 5-9-5z"/><path d="m3 12 9 5 9-5"/><path d="m3 17 9 5 9-5"/></svg>Lagerartikel</div>
+          <div class="mock-side-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V9l9-6 9 6v12"/><path d="M7 21v-8h10v8"/></svg>Lager</div>
+          <div class="mock-side-item active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21 8-9-5-9 5v8l9 5 9-5z"/><path d="m3 8 9 5 9-5M12 13v9"/></svg>Lagerbestand</div>
+          <div class="mock-side-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 0 1 15-6.7L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-15 6.7L3 16"/><path d="M3 21v-5h5"/></svg>Lagerbewegungen</div>
+          <div class="mock-side-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21v-7M4 10V3M12 21v-9M12 8V3M20 21v-5M20 12V3M1 14h6M9 8h6M17 16h6"/></svg>Bestandskorrekturen</div>
+          <div class="mock-side-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 2 9 5-9 5-9-5z"/><path d="m3 12 9 5 9-5"/><path d="m3 17 9 5 9-5"/></svg>Lagerchargen</div>
+          <div class="mock-side-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 16V6h11v10"/><path d="M14 9h4l3 3.5V16h-7z"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg>Umlagerungsaufträge</div>
+          <div class="mock-side-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M3 10h18M8 2v4M16 2v4"/></svg>Zyklusinventurpläne</div>
+          <div class="mock-side-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17 10 10l4 4 7-7"/><path d="M15 7h6v6"/></svg>Bedarfsprognosen</div>
+        </div>
+        <div class="mock-main">
+          <div class="mock-topbar">
+            <div class="mock-search">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.2-3.2"/></svg>
+              Personen, Aufträge, Anlagen suchen …
+            </div>
+            <div class="mock-plus"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></div>
+            <div class="mock-avatar"></div>
+          </div>
+          <div class="mock-h1">Lagerbestand</div>
+          <div class="mock-tag">6 Standorte · 1.284 Artikel · 9 unter Minimum</div>
+          <div class="mock-cards">
+            <div class="mock-card">
+              <div class="mock-card-head" style="color:#e11d48">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/><path d="M12 9v4M12 17h.01"/></svg>
+                Unter Minimum
+              </div>
+              <div class="mock-row"><span>Dichtungssatz 4"</span><span class="mock-pill hot">2 / 10</span></div>
+              <div class="mock-row"><span>Dichtungssatz</span><span class="mock-pill warn">4 / 12</span></div>
+              <div class="mock-row"><span>Filterelement</span><span class="mock-pill warn">9 / 15</span></div>
+            </div>
+            <div class="mock-card">
+              <div class="mock-card-head" style="color:#0d9488">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="m8 12 3 3 5-6"/></svg>
+                Zählgenauigkeit
+              </div>
+              <div class="mock-kpi">98.4%</div>
+              <div class="mock-kpi-sub">rollierende 90 Tage · A-Artikel wöchentlich</div>
+            </div>
+            <div class="mock-card">
+              <div class="mock-card-head" style="color:#d97706">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 16V6h11v10"/><path d="M14 9h4l3 3.5V16h-7z"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg>
+                Im Transit
+              </div>
+              <div class="mock-row"><span>TO-0412 → Standort 3</span><span class="mock-pill">Versandt</span></div>
+              <div class="mock-row"><span>TO-0413 → Lagerplatz</span><span class="mock-pill warn">Wareneingang</span></div>
+            </div>
+            <div class="mock-card">
+              <div class="mock-card-head" style="color:#4f46e5">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 0 1 15-6.7L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-15 6.7L3 16"/><path d="M3 21v-5h5"/></svg>
+                Bewegungen heute
+              </div>
+              <div class="mock-bars"><span style="height:30%"></span><span style="height:52%"></span><span style="height:44%"></span><span style="height:68%"></span><span style="height:61%"></span><span style="height:84%"></span></div>
+              <div class="mock-kpi-sub" style="margin-top:8px">112 Bewegungen · 18 Entnahmen für Arbeitsaufträge</div>
+            </div>
+            <div class="mock-card">
+              <div class="mock-card-head" style="color:#7c3aed">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 2 9 5-9 5-9-5z"/><path d="m3 12 9 5 9-5"/><path d="m3 17 9 5 9-5"/></svg>
+                Ablaufende Chargen
+              </div>
+              <div class="mock-row"><span>Charge 22-118</span><span class="mock-pill warn">45 T</span></div>
+              <div class="mock-row"><span>Charge 22-131</span><span class="mock-pill">90 T</span></div>
+            </div>
+            <div class="mock-card">
+              <div class="mock-card-head" style="color:#0891b2">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17 10 10l4 4 7-7"/><path d="M15 7h6v6"/></svg>
+                Prognoselücke
+              </div>
+              <div class="mock-kpi">7 Artikel</div>
+              <div class="mock-kpi-sub">fehlen gegenüber dem Bedarf des nächsten Quartals</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="section section-soft">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Vor Caspian ERP</span>
+        <h2>Das System sagt zwölf; das Regal sagt drei</h2>
+        <p>Bestandsdaten gehen auf zwei Arten schief: Entweder erfasst niemand die Bewegung, oder jemand erfasst sie zweimal. Beides endet gleich.</p>
+      </div>
+      <div class="grid grid-3">
+        <article class="card card-pad reveal">
+          <h3>Der Bestand wird nachträglich aktualisiert</h3>
+          <p class="mt-12">Material wird für einen Auftrag entnommen und später aufgeschrieben — falls überhaupt. Bis jemand abstimmt, ist die Spur eine Woche kalt.</p>
+        </article>
+        <article class="card card-pad reveal">
+          <h3>Zählen heißt anhalten</h3>
+          <p class="mt-12">Eine Vollinventur verlangt, das Lager zu schließen und alle zählen zu lassen. Deshalb passiert sie einmal im Jahr — der Rest ist Raten.</p>
+        </article>
+        <article class="card card-pad reveal">
+          <h3>Kritische Ersatzteile fehlen — entdeckt im schlechtesten Moment</h3>
+          <p class="mt-12">Das Teil ist im System und nicht im Regal — und Sie merken es, wenn die Maschine schon steht.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Was es leistet</span>
+        <h2>Bestände, die abbilden, was der Betrieb tatsächlich getan hat</h2>
+        <p>Jede Mengenänderung ist eine Bewegung mit Grund, Person und Zeitpunkt dahinter.</p>
+      </div>
+      <div class="grid grid-2">
+        <article class="card card-pad reveal">
+          <span class="icon-tile t-teal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m21 8-9-5-9 5v8l9 5 9-5z"/><path d="m3 8 9 5 9-5M12 13v9"/></svg></span>
+          <h3 class="mt-16">Bestände über mehrere Lager</h3>
+          <p class="mt-12">Echte Mengen je Standort statt einer vermischten Gesamtzahl.</p>
+          <ul class="check-list mt-16">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Lager, Freiflächen und Standortlager als eigene Orte</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Bestände je Artikel und je Lager geführt</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Mindestbestände und Nachbestellbedarf je Standort sichtbar</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Ein Katalog, geteilt mit Beschaffung und Fertigung</li>
+          </ul>
+        </article>
+        <article class="card card-pad reveal">
+          <span class="icon-tile t-cyan"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 0 1 15-6.7L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-15 6.7L3 16"/><path d="M3 21v-5h5"/></svg></span>
+          <h3 class="mt-16">Bewegungen und Korrekturen mit Grund</h3>
+          <p class="mt-12">Jede Änderung ist ein Datensatz — Eingänge, Entnahmen, Umlagerungen und Korrekturen.</p>
+          <ul class="check-list mt-16">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Bewegungen entstehen durch Eingänge, Entnahmen und Umlagerungen</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Korrekturen verlangen einen Grund — Schwund wird sichtbar</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Vollständige Historie je Artikel und Standort</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Zurechenbar: wer hat es bewegt und wann</li>
+          </ul>
+        </article>
+        <article class="card card-pad reveal">
+          <span class="icon-tile t-violet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 2 9 5-9 5-9-5z"/><path d="m3 12 9 5 9-5"/><path d="m3 17 9 5 9-5"/></svg></span>
+          <h3 class="mt-16">Chargenrückverfolgung</h3>
+          <p class="mt-12">Chargen- und Losverfolgung für Artikel, bei denen die Herkunft zählt.</p>
+          <ul class="check-list mt-16">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Lagerchargen mit Batchreferenzen und Daten</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Eine Charge vom Eingang bis zum Verbrauch verfolgen</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Verfallsempfindliche Bestände werden gesteuert statt angenommen</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Der Nachweis, den ein Kundenaudit verlangt</li>
+          </ul>
+        </article>
+        <article class="card card-pad reveal">
+          <span class="icon-tile t-amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 16V6h11v10"/><path d="M14 9h4l3 3.5V16h-7z"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg></span>
+          <h3 class="mt-16">Umlagerungsaufträge zwischen Standorten</h3>
+          <p class="mt-12">Bestände zwischen Standorten zu bewegen ist eine kontrollierte Transaktion, kein Telefonat.</p>
+          <ul class="check-list mt-16">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Umlagerung anlegen, versenden, am anderen Ende annehmen</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Bestand im Transit ist sichtbar statt verschwunden</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Abweichungen werden beim Empfang erfasst</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Die Unterlagen, die der Empfangsstandort tatsächlich braucht</li>
+          </ul>
+        </article>
+        <article class="card card-pad reveal">
+          <span class="icon-tile t-emerald"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="m8 12 3 3 5-6"/></svg></span>
+          <h3 class="mt-16">Zyklusinventur statt jährlichem Stillstand</h3>
+          <p class="mt-12">Zählen Sie laufend einen Teil des Lagers und halten Sie die Genauigkeit das ganze Jahr hoch.</p>
+          <ul class="check-list mt-16">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Zyklusinventurpläne, die festlegen, was wie oft gezählt wird</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Zählvorgänge im Gang am Handy durchgeführt</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Abweichungen werden erfasst und mit Grund in Korrekturen überführt</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Genauigkeitstrends statt eines Jahresurteils</li>
+          </ul>
+        </article>
+        <article class="card card-pad reveal">
+          <span class="icon-tile t-rose"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17 10 10l4 4 7-7"/><path d="M15 7h6v6"/></svg></span>
+          <h3 class="mt-16">Bedarfsprognosen</h3>
+          <p class="mt-12">Ein Blick nach vorn auf den künftigen Bedarf — Nachbestellung wird geplant statt reaktiv.</p>
+          <ul class="check-list mt-16">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Prognosen je Artikel und Standort</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Verglichen mit dem aktuellen Bestand und offenen Bestellungen</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Kritische Ersatzteile werden erkannt, bevor sie dringend werden</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Speist die Einkaufsentscheidungen in der Beschaffung</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-tight section-soft">
+    <div class="container">
+      <div class="section-head">
+        <h2>Wie ein Artikel durch das System läuft</h2>
+        <p>Von der Bestellung bis zum Verbrauch — jeder Schritt eine erfasste Bewegung.</p>
+      </div>
+      <div class="flow reveal">
+        <div class="flow-step done"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/></svg>Bestellung</div>
+        <span class="flow-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
+        <div class="flow-step done"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m21 8-9-5-9 5v8l9 5 9-5z"/><path d="m3 8 9 5 9-5M12 13v9"/></svg>Wareneingang</div>
+        <span class="flow-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
+        <div class="flow-step done"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21V9l9-6 9 6v12"/><path d="M7 21v-8h10v8"/></svg>Lagerbestand</div>
+        <span class="flow-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
+        <div class="flow-step"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 16V6h11v10"/><path d="M14 9h4l3 3.5V16h-7z"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg>Umlagerung</div>
+        <span class="flow-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
+        <div class="flow-step"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a4 4 0 0 0 5 5L21 21l-3 .5L8.5 12A4 4 0 0 1 3 6.5l3 3 2.5-2.5-3-3z"/></svg>An Arbeitsauftrag ausgegeben</div>
+        <span class="flow-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
+        <div class="flow-step"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="m8 12 3 3 5-6"/></svg>Zyklisch gezählt</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Jedes Werkzeug im Modul</span>
+        <h2>Zehn Werkzeuge für den physischen Bestand</h2>
+        <p>Alles vom Katalogeintrag bis zur Zählung im Gang.</p>
+      </div>
+      <div class="grid grid-2">
+        <div class="feature-item reveal">
+          <span class="icon-tile sm t-teal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 2 9 5-9 5-9-5z"/><path d="m3 12 9 5 9-5"/><path d="m3 17 9 5 9-5"/></svg></span>
+          <div>
+            <h4>Lagerartikel</h4>
+            <p>Die Lagersicht auf den gemeinsamen Artikelkatalog — Einheiten, Kategorien, Mindestbestände und Kennungen.</p>
+          </div>
+        </div>
+        <div class="feature-item reveal">
+          <span class="icon-tile sm t-cyan"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21V9l9-6 9 6v12"/><path d="M7 21v-8h10v8"/></svg></span>
+          <div>
+            <h4>Lager</h4>
+            <p>Die Orte, an denen Sie Bestand halten: Hauptlager, Container vor Ort, Freiflächen und Werkstätten.</p>
+          </div>
+        </div>
+        <div class="feature-item reveal">
+          <span class="icon-tile sm t-emerald"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m21 8-9-5-9 5v8l9 5 9-5z"/><path d="m3 8 9 5 9-5M12 13v9"/></svg></span>
+          <div>
+            <h4>Lagerbestand</h4>
+            <p>Bestand je Artikel und Standort, mit Mindestmengen und Nachbestellsicht.</p>
+          </div>
+        </div>
+        <div class="feature-item reveal">
+          <span class="icon-tile sm t-violet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 0 1 15-6.7L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-15 6.7L3 16"/><path d="M3 21v-5h5"/></svg></span>
+          <div>
+            <h4>Lagerbewegungen</h4>
+            <p>Vollständige Bewegungshistorie — jeder Eingang, jede Entnahme und Umlagerung, zugeordnet und mit Zeitstempel.</p>
+          </div>
+        </div>
+        <div class="feature-item reveal">
+          <span class="icon-tile sm t-amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21v-7M4 10V3M12 21v-9M12 8V3M20 21v-5M20 12V3M1 14h6M9 8h6M17 16h6"/></svg></span>
+          <div>
+            <h4>Bestandskorrekturen</h4>
+            <p>Korrekturen mit Pflichtgrund — Abweichungen werden erklärt statt geschluckt.</p>
+          </div>
+        </div>
+        <div class="feature-item reveal">
+          <span class="icon-tile sm t-rose"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 2 9 5-9 5-9-5z"/><path d="m3 12 9 5 9-5"/><path d="m3 17 9 5 9-5"/></svg></span>
+          <div>
+            <h4>Lagerchargen</h4>
+            <p>Batch- und Chargendatensätze für rückverfolgbare Artikel, vom Eingang bis zum Verbrauch.</p>
+          </div>
+        </div>
+        <div class="feature-item reveal">
+          <span class="icon-tile sm t-slate"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 16V6h11v10"/><path d="M14 9h4l3 3.5V16h-7z"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg></span>
+          <div>
+            <h4>Umlagerungsaufträge</h4>
+            <p>Kontrollierte Bewegung zwischen Lagern — mit Versand, Transitsicht und Empfang.</p>
+          </div>
+        </div>
+        <div class="feature-item reveal">
+          <span class="icon-tile sm t-teal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M3 10h18M8 2v4M16 2v4"/></svg></span>
+          <div>
+            <h4>Zyklusinventurpläne</h4>
+            <p>Was wie oft und von wem gezählt wird — dauerhafte Genauigkeit statt Jahresstillstand.</p>
+          </div>
+        </div>
+        <div class="feature-item reveal">
+          <span class="icon-tile sm t-emerald"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="m8 12 3 3 5-6"/></svg></span>
+          <div>
+            <h4>Zyklusinventur-Sitzungen</h4>
+            <p>Die Zählung selbst — im Gang am Handy, mit Abweichungen, sobald sie auffallen.</p>
+          </div>
+        </div>
+        <div class="feature-item reveal">
+          <span class="icon-tile sm t-cyan"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17 10 10l4 4 7-7"/><path d="M15 7h6v6"/></svg></span>
+          <div>
+            <h4>Bedarfsprognosen</h4>
+            <p>Erwarteter Verbrauch je Artikel und Standort, verglichen mit Bestand und laufenden Bestellungen.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section dark-section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Verzahnt, nicht angeflanscht</span>
+        <h2>Bestand ist ein gemeinsamer Datensatz, keine Insel</h2>
+        <p>Der Artikel, den Sie kaufen, lagern, verbrauchen und abrechnen, ist ein Datensatz.</p>
+      </div>
+      <div class="grid grid-3">
+        <div class="dark-card reveal">
+          <span class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="20" r="1"/><circle cx="18" cy="20" r="1"/><path d="M2 3h2.5l2.6 12.6a1 1 0 0 0 1 .8h8.9a1 1 0 0 0 1-.77L21 8H6"/></svg></span>
+          <h3 class="mt-16">Eingänge erzeugen Bestand</h3>
+          <p>Der Wareneingang in der Beschaffung ist die Bewegung, die den Artikel ins Regal bringt. Es gibt keine zweite Erfassung zum Vergessen.</p>
+          <p class="mt-12"><a class="link-arrow" href="/de/modules/procurement">Beschaffung ansehen<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></p>
+        </div>
+        <div class="dark-card reveal">
+          <span class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a4 4 0 0 0 5 5L21 21l-3 .5L8.5 12A4 4 0 0 1 3 6.5l3 3 2.5-2.5-3-3z"/></svg></span>
+          <h3 class="mt-16">Ersatzteile werden an Arbeitsaufträge ausgegeben</h3>
+          <p>Auf einem Instandhaltungsauftrag verbrauchte Teile werden aus dem Lager entnommen — der Auftrag trägt die echten Materialkosten.</p>
+          <p class="mt-12"><a class="link-arrow" href="/de/modules/maintenance">Instandhaltung ansehen<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></p>
+        </div>
+        <div class="dark-card reveal">
+          <span class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21V10l6 4V10l6 4V6l6 4v11z"/><path d="M7 17h.01M13 17h.01M18 17h.01"/></svg></span>
+          <h3 class="mt-16">Komponenten für die Fertigung</h3>
+          <p>Eine Stückliste verbraucht dieselben Bestandsdaten — Fertigungspläne treffen auf das echte Regal statt auf ein erhofftes.</p>
+          <p class="mt-12"><a class="link-arrow" href="/de/modules/manufacturing">Fertigung ansehen<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Wer darin arbeitet</span>
+        <h2>Für die, die das Regal verantworten</h2>
+        <p>Das Lager, die Planung und die Person, die für die Abweichung geradesteht.</p>
+      </div>
+      <div class="grid grid-3">
+        <article class="card card-pad reveal">
+          <span class="icon-tile sm t-teal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m21 8-9-5-9 5v8l9 5 9-5z"/><path d="m3 8 9 5 9-5M12 13v9"/></svg></span>
+          <h3 class="mt-16">Lagerverwalter</h3>
+          <p class="mt-12">Nimmt an, gibt aus und lagert um — am Handy im Gang — und zählt zyklisch, ohne das Lager zu schließen.</p>
+        </article>
+        <article class="card card-pad reveal">
+          <span class="icon-tile sm t-cyan"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17 10 10l4 4 7-7"/><path d="M15 7h6v6"/></svg></span>
+          <h3 class="mt-16">Materialplaner</h3>
+          <p class="mt-12">Arbeitet mit Prognosen, Mindestbeständen und offenen Bestellungen statt die Regale abzulaufen.</p>
+        </article>
+        <article class="card card-pad reveal">
+          <span class="icon-tile sm t-violet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v20M17 6H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></span>
+          <h3 class="mt-16">Finanzcontroller</h3>
+          <p class="mt-12">Erhält Bewegungen und Korrekturen mit angehängtem Grund — genau das unterscheidet eine Bewertung von einer Schätzung.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-soft">
+    <div class="container split">
+      <div>
+        <span class="eyebrow">Von Ihnen zu gestalten</span>
+        <h2 class="mt-16">Das Lager an Ihre physische Realität anpassen</h2>
+        <p class="lead mt-12">Eine Organisation hat ein Lager, eine andere elf Standorte und eine Freifläche. Beides ist normal.</p>
+        <ul class="check-list mt-24">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>So viele Lager, Magazine und Freiflächen anlegen, wie Sie tatsächlich haben</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Mindestbestände und Bestellpunkte je Artikel und Standort festlegen</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Entscheiden, welche Artikel chargengeführt werden und welche nicht</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Zyklusinventurpläne nach Kategorie, Wert oder Bewegungshäufigkeit definieren</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Für jede Korrektur einen Grundcode verlangen und beschränken, wer sie machen darf</li>
+        </ul>
+        <p class="mt-24"><a class="link-arrow" href="/de/modules/administration">Ansehen, was eine Administration steuert<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></p>
+      </div>
+      <div class="split-media">
+        <div class="panel reveal">
+          <div class="panel-head reveal">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21v-7M4 10V3M12 21v-9M12 8V3M20 21v-5M20 12V3M1 14h6M9 8h6M17 16h6"/></svg>
+            Lager · Einstellungen
+          </div>
+          <div class="panel-body reveal">
+            <table class="table-mock">
+              <thead><tr><th>Einstellung</th><th>Wert</th></tr></thead>
+              <tbody>
+                <tr><td>Lager</td><td><span class="badge badge-cyan">6 aktiv</span></td></tr>
+                <tr><td>Chargenführung</td><td><span class="badge badge-violet">Nach Kategorie</span></td></tr>
+                <tr><td>Korrekturgrund</td><td><span class="badge badge-rose">Pflicht</span></td></tr>
+                <tr><td>Zyklusinventur</td><td><span class="badge badge-emerald">Wöchentlich, A-Artikel</span></td></tr>
+                <tr><td>Negativbestand</td><td><span class="badge badge-amber">Gesperrt</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2>Fragen zum Lager, die uns gestellt werden</h2>
+      </div>
+      <div class="faq">
+        <details>
+          <summary>Können wir mehrere Lager und Standortmagazine führen?</summary>
+          <div class="faq-body">Ja. Bestände werden je Artikel und Standort geführt — Hauptlager, Freifläche und Container vor Ort sind eigene Datensätze mit eigenen Mindestmengen, keine vermischte Zahl.</div>
+        </details>
+        <details>
+          <summary>Müssen wir die Arbeit zum Zählen anhalten?</summary>
+          <div class="faq-body">Nein, genau dafür ist die Zyklusinventur da. Sie legen Pläne fest, was wie oft gezählt wird, und gezählt wird im Gang am Handy, während das Lager weiterläuft.</div>
+        </details>
+        <details>
+          <summary>Wie bleibt der Bestand genau?</summary>
+          <div class="faq-body">Weil die Handlungen, die die Arbeit tun, dieselben sind, die den Bestand bewegen. Ein Wareneingang in der Beschaffung, eine Entnahme für einen Instandhaltungsauftrag und eine Umlagerung zwischen Standorten erzeugen je eine Bewegung — Genauigkeit hängt nicht daran, dass jemand an ein zweites System denkt.</div>
+        </details>
+        <details>
+          <summary>Können wir eine Charge bis zum Lieferanten zurückverfolgen?</summary>
+          <div class="faq-body">Bei chargengeführten Artikeln ja. Lagerchargen erfassen den Batch ab dem Eingang, sodass sich verfolgen lässt, wohin eine Charge ging und mit welcher Bestellung sie kam.</div>
+        </details>
+        <details>
+          <summary>Fließt der Lagerwert in die Finanzen?</summary>
+          <div class="faq-body">Bewegungen und Korrekturen werden mit Grund und Zuordnung erfasst — genau das braucht eine Bewertung. Die Finanzen arbeiten mit demselben Artikelkatalog, sodass die Codes auf beiden Seiten übereinstimmen.</div>
+        </details>
+      </div>
+      <p class="text-center mt-32">
+        <a class="link-arrow" href="/de/modules">Alle Module durchsehen<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+      </p>
+    </div>
+  </section>
+
+
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-hero">
+      <div>
+        <p class="footer-kicker">Eine Frage? Oder lieber ein Rundgang?</p>
+        <h2>Ein System für den gesamten Betrieb.</h2>
+      </div>
+      <div>
+        <p>Erzählen Sie uns, wie Ihr Betrieb läuft. Wir sehen uns die passenden Arbeitsabläufe an, prüfen Ihre Daten und stimmen mit unserem Team die nächsten Schritte ab.</p>
+        <div class="footer-actions">
+          <a class="btn btn-onDark btn-lg" href="/de/contact#demo">Demo anfragen <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+          <a class="btn btn-outline-onDark btn-lg" href="https://docs.caspianerp.com">Dokumentation lesen</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="/de">
+          <img class="brand-mark" src="/assets/img/logo-mark.svg" alt="" width="30" height="30">
+          <span class="brand-name" style="color:#fff">Caspian <b>ERP</b></span>
+        </a>
+      </div>
+      <div class="footer-col">
+        <h4>Plattform</h4>
+        <ul>
+          <li><a href="/de/modules">Alle Module</a></li>
+          <li><a href="/de/industries">Branchen</a></li>
+          <li><a href="/de/security">Sicherheit und RBAC</a></li>
+          <li><a href="/de/pricing">Preise</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Module</h4>
+        <ul>
+          <li><a href="/de/modules/hseq">HSEQ</a></li>
+          <li><a href="/de/modules/hr">Personalwesen</a></li>
+          <li><a href="/de/modules/procurement">Beschaffung</a></li>
+          <li><a href="/de/modules/inventory">Lager</a></li>
+          <li><a href="/de/modules/maintenance">Instandhaltung</a></li>
+          <li><a href="/de/modules/finance">Finanzen</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Unternehmen</h4>
+        <ul>
+          <li><a href="/de/about">Über uns</a></li>
+          <li><a href="https://caspiantools.com" rel="noopener">CaspianTools</a></li>
+          <li><a href="/de/contact">Kontakt</a></li>
+          <li><a href="/de/contact#demo">Demo anfragen</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Erste Schritte</h4>
+        <ul>
+          <li><a href="https://app.caspianerp.com">Anmelden</a></li>
+          <li><a href="/de/contact#demo">Demo anfragen</a></li>
+          <li><a href="https://docs.caspianerp.com">Dokumentation</a></li>
+          <li><a href="https://admin.caspianerp.com">Admin-Portal</a></li>
+          <li><a href="/de/pricing#faq">Fragen zu Preisen</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <span data-year>2026</span> CaspianTools. Caspian ERP ist ein Produkt von CaspianTools.</p>
+      <nav aria-label="Rechtliches">
+        <a href="/de/privacy">Datenschutzerklärung</a>
+        <a href="/de/terms">Nutzungsbedingungen</a>
+        <a href="/de/security">Sicherheit</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+<script src="/assets/js/site.js?v=20260908" defer></script>
+</body>
+</html>

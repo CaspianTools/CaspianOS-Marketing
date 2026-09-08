@@ -1,0 +1,609 @@
+<!doctype html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="/assets/js/lang.js?v=20260908"></script>
+<title>CRM — Caspian ERP</title>
+<meta name="description" content="Kontakter, salgsmuligheter, tilbud, salgsordrer, aktiviteter, prognose og analyse — en CRM som gir en vunnet avtale rett videre til dem som skal levere.">
+<link rel="canonical" href="https://caspianerp.com/nb/modules/crm">
+<!--i18n:alternates-->
+<link rel="alternate" hreflang="en" href="https://caspianerp.com/modules/crm">
+<link rel="alternate" hreflang="az" href="https://caspianerp.com/az/modules/crm">
+<link rel="alternate" hreflang="tr" href="https://caspianerp.com/tr/modules/crm">
+<link rel="alternate" hreflang="ru" href="https://caspianerp.com/ru/modules/crm">
+<link rel="alternate" hreflang="nb" href="https://caspianerp.com/nb/modules/crm">
+<link rel="alternate" hreflang="de" href="https://caspianerp.com/de/modules/crm">
+<link rel="alternate" hreflang="fr" href="https://caspianerp.com/fr/modules/crm">
+<link rel="alternate" hreflang="x-default" href="https://caspianerp.com/modules/crm">
+<!--/i18n:alternates-->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Caspian ERP">
+<meta property="og:title" content="CRM — Caspian ERP">
+<meta property="og:description" content="Kontakter, salgsmuligheter, tilbud, salgsordrer, aktiviteter, prognose og analyse — en CRM som gir en vunnet avtale rett videre til dem som skal levere.">
+<meta property="og:url" content="https://caspianerp.com/nb/modules/crm">
+<meta property="og:image" content="https://caspianerp.com/assets/img/og-image.svg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#4f46e5">
+<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="/assets/css/site.css?v=20260908">
+<noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
+</head>
+<body>
+<a class="skip-link" href="#main">Gå til innholdet</a>
+<header class="site-header">
+  <div class="container">
+    <nav class="nav" aria-label="Hoved">
+      <a class="brand" href="/nb">
+        <img class="brand-mark" src="/assets/img/logo-mark.svg" alt="" width="30" height="30">
+        <span class="brand-name">Caspian <b>ERP</b></span>
+      </a>
+      <ul class="nav-links">
+        <li><a class="nav-link" aria-current="page" href="/nb/modules">Moduler</a></li>
+        <li><a class="nav-link" href="/nb/industries">Bransjer</a></li>
+        <li><a class="nav-link" href="/nb/security">Sikkerhet</a></li>
+        <li><a class="nav-link" href="/nb/pricing">Priser</a></li>
+        <li><a class="nav-link" href="/nb/about">Om oss</a></li>
+      </ul>
+      <div class="nav-actions">
+        <!--i18n:switcher-->
+        <details class="lang" data-lang-switcher>
+          <summary class="lang-button" title="Velg språk" aria-label="Språk: Norsk (bokmål)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18"/></svg><span class="lang-code">NB</span><svg class="lang-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="lang-menu" role="group" aria-label="Velg språk">
+            <a class="lang-option" href="/modules/crm" hreflang="en" lang="en" data-lang="en">English</a>
+            <a class="lang-option" href="/az/modules/crm" hreflang="az" lang="az" data-lang="az">Azərbaycan dili</a>
+            <a class="lang-option" href="/tr/modules/crm" hreflang="tr" lang="tr" data-lang="tr">Türkçe</a>
+            <a class="lang-option" href="/ru/modules/crm" hreflang="ru" lang="ru" data-lang="ru">Русский</a>
+            <a class="lang-option" href="/nb/modules/crm" hreflang="nb" lang="nb" data-lang="nb" aria-current="true">Norsk (bokmål)</a>
+            <a class="lang-option" href="/de/modules/crm" hreflang="de" lang="de" data-lang="de">Deutsch</a>
+            <a class="lang-option" href="/fr/modules/crm" hreflang="fr" lang="fr" data-lang="fr">Français</a>
+          </div>
+        </details>
+        <!--/i18n:switcher-->
+        <a class="btn btn-ghost btn-sm" href="https://app.caspianerp.com">Logg inn</a>
+        <a class="btn btn-primary btn-sm" href="/nb/contact#demo">Be om en demo <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+        <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="mobile-menu" aria-label="Åpne menyen" data-text-open="Åpne menyen" data-text-close="Lukk menyen">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </nav>
+  </div>
+  <div class="mobile-menu" id="mobile-menu">
+    <a class="nav-link" aria-current="page" href="/nb/modules">Moduler</a>
+    <a class="nav-link" href="/nb/industries">Bransjer</a>
+    <a class="nav-link" href="/nb/security">Sikkerhet</a>
+    <a class="nav-link" href="/nb/pricing">Priser</a>
+    <a class="nav-link" href="/nb/about">Om oss</a>
+    <a class="nav-link" href="https://docs.caspianerp.com">Dokumentasjon</a>
+    <a class="nav-link" href="/nb/contact">Kontakt</a>
+    <!--i18n:switcher-mobile-->
+    <div class="mobile-lang" role="group" aria-label="Velg språk">
+      <span class="mobile-lang-label">Språk</span>
+      <div class="mobile-lang-options">
+        <a class="lang-option" href="/modules/crm" hreflang="en" lang="en" data-lang="en">English</a>
+        <a class="lang-option" href="/az/modules/crm" hreflang="az" lang="az" data-lang="az">Azərbaycan dili</a>
+        <a class="lang-option" href="/tr/modules/crm" hreflang="tr" lang="tr" data-lang="tr">Türkçe</a>
+        <a class="lang-option" href="/ru/modules/crm" hreflang="ru" lang="ru" data-lang="ru">Русский</a>
+        <a class="lang-option" href="/nb/modules/crm" hreflang="nb" lang="nb" data-lang="nb" aria-current="true">Norsk (bokmål)</a>
+        <a class="lang-option" href="/de/modules/crm" hreflang="de" lang="de" data-lang="de">Deutsch</a>
+        <a class="lang-option" href="/fr/modules/crm" hreflang="fr" lang="fr" data-lang="fr">Français</a>
+      </div>
+    </div>
+    <!--/i18n:switcher-mobile-->
+    <div class="mobile-cta">
+      <a class="btn btn-secondary" href="https://app.caspianerp.com">Logg inn</a>
+      <a class="btn btn-primary" href="/nb/contact#demo">Be om en demo</a>
+    </div>
+  </div>
+</header>
+<main id="main">
+
+  <section class="hero">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Brødsmulesti">
+        <a href="/nb/modules">Moduler</a>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg>
+        <span aria-current="page">CRM</span>
+      </nav>
+      <span class="eyebrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>Kundeoppfølging</span>
+      <h1>En pipeline som ender <span class="grad">i levert arbeid</span></h1>
+      <p class="hero-sub">Kontakter, salgsmuligheter, tilbud og salgsordrer i den samme plattformen som kjører produksjon, lager og økonomi — så det å vinne arbeidet og å gjøre det ikke er to systemer.</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary btn-lg" href="/nb/contact#demo">Be om en demo</a>
+        <a class="btn btn-secondary btn-lg" href="https://docs.caspianerp.com">Les dokumentasjonen</a>
+      </div>
+      <p class="hero-note">Åtte verktøy · Fra tilbud til salgsordre til faktura · Samme katalog som Innkjøp</p>
+    </div>
+  </section>
+  <div class="container mock-wrap">
+    <p class="small muted text-center">Illustrerende produktvisning med eksempeldata. <a href="/nb/contact#demo">Be om en live gjennomgang</a>.</p>
+    <div class="mock reveal" role="img" aria-label="Caspian ERP CRM som viser pipeline per fase, tilbud som venter på svar, prognose og siste aktiviteter">
+      <div class="mock-bar" aria-hidden="true">
+        <span class="mock-dot"></span><span class="mock-dot"></span><span class="mock-dot"></span>
+        <span class="mock-url">app.caspianerp.com/nb/w/crm/deals</span>
+      </div>
+      <div class="mock-body" aria-hidden="true">
+        <div class="mock-rail">
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg>Hjem</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/></svg>Personal</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>HSEQ</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>Virks.</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1"/><circle cx="18" cy="20" r="1"/><path d="M2 3h2.5l2.6 12.6a1 1 0 0 0 1 .8h8.9a1 1 0 0 0 1-.77L21 8H6"/></svg>Innkjøp</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V10l6 4V10l6 4V6l6 4v11z"/><path d="M7 17h.01M13 17h.01M18 17h.01"/></svg>Prod.</div>
+          <div class="mock-rail-item active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>CRM</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V9l9-6 9 6v12"/><path d="M7 21v-8h10v8"/></svg>Lager</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 16V6h11v10"/><path d="M14 9h4l3 3.5V16h-7z"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg>Logistikk</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0 5 5L21 21l-3 .5L8.5 12A4 4 0 0 1 3 6.5l3 3 2.5-2.5-3-3z"/></svg>Vedlikeh.</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 6H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>Økonomi</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4.5 13.5H11l-1 8.5 8.5-11.5H12z"/></svg>Effektiv.</div>
+        </div>
+        <div class="mock-side">
+          <div class="mock-side-title">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            CRM
+          </div>
+          <div class="mock-side-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19h16M7 16V9M12 16V5M17 16v-4"/></svg>Dashbord</div>
+          <div class="mock-side-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17 10 10l4 4 7-7"/><path d="M15 7h6v6"/></svg>Prognose</div>
+          <div class="mock-side-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="1" fill="currentColor" stroke="none"/></svg>Analyse</div>
+          <div class="mock-side-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>Kontakter</div>
+          <div class="mock-side-item active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m11 17 2 2a1 1 0 0 0 1.4 0l3.6-3.6"/><path d="M3 11 8 6l4 4 3-3 6 6-4 4-3-3-4 4z"/></svg>Salgsmuligheter</div>
+          <div class="mock-side-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/></svg>Tilbud</div>
+          <div class="mock-side-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="4" width="10" height="17" rx="2"/><path d="M9 4V3h6v1"/><path d="M10 10h4M10 14h4"/></svg>Salgsordrer</div>
+          <div class="mock-side-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M3 10h18M8 2v4M16 2v4"/></svg>Aktiviteter</div>
+        </div>
+        <div class="mock-main">
+          <div class="mock-topbar">
+            <div class="mock-search">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.2-3.2"/></svg>
+              Søk etter personer, ordrer, utstyr …
+            </div>
+            <div class="mock-plus"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></div>
+            <div class="mock-avatar"></div>
+          </div>
+          <div class="mock-h1">Pipeline</div>
+          <div class="mock-tag">24 åpne salgsmuligheter · 6 lukkes dette kvartalet</div>
+          <div class="mock-cards">
+            <div class="mock-card">
+              <div class="mock-card-head" style="color:#e11d48">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m11 17 2 2a1 1 0 0 0 1.4 0l3.6-3.6"/><path d="M3 11 8 6l4 4 3-3 6 6-4 4-3-3-4 4z"/></svg>
+                Lukkes denne måneden
+              </div>
+              <div class="mock-row"><span>Manifoldleveranse · Q4</span><span class="mock-pill warn">Forhandling</span></div>
+              <div class="mock-row"><span>Inspeksjonskontrakt</span><span class="mock-pill ok">Muntlig</span></div>
+              <div class="mock-row"><span>Rammeavtale for deler</span><span class="mock-pill">Tilbud</span></div>
+            </div>
+            <div class="mock-card">
+              <div class="mock-card-head" style="color:#4f46e5">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17 10 10l4 4 7-7"/><path d="M15 7h6v6"/></svg>
+                Prognose
+              </div>
+              <div class="mock-kpi">68%</div>
+              <div class="mock-kpi-sub">av kvartalsmålet er sikret</div>
+            </div>
+            <div class="mock-card">
+              <div class="mock-card-head" style="color:#d97706">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/></svg>
+                Tilbud ute
+              </div>
+              <div class="mock-row"><span>QT-0441 · 14 linjer</span><span class="mock-pill warn">9 d</span></div>
+              <div class="mock-row"><span>QT-0443 · 3 linjer</span><span class="mock-pill">2 d</span></div>
+            </div>
+            <div class="mock-card">
+              <div class="mock-card-head" style="color:#0d9488">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="4" width="10" height="17" rx="2"/><path d="M9 4V3h6v1"/><path d="M10 10h4M10 14h4"/></svg>
+                Salgsordrer
+              </div>
+              <div class="mock-kpi">11</div>
+              <div class="mock-kpi-sub">akseptert · 4 allerede i produksjon</div>
+            </div>
+            <div class="mock-card">
+              <div class="mock-card-head" style="color:#7c3aed">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="1" fill="currentColor" stroke="none"/></svg>
+                Konvertering
+              </div>
+              <div class="mock-bars"><span style="height:34%"></span><span style="height:41%"></span><span style="height:38%"></span><span style="height:52%"></span><span style="height:47%"></span><span style="height:58%"></span></div>
+              <div class="mock-kpi-sub" style="margin-top:8px">Fra tilbud til ordre, seks måneder</div>
+            </div>
+            <div class="mock-card">
+              <div class="mock-card-head" style="color:#0891b2">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M3 10h18M8 2v4M16 2v4"/></svg>
+                Aktiviteter som forfaller
+              </div>
+              <div class="mock-row"><span>Telefon · Oppfølging etter befaring</span><span class="mock-pill warn">I dag</span></div>
+              <div class="mock-row"><span>Møte · Gjennomgang av rammeavtale</span><span class="mock-pill">tor.</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="section section-soft">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Før Caspian ERP</span>
+        <h2>CRM-en stopper akkurat der arbeidet begynner</h2>
+        <p>En avtale merkes som vunnet, og så taster noen hele greia inn på nytt i systemet som faktisk leverer den.</p>
+      </div>
+      <div class="grid grid-3">
+        <article class="card card-pad reveal">
+          <h3>Tilbud lages i et tekstbehandlingsprogram</h3>
+          <p class="mt-12">Prisene kommer fra et regneark, oppsettet fra forrige gang, og ingenting som går ut døren, henger sammen med det dere faktisk kan levere.</p>
+        </article>
+        <article class="card card-pad reveal">
+          <h3>Vunne avtaler tastes inn på nytt</h3>
+          <p class="mt-12">Ordren legges inn på nytt i driften, med en ny sjanse til å skrive feil antall, feil pris eller feil leveringsdato.</p>
+        </article>
+        <article class="card card-pad reveal">
+          <h3>Prognosen er en samtale</h3>
+          <p class="mt-12">Pipeline-verdien avhenger av hvilken versjon av regnearket du åpnet, og hvor optimistisk siste oppdatering var.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Hva det gjør</span>
+        <h2>Fra første kontakt til en salgsordre driften kan handle på</h2>
+        <p>Den kommersielle siden av den samme plattformen, med de samme varene, personene og hovedboken.</p>
+      </div>
+      <div class="grid grid-2">
+        <article class="card card-pad reveal">
+          <span class="icon-tile t-rose"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span>
+          <h3 class="mt-16">Kontakter og relasjonen rundt dem</h3>
+          <p class="mt-12">Kunder og personene hos dem, med historikken samlet ett sted.</p>
+          <ul class="check-list mt-16">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Kontakt- og selskapsposter med eiere</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Aktivitetshistorikk knyttet til relasjonen, ikke i en innboks</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Synlig for dem som trenger det, begrenset der dere ønsker</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Importer fra listen dere har i dag</li>
+          </ul>
+        </article>
+        <article class="card card-pad reveal">
+          <span class="icon-tile t-violet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m11 17 2 2a1 1 0 0 0 1.4 0l3.6-3.6"/><path d="M3 11 8 6l4 4 3-3 6 6-4 4-3-3-4 4z"/></svg></span>
+          <h3 class="mt-16">Salgsmuligheter med en pipeline som betyr noe</h3>
+          <p class="mt-12">Muligheter med fase, verdi og forventet lukking, oppdatert av dem som eier dem.</p>
+          <ul class="check-list mt-16">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Salgsmuligheter med fase, verdi, sannsynlighet og eier</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Pipeline-visning etter fase og eier</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Aktiviteter loggført mot avtalen etter hvert som den skrider frem</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Vunne avtaler går over i en salgsordre uten ny inntasting</li>
+          </ul>
+        </article>
+        <article class="card card-pad reveal">
+          <span class="icon-tile t-cyan"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/></svg></span>
+          <h3 class="mt-16">Tilbud bygd fra den ekte katalogen</h3>
+          <p class="mt-12">Tilbud satt sammen av de samme varene resten av plattformen bruker.</p>
+          <ul class="check-list mt-16">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Linjer fra den delte varekatalogen</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Konsistent prising og avgiftsbehandling</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Versjonert, så dere vet hva kunden faktisk fikk</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Konverteres til salgsordre ved aksept</li>
+          </ul>
+        </article>
+        <article class="card card-pad reveal">
+          <span class="icon-tile t-emerald"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="4" width="10" height="17" rx="2"/><path d="M9 4V3h6v1"/><path d="M10 10h4M10 14h4"/></svg></span>
+          <h3 class="mt-16">Salgsordrer driften kan levere på</h3>
+          <p class="mt-12">Den aksepterte ordren blir instruksen om å produsere, plukke eller sende.</p>
+          <ul class="check-list mt-16">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Salgsordrer med linjer, datoer og status</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Synlige for produksjon og lager, ikke bare for salg</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Lagertilgjengelighet sjekkes mot faktiske lagerdata</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Faktureres i Økonomi fra den samme ordren</li>
+          </ul>
+        </article>
+        <article class="card card-pad reveal">
+          <span class="icon-tile t-amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17 10 10l4 4 7-7"/><path d="M15 7h6v6"/></svg></span>
+          <h3 class="mt-16">Prognose og analyse</h3>
+          <p class="mt-12">En pipeline-prognose bygd på de avtalene folk faktisk jobber med.</p>
+          <ul class="check-list mt-16">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Prognose per periode, fase og eier</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Konverteringsanalyse gjennom pipelinen</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Vunnet og tapt synlig per eier og per kunde</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>De samme tallene KPI-dashbordet leser</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-tight section-soft">
+    <div class="container">
+      <div class="section-head">
+        <h2>Fra kontakt til betaling, uten ny inntasting</h2>
+        <p>Hvert dokument opprettes fra det forrige, og driften ser ordren så snart den er vunnet.</p>
+      </div>
+      <div class="flow reveal">
+        <div class="flow-step done"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>Kontakt</div>
+        <span class="flow-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
+        <div class="flow-step done"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m11 17 2 2a1 1 0 0 0 1.4 0l3.6-3.6"/><path d="M3 11 8 6l4 4 3-3 6 6-4 4-3-3-4 4z"/></svg>Salgsmulighet</div>
+        <span class="flow-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
+        <div class="flow-step done"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/></svg>Tilbud</div>
+        <span class="flow-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
+        <div class="flow-step"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="4" width="10" height="17" rx="2"/><path d="M9 4V3h6v1"/><path d="M10 10h4M10 14h4"/></svg>Salgsordre</div>
+        <span class="flow-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
+        <div class="flow-step"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21V10l6 4V10l6 4V6l6 4v11z"/><path d="M7 17h.01M13 17h.01M18 17h.01"/></svg>Levert</div>
+        <span class="flow-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
+        <div class="flow-step"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3v18l2-1.5L9 21l2-1.5L13 21l2-1.5L17 21l2-1.5V3z"/><path d="M8 8h8M8 12h8"/></svg>Fakturert</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Hvert verktøy i modulen</span>
+        <h2>Åtte verktøy gjennom hele salgssyklusen</h2>
+        <p>Salg, men koblet til driften som må levere.</p>
+      </div>
+      <div class="grid grid-2">
+        <div class="feature-item reveal">
+          <span class="icon-tile sm t-rose"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19h16M7 16V9M12 16V5M17 16v-4"/></svg></span>
+          <div>
+            <h4>CRM-dashbord</h4>
+            <p>Pipeline, aktivitet og konvertering på én skjerm, for dem som eier tallene.</p>
+          </div>
+        </div>
+        <div class="feature-item reveal">
+          <span class="icon-tile sm t-amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17 10 10l4 4 7-7"/><path d="M15 7h6v6"/></svg></span>
+          <div>
+            <h4>Prognose</h4>
+            <p>Forventet omsetning per periode, fase og eier, bygd på levende avtaler i stedet for en månedlig innmelding.</p>
+          </div>
+        </div>
+        <div class="feature-item reveal">
+          <span class="icon-tile sm t-violet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="1" fill="currentColor" stroke="none"/></svg></span>
+          <div>
+            <h4>Analyse</h4>
+            <p>Konverteringsrater, vunnet-tapt-analyse og bevegelse i pipelinen på tvers av salgsteamet.</p>
+          </div>
+        </div>
+        <div class="feature-item reveal">
+          <span class="icon-tile sm t-cyan"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span>
+          <div>
+            <h4>Kontakter</h4>
+            <p>Kunde- og kontaktposter med eiere og hele historikken i relasjonen.</p>
+          </div>
+        </div>
+        <div class="feature-item reveal">
+          <span class="icon-tile sm t-emerald"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m11 17 2 2a1 1 0 0 0 1.4 0l3.6-3.6"/><path d="M3 11 8 6l4 4 3-3 6 6-4 4-3-3-4 4z"/></svg></span>
+          <div>
+            <h4>Salgsmuligheter</h4>
+            <p>Muligheter med fase, verdi, sannsynlighet og forventet lukkedato.</p>
+          </div>
+        </div>
+        <div class="feature-item reveal">
+          <span class="icon-tile sm t-slate"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/></svg></span>
+          <div>
+            <h4>Tilbud</h4>
+            <p>Kundetilbud bygd fra den delte varekatalogen, versjonert og konvertible til ordre.</p>
+          </div>
+        </div>
+        <div class="feature-item reveal">
+          <span class="icon-tile sm t-teal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="4" width="10" height="17" rx="2"/><path d="M9 4V3h6v1"/><path d="M10 10h4M10 14h4"/></svg></span>
+          <div>
+            <h4>Salgsordrer</h4>
+            <p>Aksepterte ordrer lager og produksjon kan handle direkte på, og som Økonomi kan fakturere fra.</p>
+          </div>
+        </div>
+        <div class="feature-item reveal">
+          <span class="icon-tile sm t-amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M3 10h18M8 2v4M16 2v4"/></svg></span>
+          <div>
+            <h4>Aktiviteter</h4>
+            <p>Telefoner, møter og oppfølginger loggført mot kontakter og avtaler, så historikken overlever en overlevering.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section dark-section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Sammenkoblet, ikke påmontert</span>
+        <h2>Å vinne arbeidet og å gjøre det, i ett system</h2>
+        <p>Dette er egentlig hva en CRM inne i et ERP er til for.</p>
+      </div>
+      <div class="grid grid-3">
+        <div class="dark-card reveal">
+          <span class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21V10l6 4V10l6 4V6l6 4v11z"/><path d="M7 17h.01M13 17h.01M18 17h.01"/></svg></span>
+          <h3 class="mt-16">Ordrer blir til produksjon</h3>
+          <p>Salgsordren er synlig for produksjonen og kan dekkes med arbeidsordrer mot faktisk komponenttilgjengelighet.</p>
+          <p class="mt-12"><a class="link-arrow" href="/nb/modules/manufacturing">Se Produksjon<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></p>
+        </div>
+        <div class="dark-card reveal">
+          <span class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21V9l9-6 9 6v12"/><path d="M7 21v-8h10v8"/></svg></span>
+          <h3 class="mt-16">Løfter sjekkes mot lageret</h3>
+          <p>Tilgjengeligheten kommer fra faktiske lagerdata, så en leveringsdato er en forpliktelse og ikke et håp.</p>
+          <p class="mt-12"><a class="link-arrow" href="/nb/modules/inventory">Se Lager<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></p>
+        </div>
+        <div class="dark-card reveal">
+          <span class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v20M17 6H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></span>
+          <h3 class="mt-16">Ordrer blir til fakturaer</h3>
+          <p>Faktureringen skjer fra den samme ordren og den samme katalogen, så det som ble solgt og det som ble fakturert, stemmer.</p>
+          <p class="mt-12"><a class="link-arrow" href="/nb/modules/finance">Se Økonomi<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Hvem som bor i den</span>
+        <h2>For den kommersielle siden av en driftsvirksomhet</h2>
+        <p>Salg som må kunne love en reell dato.</p>
+      </div>
+      <div class="grid grid-3">
+        <article class="card card-pad reveal">
+          <span class="icon-tile sm t-rose"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m11 17 2 2a1 1 0 0 0 1.4 0l3.6-3.6"/><path d="M3 11 8 6l4 4 3-3 6 6-4 4-3-3-4 4z"/></svg></span>
+          <h3 class="mt-16">Kundeansvarlig</h3>
+          <p class="mt-12">Eier kontakter og avtaler, gir tilbud fra den ekte katalogen, og ser om driften faktisk kan levere.</p>
+        </article>
+        <article class="card card-pad reveal">
+          <span class="icon-tile sm t-amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17 10 10l4 4 7-7"/><path d="M15 7h6v6"/></svg></span>
+          <h3 class="mt-16">Salgssjef</h3>
+          <p class="mt-12">Leser en prognose bygd på levende avtaler i stedet for å mase på teamet om et regneark før hvert styremøte.</p>
+        </article>
+        <article class="card card-pad reveal">
+          <span class="icon-tile sm t-teal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="4" width="10" height="17" rx="2"/><path d="M9 4V3h6v1"/><path d="M10 10h4M10 14h4"/></svg></span>
+          <h3 class="mt-16">Driftsplanlegger</h3>
+          <p class="mt-12">Ser salgsordren i det øyeblikket den aksepteres, og planlegger produksjon og lager mot den.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-soft">
+    <div class="container split">
+      <div>
+        <span class="eyebrow">Din å forme</span>
+        <h2 class="mt-16">Konfigurer CRM etter måten dere selger på</h2>
+        <p class="lead mt-12">Prosjektsalg, servicekontrakter og produktleveranse trenger ulike pipelines.</p>
+        <ul class="check-list mt-24">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Definer deres egne pipeline-faser og sannsynligheter</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Bestem om tilbud over en verdigrense krever godkjenning</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Velg om avtaler skal være synlige for hele teamet eller bare for eieren</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Sett nummereringen og betingelsene som vises på tilbud og salgsordrer</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Slå av prognose og analyse hvis dere kjører en enkel ordrebok</li>
+        </ul>
+        <p class="mt-24"><a class="link-arrow" href="/nb/modules/administration">Se hva en administrator styrer<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></p>
+      </div>
+      <div class="split-media">
+        <div class="panel reveal">
+          <div class="panel-head reveal">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21v-7M4 10V3M12 21v-9M12 8V3M20 21v-5M20 12V3M1 14h6M9 8h6M17 16h6"/></svg>
+            CRM · Innstillinger
+          </div>
+          <div class="panel-body reveal">
+            <table class="table-mock">
+              <thead><tr><th>Innstilling</th><th>Verdi</th></tr></thead>
+              <tbody>
+                <tr><td>Pipeline-faser</td><td><span class="badge badge-rose">Egendefinert (6)</span></td></tr>
+                <tr><td>Tilbudsgodkjenning</td><td><span class="badge badge-amber">Over grensen</span></td></tr>
+                <tr><td>Synlighet for avtaler</td><td><span class="badge badge-violet">Team</span></td></tr>
+                <tr><td>Tilbud → salgsordre</td><td><span class="badge badge-emerald">Ett klikk</span></td></tr>
+                <tr><td>Prognoseperiode</td><td><span class="badge badge-cyan">Kvartalsvis</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2>Spørsmål om CRM vi ofte får</h2>
+      </div>
+      <div class="faq">
+        <details>
+          <summary>Skaper en vunnet avtale det operative arbeidet?</summary>
+          <div class="faq-body">En vunnet avtale blir en salgsordre, og salgsordren er synlig direkte for lager og produksjon. Det er poenget med å kjøre CRM-en inne i ERP-et — ingen taster ordren inn i et system nummer to.</div>
+        </details>
+        <details>
+          <summary>Hvor kommer tilbudsprisene fra?</summary>
+          <div class="faq-body">Fra den delte varekatalogen som innkjøp, lager og økonomi også bruker. Det er dette som holder det dere tilbød, sendte og fakturerte, i samsvar.</div>
+        </details>
+        <details>
+          <summary>Kan vi sjekke lageret før vi lover en dato?</summary>
+          <div class="faq-body">Ja. Tilgjengeligheten kommer fra faktiske lagerdata og ikke fra et tall som vedlikeholdes for seg, så en lovet dato kan bygge på det som virkelig står på hyllen.</div>
+        </details>
+        <details>
+          <summary>Er prognosen noe teamet må levere inn?</summary>
+          <div class="faq-body">Nei. Den bygges av avtalene folk allerede oppdaterer, med fase og sannsynlighet. Hvis ingen oppdaterer avtalene sine, vil prognosen si nettopp det, og det er i seg selv nyttig.</div>
+        </details>
+        <details>
+          <summary>Kan salg se operative data, eller bare sine egne?</summary>
+          <div class="faq-body">Det bestemmer dere. Hvert verktøy har egne tillatelser, så en kundeansvarlig kan få innsyn i lager og ordrestatus uten tilgang til økonomi eller personal.</div>
+        </details>
+      </div>
+      <p class="text-center mt-32">
+        <a class="link-arrow" href="/nb/modules">Bla gjennom alle moduler<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+      </p>
+    </div>
+  </section>
+
+
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-hero">
+      <div>
+        <p class="footer-kicker">Har du et spørsmål? Vil du ha en gjennomgang?</p>
+        <h2>Ett system for hele driften.</h2>
+      </div>
+      <div>
+        <p>Fortell oss hvordan driften din fungerer. Vi går gjennom de aktuelle arbeidsflytene, ser på dataene dine og blir enige om neste steg sammen med teamet vårt.</p>
+        <div class="footer-actions">
+          <a class="btn btn-onDark btn-lg" href="/nb/contact#demo">Be om en demo <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+          <a class="btn btn-outline-onDark btn-lg" href="https://docs.caspianerp.com">Les dokumentasjonen</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="/nb">
+          <img class="brand-mark" src="/assets/img/logo-mark.svg" alt="" width="30" height="30">
+          <span class="brand-name" style="color:#fff">Caspian <b>ERP</b></span>
+        </a>
+      </div>
+      <div class="footer-col">
+        <h4>Plattform</h4>
+        <ul>
+          <li><a href="/nb/modules">Alle moduler</a></li>
+          <li><a href="/nb/industries">Bransjer</a></li>
+          <li><a href="/nb/security">Sikkerhet og RBAC</a></li>
+          <li><a href="/nb/pricing">Priser</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Moduler</h4>
+        <ul>
+          <li><a href="/nb/modules/hseq">HSEQ</a></li>
+          <li><a href="/nb/modules/hr">Personal</a></li>
+          <li><a href="/nb/modules/procurement">Innkjøp</a></li>
+          <li><a href="/nb/modules/inventory">Lager</a></li>
+          <li><a href="/nb/modules/maintenance">Vedlikehold</a></li>
+          <li><a href="/nb/modules/finance">Økonomi</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Selskap</h4>
+        <ul>
+          <li><a href="/nb/about">Om oss</a></li>
+          <li><a href="https://caspiantools.com" rel="noopener">CaspianTools</a></li>
+          <li><a href="/nb/contact">Kontakt</a></li>
+          <li><a href="/nb/contact#demo">Be om en demo</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Kom i gang</h4>
+        <ul>
+          <li><a href="https://app.caspianerp.com">Logg inn</a></li>
+          <li><a href="/nb/contact#demo">Be om en demo</a></li>
+          <li><a href="https://docs.caspianerp.com">Dokumentasjon</a></li>
+          <li><a href="https://admin.caspianerp.com">Adminportal</a></li>
+          <li><a href="/nb/pricing#faq">Spørsmål om pris</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <span data-year>2026</span> CaspianTools. Caspian ERP er et CaspianTools-produkt.</p>
+      <nav aria-label="Juridisk">
+        <a href="/nb/privacy">Personvernerklæring</a>
+        <a href="/nb/terms">Vilkår for bruk</a>
+        <a href="/nb/security">Sikkerhet</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+<script src="/assets/js/site.js?v=20260908" defer></script>
+</body>
+</html>

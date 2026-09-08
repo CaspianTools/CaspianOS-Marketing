@@ -499,6 +499,79 @@ button { font: inherit; cursor: pointer; }
 }
 @media (max-width: 520px) {
   .nav-actions .btn-primary { display: none; }
+  .lang-button { padding-inline: 9px; }
+}
+
+/* Language switcher — a native <details>, so it opens and switches with JS off.
+   site.js only adds the click-outside and Escape close. */
+.lang { position: relative; flex: none; }
+.lang-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  height: 38px;
+  padding-inline: 12px;
+  border-radius: var(--r-pill);
+  border: 1px solid var(--border-strong);
+  background: var(--white);
+  color: var(--slate-700);
+  font-size: .875rem;
+  font-weight: 600;
+  cursor: pointer;
+  list-style: none;                 /* hide the default disclosure triangle */
+  transition: background .15s ease, color .15s ease, border-color .15s ease;
+}
+.lang-button::-webkit-details-marker { display: none; }
+.lang-button:hover { color: var(--slate-900); border-color: var(--slate-400); }
+.lang-button svg { width: 16px; height: 16px; }
+.lang-caret { transition: transform .15s ease; }
+.lang[open] .lang-button { background: var(--slate-100); color: var(--slate-900); }
+.lang[open] .lang-caret { transform: rotate(180deg); }
+.lang-code { letter-spacing: .02em; }
+
+.lang-menu {
+  position: absolute;
+  z-index: 60;
+  top: calc(100% + 8px);
+  right: 0;
+  min-width: 190px;
+  display: grid;
+  gap: 2px;
+  padding: 6px;
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  background: var(--white);
+  box-shadow: var(--shadow-lg);
+}
+.lang-option {
+  display: block;
+  padding: 9px 12px;
+  border-radius: var(--r-sm);
+  color: var(--slate-700);
+  font-size: .9375rem;
+  white-space: nowrap;
+}
+.lang-option:hover { background: var(--slate-100); color: var(--slate-900); }
+.lang-option[aria-current] { color: var(--primary); font-weight: 600; background: var(--indigo-50); }
+
+/* The same links, spelled out in the mobile drawer where there is room. */
+.mobile-lang { margin-top: 12px; padding-top: 14px; border-top: 1px solid var(--border); }
+.mobile-lang-label {
+  display: block;
+  margin-bottom: 8px;
+  padding-inline: 4px;
+  color: var(--text-muted);
+  font-size: .8125rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+}
+.mobile-lang-options { display: flex; flex-wrap: wrap; gap: 6px; }
+.mobile-lang .lang-option {
+  border: 1px solid var(--border);
+  border-radius: var(--r-pill);
+  padding: 7px 13px;
+  font-size: .875rem;
 }
 
 /* Mobile drawer — a rounded card that drops out of the pill */

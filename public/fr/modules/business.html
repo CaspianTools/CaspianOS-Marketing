@@ -1,0 +1,538 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="/assets/js/lang.js?v=20260908"></script>
+<title>Pilotage — Caspian ERP</title>
+<meta name="description" content="Indicateurs et projets dans Caspian ERP — des objectifs mesurés sur les données vivantes de tous les autres modules, et des projets dont le périmètre, le budget et l’avancement tiennent au même endroit.">
+<link rel="canonical" href="https://caspianerp.com/fr/modules/business">
+<!--i18n:alternates-->
+<link rel="alternate" hreflang="en" href="https://caspianerp.com/modules/business">
+<link rel="alternate" hreflang="az" href="https://caspianerp.com/az/modules/business">
+<link rel="alternate" hreflang="tr" href="https://caspianerp.com/tr/modules/business">
+<link rel="alternate" hreflang="ru" href="https://caspianerp.com/ru/modules/business">
+<link rel="alternate" hreflang="nb" href="https://caspianerp.com/nb/modules/business">
+<link rel="alternate" hreflang="de" href="https://caspianerp.com/de/modules/business">
+<link rel="alternate" hreflang="fr" href="https://caspianerp.com/fr/modules/business">
+<link rel="alternate" hreflang="x-default" href="https://caspianerp.com/modules/business">
+<!--/i18n:alternates-->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Caspian ERP">
+<meta property="og:title" content="Pilotage — Caspian ERP">
+<meta property="og:description" content="Indicateurs et projets dans Caspian ERP — des objectifs mesurés sur les données vivantes de tous les autres modules, et des projets dont le périmètre, le budget et l’avancement tiennent au même endroit.">
+<meta property="og:url" content="https://caspianerp.com/fr/modules/business">
+<meta property="og:image" content="https://caspianerp.com/assets/img/og-image.svg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#4f46e5">
+<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="/assets/css/site.css?v=20260908">
+<noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
+</head>
+<body>
+<a class="skip-link" href="#main">Aller au contenu</a>
+<header class="site-header">
+  <div class="container">
+    <nav class="nav" aria-label="Principale">
+      <a class="brand" href="/fr">
+        <img class="brand-mark" src="/assets/img/logo-mark.svg" alt="" width="30" height="30">
+        <span class="brand-name">Caspian <b>ERP</b></span>
+      </a>
+      <ul class="nav-links">
+        <li><a class="nav-link" aria-current="page" href="/fr/modules">Modules</a></li>
+        <li><a class="nav-link" href="/fr/industries">Secteurs</a></li>
+        <li><a class="nav-link" href="/fr/security">Sécurité</a></li>
+        <li><a class="nav-link" href="/fr/pricing">Tarifs</a></li>
+        <li><a class="nav-link" href="/fr/about">À propos</a></li>
+      </ul>
+      <div class="nav-actions">
+        <!--i18n:switcher-->
+        <details class="lang" data-lang-switcher>
+          <summary class="lang-button" title="Choisir une langue" aria-label="Langue : Français"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18"/></svg><span class="lang-code">FR</span><svg class="lang-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="lang-menu" role="group" aria-label="Choisir une langue">
+            <a class="lang-option" href="/modules/business" hreflang="en" lang="en" data-lang="en">English</a>
+            <a class="lang-option" href="/az/modules/business" hreflang="az" lang="az" data-lang="az">Azərbaycan dili</a>
+            <a class="lang-option" href="/tr/modules/business" hreflang="tr" lang="tr" data-lang="tr">Türkçe</a>
+            <a class="lang-option" href="/ru/modules/business" hreflang="ru" lang="ru" data-lang="ru">Русский</a>
+            <a class="lang-option" href="/nb/modules/business" hreflang="nb" lang="nb" data-lang="nb">Norsk (bokmål)</a>
+            <a class="lang-option" href="/de/modules/business" hreflang="de" lang="de" data-lang="de">Deutsch</a>
+            <a class="lang-option" href="/fr/modules/business" hreflang="fr" lang="fr" data-lang="fr" aria-current="true">Français</a>
+          </div>
+        </details>
+        <!--/i18n:switcher-->
+        <a class="btn btn-ghost btn-sm" href="https://app.caspianerp.com">Se connecter</a>
+        <a class="btn btn-primary btn-sm" href="/fr/contact#demo">Demander une démo <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+        <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="mobile-menu" aria-label="Ouvrir le menu" data-text-open="Ouvrir le menu" data-text-close="Fermer le menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </nav>
+  </div>
+  <div class="mobile-menu" id="mobile-menu">
+    <a class="nav-link" aria-current="page" href="/fr/modules">Modules</a>
+    <a class="nav-link" href="/fr/industries">Secteurs</a>
+    <a class="nav-link" href="/fr/security">Sécurité</a>
+    <a class="nav-link" href="/fr/pricing">Tarifs</a>
+    <a class="nav-link" href="/fr/about">À propos</a>
+    <a class="nav-link" href="https://docs.caspianerp.com">Documentation</a>
+    <a class="nav-link" href="/fr/contact">Contact</a>
+    <!--i18n:switcher-mobile-->
+    <div class="mobile-lang" role="group" aria-label="Choisir une langue">
+      <span class="mobile-lang-label">Langue</span>
+      <div class="mobile-lang-options">
+        <a class="lang-option" href="/modules/business" hreflang="en" lang="en" data-lang="en">English</a>
+        <a class="lang-option" href="/az/modules/business" hreflang="az" lang="az" data-lang="az">Azərbaycan dili</a>
+        <a class="lang-option" href="/tr/modules/business" hreflang="tr" lang="tr" data-lang="tr">Türkçe</a>
+        <a class="lang-option" href="/ru/modules/business" hreflang="ru" lang="ru" data-lang="ru">Русский</a>
+        <a class="lang-option" href="/nb/modules/business" hreflang="nb" lang="nb" data-lang="nb">Norsk (bokmål)</a>
+        <a class="lang-option" href="/de/modules/business" hreflang="de" lang="de" data-lang="de">Deutsch</a>
+        <a class="lang-option" href="/fr/modules/business" hreflang="fr" lang="fr" data-lang="fr" aria-current="true">Français</a>
+      </div>
+    </div>
+    <!--/i18n:switcher-mobile-->
+    <div class="mobile-cta">
+      <a class="btn btn-secondary" href="https://app.caspianerp.com">Se connecter</a>
+      <a class="btn btn-primary" href="/fr/contact#demo">Demander une démo</a>
+    </div>
+  </div>
+</header>
+<main id="main">
+
+  <section class="hero">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Fil d’Ariane">
+        <a href="/fr/modules">Modules</a>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg>
+        <span aria-current="page">Pilotage</span>
+      </nav>
+      <span class="eyebrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>Pilotage</span>
+      <h1>Objectifs et projets, <span class="grad">mesurés sur des données vivantes</span></h1>
+      <p class="hero-sub">Un indicateur qui lit les mêmes enregistrements que l’exploitation ne peut pas s’en écarter. Pas plus qu’un état d’avancement construit à partir du travail plutôt que saisi dans une diapositive.</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary btn-lg" href="/fr/contact#demo">Demander une démo</a>
+        <a class="btn btn-secondary btn-lg" href="https://docs.caspianerp.com">Lire la documentation</a>
+      </div>
+      <p class="hero-note">Quatre outils · Lit tous les modules · L’origine de la vue direction</p>
+    </div>
+  </section>
+  <div class="container mock-wrap">
+    <p class="small muted text-center">Vue produit illustrative avec des données d’exemple. <a href="/fr/contact#demo">Demander une présentation en direct</a>.</p>
+    <div class="mock reveal" role="img" aria-label="Caspian ERP Pilotage affichant la santé des indicateurs, l’état des projets et le budget face au réalisé">
+      <div class="mock-bar" aria-hidden="true">
+        <span class="mock-dot"></span><span class="mock-dot"></span><span class="mock-dot"></span>
+        <span class="mock-url">app.caspianerp.com/fr/w/business/kpis</span>
+      </div>
+      <div class="mock-body" aria-hidden="true">
+        <div class="mock-rail">
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg>Accueil</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/></svg>Ressources humaines</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>HSEQ</div>
+          <div class="mock-rail-item active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>Pilot.</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1"/><circle cx="18" cy="20" r="1"/><path d="M2 3h2.5l2.6 12.6a1 1 0 0 0 1 .8h8.9a1 1 0 0 0 1-.77L21 8H6"/></svg>Achats</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V10l6 4V10l6 4V6l6 4v11z"/><path d="M7 17h.01M13 17h.01M18 17h.01"/></svg>Prod.</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>CRM</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V9l9-6 9 6v12"/><path d="M7 21v-8h10v8"/></svg>Stocks</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 16V6h11v10"/><path d="M14 9h4l3 3.5V16h-7z"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg>Logist.</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0 5 5L21 21l-3 .5L8.5 12A4 4 0 0 1 3 6.5l3 3 2.5-2.5-3-3z"/></svg>Mainten.</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 6H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>Finance</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4.5 13.5H11l-1 8.5 8.5-11.5H12z"/></svg>Efficac.</div>
+        </div>
+        <div class="mock-side">
+          <div class="mock-side-title">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
+            Pilotage
+          </div>
+          <div class="mock-side-item active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="1" fill="currentColor" stroke="none"/></svg>Indicateurs</div>
+          <div class="mock-side-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 2 9 5-9 5-9-5z"/><path d="m3 12 9 5 9-5"/><path d="m3 17 9 5 9-5"/></svg>Projets</div>
+        </div>
+        <div class="mock-main">
+          <div class="mock-topbar">
+            <div class="mock-search">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.2-3.2"/></svg>
+              Rechercher personnes, commandes, actifs…
+            </div>
+            <div class="mock-plus"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></div>
+            <div class="mock-avatar"></div>
+          </div>
+          <div class="mock-h1">Tableau de bord des indicateurs</div>
+          <div class="mock-tag">10 suivis · 8 dans les clous · 2 à risque</div>
+          <div class="mock-cards">
+            <div class="mock-card">
+              <div class="mock-card-head" style="color:#4f46e5">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="1" fill="currentColor" stroke="none"/></svg>
+                Santé des indicateurs
+              </div>
+              <div class="mock-bars"><span style="height:42%"></span><span style="height:64%"></span><span style="height:52%"></span><span style="height:78%"></span><span style="height:88%"></span><span style="height:70%"></span></div>
+              <div class="mock-kpi-sub" style="margin-top:8px">8 dans les clous · 2 à risque</div>
+            </div>
+            <div class="mock-card">
+              <div class="mock-card-head" style="color:#e11d48">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/><path d="M12 9v4M12 17h.01"/></svg>
+                À risque
+              </div>
+              <div class="mock-row"><span>TRIR</span><span class="mock-pill hot">Au-dessus de la cible</span></div>
+              <div class="mock-row"><span>Délai de cycle des commandes</span><span class="mock-pill warn">11,4 j</span></div>
+            </div>
+            <div class="mock-card">
+              <div class="mock-card-head" style="color:#0d9488">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17 10 10l4 4 7-7"/><path d="M15 7h6v6"/></svg>
+                Livraison à l’heure
+              </div>
+              <div class="mock-kpi">94%</div>
+              <div class="mock-kpi-sub">Cible 90 % · en hausse de 3 points</div>
+            </div>
+            <div class="mock-card">
+              <div class="mock-card-head" style="color:#7c3aed">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 2 9 5-9 5-9-5z"/><path d="m3 12 9 5 9-5"/><path d="m3 17 9 5 9-5"/></svg>
+                Projets actifs
+              </div>
+              <div class="mock-row"><span>Mise à niveau SOR du puits</span><span class="mock-pill ok">Actif</span></div>
+              <div class="mock-row"><span>Déploiement SLIA</span><span class="mock-pill">Planification</span></div>
+              <div class="mock-row"><span>Déménagement d’entrepôt</span><span class="mock-pill warn">À risque</span></div>
+            </div>
+            <div class="mock-card">
+              <div class="mock-card-head" style="color:#d97706">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 6H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                Budget face au réalisé
+              </div>
+              <div class="mock-kpi">83%</div>
+              <div class="mock-kpi-sub">du budget annuel consommé · mois 10</div>
+            </div>
+            <div class="mock-card">
+              <div class="mock-card-head" style="color:#0891b2">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="m8 12 3 3 5-6"/></svg>
+                Actions clôturées
+              </div>
+              <div class="mock-bars"><span style="height:55%"></span><span style="height:61%"></span><span style="height:70%"></span><span style="height:66%"></span><span style="height:82%"></span><span style="height:90%"></span></div>
+              <div class="mock-kpi-sub" style="margin-top:8px">Taux de clôture sur six mois</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="section section-soft">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Avant Caspian ERP</span>
+        <h2>Le chiffre de la diapositive n’est le chiffre de personne</h2>
+        <p>Le temps qu’un indicateur soit exporté, collé, remis en forme et présenté, il appartient à celui qui a fait la présentation, pas à l’exploitation.</p>
+      </div>
+      <div class="grid grid-3">
+        <article class="card card-pad reveal">
+          <h3>Le reporting devient un projet mensuel à part entière</h3>
+          <p class="mt-12">Quelqu’un passe la première semaine de chaque mois à assembler des exports. La récompense est l’image d’un mois déjà terminé.</p>
+        </article>
+        <article class="card card-pad reveal">
+          <h3>Chaque service rapporte une vérité différente</h3>
+          <p class="mt-12">Les achats comptent les commandes d’une façon, la finance d’une autre, et la réunion se passe à réconcilier des définitions au lieu de décider.</p>
+        </article>
+        <article class="card card-pad reveal">
+          <h3>L’état d’un projet est une impression</h3>
+          <p class="mt-12">L’avancement est décrit plutôt que mesuré, et la première preuve tangible d’un glissement, c’est l’échéance elle-même.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Ce qu’il fait</span>
+        <h2>La couche qui transforme les opérations en information de gestion</h2>
+        <p>Quatre outils, délibérément. Ce module ne cherche pas à être une suite décisionnelle : il lit les enregistrements que le reste de la plateforme tient déjà.</p>
+      </div>
+      <div class="grid grid-2">
+        <article class="card card-pad reveal">
+          <span class="icon-tile t-emerald"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="1" fill="currentColor" stroke="none"/></svg></span>
+          <h3 class="mt-16">Des indicateurs définis une fois, mesurés en continu</h3>
+          <p class="mt-12">Fixez la cible, le responsable et la période, et laissez la valeur venir des enregistrements sous-jacents.</p>
+          <ul class="check-list mt-16">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Des cibles avec responsables, périodes et seuils</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Les états dans les clous, à risque et manqué se voient sans interprétation</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>L’historique est conservé : une tendance est une tendance, pas un souvenir</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Le même chiffre pour tout le monde, parce qu’il n’y en a qu’un</li>
+          </ul>
+        </article>
+        <article class="card card-pad reveal">
+          <span class="icon-tile t-slate"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19h16M7 16V9M12 16V5M17 16v-4"/></svg></span>
+          <h3 class="mt-16">Un tableau de bord qu’on ouvre vraiment</h3>
+          <p class="mt-12">Le tableau de bord des indicateurs est une vue vivante, pas un artefact mensuel.</p>
+          <ul class="check-list mt-16">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>L’état courant de tous les indicateurs suivis sur un seul écran</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Descendez d’un chiffre vers les enregistrements qui le composent</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Filtrez sur le département ou le site dont vous êtes responsable</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Aucune étape d’export entre l’exploitation et la vue</li>
+          </ul>
+        </article>
+        <article class="card card-pad reveal">
+          <span class="icon-tile t-violet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 2 9 5-9 5-9-5z"/><path d="m3 12 9 5 9-5"/><path d="m3 17 9 5 9-5"/></svg></span>
+          <h3 class="mt-16">Des projets avec périmètre et avancement</h3>
+          <p class="mt-12">Les projets contiennent le travail, les personnes et l’état — et restent liés à ce qui se passe ailleurs dans la plateforme.</p>
+          <ul class="check-list mt-16">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Un registre des projets avec responsable, dates et statut</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Une fiche détaillée avec le périmètre, l’avancement et l’équipe</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Tâches et réunions sont rattachées plutôt que suivies à part</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Visible par ceux qui font le travail, pas seulement par le sponsor</li>
+          </ul>
+        </article>
+        <article class="card card-pad reveal">
+          <span class="icon-tile t-cyan"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17 10 10l4 4 7-7"/><path d="M15 7h6v6"/></svg></span>
+          <h3 class="mt-16">Un reporting de direction sans assemblage</h3>
+          <p class="mt-12">Quand l’indicateur et l’enregistrement sont le même objet, le dossier mensuel cesse d’être une construction.</p>
+          <ul class="check-list mt-16">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Des chiffres qui concordent avec la finance parce qu’ils partagent la source</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Des comparaisons de périodes sans reconstruire un tableur</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Les responsables rendent compte de leurs indicateurs dans le système où ils travaillent</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Rien à ressaisir entre l’exploitation et le dossier du conseil</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-soft">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Chaque outil du module</span>
+        <h2>Quatre outils qui surplombent les autres</h2>
+        <p>Petit module, grand effet de levier — il dépend de tous les autres.</p>
+      </div>
+      <div class="grid grid-2">
+        <div class="feature-item reveal">
+          <span class="icon-tile sm t-emerald"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="1" fill="currentColor" stroke="none"/></svg></span>
+          <div>
+            <h4>Indicateurs</h4>
+            <p>Définissez les indicateurs qui pilotent votre organisation — cible, responsable, période et seuil — et suivez-les sur des données vivantes.</p>
+          </div>
+        </div>
+        <div class="feature-item reveal">
+          <span class="icon-tile sm t-slate"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19h16M7 16V9M12 16V5M17 16v-4"/></svg></span>
+          <div>
+            <h4>Tableau de bord des indicateurs</h4>
+            <p>L’état courant de chaque indicateur suivi sur un écran, avec la tendance et l’écart à la cible.</p>
+          </div>
+        </div>
+        <div class="feature-item reveal">
+          <span class="icon-tile sm t-violet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 2 9 5-9 5-9-5z"/><path d="m3 12 9 5 9-5"/><path d="m3 17 9 5 9-5"/></svg></span>
+          <div>
+            <h4>Projets</h4>
+            <p>Le registre des projets : responsable, dates, statut et budget, avec le travail rattaché plutôt que décrit.</p>
+          </div>
+        </div>
+        <div class="feature-item reveal">
+          <span class="icon-tile sm t-cyan"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/></svg></span>
+          <div>
+            <h4>Détail du projet</h4>
+            <p>Un projet dans son ensemble — périmètre, avancement, équipe, et les tâches et réunions qui le font avancer.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section dark-section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Intégré, pas rapporté</span>
+        <h2>Un indicateur ne vaut que ce que vaut l’enregistrement qui le porte</h2>
+        <p>Ce module n’a presque aucune donnée propre. C’est tout l’intérêt.</p>
+      </div>
+      <div class="grid grid-3">
+        <div class="dark-card reveal">
+          <span class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span>
+          <h3 class="mt-16">Performance sécurité</h3>
+          <p>Le taux d’observations, les incidents ouverts et les actions en retard sont comptés depuis le registre HSEQ plutôt que déclarés à la main.</p>
+          <p class="mt-12"><a class="link-arrow" href="/fr/modules/hseq">Voir HSEQ<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></p>
+        </div>
+        <div class="dark-card reveal">
+          <span class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v20M17 6H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></span>
+          <h3 class="mt-16">Performance financière</h3>
+          <p>Le budget face au réalisé vient du même grand livre que celui de votre comptable : les deux versions ne peuvent pas diverger.</p>
+          <p class="mt-12"><a class="link-arrow" href="/fr/modules/finance">Voir Finance<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></p>
+        </div>
+        <div class="dark-card reveal">
+          <span class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 4.5 13.5H11l-1 8.5 8.5-11.5H12z"/></svg></span>
+          <h3 class="mt-16">Livraison</h3>
+          <p>L’avancement du projet se construit à partir des tâches, réunions et actions que les gens complètent déjà dans Efficacité.</p>
+          <p class="mt-12"><a class="link-arrow" href="/fr/modules/efficiency">Voir Efficacité<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Qui y travaille</span>
+        <h2>La couche de pilotage, sans système distinct</h2>
+        <p>Trois personnes qui partagent aujourd’hui un tableur.</p>
+      </div>
+      <div class="grid grid-3">
+        <article class="card card-pad reveal">
+          <span class="icon-tile sm t-emerald"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg></span>
+          <h3 class="mt-16">Directeur général</h3>
+          <p class="mt-12">Ouvre un tableau de bord et voit si l’organisation est dans les clous, sans attendre l’assemblage d’un dossier mensuel.</p>
+        </article>
+        <article class="card card-pad reveal">
+          <span class="icon-tile sm t-violet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 2 9 5-9 5-9-5z"/><path d="m3 12 9 5 9-5"/><path d="m3 17 9 5 9-5"/></svg></span>
+          <h3 class="mt-16">Chef de projet</h3>
+          <p class="mt-12">Mène le projet là où le travail se fait : le statut est une conséquence du travail, pas une tâche de reporting distincte.</p>
+        </article>
+        <article class="card card-pad reveal">
+          <span class="icon-tile sm t-cyan"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="1" fill="currentColor" stroke="none"/></svg></span>
+          <h3 class="mt-16">Chef de département</h3>
+          <p class="mt-12">Porte quelques indicateurs, les voit dans le système où il dirige son département, et est évalué sur des chiffres vivants.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-soft">
+    <div class="container split">
+      <div>
+        <span class="eyebrow">À vous de le façonner</span>
+        <h2 class="mt-16">Définissez ce qui pilote réellement votre organisation</h2>
+        <p class="lead mt-12">Deux exploitations ne suivent jamais les mêmes indicateurs. Rien ici n’est figé dans le code.</p>
+        <ul class="check-list mt-24">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Créez vos propres indicateurs avec les cibles, périodes et seuils que vous employez</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Attribuez un responsable à chaque indicateur, pour que la redevabilité ait un nom</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Décidez quels départements voient quels indicateurs et projets</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Menez vos projets avec vos propres valeurs de statut et vos étapes</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Masquez complètement le module si vous pilotez par département plutôt que par indicateur</li>
+        </ul>
+        <p class="mt-24"><a class="link-arrow" href="/fr/modules/administration">Voir ce que contrôle un administrateur<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></p>
+      </div>
+      <div class="split-media">
+        <div class="panel reveal">
+          <div class="panel-head reveal">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21v-7M4 10V3M12 21v-9M12 8V3M20 21v-5M20 12V3M1 14h6M9 8h6M17 16h6"/></svg>
+            Pilotage · Paramètres
+          </div>
+          <div class="panel-body reveal">
+            <table class="table-mock">
+              <thead><tr><th>Paramètre</th><th>Valeur</th></tr></thead>
+              <tbody>
+                <tr><td>Période des indicateurs</td><td><span class="badge badge-indigo">Mensuelle</span></td></tr>
+                <tr><td>Seuil de risque</td><td><span class="badge badge-amber">85 % de la cible</span></td></tr>
+                <tr><td>Visibilité des indicateurs</td><td><span class="badge badge-violet">Responsable et managers</span></td></tr>
+                <tr><td>Statuts de projet</td><td><span class="badge badge-cyan">Personnalisés (5)</span></td></tr>
+                <tr><td>Rafraîchissement du tableau de bord</td><td><span class="badge badge-emerald">Exemple</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2>Les questions de pilotage qu’on nous pose</h2>
+      </div>
+      <div class="faq">
+        <details>
+          <summary>Les indicateurs se mettent-ils à jour automatiquement ?</summary>
+          <div class="faq-body">Ils lisent les enregistrements que tient le reste de la plateforme : les chiffres bougent donc avec le travail. Ce que vous définissez, c’est l’indicateur, sa cible et son responsable — pas le nombre lui-même.</div>
+        </details>
+        <details>
+          <summary>Est-ce un remplacement d’outil décisionnel ?</summary>
+          <div class="faq-body">Non, et il ne prétend pas l’être. C’est la vue de gestion des données déjà présentes dans Caspian ERP. S’il vous faut modéliser des sources externes, exportez et utilisez votre outil décisionnel — l’intérêt ici, c’est qu’aucun export n’est nécessaire pour la vue quotidienne.</div>
+        </details>
+        <details>
+          <summary>Un projet peut-il s’étendre sur plusieurs modules ?</summary>
+          <div class="faq-body">C’est le cas normal. Un projet mobilise généralement des tâches et réunions d’Efficacité, des dépenses de Finance et des personnes des RH. La fiche projet est l’endroit où tout cela se voit ensemble.</div>
+        </details>
+        <details>
+          <summary>Qui peut voir le tableau de bord ?</summary>
+          <div class="faq-body">Qui vous voulez. La visibilité des indicateurs est régie par les autorisations comme le reste : vous pouvez en publier certains à toute l’organisation et en réserver d’autres à leur responsable et à la direction.</div>
+        </details>
+      </div>
+      <p class="text-center mt-32">
+        <a class="link-arrow" href="/fr/modules">Parcourir tous les modules<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+      </p>
+    </div>
+  </section>
+
+
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-hero">
+      <div>
+        <p class="footer-kicker">Une question ? Envie d’une visite guidée ?</p>
+        <h2>Un seul système pour toute l’exploitation.</h2>
+      </div>
+      <div>
+        <p>Dites-nous comment fonctionne votre exploitation. Nous explorons les flux de travail pertinents, examinons vos données et convenons des prochaines étapes avec notre équipe.</p>
+        <div class="footer-actions">
+          <a class="btn btn-onDark btn-lg" href="/fr/contact#demo">Demander une démo <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+          <a class="btn btn-outline-onDark btn-lg" href="https://docs.caspianerp.com">Lire la documentation</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="/fr">
+          <img class="brand-mark" src="/assets/img/logo-mark.svg" alt="" width="30" height="30">
+          <span class="brand-name" style="color:#fff">Caspian <b>ERP</b></span>
+        </a>
+      </div>
+      <div class="footer-col">
+        <h4>Plateforme</h4>
+        <ul>
+          <li><a href="/fr/modules">Tous les modules</a></li>
+          <li><a href="/fr/industries">Secteurs</a></li>
+          <li><a href="/fr/security">Sécurité et RBAC</a></li>
+          <li><a href="/fr/pricing">Tarifs</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Modules</h4>
+        <ul>
+          <li><a href="/fr/modules/hseq">HSEQ</a></li>
+          <li><a href="/fr/modules/hr">Ressources humaines</a></li>
+          <li><a href="/fr/modules/procurement">Achats</a></li>
+          <li><a href="/fr/modules/inventory">Stocks</a></li>
+          <li><a href="/fr/modules/maintenance">Maintenance</a></li>
+          <li><a href="/fr/modules/finance">Finance</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Société</h4>
+        <ul>
+          <li><a href="/fr/about">À propos</a></li>
+          <li><a href="https://caspiantools.com" rel="noopener">CaspianTools</a></li>
+          <li><a href="/fr/contact">Contact</a></li>
+          <li><a href="/fr/contact#demo">Demander une démo</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Commencer</h4>
+        <ul>
+          <li><a href="https://app.caspianerp.com">Se connecter</a></li>
+          <li><a href="/fr/contact#demo">Demander une démo</a></li>
+          <li><a href="https://docs.caspianerp.com">Documentation</a></li>
+          <li><a href="https://admin.caspianerp.com">Portail d’administration</a></li>
+          <li><a href="/fr/pricing#faq">Questions de tarifs</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <span data-year>2026</span> CaspianTools. Caspian ERP est un produit CaspianTools.</p>
+      <nav aria-label="Mentions légales">
+        <a href="/fr/privacy">Politique de confidentialité</a>
+        <a href="/fr/terms">Conditions d’utilisation</a>
+        <a href="/fr/security">Sécurité</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+<script src="/assets/js/site.js?v=20260908" defer></script>
+</body>
+</html>

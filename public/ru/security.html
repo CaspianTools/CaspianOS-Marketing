@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="/assets/js/lang.js?v=20260908"></script>
+<title>Безопасность и контроль доступа — Caspian ERP</title>
+<meta name="description" content="Изоляция арендаторов, RBAC на основе прав с проверкой на сервере, подтверждённые приглашения и журнал аудита. Как Caspian ERP защищает данные вашей организации.">
+<link rel="canonical" href="https://caspianerp.com/ru/security">
+<!--i18n:alternates-->
+<link rel="alternate" hreflang="en" href="https://caspianerp.com/security">
+<link rel="alternate" hreflang="az" href="https://caspianerp.com/az/security">
+<link rel="alternate" hreflang="tr" href="https://caspianerp.com/tr/security">
+<link rel="alternate" hreflang="ru" href="https://caspianerp.com/ru/security">
+<link rel="alternate" hreflang="nb" href="https://caspianerp.com/nb/security">
+<link rel="alternate" hreflang="de" href="https://caspianerp.com/de/security">
+<link rel="alternate" hreflang="fr" href="https://caspianerp.com/fr/security">
+<link rel="alternate" hreflang="x-default" href="https://caspianerp.com/security">
+<!--/i18n:alternates-->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Caspian ERP">
+<meta property="og:title" content="Безопасность и контроль доступа — Caspian ERP">
+<meta property="og:description" content="Изоляция арендаторов, RBAC на основе прав с проверкой на сервере, подтверждённые приглашения и журнал аудита. Как Caspian ERP защищает данные вашей организации.">
+<meta property="og:url" content="https://caspianerp.com/ru/security">
+<meta property="og:image" content="https://caspianerp.com/assets/img/og-image.svg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#4f46e5">
+<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="/assets/css/site.css?v=20260908">
+<noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
+</head>
+<body>
+<a class="skip-link" href="#main">Перейти к содержимому</a>
+<header class="site-header">
+  <div class="container">
+    <nav class="nav" aria-label="Основная">
+      <a class="brand" href="/ru">
+        <img class="brand-mark" src="/assets/img/logo-mark.svg" alt="" width="30" height="30">
+        <span class="brand-name">Caspian <b>ERP</b></span>
+      </a>
+      <ul class="nav-links">
+        <li><a class="nav-link" href="/ru/modules">Модули</a></li>
+        <li><a class="nav-link" href="/ru/industries">Отрасли</a></li>
+        <li><a class="nav-link" aria-current="page" href="/ru/security">Безопасность</a></li>
+        <li><a class="nav-link" href="/ru/pricing">Цены</a></li>
+        <li><a class="nav-link" href="/ru/about">О нас</a></li>
+      </ul>
+      <div class="nav-actions">
+        <!--i18n:switcher-->
+        <details class="lang" data-lang-switcher>
+          <summary class="lang-button" title="Выберите язык" aria-label="Язык: Русский"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18"/></svg><span class="lang-code">RU</span><svg class="lang-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="lang-menu" role="group" aria-label="Выберите язык">
+            <a class="lang-option" href="/security" hreflang="en" lang="en" data-lang="en">English</a>
+            <a class="lang-option" href="/az/security" hreflang="az" lang="az" data-lang="az">Azərbaycan dili</a>
+            <a class="lang-option" href="/tr/security" hreflang="tr" lang="tr" data-lang="tr">Türkçe</a>
+            <a class="lang-option" href="/ru/security" hreflang="ru" lang="ru" data-lang="ru" aria-current="true">Русский</a>
+            <a class="lang-option" href="/nb/security" hreflang="nb" lang="nb" data-lang="nb">Norsk (bokmål)</a>
+            <a class="lang-option" href="/de/security" hreflang="de" lang="de" data-lang="de">Deutsch</a>
+            <a class="lang-option" href="/fr/security" hreflang="fr" lang="fr" data-lang="fr">Français</a>
+          </div>
+        </details>
+        <!--/i18n:switcher-->
+        <a class="btn btn-ghost btn-sm" href="https://app.caspianerp.com">Войти</a>
+        <a class="btn btn-primary btn-sm" href="/ru/contact#demo">Запросить демо <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+        <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="mobile-menu" aria-label="Открыть меню" data-text-open="Открыть меню" data-text-close="Закрыть меню">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </nav>
+  </div>
+  <div class="mobile-menu" id="mobile-menu">
+    <a class="nav-link" href="/ru/modules">Модули</a>
+    <a class="nav-link" href="/ru/industries">Отрасли</a>
+    <a class="nav-link" aria-current="page" href="/ru/security">Безопасность</a>
+    <a class="nav-link" href="/ru/pricing">Цены</a>
+    <a class="nav-link" href="/ru/about">О нас</a>
+    <a class="nav-link" href="https://docs.caspianerp.com">Документация</a>
+    <a class="nav-link" href="/ru/contact">Контакты</a>
+    <!--i18n:switcher-mobile-->
+    <div class="mobile-lang" role="group" aria-label="Выберите язык">
+      <span class="mobile-lang-label">Язык</span>
+      <div class="mobile-lang-options">
+        <a class="lang-option" href="/security" hreflang="en" lang="en" data-lang="en">English</a>
+        <a class="lang-option" href="/az/security" hreflang="az" lang="az" data-lang="az">Azərbaycan dili</a>
+        <a class="lang-option" href="/tr/security" hreflang="tr" lang="tr" data-lang="tr">Türkçe</a>
+        <a class="lang-option" href="/ru/security" hreflang="ru" lang="ru" data-lang="ru" aria-current="true">Русский</a>
+        <a class="lang-option" href="/nb/security" hreflang="nb" lang="nb" data-lang="nb">Norsk (bokmål)</a>
+        <a class="lang-option" href="/de/security" hreflang="de" lang="de" data-lang="de">Deutsch</a>
+        <a class="lang-option" href="/fr/security" hreflang="fr" lang="fr" data-lang="fr">Français</a>
+      </div>
+    </div>
+    <!--/i18n:switcher-mobile-->
+    <div class="mobile-cta">
+      <a class="btn btn-secondary" href="https://app.caspianerp.com">Войти</a>
+      <a class="btn btn-primary" href="/ru/contact#demo">Запросить демо</a>
+    </div>
+  </div>
+</header>
+<main id="main">
+
+  <section class="hero">
+    <div class="container">
+      <span class="eyebrow">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
+        Безопасность и контроль доступа
+      </span>
+      <h1>Права, проверяемые <span class="grad">в базе данных</span></h1>
+      <p class="hero-sub">
+        ERP хранит ваши происшествия, медицинские записи, зарплаты и договоры. Спрятать пункт меню — это не контроль доступа, поэтому в Caspian ERP каждое чтение и запись проверяются на сервере по выданным вами правам.
+      </p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <div class="grid grid-3">
+        <div class="card card-pad card-interactive reveal">
+          <span class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></span>
+          <h3 class="mt-16">Изоляция арендаторов</h3>
+          <p class="muted mt-6">Каждая запись живёт под своей организацией и несёт её идентификатор. Запрос, выходящий за пределы вашей организации, отклоняется правилами, а не фильтруется клиентом.</p>
+        </div>
+        <div class="card card-pad card-interactive reveal">
+          <span class="icon-tile t-emerald"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></span>
+          <h3 class="mt-16">RBAC на основе прав</h3>
+          <p class="muted mt-6">У каждого инструмента свои права на чтение, создание, изменение и удаление. Роль — это набор прав; участник имеет по одной роли в организации. Ничего не подразумевается из названия должности.</p>
+        </div>
+        <div class="card card-pad card-interactive reveal">
+          <span class="icon-tile t-violet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
+          <h3 class="mt-16">Журнал аудита</h3>
+          <p class="muted mt-6">Изменения членства, ролей и прав пишутся в журнал, доступный только на добавление, с указанием сделавшего их участника — записи нельзя подделать от чужого имени.</p>
+        </div>
+        <div class="card card-pad card-interactive reveal">
+          <span class="icon-tile t-amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z"/><path d="m8 12 3 3 5-6"/></svg></span>
+          <h3 class="mt-16">Подтверждённые приглашения</h3>
+          <p class="muted mt-6">Приглашение можно найти и принять только с подтверждённого адреса, поэтому никто не войдёт в вашу организацию, зарегистрировав чужой адрес.</p>
+        </div>
+        <div class="card card-pad card-interactive reveal">
+          <span class="icon-tile t-cyan"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5v7c0 6 8 10 8 10s8-4 8-10V5z"/></svg></span>
+          <h3 class="mt-16">Минимум привилегий по умолчанию</h3>
+          <p class="muted mt-6">Владение, тарифный план и квота участников — поля платформы: администратор не может повысить себя до владельца или сменить ваш план изнутри приложения.</p>
+        </div>
+        <div class="card card-pad card-interactive reveal">
+          <span class="icon-tile t-rose"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l3 8 4-16 3 8h4"/></svg></span>
+          <h3 class="mt-16">Защищённый транспорт</h3>
+          <p class="muted mt-6">HTTPS повсюду, заголовки безопасности, политика безопасности контента и пользовательские лимиты частоты на каждом серверном маршруте.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-soft">
+    <div class="container split">
+      <div>
+        <h2>Как решается вопрос доступа</h2>
+        <p class="lead mt-16">
+          На каждую операцию сервер отвечает на четыре вопроса. Если хоть один ответ «нет», операция не проходит — что бы ни думал браузер.
+        </p>
+        <div class="feature-list">
+          <div class="feature-item"><span class="icon-tile sm">1</span><div><h4>Вы вошли в систему?</h4><p>Аутентификация через Google либо по почте и паролю, с обязательным подтверждением адреса для парольных учётных записей.</p></div></div>
+          <div class="feature-item"><span class="icon-tile sm">2</span><div><h4>Вы активный участник этой организации?</h4><p>Приостановленные и уволенные участники теряют доступ немедленно; приостановленные организации становятся доступны только для чтения.</p></div></div>
+          <div class="feature-item"><span class="icon-tile sm">3</span><div><h4>Есть ли у вашей роли это право?</h4><p>Проверяется по каждому инструменту и действию — чтение, создание, изменение или удаление — по реестру прав.</p></div></div>
+          <div class="feature-item"><span class="icon-tile sm">4</span><div><h4>Принадлежит ли запись вашей организации?</h4><p>Проверяется по пути документа и идентификатору организации — и при чтении, и при записи.</p></div></div>
+        </div>
+      </div>
+      <div class="split-media reveal">
+        <div class="panel reveal">
+          <div class="panel-head reveal">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
+            Роли · Начальник участка
+            <span class="badge badge-indigo">Пользовательская роль</span>
+          </div>
+          <div class="panel-body reveal">
+            <table class="table-mock">
+              <caption class="sr-only">Пример набора прав для пользовательской роли</caption>
+              <thead><tr><th scope="col">Инструмент</th><th scope="col">Чтение</th><th scope="col">Создание</th><th scope="col">Изменение</th><th scope="col">Удаление</th></tr></thead>
+              <tbody>
+                <tr><td>Наряды-допуски</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="no">—</td></tr>
+                <tr><td>Наблюдения</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="no">—</td></tr>
+                <tr><td>Происшествия</td><td class="yes">✓</td><td class="yes">✓</td><td class="no">—</td><td class="no">—</td></tr>
+                <tr><td>Персонал</td><td class="yes">✓</td><td class="no">—</td><td class="no">—</td><td class="no">—</td></tr>
+                <tr><td>Медицина</td><td class="no">—</td><td class="no">—</td><td class="no">—</td><td class="no">—</td></tr>
+                <tr><td>Счета покупателям</td><td class="no">—</td><td class="no">—</td><td class="no">—</td><td class="no">—</td></tr>
+              </tbody>
+            </table>
+            <p class="small muted mt-16">Роли строятся инструмент за инструментом. Мастер, которому не положено видеть зарплаты и медицину, просто не получает такого права.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section dark-section">
+    <div class="container">
+      <div class="section-head">
+        <h2>Инфраструктура и данные</h2>
+        <p>Caspian ERP работает на Google Cloud. Мы строим на управляемой инфраструктуре, а не держим собственные серверы.</p>
+      </div>
+      <div class="grid grid-3">
+        <div class="dark-card reveal">
+          <h3>Шифрование</h3>
+          <p>Трафик идёт по HTTPS. Данные в покое шифруются базовыми сервисами Google Cloud.</p>
+        </div>
+        <div class="dark-card reveal">
+          <h3>Резервные копии и доступность</h3>
+          <p>Записи хранятся в управляемой реплицированной базе данных. Приложение масштабируется автоматически, и нет окна обслуживания, которое вам нужно планировать.</p>
+        </div>
+        <div class="dark-card reveal">
+          <h3>Ваши данные принадлежат вам</h3>
+          <p>Выгружайте любой список в CSV когда угодно и запрашивайте полную выгрузку записей организации перед закрытием аккаунта.</p>
+        </div>
+        <div class="dark-card reveal">
+          <h3>Доступ с нашей стороны</h3>
+          <p>Доступ поддержки к организации клиента ограничен, целевой и только с вашего согласия — это не постоянная привилегия.</p>
+        </div>
+        <div class="dark-card reveal">
+          <h3>Ответственное раскрытие</h3>
+          <p>Что-то нашли? Напишите на <a href="mailto:security@caspianerp.com" style="color:#c7d2fe">security@caspianerp.com</a>. Мы подтвердим получение, разберёмся и будем держать вас в курсе.</p>
+        </div>
+        <div class="dark-card reveal">
+          <h3>Сертификации</h3>
+          <p>Наш облачный провайдер имеет основные отраслевые сертификации. Сам Caspian ERP пока не прошёл независимый аудит — мы предпочитаем сказать это прямо, а не намекать на обратное.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head"><h2>Частые вопросы о безопасности</h2></div>
+      <div class="faq">
+        <details>
+          <summary>Где хранятся наши данные?</summary>
+          <div class="faq-body">В Google Cloud, в управляемой базе данных, выделенной для платформы, где ваши записи находятся в пространстве имён вашей организации. Если у вашего бизнеса есть особые требования к резидентности данных, скажите нам до подписания — мы прямо ответим, сможем ли их выполнить.</div>
+        </details>
+        <details>
+          <summary>Может ли один клиент видеть данные другого?</summary>
+          <div class="faq-body">Нет. Каждый документ лежит под своей организацией и несёт её идентификатор, а правила безопасности проверяют членство и права при каждом чтении и записи. Клиентского фильтра, который можно обойти, не существует.</div>
+        </details>
+        <details>
+          <summary>Как удалить сотрудника, который ушёл?</summary>
+          <div class="faq-body">Приостановите или закройте его членство в разделе «Настройки → Команда». Доступ прекращается немедленно, его прошлые записи остаются нетронутыми и подписанными, а изменение фиксируется в журнале аудита.</div>
+        </details>
+        <details>
+          <summary>Поддерживаете ли вы единый вход (SSO)?</summary>
+          <div class="faq-body">Сегодня поддерживается вход через Google наряду с почтой и паролем с подтверждением. Нужен SAML или другой провайдер идентичности — скажите нам: он в дорожной карте, а очередь определяет спрос клиентов.</div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-hero">
+      <div>
+        <p class="footer-kicker">Есть вопрос? Хотите, чтобы мы всё показали?</p>
+        <h2>Одна система для всего предприятия.</h2>
+      </div>
+      <div>
+        <p>Расскажите, как устроена ваша работа. Мы разберём подходящие процессы, посмотрим ваши данные и вместе с нашей командой согласуем следующие шаги.</p>
+        <div class="footer-actions">
+          <a class="btn btn-onDark btn-lg" href="/ru/contact#demo">Запросить демо <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+          <a class="btn btn-outline-onDark btn-lg" href="https://docs.caspianerp.com">Читать документацию</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="/ru">
+          <img class="brand-mark" src="/assets/img/logo-mark.svg" alt="" width="30" height="30">
+          <span class="brand-name" style="color:#fff">Caspian <b>ERP</b></span>
+        </a>
+      </div>
+      <div class="footer-col">
+        <h4>Платформа</h4>
+        <ul>
+          <li><a href="/ru/modules">Все модули</a></li>
+          <li><a href="/ru/industries">Отрасли</a></li>
+          <li><a href="/ru/security">Безопасность и RBAC</a></li>
+          <li><a href="/ru/pricing">Цены</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Модули</h4>
+        <ul>
+          <li><a href="/ru/modules/hseq">HSEQ</a></li>
+          <li><a href="/ru/modules/hr">Персонал</a></li>
+          <li><a href="/ru/modules/procurement">Закупки</a></li>
+          <li><a href="/ru/modules/inventory">Склад</a></li>
+          <li><a href="/ru/modules/maintenance">Техобслуживание</a></li>
+          <li><a href="/ru/modules/finance">Финансы</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Компания</h4>
+        <ul>
+          <li><a href="/ru/about">О нас</a></li>
+          <li><a href="https://caspiantools.com" rel="noopener">CaspianTools</a></li>
+          <li><a href="/ru/contact">Контакты</a></li>
+          <li><a href="/ru/contact#demo">Запросить демо</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Начало работы</h4>
+        <ul>
+          <li><a href="https://app.caspianerp.com">Войти</a></li>
+          <li><a href="/ru/contact#demo">Запросить демо</a></li>
+          <li><a href="https://docs.caspianerp.com">Документация</a></li>
+          <li><a href="https://admin.caspianerp.com">Портал администратора</a></li>
+          <li><a href="/ru/pricing#faq">Вопросы о ценах</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <span data-year>2026</span> CaspianTools. Caspian ERP — продукт CaspianTools.</p>
+      <nav aria-label="Правовая информация">
+        <a href="/ru/privacy">Политика конфиденциальности</a>
+        <a href="/ru/terms">Условия использования</a>
+        <a href="/ru/security">Безопасность</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+<script src="/assets/js/site.js?v=20260908" defer></script>
+</body>
+</html>

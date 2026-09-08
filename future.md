@@ -138,23 +138,27 @@ posts is worse than none. Deliberately excluded rather than stubbed out.
 
 **Estimated effort:** 1 day for the shell, ongoing for content
 
-### Translate the site
-**What:** The application ships in five languages (en, fr, de, nb, tr); this site is English-only.
+### Human review of the seven-language marketing copy
+**What:** The site now ships in English, Azerbaijani, Turkish, Russian, Norwegian (bokmål), German
+and French (see the i18n section of the README). The translations were produced in-house against
+the string catalogue, not by a native-speaking marketing translator.
 
-**Why it matters:** A Norwegian or Turkish buyer landing on an English-only site is a worse first
-impression than the product deserves, given the app itself is localised.
+**Why it matters:** Marketing copy carries tone, not just meaning. A phrase that is accurate but
+reads as translated costs credibility with exactly the buyer it was written for.
 
-**Why deferred:** The static site has no i18n mechanism, and translating marketing copy well is a
-different job from translating UI strings.
+**Why deferred:** The plumbing, the switcher and the browser-language adaptation are the part that
+needed engineering; a copy review is a per-language editorial pass that can happen at any time
+without touching the pipeline.
 
 **How to approach:**
-1. Move the pages under `/{lang}/` paths (`/fr/modules`, …), keeping English at the root.
-2. Add `<link rel="alternate" hreflang="…">` to every page and list all variants in `sitemap.xml`.
-3. Add a language switcher to the footer; do **not** auto-redirect on `Accept-Language` — it breaks
-   shared links and search-engine crawling.
-4. Have marketing copy translated by a human, not machine-translated from the app's UI bundles.
+1. Send `i18n/<lang>.json` to a native speaker with `i18n/_catalog.json` for context — it names the
+   page and element each string comes from.
+2. Ask them to edit values in place; keys are the English source strings and must not change.
+3. Watch the glossary terms in particular: work order, permit to work, requisition, purchase order,
+   cycle count, competence matrix. They repeat across pages and must stay consistent.
+4. Re-run `node scripts/i18n-build.mjs` and the check suite, then ship.
 
-**Estimated effort:** 1 day of plumbing plus translation turnaround
+**Estimated effort:** half a day per language, plus reviewer turnaround
 
 ### Rasterised social/OG image and favicon fallbacks
 **What:** The Open Graph image and favicon are SVG (`public/assets/img/og-image.svg`,

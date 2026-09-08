@@ -68,11 +68,16 @@ for (const page of pages) {
       continue;
     }
 
-    // Clean URL: "/" → index.html, "/modules" → modules.html
-    const file = target === '/' ? 'index.html' : `${target.slice(1)}.html`;
-    const targetHtml = load(file);
+    // Clean URL: "/" → index.html, "/modules" → modules.html, and — because
+    // the localized trees are directories — "/az" → az/index.html, exactly the
+    // order hosting resolves them in.
+    const candidates = target === '/'
+      ? ['index.html']
+      : [`${target.slice(1)}.html`, `${target.slice(1)}/index.html`];
+    const file = candidates.find((c) => load(c) !== null);
+    const targetHtml = file ? load(file) : null;
     if (targetHtml === null) {
-      console.error(`${page}: ${target} — no page (expected public/${file})`);
+      console.error(`${page}: ${target} — no page (expected public/${candidates.join(' or public/')})`);
       problems++;
       continue;
     }

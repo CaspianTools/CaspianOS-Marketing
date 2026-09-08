@@ -1,0 +1,627 @@
+<!doctype html>
+<html lang="az">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="/assets/js/lang.js?v=20260908"></script>
+<title>HSEQ — Caspian ERP</title>
+<meta name="description" content="Risk qiymətləndirmələri, müşahidələr, hadisələr, araşdırmalar, iş icazələri, yükqaldırma planları, tibb və monitorinq — əməliyyatın qalan hissəsi ilə eyni insan və aktiv qeydləri üzərində işləyən HSEQ.">
+<link rel="canonical" href="https://caspianerp.com/az/modules/hseq">
+<!--i18n:alternates-->
+<link rel="alternate" hreflang="en" href="https://caspianerp.com/modules/hseq">
+<link rel="alternate" hreflang="az" href="https://caspianerp.com/az/modules/hseq">
+<link rel="alternate" hreflang="tr" href="https://caspianerp.com/tr/modules/hseq">
+<link rel="alternate" hreflang="ru" href="https://caspianerp.com/ru/modules/hseq">
+<link rel="alternate" hreflang="nb" href="https://caspianerp.com/nb/modules/hseq">
+<link rel="alternate" hreflang="de" href="https://caspianerp.com/de/modules/hseq">
+<link rel="alternate" hreflang="fr" href="https://caspianerp.com/fr/modules/hseq">
+<link rel="alternate" hreflang="x-default" href="https://caspianerp.com/modules/hseq">
+<!--/i18n:alternates-->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Caspian ERP">
+<meta property="og:title" content="HSEQ — Caspian ERP">
+<meta property="og:description" content="Risk qiymətləndirmələri, müşahidələr, hadisələr, araşdırmalar, iş icazələri, yükqaldırma planları, tibb və monitorinq — əməliyyatın qalan hissəsi ilə eyni insan və aktiv qeydləri üzərində işləyən HSEQ.">
+<meta property="og:url" content="https://caspianerp.com/az/modules/hseq">
+<meta property="og:image" content="https://caspianerp.com/assets/img/og-image.svg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#4f46e5">
+<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="/assets/css/site.css?v=20260908">
+<noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
+</head>
+<body>
+<a class="skip-link" href="#main">Məzmuna keç</a>
+<header class="site-header">
+  <div class="container">
+    <nav class="nav" aria-label="Əsas">
+      <a class="brand" href="/az">
+        <img class="brand-mark" src="/assets/img/logo-mark.svg" alt="" width="30" height="30">
+        <span class="brand-name">Caspian <b>ERP</b></span>
+      </a>
+      <ul class="nav-links">
+        <li><a class="nav-link" aria-current="page" href="/az/modules">Modullar</a></li>
+        <li><a class="nav-link" href="/az/industries">Sənayelər</a></li>
+        <li><a class="nav-link" href="/az/security">Təhlükəsizlik</a></li>
+        <li><a class="nav-link" href="/az/pricing">Qiymətlər</a></li>
+        <li><a class="nav-link" href="/az/about">Haqqımızda</a></li>
+      </ul>
+      <div class="nav-actions">
+        <!--i18n:switcher-->
+        <details class="lang" data-lang-switcher>
+          <summary class="lang-button" title="Dil seçin" aria-label="Dil: Azərbaycan dili"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18"/></svg><span class="lang-code">AZ</span><svg class="lang-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="lang-menu" role="group" aria-label="Dil seçin">
+            <a class="lang-option" href="/modules/hseq" hreflang="en" lang="en" data-lang="en">English</a>
+            <a class="lang-option" href="/az/modules/hseq" hreflang="az" lang="az" data-lang="az" aria-current="true">Azərbaycan dili</a>
+            <a class="lang-option" href="/tr/modules/hseq" hreflang="tr" lang="tr" data-lang="tr">Türkçe</a>
+            <a class="lang-option" href="/ru/modules/hseq" hreflang="ru" lang="ru" data-lang="ru">Русский</a>
+            <a class="lang-option" href="/nb/modules/hseq" hreflang="nb" lang="nb" data-lang="nb">Norsk (bokmål)</a>
+            <a class="lang-option" href="/de/modules/hseq" hreflang="de" lang="de" data-lang="de">Deutsch</a>
+            <a class="lang-option" href="/fr/modules/hseq" hreflang="fr" lang="fr" data-lang="fr">Français</a>
+          </div>
+        </details>
+        <!--/i18n:switcher-->
+        <a class="btn btn-ghost btn-sm" href="https://app.caspianerp.com">Daxil olun</a>
+        <a class="btn btn-primary btn-sm" href="/az/contact#demo">Demo tələb edin <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+        <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="mobile-menu" aria-label="Menyunu aç" data-text-open="Menyunu aç" data-text-close="Menyunu bağla">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </nav>
+  </div>
+  <div class="mobile-menu" id="mobile-menu">
+    <a class="nav-link" aria-current="page" href="/az/modules">Modullar</a>
+    <a class="nav-link" href="/az/industries">Sənayelər</a>
+    <a class="nav-link" href="/az/security">Təhlükəsizlik</a>
+    <a class="nav-link" href="/az/pricing">Qiymətlər</a>
+    <a class="nav-link" href="/az/about">Haqqımızda</a>
+    <a class="nav-link" href="https://docs.caspianerp.com">Sənədləşmə</a>
+    <a class="nav-link" href="/az/contact">Əlaqə</a>
+    <!--i18n:switcher-mobile-->
+    <div class="mobile-lang" role="group" aria-label="Dil seçin">
+      <span class="mobile-lang-label">Dil</span>
+      <div class="mobile-lang-options">
+        <a class="lang-option" href="/modules/hseq" hreflang="en" lang="en" data-lang="en">English</a>
+        <a class="lang-option" href="/az/modules/hseq" hreflang="az" lang="az" data-lang="az" aria-current="true">Azərbaycan dili</a>
+        <a class="lang-option" href="/tr/modules/hseq" hreflang="tr" lang="tr" data-lang="tr">Türkçe</a>
+        <a class="lang-option" href="/ru/modules/hseq" hreflang="ru" lang="ru" data-lang="ru">Русский</a>
+        <a class="lang-option" href="/nb/modules/hseq" hreflang="nb" lang="nb" data-lang="nb">Norsk (bokmål)</a>
+        <a class="lang-option" href="/de/modules/hseq" hreflang="de" lang="de" data-lang="de">Deutsch</a>
+        <a class="lang-option" href="/fr/modules/hseq" hreflang="fr" lang="fr" data-lang="fr">Français</a>
+      </div>
+    </div>
+    <!--/i18n:switcher-mobile-->
+    <div class="mobile-cta">
+      <a class="btn btn-secondary" href="https://app.caspianerp.com">Daxil olun</a>
+      <a class="btn btn-primary" href="/az/contact#demo">Demo tələb edin</a>
+    </div>
+  </div>
+</header>
+<main id="main">
+
+  <section class="hero">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Naviqasiya yolu">
+        <a href="/az/modules">Modullar</a>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg>
+        <span aria-current="page">HSEQ</span>
+      </nav>
+      <span class="eyebrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Sağlamlıq, Təhlükəsizlik, Ətraf Mühit və Keyfiyyət</span>
+      <h1>Qovluqlarda deyil, canlı <span class="grad">qeydlərdə işləyən təhlükəsizlik</span></h1>
+      <p class="hero-sub">İcazələr, risk qiymətləndirmələri, müşahidələr, hadisələr və araşdırmalar bir reyestrdə — səriştəsini sistemin artıq bildiyi insanlar tərəfindən imzalanır.</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary btn-lg" href="/az/contact#demo">Demo tələb edin</a>
+        <a class="btn btn-secondary btn-lg" href="https://docs.caspianerp.com">Sənədləri oxuyun</a>
+      </div>
+      <p class="hero-note">Doqquz alət · İş icazəsi əməliyyatları üçün qurulub · Səriştəni İR-dən oxuyur</p>
+    </div>
+  </section>
+  <div class="container mock-wrap">
+    <p class="small muted text-center">Nümunə məlumatlarla izahedici məhsul görünüşü. <a href="/az/contact#demo">Canlı baxış tələb edin</a>.</p>
+    <div class="mock reveal" role="img" aria-label="Açıq iş icazələrini, hadisə statusunu, müşahidə trendini və gecikmiş tədbirləri göstərən Caspian ERP HSEQ">
+      <div class="mock-bar" aria-hidden="true">
+        <span class="mock-dot"></span><span class="mock-dot"></span><span class="mock-dot"></span>
+        <span class="mock-url">app.caspianerp.com/az/w/hseq/permits</span>
+      </div>
+      <div class="mock-body" aria-hidden="true">
+        <div class="mock-rail">
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg>Ana səhifə</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/></svg>İnsan Resursları</div>
+          <div class="mock-rail-item active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>HSEQ</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>Biznes</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1"/><circle cx="18" cy="20" r="1"/><path d="M2 3h2.5l2.6 12.6a1 1 0 0 0 1 .8h8.9a1 1 0 0 0 1-.77L21 8H6"/></svg>Satınalma</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V10l6 4V10l6 4V6l6 4v11z"/><path d="M7 17h.01M13 17h.01M18 17h.01"/></svg>İstehsal</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>CRM</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V9l9-6 9 6v12"/><path d="M7 21v-8h10v8"/></svg>Anbar</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 16V6h11v10"/><path d="M14 9h4l3 3.5V16h-7z"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg>Logistika</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0 5 5L21 21l-3 .5L8.5 12A4 4 0 0 1 3 6.5l3 3 2.5-2.5-3-3z"/></svg>Tex. xidmət</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 6H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>Maliyyə</div>
+          <div class="mock-rail-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4.5 13.5H11l-1 8.5 8.5-11.5H12z"/></svg>Səmərəlilik</div>
+        </div>
+        <div class="mock-side">
+          <div class="mock-side-title">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            HSEQ
+          </div>
+          <div class="mock-side-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/><path d="M12 9v4M12 17h.01"/></svg>Risk Qiymətləndirmələri</div>
+          <div class="mock-side-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg>Müşahidələr</div>
+          <div class="mock-side-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/><path d="M12 9v4M12 17h.01"/></svg>Hadisələr</div>
+          <div class="mock-side-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.2-3.2"/></svg>Araşdırmalar</div>
+          <div class="mock-side-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 14 16 9"/><path d="M4.5 18a9 9 0 1 1 15 0"/><circle cx="12" cy="14" r="1.5"/></svg>Monitorinq</div>
+          <div class="mock-side-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20s-7-4.3-7-9a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 4.7-7 9-7 9z"/></svg>Tibbi</div>
+          <div class="mock-side-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/></svg>Sənədlər</div>
+          <div class="mock-side-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3h6v6"/><path d="M10 14 20 4"/><path d="M20 13v6a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h6"/></svg>Yükqaldırma Planları</div>
+          <div class="mock-side-item active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>İş İcazələri</div>
+        </div>
+        <div class="mock-main">
+          <div class="mock-topbar">
+            <div class="mock-search">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.2-3.2"/></svg>
+              İnsanları, sifarişləri, aktivləri axtarın…
+            </div>
+            <div class="mock-plus"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></div>
+            <div class="mock-avatar"></div>
+          </div>
+          <div class="mock-h1">İş icazələri</div>
+          <div class="mock-tag">7 açıq · 2-si ikinci imza gözləyir</div>
+          <div class="mock-cards">
+            <div class="mock-card">
+              <div class="mock-card-head" style="color:#e11d48">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
+                Açıq icazələr
+              </div>
+              <div class="mock-row"><span>PTW-0241 · Odlu iş</span><span class="mock-pill hot">2 saata bitir</span></div>
+              <div class="mock-row"><span>PTW-0244 · Qapalı sahə</span><span class="mock-pill">Açıq</span></div>
+              <div class="mock-row"><span>PTW-0245 · İzolyasiya</span><span class="mock-pill warn">İmza</span></div>
+            </div>
+            <div class="mock-card">
+              <div class="mock-card-head" style="color:#d97706">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/><path d="M12 9v4M12 17h.01"/></svg>
+                Açıq hadisələr
+              </div>
+              <div class="mock-kpi">2</div>
+              <div class="mock-kpi-sub">1-i araşdırılır · 0 bildiriləsi</div>
+            </div>
+            <div class="mock-card">
+              <div class="mock-card-head" style="color:#0891b2">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg>
+                Müşahidələr
+              </div>
+              <div class="mock-bars"><span style="height:32%"></span><span style="height:44%"></span><span style="height:41%"></span><span style="height:58%"></span><span style="height:66%"></span><span style="height:79%"></span></div>
+              <div class="mock-kpi-sub" style="margin-top:8px">bu rübdə 318 · 71% təhlükəsiz davranış</div>
+            </div>
+            <div class="mock-card">
+              <div class="mock-card-head" style="color:#4f46e5">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6h11M9 12h11M9 18h11M4 6h.01M4 12h.01M4 18h.01"/></svg>
+                Gecikmiş tədbirlər
+              </div>
+              <div class="mock-row"><span>Məhəccər · Göyərtə 2</span><span class="mock-pill hot">6 gün</span></div>
+              <div class="mock-row"><span>Alət qutusu təkrarı</span><span class="mock-pill warn">2 gün</span></div>
+              <div class="mock-row"><span>Nişanlama · Anbar</span><span class="mock-pill">Bu gün</span></div>
+            </div>
+            <div class="mock-card">
+              <div class="mock-card-head" style="color:#7c3aed">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3h6v6"/><path d="M10 14 20 4"/><path d="M20 13v6a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h6"/></svg>
+                Yükqaldırma planları
+              </div>
+              <div class="mock-row"><span>LP-118 · Skidin daşınması</span><span class="mock-pill ok">Təsdiqlənib</span></div>
+              <div class="mock-row"><span>LP-119 · Riser</span><span class="mock-pill warn">Baxış</span></div>
+            </div>
+            <div class="mock-card">
+              <div class="mock-card-head" style="color:#0d9488">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20s-7-4.3-7-9a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 4.7-7 9-7 9z"/></svg>
+                Tibbi etibarlılıq
+              </div>
+              <div class="mock-kpi">96%</div>
+              <div class="mock-kpi-sub">60 gün ərzində 5 sağlamlıq arayışının müddəti bitir</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="section section-soft">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Caspian ERP-dən əvvəl</span>
+        <h2>Təhlükəsizlik sistemi ilə əməliyyat iki ayrı sistemdir</h2>
+        <p>Hər podratçı bunun şəklini bilir: sənəd bir şey deyir, iş yeri başqa şey edir və aradakı boşluq yalnız nəsə baş verəndən sonra görünür.</p>
+      </div>
+      <div class="grid grid-3">
+        <article class="card card-pad reveal">
+          <h3>İcazələr girişdə kağız üzərində yaşayır</h3>
+          <p class="mt-12">Lövhədə imzalanan icazə təlim qeydi ilə tutuşdurula bilmir, ofisdən tapıla bilmir və ayın sonunda sayıla bilmir.</p>
+        </article>
+        <article class="card card-pad reveal">
+          <h3>Müşahidələr bir qutuya düşür</h3>
+          <p class="mt-12">Kartlar yığılır, həftələr sonra yazıya köçürülür və hamının şübhələndiyi trend hərəkət etmək pəncərəsi bağlandıqdan xeyli sonra təsdiqlənir.</p>
+        </article>
+        <article class="card card-pad reveal">
+          <h3>Araşdırmalar hadisəni yenidən danışır</h3>
+          <p class="mt-12">Strukturlaşdırılmış metod olmadan araşdırma bir hekayəyə çevrilir. Tədbirlər şəxsə deyil, şöbəyə təyin olunur və heç kim onların bağlanıb-bağlanmadığını izləmir.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Nə edir</span>
+        <h2>Bütün HSEQ dövrü, bir reyestrdə</h2>
+        <p>Təhlükədən nəzarətə, müşahidədən trendə, hadisədən bağlanmış tədbirə — sənəd kimi deyil, qeyd kimi saxlanılır.</p>
+      </div>
+      <div class="grid grid-2">
+        <article class="card card-pad reveal">
+          <span class="icon-tile t-amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/><path d="M12 9v4M12 17h.01"/></svg></span>
+          <h3 class="mt-16">Real nəzarət tədbirləri olan risk qiymətləndirmələri</h3>
+          <p class="mt-12">Təhlükələr, risk balları və onları azaldan nəzarət tədbirləri — nəzərdən keçirə və təkrar istifadə edə biləcəyiniz strukturlaşdırılmış qeydlər kimi saxlanılır.</p>
+          <ul class="check-list mt-16">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Hər fəaliyyət üzrə təhlükə, risk balı və nəzarət tədbirləri qeyd olunur</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Fotosurəti çıxarılmır, nəzərdən keçirilir və yenidən verilir</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>İcazələr ona istinad edir, ona görə qiymətləndirmə ayrıca bir tapşırıq deyil</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Sahə, fəaliyyət və qalıq risk üzrə süzülə bilir</li>
+          </ul>
+        </article>
+        <article class="card card-pad reveal">
+          <span class="icon-tile t-rose"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></span>
+          <h3 class="mt-16">Adı çəkilən insanlar tərəfindən imzalanan iş icazələri</h3>
+          <p class="mt-12">İcazə açılır, yoxlanılır, təsdiqlənir və bağlanır — hər imza sistemin tanıdığı bir insandır.</p>
+          <ul class="check-list mt-16">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Əməliyyatınızın həqiqətən necə işlədiyinə uyğun konfiqurasiya olunan icazə növləri</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>İmzalayanlar güncəl sertifikatları olan kadr qeydləridir</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Hansı icazələrin açıq olduğunun və harada olduğunun canlı görünüşü</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Bağlanmış icazələr sübut kimi axtarıla bilən qalır</li>
+          </ul>
+        </article>
+        <article class="card card-pad reveal">
+          <span class="icon-tile t-cyan"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg></span>
+          <h3 class="mt-16">Trendə çevrilən müşahidələr</h3>
+          <p class="mt-12">Sahədə telefonla qeyd olunan təhlükəsiz və təhlükəli müşahidələr göndərildiyi anda toplanır.</p>
+          <ul class="check-list mt-16">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>İş yerində telefon brauzerindən göndərilir</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Kateqoriyalaşdırılır, ona görə naxışlar əl ilə kodlaşdırma olmadan üzə çıxır</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Tədbirlər birbaşa müşahidədən açılır</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>İdarə panelində gələn ay yox, elə həmin gün sayılır</li>
+          </ul>
+        </article>
+        <article class="card card-pad reveal">
+          <span class="icon-tile t-violet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.2-3.2"/></svg></span>
+          <h3 class="mt-16">Bağlanan hadisələr və araşdırmalar</h3>
+          <p class="mt-12">Hadisəni bildirin, araşdırmanı aparın, tədbirləri insanlara təyin edin və bağlanana qədər izləyin.</p>
+          <ul class="check-list mt-16">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Təsnifatı, sahəsi və dərhal görülən tədbirləri olan hadisə qeydi</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Araşdırma öz hadisəsinə bağlıdır, ayrıca arxivləşdirilmir</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Tədbirlərin adı çəkilən məsul şəxsi və son tarixi var</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Açıq tədbirlər onların məsulunun ana ekranında görünür</li>
+          </ul>
+        </article>
+        <article class="card card-pad reveal">
+          <span class="icon-tile t-emerald"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-7-4.3-7-9a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 4.7-7 9-7 9z"/></svg></span>
+          <h3 class="mt-16">Tibb və monitorinq</h3>
+          <p class="mt-12">İşə yararlılıq qeydləri və sağlamlıq və ya ətraf mühit monitorinqi aid olduğu şəxs və sahə ilə birlikdə saxlanılır.</p>
+          <ul class="check-list mt-16">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Bitmə tarixi olan tibbi qeydlər eyni səriştə yoxlamalarını qidalandırır</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Monitorinq turları və ölçmələr bir məkana bağlı qeyd olunur</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>İstisnalar jurnalda basdırılmır, qaldırılır</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Yalnız görməli olan rollarla məhdudlaşdırılıb</li>
+          </ul>
+        </article>
+        <article class="card card-pad reveal">
+          <span class="icon-tile t-teal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3h6v6"/><path d="M10 14 20 4"/><path d="M20 13v6a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h6"/></svg></span>
+          <h3 class="mt-16">Yükqaldırma planları və idarə olunan sənədlər</h3>
+          <p class="mt-12">Yüksək nəticəli fəaliyyətlər və onları tənzimləyən sənədlər — versiyalanmış və tapıla bilən.</p>
+          <ul class="check-list mt-16">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Avadanlığı, personalı və təsdiqi olan yükqaldırma planları</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Güncəl versiyaları olan HSEQ sənəd reyestri</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Sənədlərə onlardan istifadə edən fəaliyyətlərdən istinad edilir</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Planlar, icazələr və sənədlər üzrə vahid axtarış</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-tight section-soft">
+    <div class="container">
+      <div class="section-head">
+        <h2>Müşahidədən bağlanmış tədbirə</h2>
+        <p>Eyni zəncir işləyir — istər sahədəki kartdan, istərsə də bildiriləsi hadisədən başlasın.</p>
+      </div>
+      <div class="flow reveal">
+        <div class="flow-step done"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg>Müşahidə</div>
+        <span class="flow-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
+        <div class="flow-step done"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/><path d="M12 9v4M12 17h.01"/></svg>Hadisə açıldı</div>
+        <span class="flow-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
+        <div class="flow-step"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.2-3.2"/></svg>Araşdırma</div>
+        <span class="flow-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
+        <div class="flow-step"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6h11M9 12h11M9 18h11M4 6h.01M4 12h.01M4 18h.01"/></svg>Tədbirlər təyin edildi</div>
+        <span class="flow-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
+        <div class="flow-step"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="m8 12 3 3 5-6"/></svg>Bağlanma təsdiqləndi</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Moduldakı hər alət</span>
+        <h2>Sağlamlıq, təhlükəsizlik, ətraf mühit və keyfiyyət üzrə doqquz alət</h2>
+        <p>Hər birinin nə olduğu, sadə dillə.</p>
+      </div>
+      <div class="grid grid-2">
+        <div class="feature-item reveal">
+          <span class="icon-tile sm t-amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/><path d="M12 9v4M12 17h.01"/></svg></span>
+          <div>
+            <h4>Risk Qiymətləndirmələri</h4>
+            <p>Hər fəaliyyət üzrə təhlükələr, risk balları və nəzarət tədbirləri — dövri olaraq nəzərdən keçirilir və ona söykənən işlərdən istinad edilir.</p>
+          </div>
+        </div>
+        <div class="feature-item reveal">
+          <span class="icon-tile sm t-cyan"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg></span>
+          <div>
+            <h4>Müşahidələr</h4>
+            <p>Sahədə qeyd olunan, kateqoriyalaşdırılan, trendə çevrilən və tədbirə çevrilən təhlükəsiz və təhlükəli müşahidələr.</p>
+          </div>
+        </div>
+        <div class="feature-item reveal">
+          <span class="icon-tile sm t-rose"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/><path d="M12 9v4M12 17h.01"/></svg></span>
+          <div>
+            <h4>Hadisələr</h4>
+            <p>Hadisə reyestri — təsnifat, sahə, iştirak edən insanlar, dərhal görülən tədbirlər və status.</p>
+          </div>
+        </div>
+        <div class="feature-item reveal">
+          <span class="icon-tile sm t-violet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.2-3.2"/></svg></span>
+          <div>
+            <h4>Araşdırmalar</h4>
+            <p>Öz hadisəsinə bağlı strukturlaşdırılmış izləmə — məsul şəxsi və tarixi olan nəticələr və tədbirlərlə.</p>
+          </div>
+        </div>
+        <div class="feature-item reveal">
+          <span class="icon-tile sm t-teal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 14 16 9"/><path d="M4.5 18a9 9 0 1 1 15 0"/><circle cx="12" cy="14" r="1.5"/></svg></span>
+          <div>
+            <h4>Monitorinq</h4>
+            <p>Məkanlara bağlı qeyd olunan planlı sağlamlıq, gigiyena və ətraf mühit monitorinqi — istisnalar üzə çıxarılmaqla.</p>
+          </div>
+        </div>
+        <div class="feature-item reveal">
+          <span class="icon-tile sm t-emerald"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-7-4.3-7-9a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 4.7-7 9-7 9z"/></svg></span>
+          <div>
+            <h4>Tibbi</h4>
+            <p>Şəxsə bağlı saxlanılan işə yararlılıq və tibbi qeydlər — səriştə yoxlamalarını qidalandıran bitmə tarixləri ilə.</p>
+          </div>
+        </div>
+        <div class="feature-item reveal">
+          <span class="icon-tile sm t-slate"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/></svg></span>
+          <div>
+            <h4>Sənədlər</h4>
+            <p>HSEQ sənəd reyestri — prosedurlar, standartlar və formalar, versiyalanmış və axtarıla bilən.</p>
+          </div>
+        </div>
+        <div class="feature-item reveal">
+          <span class="icon-tile sm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3h6v6"/><path d="M10 14 20 4"/><path d="M20 13v6a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h6"/></svg></span>
+          <div>
+            <h4>Yükqaldırma Planları</h4>
+            <p>Avadanlıq, personal, metod və təsdiqlə yükqaldırma planlaması — çap deyil, qeyd kimi saxlanılır.</p>
+          </div>
+        </div>
+        <div class="feature-item reveal">
+          <span class="icon-tile sm t-rose"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></span>
+          <div>
+            <h4>İş İcazələri</h4>
+            <p>İcazələri açın, yoxlayın, təsdiqləyin və bağlayın — imzalayanlar güncəl sertifikatları olan kadr qeydlərindən götürülür.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section dark-section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Bağlıdır, sonradan bərkidilməyib</span>
+        <h2>Təhlükəsizlik niyə ERP daxilində daha yaxşı işləyir</h2>
+        <p>Təlim matrisini oxuya bilən icazə, oxuya bilməyəndən tamamilə fərqli bir alətdir.</p>
+      </div>
+      <div class="grid grid-3">
+        <div class="dark-card reveal">
+          <span class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/></svg></span>
+          <h3 class="mt-16">Səriştə İR-dən</h3>
+          <p>İmzalayanlar, icazə sahibləri və yükqaldırma nəzarətçiləri kadr qeydləridir — ona görə bitmiş sertifikat işdən sonra deyil, əvvəl görünür.</p>
+          <p class="mt-12"><a class="link-arrow" href="/az/modules/hr">İnsan Resurslarına bax<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></p>
+        </div>
+        <div class="dark-card reveal">
+          <span class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a4 4 0 0 0 5 5L21 21l-3 .5L8.5 12A4 4 0 0 1 3 6.5l3 3 2.5-2.5-3-3z"/></svg></span>
+          <h3 class="mt-16">Aktivlər Texniki xidmətdən</h3>
+          <p>Yükqaldırma planındakı və ya hadisədəki avadanlıq öz kalibrləmə və xidmət tarixçəsini daşıyan eyni aktiv qeydidir.</p>
+          <p class="mt-12"><a class="link-arrow" href="/az/modules/maintenance">Texniki xidmətə bax<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></p>
+        </div>
+        <div class="dark-card reveal">
+          <span class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 4.5 13.5H11l-1 8.5 8.5-11.5H12z"/></svg></span>
+          <h3 class="mt-16">Tədbirlər işə çevrilir</h3>
+          <p>Araşdırma tədbirləri məsul şəxsi və son tarixi ilə Tapşırıqlara düşür — insanların onsuz da işlədiyi eyni siyahıya.</p>
+          <p class="mt-12"><a class="link-arrow" href="/az/modules/efficiency">Səmərəliliyə bax<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Orada kim yaşayır</span>
+        <h2>Məsuliyyəti daşıyan insanlar üçün</h2>
+        <p>HSE məsləhətçisindən iş yerində imzalayan şəxsə qədər.</p>
+      </div>
+      <div class="grid grid-3">
+        <article class="card card-pad reveal">
+          <span class="icon-tile sm t-amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></span>
+          <h3 class="mt-16">HSE məsləhətçisi</h3>
+          <p class="mt-12">Müşahidə proqramını aparır, araşdırır, tədbirləri bağlanana qədər izləyir və aylıq rəqəmləri canlı məlumatlardan çıxarır.</p>
+        </article>
+        <article class="card card-pad reveal">
+          <span class="icon-tile sm t-rose"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></span>
+          <h3 class="mt-16">İcazə verən</h3>
+          <p class="mt-12">İcazələri hər imzalayanın səriştəsinin artıq matrisə görə yoxlandığını bilərək açır və bağlayır.</p>
+        </article>
+        <article class="card card-pad reveal">
+          <span class="icon-tile sm t-violet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg></span>
+          <h3 class="mt-16">Əməliyyat meneceri</h3>
+          <p class="mt-12">Açıq hadisələri, gecikmiş tədbirləri və icazə yükünü üç nəfərdən cədvəl istəmədən bir ekranda görür.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-soft">
+    <div class="container split">
+      <div>
+        <span class="eyebrow">Formalaşdırmaq sizin əlinizdə</span>
+        <h2 class="mt-16">HSEQ-i öz standartınıza uyğun konfiqurasiya edin</h2>
+        <p class="lead mt-12">Fərqli əməliyyatlar fərqli təsnif edir, qiymətləndirir və təsdiqləyir. Modul sizinkinə uyğunlaşır.</p>
+        <ul class="check-list mt-24">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Öz icazə növlərinizi və hər birinin tələb etdiyi təsdiqi müəyyən edin</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Risk qiymətləndirmə şkalalarını və eskalasiya tələb edən həddləri təyin edin</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Mövcud proqramınıza uyğun müşahidə kateqoriyaları seçin</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Tibbi qeydləri adı çəkilən bir rolla məhdudlaşdırın, müşahidələri isə hamıya açıq saxlayın</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>İşlətmədiyiniz istənilən aləti söndürün — yükqaldırma əməliyyatı olmayan təşkilat yükqaldırma planlarını gizlədə bilər</li>
+        </ul>
+        <p class="mt-24"><a class="link-arrow" href="/az/modules/administration">Administratorun nəyə nəzarət etdiyinə bax<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></p>
+      </div>
+      <div class="split-media">
+        <div class="panel reveal">
+          <div class="panel-head reveal">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21v-7M4 10V3M12 21v-9M12 8V3M20 21v-5M20 12V3M1 14h6M9 8h6M17 16h6"/></svg>
+            HSEQ · Parametrlər
+          </div>
+          <div class="panel-body reveal">
+            <table class="table-mock">
+              <thead><tr><th>Parametr</th><th>Dəyər</th></tr></thead>
+              <tbody>
+                <tr><td>İcazənin təsdiqi</td><td><span class="badge badge-rose">İki imza</span></td></tr>
+                <tr><td>Risk matrisi</td><td><span class="badge badge-amber">5 × 5</span></td></tr>
+                <tr><td>Müşahidə kateqoriyaları</td><td><span class="badge badge-cyan">Fərdi (12)</span></td></tr>
+                <tr><td>Tibbi qeydlər</td><td><span class="badge badge-violet">Məhdud rol</span></td></tr>
+                <tr><td>Araşdırma tələb olunur</td><td><span class="badge badge-indigo">Ortadan yuxarı</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2>HSEQ-ə dair bizə verilən suallar</h2>
+      </div>
+      <div class="faq">
+        <details>
+          <summary>İş icazələri sahədə açılıb bağlana bilərmi?</summary>
+          <div class="faq-body">Bəli. Tətbiq telefon brauzerində işləyir — icazələr, müşahidələr və alət qutusu iştirakı da məhz belə istifadə olunmaq üçün nəzərdə tutulub. Sahə cihazına quraşdırılacaq heç nə yoxdur.</div>
+        </details>
+        <details>
+          <summary>Sistem imzalayanın səriştəli olmasını tələb edirmi?</summary>
+          <div class="faq-body">İmzalayanlar kadr qeydləridir və həmin qeydlər təlim və tibbi etibarlılığı daşıyır. Bu o deməkdir ki, bitmiş sertifikat növbəti auditdə deyil, imza anında görünür. Nə qədər sərt dayanma istədiyiniz isə kod dəyişikliyi deyil, konfiqurasiya qərarıdır.</div>
+        </details>
+        <details>
+          <summary>Mövcud risk matrisimizi və kateqoriyalarımızı saxlaya bilərikmi?</summary>
+          <div class="faq-body">Bəli. Risk qiymətləndirmə şkalaları, icazə növləri və müşahidə kateqoriyaları administratorunuz tərəfindən konfiqurasiya olunur. Modul sizə metodologiya dayatmır.</div>
+        </details>
+        <details>
+          <summary>Araşdırma tədbirləri ilə nə olur?</summary>
+          <div class="faq-body">Onlar adı çəkilən məsul şəxsi və son tarixi olan tapşırığa çevrilir və həmin şəxsin ana ekranında qalan işlərinin yanında görünür. Yalnız hesabatın içində mövcud olan tədbir heç kimin görmədiyi tədbirdir.</div>
+        </details>
+        <details>
+          <summary>HSEQ məlumatları təşkilatın qalan hissəsindən ayrılıbmı?</summary>
+          <div class="faq-body">Onlar eyni təşkilatın içində, eyni icazə modeli altındadır. Həssas alətlər — xüsusən tibb — adətən bir rolla məhdudlaşdırılır, müşahidələr isə bildirim asan qalsın deyə hamıya açıq saxlanılır.</div>
+        </details>
+      </div>
+      <p class="text-center mt-32">
+        <a class="link-arrow" href="/az/modules">Bütün modullara bax<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+      </p>
+    </div>
+  </section>
+
+
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-hero">
+      <div>
+        <p class="footer-kicker">Sualınız var? Sizə göstərməyimizi istəyirsiniz?</p>
+        <h2>Bütün əməliyyat üçün bir sistem.</h2>
+      </div>
+      <div>
+        <p>Əməliyyatınızın necə işlədiyini bizə danışın. Uyğun iş axınlarını birlikdə nəzərdən keçirək, məlumatlarınıza baxaq və komandamızla növbəti addımları razılaşdıraq.</p>
+        <div class="footer-actions">
+          <a class="btn btn-onDark btn-lg" href="/az/contact#demo">Demo tələb edin <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+          <a class="btn btn-outline-onDark btn-lg" href="https://docs.caspianerp.com">Sənədləri oxuyun</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="/az">
+          <img class="brand-mark" src="/assets/img/logo-mark.svg" alt="" width="30" height="30">
+          <span class="brand-name" style="color:#fff">Caspian <b>ERP</b></span>
+        </a>
+      </div>
+      <div class="footer-col">
+        <h4>Platforma</h4>
+        <ul>
+          <li><a href="/az/modules">Bütün modullar</a></li>
+          <li><a href="/az/industries">Sənayelər</a></li>
+          <li><a href="/az/security">Təhlükəsizlik və RBAC</a></li>
+          <li><a href="/az/pricing">Qiymətlər</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Modullar</h4>
+        <ul>
+          <li><a href="/az/modules/hseq">HSEQ</a></li>
+          <li><a href="/az/modules/hr">İnsan Resursları</a></li>
+          <li><a href="/az/modules/procurement">Satınalma</a></li>
+          <li><a href="/az/modules/inventory">Anbar</a></li>
+          <li><a href="/az/modules/maintenance">Texniki xidmət</a></li>
+          <li><a href="/az/modules/finance">Maliyyə</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Şirkət</h4>
+        <ul>
+          <li><a href="/az/about">Haqqımızda</a></li>
+          <li><a href="https://caspiantools.com" rel="noopener">CaspianTools</a></li>
+          <li><a href="/az/contact">Əlaqə</a></li>
+          <li><a href="/az/contact#demo">Demo tələb edin</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Başlayın</h4>
+        <ul>
+          <li><a href="https://app.caspianerp.com">Daxil olun</a></li>
+          <li><a href="/az/contact#demo">Demo tələb edin</a></li>
+          <li><a href="https://docs.caspianerp.com">Sənədləşmə</a></li>
+          <li><a href="https://admin.caspianerp.com">Admin portalı</a></li>
+          <li><a href="/az/pricing#faq">Qiymət sualları</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <span data-year>2026</span> CaspianTools. Caspian ERP CaspianTools məhsuludur.</p>
+      <nav aria-label="Hüquqi">
+        <a href="/az/privacy">Məxfilik Siyasəti</a>
+        <a href="/az/terms">İstifadə Şərtləri</a>
+        <a href="/az/security">Təhlükəsizlik</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+<script src="/assets/js/site.js?v=20260908" defer></script>
+</body>
+</html>

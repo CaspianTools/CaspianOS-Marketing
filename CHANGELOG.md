@@ -4,6 +4,38 @@ All notable changes to the Caspian ERP marketing site are documented in this fil
 
 ## [Unreleased]
 
+### Added
+- **The site ships in seven languages** — English, Azerbaijani, Turkish, Russian, Norwegian
+  (bokmål), German and French, the same list the application supports. Every page exists at
+  `/<lang>/…` (English stays at the root), fully translated including titles, meta descriptions,
+  `aria-label`s and the strings `site.js` writes into the page.
+- **A language menu in the header and the mobile drawer.** It is a native `<details>` full of
+  ordinary links, so switching language needs no JavaScript; `site.js` only adds the
+  click-outside/Escape close and remembers the choice in `localStorage`.
+- **Automatic adaptation to the browser's language.** `public/assets/js/lang.js` runs before the
+  page paints and redirects an *unprefixed* URL to the visitor's language — a remembered choice
+  first, then `navigator.languages` (once per visit). A URL that names its language is never
+  overridden, so shared links and crawlers keep working, and the redirect target is always
+  prefixed, which makes a loop impossible.
+- **`hreflang` alternates on every page**, including `x-default` pointing at English, and a
+  sitemap listing all 147 URLs across the seven languages.
+- **An i18n pipeline with no runtime cost.** `scripts/i18n-extract.mjs` collects every translatable
+  string from the English pages into `i18n/_catalog.json`; `scripts/i18n-build.mjs` generates
+  `public/<lang>/` and `sitemap.xml` from `i18n/<lang>.json`; `scripts/check-i18n.mjs` fails CI on
+  an untranslated string, a stale generated page or an orphaned file. Generated output is committed,
+  because Firebase Hosting serves the repository as-is.
+
+### Changed
+- **`site.js` no longer hard-codes English.** The drawer's labels and every string the email
+  composer writes now come from `data-text-*` attributes on the markup, and the contact form's
+  preselected enquiry is matched by `data-interest` rather than by its visible text — so both work
+  in a translated page.
+- **`check-links.mjs` resolves directory indexes** (`/az` → `public/az/index.html`), matching how
+  hosting actually serves the localized trees. Verified against the hosting emulator.
+- **Corrected the language claims.** The home page, the Administration module page and its settings
+  mock said five languages and listed the old set; all now say seven and name them.
+- **Asset version bumped to `20260908`**, and `lang.js` joined the versioned-asset check.
+
 ### Changed
 - **Rebranded from CaspianOS to Caspian ERP.** The wordmark, every page title, the copy, the
   Open Graph image, the sitemap and the canonical URLs now say Caspian ERP and `caspianerp.com`.

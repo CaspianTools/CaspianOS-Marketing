@@ -7,6 +7,14 @@
      (the scroller arrows) without hiding anything from a no-JS visitor. */
   document.documentElement.classList.add('js');
 
+  /* Every string this script writes into the page comes from a `data-text-*`
+     attribute on the element it belongs to, so the localized pages carry their
+     own copy and nothing here has to know which language is on screen. */
+  function text(el, key, fallback) {
+    var value = el && el.getAttribute('data-text-' + key);
+    return value === null || value === undefined || value === '' ? fallback : value;
+  }
+
   /* ---------------------------------------------------------------- header */
   var header = document.querySelector('.site-header');
   if (header) {
@@ -24,24 +32,58 @@
     toggle.addEventListener('click', function () {
       var open = menu.classList.toggle('is-open');
       toggle.setAttribute('aria-expanded', String(open));
-      toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+      toggle.setAttribute('aria-label', open
+        ? text(toggle, 'close', 'Close menu')
+        : text(toggle, 'open', 'Open menu'));
     });
     menu.addEventListener('click', function (e) {
       if (e.target.closest('a')) {
         menu.classList.remove('is-open');
         toggle.setAttribute('aria-expanded', 'false');
-        toggle.setAttribute('aria-label', 'Open menu');
+        toggle.setAttribute('aria-label', text(toggle, 'open', 'Open menu'));
       }
     });
     window.addEventListener('keydown', function (e) {
       if (e.key === 'Escape' && menu.classList.contains('is-open')) {
         menu.classList.remove('is-open');
         toggle.setAttribute('aria-expanded', 'false');
-        toggle.setAttribute('aria-label', 'Open menu');
+        toggle.setAttribute('aria-label', text(toggle, 'open', 'Open menu'));
         toggle.focus();
       }
     });
   }
+
+  /* ------------------------------------------------------ language switcher */
+  /* The menu is a <details> full of links, so it already works without this.
+     All that is added here is remembering the choice — lang.js reads it on the
+     next visit to an unprefixed URL — and the close behaviour a native
+     <details> lacks. */
+  var switcher = document.querySelector('[data-lang-switcher]');
+  if (switcher) {
+    switcher.querySelectorAll('[data-lang]').forEach(function (link) {
+      link.addEventListener('click', function () {
+        try {
+          window.localStorage.setItem('caspian.lang', link.getAttribute('data-lang'));
+        } catch (error) { /* private mode: the link still navigates */ }
+      });
+    });
+    document.addEventListener('click', function (e) {
+      if (switcher.open && !switcher.contains(e.target)) switcher.open = false;
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && switcher.open) {
+        switcher.open = false;
+        switcher.querySelector('summary').focus();
+      }
+    });
+  }
+  document.querySelectorAll('.mobile-lang [data-lang]').forEach(function (link) {
+    link.addEventListener('click', function () {
+      try {
+        window.localStorage.setItem('caspian.lang', link.getAttribute('data-lang'));
+      } catch (error) { /* private mode: the link still navigates */ }
+    });
+  });
 
   /* -------------------------------------------------------- module filters */
   var tablist = document.querySelector('[data-module-filter]');
@@ -101,10 +143,14 @@
     var draft = form.querySelector('#email-draft');
     var status = form.querySelector('[data-form-status]');
     var interest = form.querySelector('[name="interest"]');
+    var preselect = function (key) {
+      var option = form.querySelector('[data-interest="' + key + '"]');
+      if (option) interest.value = option.value;
+    };
     if (new URLSearchParams(window.location.search).get('interest') === 'pricing') {
-      interest.value = 'Pricing & plans';
+      preselect('pricing');
     } else if (window.location.hash === '#demo') {
-      interest.value = 'A product demo';
+      preselect('demo');
     }
     form.addEventListener('input', function (event) {
       if (event.target === draft) return;
@@ -115,33 +161,41 @@
     form.addEventListener('submit', function (e) {
       e.preventDefault();
       form.querySelectorAll('[required]').forEach(function (field) {
-        field.setCustomValidity(field.value.trim() ? '' : 'Please complete this field.');
+        field.setCustomValidity(field.value.trim()
+          ? '' : text(form, 'required', 'Please complete this field.'));
       });
       if (!form.reportValidity()) return;
       var data = new FormData(form);
       var get = function (key) { return (data.get(key) || '').toString().trim(); };
       var to = form.getAttribute('data-mail-to');
-      var subject = 'Caspian ERP enquiry' + (get('interest') ? ' - ' + get('interest') : '');
+      var subject = text(form, 'subject', 'Caspian ERP enquiry')
+        + (get('interest') ? ' - ' + get('interest') : '');
       var body = [
-        'Name: ' + get('name'), 'Work email: ' + get('email'),
-        'Company: ' + get('company'), 'Team size: ' + get('size'),
-        'Interested in: ' + get('interest'), '', get('message')
+        text(form, 'name', 'Name') + ': ' + get('name'),
+        text(form, 'email', 'Work email') + ': ' + get('email'),
+        text(form, 'company', 'Company') + ': ' + get('company'),
+        text(form, 'size', 'Team size') + ': ' + get('size'),
+        text(form, 'interest', 'Interested in') + ': ' + get('interest'),
+        '', get('message')
       ].join('\n');
       draft.value = 'To: ' + to + '\nSubject: ' + subject + '\n\n' + body;
       form.querySelector('[data-open-email]').href = 'mailto:' + to +
         '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
       preview.hidden = false;
-      status.textContent = 'Your draft is ready. Open your email app or copy it into webmail, then send it. Nothing has been sent yet.';
+      status.textContent = text(form, 'ready',
+        'Your draft is ready. Open your email app or copy it into webmail, then send it. Nothing has been sent yet.');
       draft.focus();
     });
     form.querySelector('[data-copy-email]').addEventListener('click', async function () {
       try {
         await navigator.clipboard.writeText(draft.value);
-        status.textContent = 'Copied. Paste the draft into your email service and send it to hello@caspianerp.com.';
+        status.textContent = text(form, 'copied',
+          'Copied. Paste the draft into your email service and send it to hello@caspianerp.com.');
       } catch (error) {
         draft.focus();
         draft.select();
-        status.textContent = 'Copy the selected draft using your device’s copy command, then paste it into your email service.';
+        status.textContent = text(form, 'manual',
+          'Copy the selected draft using your device’s copy command, then paste it into your email service.');
       }
     });
     form.classList.add('is-ready');
