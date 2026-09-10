@@ -20,6 +20,8 @@ This file is the central index, while each supporting document keeps its purpose
 - DESIGN: the single source of truth for visual rules; read before visual edits and keep in sync.
 - future: outstanding work, dependencies and unresolved decisions.
 - CHANGELOG: the history of implemented changes.
+- CaspianOS-App's TODO.md: anything only the owner can do. Not a file in this repository — see
+  "Owner items live in CaspianOS-App's TODO.md" below.
 
 ## Owner decisions and current state
 
@@ -54,6 +56,33 @@ This file is the central index, while each supporting document keeps its purpose
   the links. If the app's language list or its entry route changes, this is what must follow.
 - Track remaining work in future.md. Verify Git, PR and deployment state before claiming a
   change is committed, merged or live; a local edit or changelog entry is not deployment proof.
+
+## Owner items live in CaspianOS-App's TODO.md
+
+Saying it in the session is not handing it over. Sessions end and chat scrolls, so an item raised
+only in a reply is lost, then rediscovered weeks later by a session that has no idea it was already
+raised. Anything this repository leaves for the owner goes into **`TODO.md` in CaspianOS-App**
+(`https://github.com/CaspianTools/CaspianOS-App`), which is the owner's single queue for all three
+repositories — the application, the platform cockpit (CaspianOS-Admin) and this site. Report it in
+the session as well; the report is the notification, that file is the record.
+
+There is deliberately **no `TODO.md` in this repository**. One person with one Google Cloud console,
+one registrar and one Stripe account should not be asked to remember three lists. Do not start one
+here.
+
+**What belongs there.** Only what the owner can do and an assistant cannot: a console or DNS step,
+a credential an assistant must never hold, a decision the code cannot make — pricing being the
+standing example in this repository — or a check that only works against the live site. If an
+assistant can do it, it does it, and it is not written down. Outstanding work that is merely
+unstarted stays in `future.md`; it moves to the app's `TODO.md` only once it blocks something
+already shipped, or once an assistant is waiting on the answer to continue.
+
+**The cross-repository seam.** A session working here usually cannot commit to CaspianOS-App in the
+same commit as the change that raised the item. When that happens, attach that repository
+(`add_repo`) and add the entry as soon as it is in reach — the seam is not a reason for the item to
+go unrecorded. Follow that file's own conventions rather than inventing a shape: stable `T` ids that
+are never renumbered or reused, and each entry carrying *what to do*, *why it matters*, *context*
+and *done when*. Read the file before adding, so an item already there is updated, not duplicated.
 
 ## What this repo is
 
