@@ -14539,7 +14539,13 @@
     ]
   },
   {
-    "en": "This marketing site does not set advertising or tracking cookies. The application uses\n          strictly necessary storage to keep you signed in and to remember interface preferences\n          such as your language. Blocking that storage will stop the application working.",
+    "en": "This marketing site uses Google Analytics to count visits and see which pages are read.\n          It sets first-party cookies that tell one browser from another and group requests into a\n          single visit, and it reports the pages you open, the site or search that sent you, your\n          approximate location and your device type. We use that only to understand demand for the\n          product. We set no advertising cookies, we do not build profiles, and we run no\n          remarketing. Blocking cookies for this site stops the measurement and leaves every page\n          working normally.",
+    "where": [
+      "/privacy p"
+    ]
+  },
+  {
+    "en": "The application uses strictly necessary storage to keep you signed in and to remember\n          interface preferences such as your language. Blocking that storage will stop the\n          application working.",
     "where": [
       "/privacy p"
     ]
@@ -14564,6 +14570,18 @@
   },
   {
     "en": "— hosting, authentication and database.",
+    "where": [
+      "/privacy li"
+    ]
+  },
+  {
+    "en": "Google Analytics",
+    "where": [
+      "/privacy strong"
+    ]
+  },
+  {
+    "en": "— visit measurement on this marketing site.",
     "where": [
       "/privacy li"
     ]

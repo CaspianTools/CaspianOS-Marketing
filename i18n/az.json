@@ -2164,7 +2164,6 @@
   "— accounting, tax and lawful requests.": "— mühasibatlıq, vergi və qanuni sorğular.",
   "We do not sell personal data, and we do not use your organization's content for advertising.": "Biz şəxsi məlumatları satmırıq və təşkilatınızın məzmununu reklam üçün istifadə etmirik.",
   "Cookies and similar technologies": "Kukilər və oxşar texnologiyalar",
-  "This marketing site does not set advertising or tracking cookies. The application uses\n          strictly necessary storage to keep you signed in and to remember interface preferences\n          such as your language. Blocking that storage will stop the application working.": "Bu marketinq saytı reklam və ya izləmə kukiləri qoymur. Tətbiq sizi sistemdə saxlamaq və dil kimi interfeys üstünlüklərinizi yadda saxlamaq üçün ciddi zəruri olan yaddaşdan istifadə edir. Bu yaddaşı bloklamaq tətbiqin işini dayandıracaq.",
   "Who we share it with": "Kimlərlə paylaşırıq",
   "We use a small number of service providers, each bound by contract to process data only on our instructions:": "Hər biri müqavilə ilə məlumatları yalnız bizim göstərişimizlə emal etməyə borclu olan az sayda xidmət təchizatçısından istifadə edirik:",
   "Google Cloud / Firebase": "Google Cloud / Firebase",
@@ -2299,5 +2298,9 @@
   "T&uuml;rkiye": "T&uuml;rkiye",
   "and the courts of": "qanunları və",
   "Bursa": "Bursa",
-  "Questions:": "Suallar:"
+  "Questions:": "Suallar:",
+  "This marketing site uses Google Analytics to count visits and see which pages are read.\n          It sets first-party cookies that tell one browser from another and group requests into a\n          single visit, and it reports the pages you open, the site or search that sent you, your\n          approximate location and your device type. We use that only to understand demand for the\n          product. We set no advertising cookies, we do not build profiles, and we run no\n          remarketing. Blocking cookies for this site stops the measurement and leaves every page\n          working normally.": "Bu marketinq saytı ziyarətləri saymaq və hansı səhifələrin oxunduğunu görmək üçün Google Analytics-dən istifadə edir. O, bir brauzeri digərindən ayıran və sorğuları bir ziyarətdə birləşdirən birinci tərəf kukiləri qoyur və açdığınız səhifələri, sizi göndərən saytı və ya axtarışı, təxmini məkanınızı və cihaz növünüzü qeyd edir. Bunu yalnız məhsula olan tələbi anlamaq üçün istifadə edirik. Reklam kukiləri qoymuruq, profil qurmuruq və remarketinq aparmırıq. Bu sayt üçün kukiləri bloklamaq ölçməni dayandırır, bütün səhifələr isə normal işləməyə davam edir.",
+  "The application uses strictly necessary storage to keep you signed in and to remember\n          interface preferences such as your language. Blocking that storage will stop the\n          application working.": "Tətbiq sizi sistemdə saxlamaq və dil kimi interfeys üstünlüklərinizi yadda saxlamaq üçün ciddi zəruri olan yaddaşdan istifadə edir. Bu yaddaşı bloklamaq tətbiqin işini dayandıracaq.",
+  "Google Analytics": "Google Analytics",
+  "— visit measurement on this marketing site.": "— bu marketinq saytında ziyarət ölçməsi."
 }

@@ -2164,7 +2164,6 @@
   "— accounting, tax and lawful requests.": "— regnskap, skatt og lovlige forespørsler.",
   "We do not sell personal data, and we do not use your organization's content for advertising.": "Vi selger ikke personopplysninger, og vi bruker ikke organisasjonens innhold til reklame.",
   "Cookies and similar technologies": "Informasjonskapsler og lignende teknologi",
-  "This marketing site does not set advertising or tracking cookies. The application uses\n          strictly necessary storage to keep you signed in and to remember interface preferences\n          such as your language. Blocking that storage will stop the application working.": "Dette markedsføringsnettstedet setter ingen reklame- eller sporingskapsler. Applikasjonen bruker strengt nødvendig lagring for å holde deg innlogget og huske grensesnittvalg som språk. Blokkerer du den lagringen, slutter applikasjonen å virke.",
   "Who we share it with": "Hvem vi deler dem med",
   "We use a small number of service providers, each bound by contract to process data only on our instructions:": "Vi bruker et lite antall tjenesteleverandører, hver av dem kontraktsforpliktet til å behandle data kun etter våre instrukser:",
   "Google Cloud / Firebase": "Google Cloud / Firebase",
@@ -2299,5 +2298,9 @@
   "T&uuml;rkiye": "T&uuml;rkiye",
   "and the courts of": "og domstolene i",
   "Bursa": "Bursa",
-  "Questions:": "Spørsmål:"
+  "Questions:": "Spørsmål:",
+  "This marketing site uses Google Analytics to count visits and see which pages are read.\n          It sets first-party cookies that tell one browser from another and group requests into a\n          single visit, and it reports the pages you open, the site or search that sent you, your\n          approximate location and your device type. We use that only to understand demand for the\n          product. We set no advertising cookies, we do not build profiles, and we run no\n          remarketing. Blocking cookies for this site stops the measurement and leaves every page\n          working normally.": "Dette markedsføringsnettstedet bruker Google Analytics til å telle besøk og se hvilke sider som leses. Det settes førsteparts informasjonskapsler som skiller én nettleser fra en annen og samler forespørsler til ett besøk, og det registreres hvilke sider du åpner, hvilket nettsted eller søk som sendte deg hit, omtrentlig plassering og enhetstype. Vi bruker dette bare til å forstå etterspørselen etter produktet. Vi setter ingen reklamekapsler, vi bygger ingen profiler, og vi driver ikke remarketing. Blokkerer du informasjonskapsler for dette nettstedet, stopper målingen, og alle sider virker som normalt.",
+  "The application uses strictly necessary storage to keep you signed in and to remember\n          interface preferences such as your language. Blocking that storage will stop the\n          application working.": "Applikasjonen bruker strengt nødvendig lagring for å holde deg innlogget og huske grensesnittvalg som språk. Blokkerer du den lagringen, slutter applikasjonen å virke.",
+  "Google Analytics": "Google Analytics",
+  "— visit measurement on this marketing site.": "— besøksmåling på dette nettstedet."
 }

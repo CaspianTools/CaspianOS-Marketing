@@ -2164,7 +2164,6 @@
   "— accounting, tax and lawful requests.": "— бухгалтерия, налоги и законные запросы.",
   "We do not sell personal data, and we do not use your organization's content for advertising.": "Мы не продаём персональные данные и не используем содержимое вашей организации для рекламы.",
   "Cookies and similar technologies": "Файлы cookie и похожие технологии",
-  "This marketing site does not set advertising or tracking cookies. The application uses\n          strictly necessary storage to keep you signed in and to remember interface preferences\n          such as your language. Blocking that storage will stop the application working.": "Этот маркетинговый сайт не устанавливает рекламных и трекинговых cookie. Приложение использует строго необходимое хранилище, чтобы вы оставались в системе и чтобы помнить настройки интерфейса, например язык. Блокировка такого хранилища остановит работу приложения.",
   "Who we share it with": "С кем мы делимся",
   "We use a small number of service providers, each bound by contract to process data only on our instructions:": "Мы используем небольшое число поставщиков услуг, каждый из которых по договору обрабатывает данные только по нашим указаниям:",
   "Google Cloud / Firebase": "Google Cloud / Firebase",
@@ -2299,5 +2298,9 @@
   "T&uuml;rkiye": "T&uuml;rkiye",
   "and the courts of": "и суды",
   "Bursa": "Bursa",
-  "Questions:": "Вопросы:"
+  "Questions:": "Вопросы:",
+  "This marketing site uses Google Analytics to count visits and see which pages are read.\n          It sets first-party cookies that tell one browser from another and group requests into a\n          single visit, and it reports the pages you open, the site or search that sent you, your\n          approximate location and your device type. We use that only to understand demand for the\n          product. We set no advertising cookies, we do not build profiles, and we run no\n          remarketing. Blocking cookies for this site stops the measurement and leaves every page\n          working normally.": "Этот маркетинговый сайт использует Google Analytics, чтобы считать визиты и видеть, какие страницы читают. Он устанавливает собственные cookie, которые отличают один браузер от другого и объединяют запросы в один визит, и записывает открытые вами страницы, сайт или поисковый запрос, который вас привёл, ваше примерное местоположение и тип устройства. Мы используем это только для того, чтобы понимать спрос на продукт. Мы не устанавливаем рекламных cookie, не строим профили и не ведём ремаркетинг. Блокировка cookie для этого сайта останавливает измерение, и все страницы продолжают работать как обычно.",
+  "The application uses strictly necessary storage to keep you signed in and to remember\n          interface preferences such as your language. Blocking that storage will stop the\n          application working.": "Приложение использует строго необходимое хранилище, чтобы вы оставались в системе и чтобы помнить настройки интерфейса, например язык. Блокировка такого хранилища остановит работу приложения.",
+  "Google Analytics": "Google Analytics",
+  "— visit measurement on this marketing site.": "— измерение посещаемости этого сайта."
 }
