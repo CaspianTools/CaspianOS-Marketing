@@ -4,6 +4,20 @@ All notable changes to the Caspian ERP marketing site are documented in this fil
 
 ## [Unreleased]
 
+### Changed
+- **Owner items now go to CaspianOS-App's `TODO.md`, and `CLAUDE.md` says so.** Anything only the
+  owner can do — a console or DNS step, a credential an assistant must never hold, a decision the
+  code cannot make — is recorded in that repository's `TODO.md`, the single queue for the
+  application, the platform cockpit and this site. Saying it in a session is not handing it over:
+  sessions end, and the item is then rediscovered weeks later by a session that has no idea it was
+  already raised. There is deliberately **no `TODO.md` here**; work that is merely unstarted stays
+  in `future.md`.
+  - **The pricing model went across as `T26`.** Recorded there because it stopped being a marketing
+    question: the cockpit can now create Stripe prices, and there are no agreed amounts to create
+    them with, so it is the first blocker in the money chain. The scoping stays in `future.md` →
+    "Develop the pricing model"; the decision itself is now queued where the owner will see it
+    alongside the rest of the billing work.
+
 ### Added
 - **The site ships in seven languages** — English, Azerbaijani, Turkish, Russian, Norwegian
   (bokmål), German and French, the same list the application supports. Every page exists at
