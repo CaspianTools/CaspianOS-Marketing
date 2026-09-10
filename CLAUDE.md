@@ -41,6 +41,17 @@ This file is the central index, while each supporting document keeps its purpose
 - The contact form validates and previews email drafts, with mail-app and webmail-copy actions.
   It does not send or store leads. A backend remains outstanding.
 - Product views use labeled sample data; authentic screenshots and evidence remain outstanding.
+- Google Analytics 4 is installed, on the owner's instruction of 2026-09-10, with the measurement
+  ID `G-14GPENV8PG`. It supersedes the older "no third-party scripts, trackers or cookies" rule,
+  which now reads as "GA is the only one". The ID lives in exactly one place,
+  `public/assets/js/analytics.js`. The tag is the standard gtag.js pair of commands, moved into a
+  file because the CSP allows no inline script; it is deferred so `lang.js` can redirect an
+  unprefixed URL before a hit is sent, and the visit is counted on the page actually read.
+  The owner declined a consent banner: the tag runs for every visitor, cookies and all. That is a
+  live GDPR/ePrivacy exposure for EEA visitors — German, French and Norwegian pages are served —
+  and it is recorded as `T27` in CaspianOS-App's `TODO.md`, not re-raised here unprompted.
+  Switching to Consent Mode with `analytics_storage: denied` is a few lines in that one file if the
+  owner ever wants it.
 - Playwright Test is installed as a development dependency. Chromium launch and rendering
   were verified; a full browser suite has not yet been added. See README for setup.
 - The site ships in seven languages — en, az, tr, ru, nb, de, fr — matching the application's list.
@@ -208,7 +219,12 @@ npx firebase-tools emulators:start --only hosting
   features. Every tool described on the site exists in the application.
 - **JavaScript is an enhancement.** Every page must render, read and navigate with JS disabled.
   Anything hidden until JS runs (`.reveal`) needs a `<noscript>` override in the page head.
-- **No third-party scripts, trackers or cookies.** The only external request is the Inter webfont.
+- **Google Analytics is the only third-party script.** The external requests are the Inter
+  webfont and the GA4 tag (`G-14GPENV8PG`), loaded by `public/assets/js/analytics.js` — a file,
+  not Google's inline snippet, because `script-src` carries no `'unsafe-inline'` and the browser
+  would refuse to run it. Adding any other tracker, embed or A/B tool is an owner decision.
+  Two things move together with it: the CSP in `firebase.json`, which is what actually permits
+  the tag, and `/privacy`, which must keep describing what is set.
 - **No template engine.** The header and footer are duplicated in every page on purpose. Change
   the nav or footer in *all* pages, and keep `aria-current="page"` correct. The three
   `<!--i18n:…-->` regions inside them (hreflang alternates, header language menu, drawer language

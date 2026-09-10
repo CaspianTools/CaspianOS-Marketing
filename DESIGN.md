@@ -187,7 +187,12 @@ about 0.6s. All of it lives in §20 of `site.css`.
   enforces it; forgetting means returning visitors render new HTML against old CSS.
 - **Escape bare ampersands** in copy (`&amp;`). Several module names contain one
   ("Departments &amp; Tools", "Logistics &amp; Fleet") and a raw `&` is invalid HTML.
-- **No third-party scripts, trackers or cookies.** The only external request is the Inter webfont.
+- **Google Analytics is the only third-party script.** The external requests are the Inter
+  webfont and the GA4 tag (`G-14GPENV8PG`), loaded by `public/assets/js/analytics.js` — a file,
+  not Google's inline snippet, because `script-src` carries no `'unsafe-inline'` and the browser
+  would refuse to run it. Adding any other tracker, embed or A/B tool is an owner decision.
+  Two things move together with it: the CSP in `firebase.json`, which is what actually permits
+  the tag, and `/privacy`, which must keep describing what is set.
 - **Claims must be true.** No invented customer logos, testimonials, certifications or metrics —
   the numbers in the hero bento come from the actual module and tool counts, the ticker lists the
   real modules, and the "who it is for" cards describe roles, not customers. The reference layout

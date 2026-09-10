@@ -10,7 +10,10 @@ import fs from 'node:fs';
 import path from 'node:path';
 
 const ROOT = 'public';
-const ASSETS = ['/assets/css/site.css', '/assets/js/site.js', '/assets/js/lang.js'];
+const ASSETS = [
+  '/assets/css/site.css', '/assets/js/site.js', '/assets/js/lang.js',
+  '/assets/js/analytics.js',
+];
 
 const pagesIn = (dir) =>
   fs.readdirSync(dir, { withFileTypes: true }).flatMap((e) =>

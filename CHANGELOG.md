@@ -5,6 +5,27 @@ All notable changes to the Caspian ERP marketing site are documented in this fil
 ## [Unreleased]
 
 ### Changed
+- **Google Analytics 4 is installed** (`G-14GPENV8PG`), on the owner's instruction. It replaces the
+  standing "no third-party scripts, trackers or cookies" rule, which now reads as "GA is the only
+  one" in `CLAUDE.md`, `README.md` and `DESIGN.md`.
+  - **It is a file, not the pasted snippet.** Google hands you two inline `<script>` blocks; this
+    site sends `script-src 'self'` with no `'unsafe-inline'`, so a browser would refuse to run
+    them. `public/assets/js/analytics.js` runs the same commands in the same order and is the one
+    place that knows the measurement ID.
+  - **The CSP in `firebase.json` had to open up**, or nothing loads at all:
+    `script-src` gains `https://*.googletagmanager.com`, `img-src` the two Google hosts, and an
+    explicit `connect-src` replaces the inherited `default-src 'self'` that was silently blocking
+    every measurement beacon. Verified in Chromium against the real header — `gtag()` defined,
+    both commands queued on `dataLayer`, `gtag.js` requested, zero CSP violations, on an English
+    page and a generated German one.
+  - **Deferred on purpose.** `lang.js` may redirect an unprefixed URL to the visitor's language
+    before the page paints; a deferred script has not run by then, so someone who lands on
+    `/pricing` and is sent to `/de/pricing` is counted once, on the page they actually read.
+  - **`/privacy` now says what is set**, in all seven languages, because the site cannot claim it
+    sets no tracking cookies while GA sets them. The cookies section describes the first-party
+    cookies, what is reported and what blocking them does, and Google Analytics joins the list of
+    processors. The sentence about the application's necessary storage is unchanged, wording
+    included.
 - **Owner items now go to CaspianOS-App's `TODO.md`, and `CLAUDE.md` says so.** Anything only the
   owner can do — a console or DNS step, a credential an assistant must never hold, a decision the
   code cannot make — is recorded in that repository's `TODO.md`, the single queue for the

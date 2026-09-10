@@ -145,7 +145,12 @@ English edit that was never re-generated fails CI instead of shipping a half-tra
 - **The language menu works without JavaScript.** It is a `<details>` full of ordinary links, and
   `/tr/pricing` always serves Turkish. `lang.js` only redirects an *unprefixed* URL, honouring a
   remembered choice first and the browser's languages second — so a shared link is never overridden.
-- **No third-party scripts, trackers or cookies.** The only external request is the Inter webfont.
+- **Google Analytics is the only third-party script.** The external requests are the Inter
+  webfont and the GA4 tag (`G-14GPENV8PG`), loaded by `public/assets/js/analytics.js` — a file,
+  not Google's inline snippet, because `script-src` carries no `'unsafe-inline'` and the browser
+  would refuse to run it. Adding any other tracker, embed or A/B tool is an owner decision.
+  Two things move together with it: the CSP in `firebase.json`, which is what actually permits
+  the tag, and `/privacy`, which must keep describing what is set.
 - **Claims must be true.** No invented customer logos, testimonials, certifications or metrics.
 - **Caspian ERP is a CaspianTools product.** The footer of every page carries the credit and links to
   `caspiantools.com`; `/about` explains the studio; `/privacy` and `/terms` name CaspianTools,
