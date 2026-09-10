@@ -49,7 +49,9 @@ This file is the central index, while each supporting document keeps its purpose
   unprefixed URL before a hit is sent, and the visit is counted on the page actually read.
   The owner declined a consent banner: the tag runs for every visitor, cookies and all. That is a
   live GDPR/ePrivacy exposure for EEA visitors — German, French and Norwegian pages are served —
-  and it is recorded as `T27` in CaspianOS-App's `TODO.md`, not re-raised here unprompted.
+  and it is recorded as `T27` in CaspianOS-App's `TODO.md` — with `T28` for the one check that
+  needs the owner's Google account, that GA is really receiving the data. Neither is re-raised
+  here unprompted.
   Switching to Consent Mode with `analytics_storage: denied` is a few lines in that one file if the
   owner ever wants it.
 - Playwright Test is installed as a development dependency. Chromium launch and rendering
