@@ -14539,7 +14539,31 @@
     ]
   },
   {
-    "en": "This marketing site uses Google Analytics to count visits and see which pages are read.\n          It sets first-party cookies that tell one browser from another and group requests into a\n          single visit, and it reports the pages you open, the site or search that sent you, your\n          approximate location and your device type. We use that only to understand demand for the\n          product. We set no advertising cookies, we do not build profiles, and we run no\n          remarketing. Blocking cookies for this site stops the measurement and leaves every page\n          working normally.",
+    "en": "This marketing site can use Google Analytics to count visits and see which pages are read,\n          and it asks before it does. On your first visit a banner offers Accept or Reject.",
+    "where": [
+      "/privacy p"
+    ]
+  },
+  {
+    "en": "Nothing is loaded and no cookie is set until you accept",
+    "where": [
+      "/privacy strong"
+    ]
+  },
+  {
+    "en": "— if you reject,\n          or simply never answer, Google is not contacted at all and no measurement happens.",
+    "where": [
+      "/privacy p"
+    ]
+  },
+  {
+    "en": "If you accept, it sets first-party cookies that tell one browser from another and group\n          requests into a single visit, and it reports the pages you open, the site or search that\n          sent you, your approximate location and your device type. We use that only to understand\n          demand for the product. We set no advertising cookies, we do not build profiles, and we\n          run no remarketing.",
+    "where": [
+      "/privacy p"
+    ]
+  },
+  {
+    "en": "Your answer is remembered in your browser's own storage — not in a cookie — so clearing\n          this site's data in your browser makes the banner ask again. Every page works normally\n          either way.",
     "where": [
       "/privacy p"
     ]

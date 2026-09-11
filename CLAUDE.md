@@ -47,13 +47,14 @@ This file is the central index, while each supporting document keeps its purpose
   `public/assets/js/analytics.js`. The tag is the standard gtag.js pair of commands, moved into a
   file because the CSP allows no inline script; it is deferred so `lang.js` can redirect an
   unprefixed URL before a hit is sent, and the visit is counted on the page actually read.
-  The owner declined a consent banner: the tag runs for every visitor, cookies and all. That is a
-  live GDPR/ePrivacy exposure for EEA visitors — German, French and Norwegian pages are served —
-  and it is recorded as `T27` in CaspianOS-App's `TODO.md` — with `T28` for the one check that
-  needs the owner's Google account, that GA is really receiving the data. Neither is re-raised
-  here unprompted.
-  Switching to Consent Mode with `analytics_storage: denied` is a few lines in that one file if the
-  owner ever wants it.
+  **Nothing loads it until a visitor accepts.** The owner chose a real consent banner (`T27`,
+  2026-09-11), so no page includes `analytics.js` directly any more: `public/assets/js/consent.js`
+  is what every page loads, and it injects the tag only once consent exists. Adding a
+  `<script src>` for `analytics.js` back into a page would silently undo the gate — which is why
+  the gate is a separate file rather than a flag inside the tag.
+  With JavaScript off nothing can run and no banner appears, which is the right outcome rather
+  than a gap. The answer lives in `localStorage`, not a cookie. `T28` — that GA is really
+  receiving data — still needs the owner's Google account and is not re-raised here unprompted.
 - Playwright Test is installed as a development dependency. Chromium launch and rendering
   were verified; a full browser suite has not yet been added. See README for setup.
 - The site ships in seven languages — en, az, tr, ru, nb, de, fr — matching the application's list.
@@ -221,12 +222,15 @@ npx firebase-tools emulators:start --only hosting
   features. Every tool described on the site exists in the application.
 - **JavaScript is an enhancement.** Every page must render, read and navigate with JS disabled.
   Anything hidden until JS runs (`.reveal`) needs a `<noscript>` override in the page head.
-- **Google Analytics is the only third-party script.** The external requests are the Inter
-  webfont and the GA4 tag (`G-14GPENV8PG`), loaded by `public/assets/js/analytics.js` — a file,
-  not Google's inline snippet, because `script-src` carries no `'unsafe-inline'` and the browser
-  would refuse to run it. Adding any other tracker, embed or A/B tool is an owner decision.
-  Two things move together with it: the CSP in `firebase.json`, which is what actually permits
-  the tag, and `/privacy`, which must keep describing what is set.
+- **Google Analytics is the only third-party script, and it is behind consent.** The external
+  requests are the Inter webfont and the GA4 tag (`G-14GPENV8PG`). The tag lives in
+  `public/assets/js/analytics.js` — a file, not Google's inline snippet, because `script-src`
+  carries no `'unsafe-inline'` and the browser would refuse to run it — and **no page includes it
+  directly**. Pages load `public/assets/js/consent.js`, which injects it only after a visitor
+  accepts; reject, or never answer, and Google is never contacted. Adding any other tracker, embed
+  or A/B tool is an owner decision. Three things move together with it: the CSP in `firebase.json`,
+  which is what actually permits the tag; `/privacy`, which must keep describing what is set; and
+  the consent gate, which must keep being the only thing that loads the tag.
 - **No template engine.** The header and footer are duplicated in every page on purpose. Change
   the nav or footer in *all* pages, and keep `aria-current="page"` correct. The three
   `<!--i18n:…-->` regions inside them (hreflang alternates, header language menu, drawer language

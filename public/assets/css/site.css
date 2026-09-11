@@ -1867,3 +1867,71 @@ button { font: inherit; cursor: pointer; }
   html:not(.js) .mobile-menu { display: block; }
   html:not(.js) .nav-toggle { display: none; }
 }
+
+/* Cookie consent (assets/js/consent.js).
+
+   Injected on the first visit only, and never present once a choice is made,
+   so it is styled as a self-contained strip rather than part of any layout.
+   Pinned to the bottom: a visitor should be able to read the page they came
+   for while deciding, which a full-screen interstitial denies them.
+
+   Accept and Reject are the same size, weight and shape. The only difference
+   is fill, and the cheaper choice for the visitor is not the harder one to
+   reach — a banner that buries Reject is the pattern regulators single out. */
+.consent {
+  position: fixed;
+  left: 16px;
+  right: 16px;
+  bottom: 16px;
+  z-index: 200;
+  margin: 0 auto;
+  max-width: 720px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 16px;
+  padding: 16px 18px;
+  background: #fff;
+  border: 1px solid var(--slate-200);
+  border-radius: 14px;
+  box-shadow: 0 1px 2px rgb(0 0 0 / 0.06), 0 12px 32px -8px rgb(0 0 0 / 0.18);
+}
+.consent__text {
+  flex: 1 1 320px;
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--slate-600);
+}
+.consent__link { color: var(--indigo-600); }
+.consent__actions { display: flex; gap: 8px; margin-left: auto; }
+.consent__btn {
+  font: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 9px 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color .15s ease, border-color .15s ease;
+}
+.consent__btn--primary {
+  background: var(--indigo-600);
+  border: 1px solid var(--indigo-600);
+  color: #fff;
+}
+.consent__btn--primary:hover { background: var(--indigo-700); border-color: var(--indigo-700); }
+.consent__btn--ghost {
+  background: #fff;
+  border: 1px solid var(--slate-300);
+  color: var(--slate-700);
+}
+.consent__btn--ghost:hover { background: var(--slate-50); }
+.consent__btn:focus-visible { outline: 2px solid var(--indigo-500); outline-offset: 2px; }
+
+@media (max-width: 520px) {
+  /* Full width on a phone, and the actions on their own row so neither button
+     is squeezed into a tap target smaller than the other. */
+  .consent { flex-direction: column; align-items: stretch; }
+  .consent__actions { margin-left: 0; }
+  .consent__btn { flex: 1 1 0; }
+}
