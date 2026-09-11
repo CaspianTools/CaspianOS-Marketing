@@ -187,12 +187,15 @@ about 0.6s. All of it lives in §20 of `site.css`.
   enforces it; forgetting means returning visitors render new HTML against old CSS.
 - **Escape bare ampersands** in copy (`&amp;`). Several module names contain one
   ("Departments &amp; Tools", "Logistics &amp; Fleet") and a raw `&` is invalid HTML.
-- **Google Analytics is the only third-party script.** The external requests are the Inter
-  webfont and the GA4 tag (`G-14GPENV8PG`), loaded by `public/assets/js/analytics.js` — a file,
-  not Google's inline snippet, because `script-src` carries no `'unsafe-inline'` and the browser
-  would refuse to run it. Adding any other tracker, embed or A/B tool is an owner decision.
-  Two things move together with it: the CSP in `firebase.json`, which is what actually permits
-  the tag, and `/privacy`, which must keep describing what is set.
+- **Google Analytics is the only third-party script, and it is behind consent.** The external
+  requests are the Inter webfont and the GA4 tag (`G-14GPENV8PG`). The tag lives in
+  `public/assets/js/analytics.js` — a file, not Google's inline snippet, because `script-src`
+  carries no `'unsafe-inline'` and the browser would refuse to run it — and **no page includes it
+  directly**. Pages load `public/assets/js/consent.js`, which injects it only after a visitor
+  accepts; reject, or never answer, and Google is never contacted. Adding any other tracker, embed
+  or A/B tool is an owner decision. Three things move together with it: the CSP in `firebase.json`,
+  which is what actually permits the tag; `/privacy`, which must keep describing what is set; and
+  the consent gate, which must keep being the only thing that loads the tag.
 - **Claims must be true.** No invented customer logos, testimonials, certifications or metrics —
   the numbers in the hero bento come from the actual module and tool counts, the ticker lists the
   real modules, and the "who it is for" cards describe roles, not customers. The reference layout

@@ -4,6 +4,32 @@ All notable changes to the Caspian ERP marketing site are documented in this fil
 
 ## [Unreleased]
 
+### Added
+- **A cookie consent banner, and Google Analytics behind it** (CaspianOS-App `TODO.md` → **T27**,
+  the owner chose the banner over Consent Mode). GA4 shipped on 2026-09-10 with the plain tag: it
+  set cookies and sent data on the first pageview, before any visitor had agreed. The site is served
+  in German, French and Norwegian, so EEA visitors are expected, and there consent comes *before* a
+  non-essential cookie — disclosure on `/privacy` is not consent.
+  - **Nothing loads until someone says yes.** No page includes `analytics.js` any more; every page
+    loads `assets/js/consent.js`, which injects the tag only once consent exists. Reject, or simply
+    never answer, and Google is not contacted at all — no request, no cookie, no data.
+  - Loading the tag in a cookie-less mode and asking afterwards was the cheaper option and was not
+    taken: it still contacts Google on the first pageview, which is the thing being consented to.
+  - **Reject is first, and the same size as Accept.** The cheaper choice for the visitor is not the
+    harder one to reach; a banner that buries Reject is the pattern regulators single out.
+  - **With JavaScript off no banner appears** — analytics cannot run and no cookie can be set, so
+    there is nothing to consent to. That is the correct outcome, not a gap.
+  - The answer is remembered in `localStorage`, **not a cookie**. A cookie recording that you
+    refused cookies is a poor joke, and this is storage a visitor can clear with the rest of the
+    site — doing so makes the banner ask again.
+  - The banner is a pinned strip rather than a full-screen interstitial, so a visitor can read the
+    page they came for while deciding. Seven languages, from the page's own `lang`.
+  - `/privacy` rewritten in all seven languages to say the tag asks first and that refusing means
+    Google is never contacted. `CLAUDE.md`, `README.md` and `DESIGN.md` now record that
+    `consent.js` must remain the only thing that loads the tag — putting a `<script src>` for
+    `analytics.js` back into a page would silently undo the gate.
+
+
 ### Changed
 - **Google Analytics 4 is installed** (`G-14GPENV8PG`), on the owner's instruction. It replaces the
   standing "no third-party scripts, trackers or cookies" rule, which now reads as "GA is the only
